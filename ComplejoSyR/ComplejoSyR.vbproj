@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F78FA806-776A-487F-8CB5-794A35E24AB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ComplejoSyR.My.MyApplication</StartupObject>
+    <RootNamespace>ComplejoSyR</RootNamespace>
+    <AssemblyName>ComplejoSyR</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ComplejoSyR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ComplejoSyR.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\AlojamientoClass.vb" />
+    <Compile Include="Clases\AlojamientoReservaClass.vb" />
+    <Compile Include="Clases\ClienteClass.vb" />
+    <Compile Include="Clases\ConexionClass.vb" />
+    <Compile Include="Clases\ModalidadClass.vb" />
+    <Compile Include="Clases\PagoClass.vb" />
+    <Compile Include="Clases\ReservaClass.vb" />
+    <Compile Include="Clases\ServicioClass.vb" />
+    <Compile Include="IU\Administracion.Designer.vb">
+      <DependentUpon>Administracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\Administracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\AlojamientosDeReserva.Designer.vb">
+      <DependentUpon>AlojamientosDeReserva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\AlojamientosDeReserva.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\detAlojamiento.Designer.vb">
+      <DependentUpon>detAlojamiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\detAlojamiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\detCliente.Designer.vb">
+      <DependentUpon>detCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\detCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\detModalidad.Designer.vb">
+      <DependentUpon>detModalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\detModalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\detPago.Designer.vb">
+      <DependentUpon>detPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\detPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\detReserva.Designer.vb">
+      <DependentUpon>detReserva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\detReserva.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\detServicio.Designer.vb">
+      <DependentUpon>detServicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\detServicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\Historial.Designer.vb">
+      <DependentUpon>Historial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\Historial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\Inicio.Designer.vb">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\Inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\listClientes.Designer.vb">
+      <DependentUpon>listClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\listClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\listReservas.Designer.vb">
+      <DependentUpon>listReservas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\listReservas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IU\listServicios.Designer.vb">
+      <DependentUpon>listServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="IU\listServicios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IU\Administracion.resx">
+      <DependentUpon>Administracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\AlojamientosDeReserva.resx">
+      <DependentUpon>AlojamientosDeReserva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\detAlojamiento.resx">
+      <DependentUpon>detAlojamiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\detCliente.resx">
+      <DependentUpon>detCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\detModalidad.resx">
+      <DependentUpon>detModalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\detPago.resx">
+      <DependentUpon>detPago.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\detReserva.resx">
+      <DependentUpon>detReserva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\detServicio.resx">
+      <DependentUpon>detServicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\Historial.resx">
+      <DependentUpon>Historial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\Inicio.resx">
+      <DependentUpon>Inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\listClientes.resx">
+      <DependentUpon>listClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\listReservas.resx">
+      <DependentUpon>listReservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IU\listServicios.resx">
+      <DependentUpon>listServicios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
