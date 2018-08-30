@@ -88,6 +88,7 @@ Partial Class Administracion
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvModalidades.DefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvModalidades.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvModalidades.Location = New System.Drawing.Point(0, 0)
         Me.dgvModalidades.MultiSelect = False
         Me.dgvModalidades.Name = "dgvModalidades"
@@ -104,7 +105,7 @@ Partial Class Administracion
         DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvModalidades.RowsDefaultCellStyle = DataGridViewCellStyle5
         Me.dgvModalidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvModalidades.Size = New System.Drawing.Size(621, 237)
+        Me.dgvModalidades.Size = New System.Drawing.Size(634, 237)
         Me.dgvModalidades.TabIndex = 9
         '
         'btnDelMod
@@ -184,13 +185,14 @@ Partial Class Administracion
         DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvAlojamientos.DefaultCellStyle = DataGridViewCellStyle7
-        Me.dgvAlojamientos.Location = New System.Drawing.Point(0, 0)
+        Me.dgvAlojamientos.Dock = System.Windows.Forms.DockStyle.Top
+        Me.dgvAlojamientos.Location = New System.Drawing.Point(3, 3)
         Me.dgvAlojamientos.MultiSelect = False
         Me.dgvAlojamientos.Name = "dgvAlojamientos"
         Me.dgvAlojamientos.ReadOnly = True
         Me.dgvAlojamientos.RowHeadersVisible = False
         Me.dgvAlojamientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvAlojamientos.Size = New System.Drawing.Size(623, 237)
+        Me.dgvAlojamientos.Size = New System.Drawing.Size(628, 237)
         Me.dgvAlojamientos.TabIndex = 14
         '
         'btnDeletAloj
