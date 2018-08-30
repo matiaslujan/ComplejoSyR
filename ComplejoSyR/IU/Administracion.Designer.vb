@@ -202,7 +202,7 @@ Partial Class Administracion
         Me.btnDeletAloj.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnDeletAloj.FlatAppearance.BorderSize = 2
         Me.btnDeletAloj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnDeletAloj.Location = New System.Drawing.Point(202, 243)
+        Me.btnDeletAloj.Location = New System.Drawing.Point(202, 245)
         Me.btnDeletAloj.Name = "btnDeletAloj"
         Me.btnDeletAloj.Size = New System.Drawing.Size(87, 32)
         Me.btnDeletAloj.TabIndex = 12
@@ -216,7 +216,7 @@ Partial Class Administracion
         Me.btnModAloj.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnModAloj.FlatAppearance.BorderSize = 2
         Me.btnModAloj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnModAloj.Location = New System.Drawing.Point(105, 243)
+        Me.btnModAloj.Location = New System.Drawing.Point(105, 245)
         Me.btnModAloj.Name = "btnModAloj"
         Me.btnModAloj.Size = New System.Drawing.Size(87, 32)
         Me.btnModAloj.TabIndex = 11
@@ -230,7 +230,7 @@ Partial Class Administracion
         Me.btnAddAloj.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAddAloj.FlatAppearance.BorderSize = 2
         Me.btnAddAloj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAddAloj.Location = New System.Drawing.Point(8, 243)
+        Me.btnAddAloj.Location = New System.Drawing.Point(8, 245)
         Me.btnAddAloj.Name = "btnAddAloj"
         Me.btnAddAloj.Size = New System.Drawing.Size(87, 32)
         Me.btnAddAloj.TabIndex = 10
