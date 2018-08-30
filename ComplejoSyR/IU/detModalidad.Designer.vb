@@ -36,7 +36,7 @@ Partial Class detModalidad
         '
         Me.Label2.AutoSize = True
         Me.Label2.Enabled = False
-        Me.Label2.Location = New System.Drawing.Point(58, 63)
+        Me.Label2.Location = New System.Drawing.Point(17, 15)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(16, 13)
         Me.Label2.TabIndex = 47
@@ -46,7 +46,7 @@ Partial Class detModalidad
         'txtId
         '
         Me.txtId.Enabled = False
-        Me.txtId.Location = New System.Drawing.Point(117, 60)
+        Me.txtId.Location = New System.Drawing.Point(76, 12)
         Me.txtId.Name = "txtId"
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(100, 20)
@@ -55,14 +55,14 @@ Partial Class detModalidad
         '
         'txtTipo
         '
-        Me.txtTipo.Location = New System.Drawing.Point(117, 135)
+        Me.txtTipo.Location = New System.Drawing.Point(122, 85)
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(100, 20)
         Me.txtTipo.TabIndex = 42
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(117, 91)
+        Me.txtNombre.Location = New System.Drawing.Point(122, 43)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 41
@@ -70,7 +70,7 @@ Partial Class detModalidad
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(58, 142)
+        Me.Label3.Location = New System.Drawing.Point(63, 92)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(28, 13)
         Me.Label3.TabIndex = 46
@@ -79,7 +79,7 @@ Partial Class detModalidad
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(53, 94)
+        Me.Label1.Location = New System.Drawing.Point(58, 46)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(44, 13)
         Me.Label1.TabIndex = 45
@@ -87,36 +87,44 @@ Partial Class detModalidad
         '
         'btnCancelar
         '
-        Me.btnCancelar.Location = New System.Drawing.Point(157, 180)
+        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.Location = New System.Drawing.Point(166, 146)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 44
+        Me.btnCancelar.Size = New System.Drawing.Size(93, 24)
+        Me.btnCancelar.TabIndex = 86
         Me.btnCancelar.Text = "Cancelar"
-        Me.btnCancelar.UseVisualStyleBackColor = True
+        Me.btnCancelar.UseVisualStyleBackColor = False
         '
         'btnAceptar
         '
-        Me.btnAceptar.Location = New System.Drawing.Point(56, 180)
+        Me.btnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAceptar.Location = New System.Drawing.Point(20, 146)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(75, 23)
-        Me.btnAceptar.TabIndex = 43
+        Me.btnAceptar.Size = New System.Drawing.Size(93, 24)
+        Me.btnAceptar.TabIndex = 85
         Me.btnAceptar.Text = "Aceptar"
-        Me.btnAceptar.UseVisualStyleBackColor = True
+        Me.btnAceptar.UseVisualStyleBackColor = False
         '
         'detModalidad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Wheat
-        Me.ClientSize = New System.Drawing.Size(284, 262)
+        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.ClientSize = New System.Drawing.Size(292, 192)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtId)
         Me.Controls.Add(Me.txtTipo)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.btnCancelar)
-        Me.Controls.Add(Me.btnAceptar)
         Me.MaximizeBox = False
         Me.Name = "detModalidad"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

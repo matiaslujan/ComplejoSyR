@@ -22,6 +22,7 @@ Partial Class Administracion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Administracion))
         Me.tabCuentas = New System.Windows.Forms.TabPage
         Me.tabModalidades = New System.Windows.Forms.TabPage
         Me.dgvModalidades = New System.Windows.Forms.DataGridView
@@ -67,8 +68,11 @@ Partial Class Administracion
         '
         Me.dgvModalidades.AllowUserToAddRows = False
         Me.dgvModalidades.AllowUserToDeleteRows = False
+        Me.dgvModalidades.AllowUserToResizeColumns = False
+        Me.dgvModalidades.AllowUserToResizeRows = False
         Me.dgvModalidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvModalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvModalidades.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgvModalidades.Location = New System.Drawing.Point(0, 0)
         Me.dgvModalidades.MultiSelect = False
         Me.dgvModalidades.Name = "dgvModalidades"
@@ -80,6 +84,7 @@ Partial Class Administracion
         '
         'btnDelMod
         '
+        Me.btnDelMod.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDelMod.Location = New System.Drawing.Point(162, 243)
         Me.btnDelMod.Name = "btnDelMod"
         Me.btnDelMod.Size = New System.Drawing.Size(75, 23)
@@ -89,6 +94,7 @@ Partial Class Administracion
         '
         'btnUpdMod
         '
+        Me.btnUpdMod.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUpdMod.Location = New System.Drawing.Point(81, 243)
         Me.btnUpdMod.Name = "btnUpdMod"
         Me.btnUpdMod.Size = New System.Drawing.Size(75, 23)
@@ -98,6 +104,7 @@ Partial Class Administracion
         '
         'btnAddMod
         '
+        Me.btnAddMod.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAddMod.Location = New System.Drawing.Point(0, 243)
         Me.btnAddMod.Name = "btnAddMod"
         Me.btnAddMod.Size = New System.Drawing.Size(75, 23)
@@ -133,8 +140,11 @@ Partial Class Administracion
         'dgvAlojamientos
         '
         Me.dgvAlojamientos.AllowUserToAddRows = False
+        Me.dgvAlojamientos.AllowUserToResizeColumns = False
+        Me.dgvAlojamientos.AllowUserToResizeRows = False
         Me.dgvAlojamientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvAlojamientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvAlojamientos.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgvAlojamientos.Location = New System.Drawing.Point(0, 0)
         Me.dgvAlojamientos.MultiSelect = False
         Me.dgvAlojamientos.Name = "dgvAlojamientos"
@@ -146,6 +156,7 @@ Partial Class Administracion
         '
         'btnDeletAloj
         '
+        Me.btnDeletAloj.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDeletAloj.Location = New System.Drawing.Point(162, 243)
         Me.btnDeletAloj.Name = "btnDeletAloj"
         Me.btnDeletAloj.Size = New System.Drawing.Size(75, 23)
@@ -155,6 +166,7 @@ Partial Class Administracion
         '
         'btnModAloj
         '
+        Me.btnModAloj.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnModAloj.Location = New System.Drawing.Point(81, 243)
         Me.btnModAloj.Name = "btnModAloj"
         Me.btnModAloj.Size = New System.Drawing.Size(75, 23)
@@ -164,6 +176,7 @@ Partial Class Administracion
         '
         'btnAddAloj
         '
+        Me.btnAddAloj.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAddAloj.Location = New System.Drawing.Point(0, 243)
         Me.btnAddAloj.Name = "btnAddAloj"
         Me.btnAddAloj.Size = New System.Drawing.Size(75, 23)
@@ -177,6 +190,7 @@ Partial Class Administracion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(642, 292)
         Me.Controls.Add(Me.TabControl1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Administracion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Administracion"

@@ -227,7 +227,25 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\calendar.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo5.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aloj.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pago.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

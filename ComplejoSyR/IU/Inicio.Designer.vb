@@ -23,6 +23,7 @@ Partial Class Inicio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
         Me.btnReservas = New System.Windows.Forms.ToolStripMenuItem
         Me.btnClientes = New System.Windows.Forms.ToolStripMenuItem
@@ -136,6 +137,7 @@ Partial Class Inicio
         'btnNuevaReserva
         '
         Me.btnNuevaReserva.BackColor = System.Drawing.Color.White
+        Me.btnNuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.FlatAppearance.BorderSize = 3
         Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
@@ -150,6 +152,7 @@ Partial Class Inicio
         'btnBuscar
         '
         Me.btnBuscar.BackColor = System.Drawing.Color.White
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.FlatAppearance.BorderSize = 3
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
@@ -173,6 +176,7 @@ Partial Class Inicio
         Me.Controls.Add(Me.Calendario)
         Me.Controls.Add(Me.dgvOcupacion)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Inicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio"

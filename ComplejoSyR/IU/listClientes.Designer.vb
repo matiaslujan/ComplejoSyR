@@ -22,6 +22,7 @@ Partial Class listClientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(listClientes))
         Me.dgvClientes = New System.Windows.Forms.DataGridView
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnEliminar = New System.Windows.Forms.Button
@@ -36,8 +37,11 @@ Partial Class listClientes
         '
         Me.dgvClientes.AllowUserToAddRows = False
         Me.dgvClientes.AllowUserToDeleteRows = False
+        Me.dgvClientes.AllowUserToResizeColumns = False
+        Me.dgvClientes.AllowUserToResizeRows = False
         Me.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvClientes.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgvClientes.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvClientes.Location = New System.Drawing.Point(0, 0)
         Me.dgvClientes.MultiSelect = False
@@ -148,10 +152,11 @@ Partial Class listClientes
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "listClientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "listClientes"
+        Me.Text = "Clientes"
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

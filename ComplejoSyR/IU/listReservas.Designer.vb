@@ -22,6 +22,7 @@ Partial Class listReservas
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(listReservas))
         Me.dgvReservas = New System.Windows.Forms.DataGridView
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnEliminar = New System.Windows.Forms.Button
@@ -35,8 +36,11 @@ Partial Class listReservas
         '
         Me.dgvReservas.AllowUserToAddRows = False
         Me.dgvReservas.AllowUserToDeleteRows = False
+        Me.dgvReservas.AllowUserToResizeColumns = False
+        Me.dgvReservas.AllowUserToResizeRows = False
         Me.dgvReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvReservas.Cursor = System.Windows.Forms.Cursors.Hand
         Me.dgvReservas.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvReservas.Location = New System.Drawing.Point(0, 0)
         Me.dgvReservas.MultiSelect = False
@@ -129,6 +133,7 @@ Partial Class listReservas
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "listReservas"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

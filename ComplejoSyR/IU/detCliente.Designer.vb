@@ -22,6 +22,7 @@ Partial Class detCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(detCliente))
         Me.Label5 = New System.Windows.Forms.Label
         Me.txtId = New System.Windows.Forms.TextBox
         Me.Label4 = New System.Windows.Forms.Label
@@ -171,10 +172,11 @@ Partial Class detCliente
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.txtDomicilio)
         Me.Controls.Add(Me.txtNombre)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.Name = "detCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "detCliente"
+        Me.Text = "Cliente"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
