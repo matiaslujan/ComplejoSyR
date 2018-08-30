@@ -306,7 +306,7 @@ Public Class ReservaClass
         dgv.Columns("Nombre").HeaderText = "Modalidad"
         dgv.Columns("FIngreso").HeaderText = "Ingreso"
         dgv.Columns("FEgreso").HeaderText = "Egreso"
-        dgv.Columns("Numero").Width = 50
+        dgv.Columns("Numero").Width = 100
         dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         Desconectar()

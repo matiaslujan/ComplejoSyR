@@ -70,6 +70,7 @@
     <Compile Include="Clases\AlojamientoReservaClass.vb" />
     <Compile Include="Clases\ClienteClass.vb" />
     <Compile Include="Clases\ConexionClass.vb" />
+    <Compile Include="Clases\Funciones.vb" />
     <Compile Include="Clases\ModalidadClass.vb" />
     <Compile Include="Clases\PagoClass.vb" />
     <Compile Include="Clases\ReservaClass.vb" />

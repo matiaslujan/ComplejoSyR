@@ -23,6 +23,8 @@ Partial Class Inicio
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
         Me.btnReservas = New System.Windows.Forms.ToolStripMenuItem
@@ -47,7 +49,7 @@ Partial Class Inicio
         Me.MenuStrip1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(1016, 40)
+        Me.MenuStrip1.Size = New System.Drawing.Size(846, 40)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -91,9 +93,9 @@ Partial Class Inicio
         'Calendario
         '
         Me.Calendario.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.Calendario.CalendarDimensions = New System.Drawing.Size(4, 1)
+        Me.Calendario.CalendarDimensions = New System.Drawing.Size(2, 1)
         Me.Calendario.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Calendario.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Calendario.Dock = System.Windows.Forms.DockStyle.Left
         Me.Calendario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Calendario.ForeColor = System.Drawing.SystemColors.InfoText
         Me.Calendario.Location = New System.Drawing.Point(0, 40)
@@ -110,28 +112,38 @@ Partial Class Inicio
         Me.dgvOcupacion.AllowUserToDeleteRows = False
         Me.dgvOcupacion.AllowUserToResizeColumns = False
         Me.dgvOcupacion.AllowUserToResizeRows = False
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvOcupacion.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvOcupacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvOcupacion.BackgroundColor = System.Drawing.Color.White
         Me.dgvOcupacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.dgvOcupacion.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Coral
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvOcupacion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOcupacion.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvOcupacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvOcupacion.Cursor = System.Windows.Forms.Cursors.Hand
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOcupacion.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.dgvOcupacion.Location = New System.Drawing.Point(0, 321)
+        Me.dgvOcupacion.Location = New System.Drawing.Point(0, 267)
         Me.dgvOcupacion.Margin = New System.Windows.Forms.Padding(3, 3, 3, 10)
         Me.dgvOcupacion.MultiSelect = False
         Me.dgvOcupacion.Name = "dgvOcupacion"
         Me.dgvOcupacion.RowHeadersVisible = False
         Me.dgvOcupacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvOcupacion.Size = New System.Drawing.Size(1016, 299)
+        Me.dgvOcupacion.Size = New System.Drawing.Size(846, 353)
         Me.dgvOcupacion.TabIndex = 5
         '
         'btnNuevaReserva
@@ -142,9 +154,9 @@ Partial Class Inicio
         Me.btnNuevaReserva.FlatAppearance.BorderSize = 3
         Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNuevaReserva.Location = New System.Drawing.Point(655, 256)
+        Me.btnNuevaReserva.Location = New System.Drawing.Point(540, 148)
         Me.btnNuevaReserva.Name = "btnNuevaReserva"
-        Me.btnNuevaReserva.Size = New System.Drawing.Size(100, 34)
+        Me.btnNuevaReserva.Size = New System.Drawing.Size(250, 34)
         Me.btnNuevaReserva.TabIndex = 131
         Me.btnNuevaReserva.Text = "Nueva Reserva"
         Me.btnNuevaReserva.UseVisualStyleBackColor = False
@@ -157,9 +169,9 @@ Partial Class Inicio
         Me.btnBuscar.FlatAppearance.BorderSize = 3
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Location = New System.Drawing.Point(494, 256)
+        Me.btnBuscar.Location = New System.Drawing.Point(540, 227)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(100, 34)
+        Me.btnBuscar.Size = New System.Drawing.Size(250, 34)
         Me.btnBuscar.TabIndex = 130
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -170,7 +182,7 @@ Partial Class Inicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1016, 620)
+        Me.ClientSize = New System.Drawing.Size(846, 620)
         Me.Controls.Add(Me.btnNuevaReserva)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Calendario)
