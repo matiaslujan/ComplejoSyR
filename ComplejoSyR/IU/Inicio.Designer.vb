@@ -34,8 +34,10 @@ Partial Class Inicio
         Me.dgvOcupacion = New System.Windows.Forms.DataGridView
         Me.btnNuevaReserva = New System.Windows.Forms.Button
         Me.btnBuscar = New System.Windows.Forms.Button
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvOcupacion, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -49,7 +51,7 @@ Partial Class Inicio
         Me.MenuStrip1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(846, 40)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1245, 40)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -143,7 +145,7 @@ Partial Class Inicio
         Me.dgvOcupacion.Name = "dgvOcupacion"
         Me.dgvOcupacion.RowHeadersVisible = False
         Me.dgvOcupacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvOcupacion.Size = New System.Drawing.Size(846, 353)
+        Me.dgvOcupacion.Size = New System.Drawing.Size(1245, 353)
         Me.dgvOcupacion.TabIndex = 5
         '
         'btnNuevaReserva
@@ -176,13 +178,25 @@ Partial Class Inicio
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = False
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PictureBox1.Image = Global.ComplejoSyR.My.Resources.Resources.inci
+        Me.PictureBox1.Location = New System.Drawing.Point(726, 40)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(519, 227)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 132
+        Me.PictureBox1.TabStop = False
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(846, 620)
+        Me.ClientSize = New System.Drawing.Size(1245, 620)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnNuevaReserva)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.Calendario)
@@ -196,6 +210,7 @@ Partial Class Inicio
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgvOcupacion, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -208,5 +223,6 @@ Partial Class Inicio
     Friend WithEvents btnAdministracion As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnNuevaReserva As System.Windows.Forms.Button
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class
