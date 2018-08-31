@@ -86,4 +86,5 @@
         r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
 
     End Sub
+
 End Class
