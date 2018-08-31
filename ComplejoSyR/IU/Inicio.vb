@@ -15,7 +15,7 @@
         a.ShowDialog()
 
     End Sub
-    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim b As New listReservas
 
         b.ShowDialog()
@@ -52,7 +52,7 @@
 
     End Sub
 
-    Private Sub btnReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevaReserva.Click
+    Private Sub btnReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         NuevaReserva()
 
@@ -86,5 +86,7 @@
         r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
 
     End Sub
+
+
 
 End Class

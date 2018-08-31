@@ -40,7 +40,7 @@ Partial Class detCliente
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(44, 5)
+        Me.Label5.Location = New System.Drawing.Point(7, 5)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(16, 13)
         Me.Label5.TabIndex = 23
@@ -51,7 +51,7 @@ Partial Class detCliente
         'txtId
         '
         Me.txtId.Enabled = False
-        Me.txtId.Location = New System.Drawing.Point(66, 5)
+        Me.txtId.Location = New System.Drawing.Point(29, 5)
         Me.txtId.Name = "txtId"
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(21, 20)
@@ -61,7 +61,7 @@ Partial Class detCliente
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(128, 140)
+        Me.Label4.Location = New System.Drawing.Point(91, 140)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(38, 13)
         Me.Label4.TabIndex = 22
@@ -71,7 +71,7 @@ Partial Class detCliente
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(114, 104)
+        Me.Label3.Location = New System.Drawing.Point(77, 104)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 13)
         Me.Label3.TabIndex = 21
@@ -81,7 +81,7 @@ Partial Class detCliente
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(114, 72)
+        Me.Label2.Location = New System.Drawing.Point(77, 72)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 13)
         Me.Label2.TabIndex = 20
@@ -91,7 +91,7 @@ Partial Class detCliente
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(51, 35)
+        Me.Label1.Location = New System.Drawing.Point(14, 35)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 13)
         Me.Label1.TabIndex = 19
@@ -100,32 +100,32 @@ Partial Class detCliente
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(184, 137)
+        Me.txtCorreo.Location = New System.Drawing.Point(147, 137)
         Me.txtCorreo.Name = "txtCorreo"
-        Me.txtCorreo.Size = New System.Drawing.Size(100, 20)
+        Me.txtCorreo.Size = New System.Drawing.Size(191, 20)
         Me.txtCorreo.TabIndex = 16
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(184, 104)
+        Me.txtTelefono.Location = New System.Drawing.Point(147, 104)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelefono.Size = New System.Drawing.Size(191, 20)
         Me.txtTelefono.TabIndex = 15
         Me.txtTelefono.Tag = "Validar"
         '
         'txtDomicilio
         '
-        Me.txtDomicilio.Location = New System.Drawing.Point(184, 69)
+        Me.txtDomicilio.Location = New System.Drawing.Point(147, 69)
         Me.txtDomicilio.Name = "txtDomicilio"
-        Me.txtDomicilio.Size = New System.Drawing.Size(100, 20)
+        Me.txtDomicilio.Size = New System.Drawing.Size(191, 20)
         Me.txtDomicilio.TabIndex = 14
         Me.txtDomicilio.Tag = "Validar"
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(184, 33)
+        Me.txtNombre.Location = New System.Drawing.Point(147, 33)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(100, 20)
+        Me.txtNombre.Size = New System.Drawing.Size(191, 20)
         Me.txtNombre.TabIndex = 13
         Me.txtNombre.Tag = "Validar"
         '

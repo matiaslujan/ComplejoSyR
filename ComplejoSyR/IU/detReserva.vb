@@ -184,6 +184,7 @@
     End Sub
     'agregar alojamiento, mostrar solo los disponibles
     Private Sub btnAgregarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarAloj.Click
+        'Aviso()
 
         Dim det As New AlojamientosDeReserva(txtId.Text, dtpFechaIngreso.Text, dtpFechaEgreso.Text)
 
@@ -204,11 +205,10 @@
         Datos()
 
     End Sub
-
-
     '----------------------------PAGOS--------------------------------
     '-----------------------------------------------------------------
     Private Sub btnAgregarPago_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarPago.Click
+        ' Aviso()
 
         Dim det As New detPago(txtId.Text)
 
@@ -216,8 +216,17 @@
 
         Datos()
     End Sub
+    'Private Function Aviso() As Integer
 
+    '    If txtId.Text = "" Then
 
+    '        MsgBox("Primero debe guardar la reserva")
+
+    '        Return 1
+
+    '    End If
+
+    'End Function
     Private Sub ModificarPago()
 
         Dim p As New PagoClass
