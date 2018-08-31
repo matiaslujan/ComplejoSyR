@@ -35,9 +35,13 @@ Partial Class Inicio
         Me.btnNuevaReserva = New System.Windows.Forms.Button
         Me.btnBuscar = New System.Windows.Forms.Button
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer
         Me.MenuStrip1.SuspendLayout()
         CType(Me.dgvOcupacion, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
+        Me.SplitContainer1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -51,7 +55,7 @@ Partial Class Inicio
         Me.MenuStrip1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(1245, 40)
+        Me.MenuStrip1.Size = New System.Drawing.Size(861, 40)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -95,12 +99,12 @@ Partial Class Inicio
         'Calendario
         '
         Me.Calendario.BackColor = System.Drawing.SystemColors.InactiveCaption
-        Me.Calendario.CalendarDimensions = New System.Drawing.Size(2, 1)
+        Me.Calendario.CalendarDimensions = New System.Drawing.Size(2, 2)
         Me.Calendario.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Calendario.Dock = System.Windows.Forms.DockStyle.Left
+        Me.Calendario.Dock = System.Windows.Forms.DockStyle.Top
         Me.Calendario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Calendario.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Calendario.Location = New System.Drawing.Point(0, 40)
+        Me.Calendario.Location = New System.Drawing.Point(0, 0)
         Me.Calendario.MaxSelectionCount = 30
         Me.Calendario.Name = "Calendario"
         Me.Calendario.TabIndex = 6
@@ -139,24 +143,25 @@ Partial Class Inicio
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOcupacion.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.dgvOcupacion.Location = New System.Drawing.Point(0, 267)
+        Me.dgvOcupacion.Location = New System.Drawing.Point(0, 339)
         Me.dgvOcupacion.Margin = New System.Windows.Forms.Padding(3, 3, 3, 10)
         Me.dgvOcupacion.MultiSelect = False
         Me.dgvOcupacion.Name = "dgvOcupacion"
         Me.dgvOcupacion.RowHeadersVisible = False
         Me.dgvOcupacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvOcupacion.Size = New System.Drawing.Size(1245, 353)
+        Me.dgvOcupacion.Size = New System.Drawing.Size(504, 186)
         Me.dgvOcupacion.TabIndex = 5
         '
         'btnNuevaReserva
         '
+        Me.btnNuevaReserva.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNuevaReserva.BackColor = System.Drawing.Color.White
         Me.btnNuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.FlatAppearance.BorderSize = 3
         Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnNuevaReserva.Location = New System.Drawing.Point(540, 148)
+        Me.btnNuevaReserva.Location = New System.Drawing.Point(57, 78)
         Me.btnNuevaReserva.Name = "btnNuevaReserva"
         Me.btnNuevaReserva.Size = New System.Drawing.Size(250, 34)
         Me.btnNuevaReserva.TabIndex = 131
@@ -165,13 +170,14 @@ Partial Class Inicio
         '
         'btnBuscar
         '
+        Me.btnBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBuscar.BackColor = System.Drawing.Color.White
         Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.FlatAppearance.BorderSize = 3
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Location = New System.Drawing.Point(540, 227)
+        Me.btnBuscar.Location = New System.Drawing.Point(57, 206)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(250, 34)
         Me.btnBuscar.TabIndex = 130
@@ -180,14 +186,34 @@ Partial Class Inicio
         '
         'PictureBox1
         '
-        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.PictureBox1.Image = Global.ComplejoSyR.My.Resources.Resources.inci
-        Me.PictureBox1.Location = New System.Drawing.Point(726, 40)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 298)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(519, 227)
+        Me.PictureBox1.Size = New System.Drawing.Size(353, 227)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 132
         Me.PictureBox1.TabStop = False
+        '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 40)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Calendario)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.dgvOcupacion)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.btnNuevaReserva)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.PictureBox1)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.btnBuscar)
+        Me.SplitContainer1.Size = New System.Drawing.Size(861, 525)
+        Me.SplitContainer1.SplitterDistance = 504
+        Me.SplitContainer1.TabIndex = 133
         '
         'Inicio
         '
@@ -195,15 +221,12 @@ Partial Class Inicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1245, 620)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.btnNuevaReserva)
-        Me.Controls.Add(Me.btnBuscar)
-        Me.Controls.Add(Me.Calendario)
-        Me.Controls.Add(Me.dgvOcupacion)
+        Me.ClientSize = New System.Drawing.Size(861, 565)
+        Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(877, 604)
         Me.Name = "Inicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio"
@@ -212,6 +235,9 @@ Partial Class Inicio
         Me.MenuStrip1.PerformLayout()
         CType(Me.dgvOcupacion, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -225,5 +251,6 @@ Partial Class Inicio
     Friend WithEvents btnNuevaReserva As System.Windows.Forms.Button
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
 
 End Class
