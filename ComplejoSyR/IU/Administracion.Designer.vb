@@ -26,9 +26,6 @@ Partial Class Administracion
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Administracion))
         Me.tabModalidades = New System.Windows.Forms.TabPage
         Me.dgvModalidades = New System.Windows.Forms.DataGridView
@@ -80,30 +77,14 @@ Partial Class Administracion
         Me.dgvModalidades.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvModalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvModalidades.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvModalidades.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvModalidades.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvModalidades.Location = New System.Drawing.Point(0, 0)
         Me.dgvModalidades.MultiSelect = False
         Me.dgvModalidades.Name = "dgvModalidades"
         Me.dgvModalidades.ReadOnly = True
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvModalidades.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvModalidades.RowHeadersVisible = False
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvModalidades.RowsDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvModalidades.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvModalidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvModalidades.Size = New System.Drawing.Size(634, 237)
         Me.dgvModalidades.TabIndex = 9
@@ -111,6 +92,9 @@ Partial Class Administracion
         'btnDelMod
         '
         Me.btnDelMod.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnDelMod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnDelMod.FlatAppearance.BorderSize = 2
+        Me.btnDelMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelMod.Location = New System.Drawing.Point(193, 243)
         Me.btnDelMod.Name = "btnDelMod"
@@ -122,6 +106,9 @@ Partial Class Administracion
         'btnUpdMod
         '
         Me.btnUpdMod.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnUpdMod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnUpdMod.FlatAppearance.BorderSize = 2
+        Me.btnUpdMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdMod.Location = New System.Drawing.Point(100, 243)
         Me.btnUpdMod.Name = "btnUpdMod"
@@ -133,6 +120,9 @@ Partial Class Administracion
         'btnAddMod
         '
         Me.btnAddMod.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnAddMod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnAddMod.FlatAppearance.BorderSize = 2
+        Me.btnAddMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddMod.Location = New System.Drawing.Point(8, 243)
         Me.btnAddMod.Name = "btnAddMod"
@@ -172,19 +162,11 @@ Partial Class Administracion
         Me.dgvAlojamientos.AllowUserToAddRows = False
         Me.dgvAlojamientos.AllowUserToResizeColumns = False
         Me.dgvAlojamientos.AllowUserToResizeRows = False
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dgvAlojamientos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dgvAlojamientos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvAlojamientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvAlojamientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAlojamientos.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvAlojamientos.DefaultCellStyle = DataGridViewCellStyle7
         Me.dgvAlojamientos.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvAlojamientos.Location = New System.Drawing.Point(3, 3)
         Me.dgvAlojamientos.MultiSelect = False

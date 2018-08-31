@@ -119,6 +119,7 @@ Partial Class detCliente
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(100, 20)
         Me.txtDomicilio.TabIndex = 14
+        Me.txtDomicilio.Tag = "Validar"
         '
         'txtNombre
         '
