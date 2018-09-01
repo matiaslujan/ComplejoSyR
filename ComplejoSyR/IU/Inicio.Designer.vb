@@ -103,9 +103,9 @@ Partial Class Inicio
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Image = Global.ComplejoSyR.My.Resources.Resources.inicio
-        Me.PictureBox1.Location = New System.Drawing.Point(549, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(526, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(321, 519)
+        Me.PictureBox1.Size = New System.Drawing.Size(344, 519)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 132
         Me.PictureBox1.TabStop = False
@@ -147,7 +147,7 @@ Partial Class Inicio
         Me.dgvOcupacion.Name = "dgvOcupacion"
         Me.dgvOcupacion.RowHeadersVisible = False
         Me.dgvOcupacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvOcupacion.Size = New System.Drawing.Size(534, 251)
+        Me.dgvOcupacion.Size = New System.Drawing.Size(511, 251)
         Me.dgvOcupacion.TabIndex = 5
         '
         'Calendario
@@ -190,7 +190,7 @@ Partial Class Inicio
         Me.btnNuevaReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevaReserva.Location = New System.Drawing.Point(3, 3)
         Me.btnNuevaReserva.Name = "btnNuevaReserva"
-        Me.btnNuevaReserva.Size = New System.Drawing.Size(261, 31)
+        Me.btnNuevaReserva.Size = New System.Drawing.Size(249, 31)
         Me.btnNuevaReserva.TabIndex = 133
         Me.btnNuevaReserva.Text = "Nueva Reserva"
         Me.btnNuevaReserva.UseVisualStyleBackColor = False
@@ -207,9 +207,9 @@ Partial Class Inicio
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Location = New System.Drawing.Point(270, 3)
+        Me.btnBuscar.Location = New System.Drawing.Point(258, 3)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(261, 31)
+        Me.btnBuscar.Size = New System.Drawing.Size(250, 31)
         Me.btnBuscar.TabIndex = 132
         Me.btnBuscar.Text = "Buscar Reserva"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -217,15 +217,15 @@ Partial Class Inicio
         'TableLayoutPanel1
         '
         Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 327.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 40)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(873, 525)
         Me.TableLayoutPanel1.TabIndex = 135
         '
@@ -243,7 +243,7 @@ Partial Class Inicio
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.63895!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.36105!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(540, 519)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(517, 519)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'TableLayoutPanel3
@@ -258,7 +258,7 @@ Partial Class Inicio
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(534, 37)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(511, 37)
         Me.TableLayoutPanel3.TabIndex = 7
         '
         'Inicio
@@ -272,7 +272,7 @@ Partial Class Inicio
         Me.Controls.Add(Me.Splitter1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(882, 604)
+        Me.MinimumSize = New System.Drawing.Size(892, 604)
         Me.Name = "Inicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "Inicio"

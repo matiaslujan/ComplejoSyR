@@ -66,6 +66,9 @@ Partial Class Administracion
         Me.dgvModalidades.AllowUserToResizeRows = False
         DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvModalidades.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgvModalidades.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvModalidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -77,7 +80,6 @@ Partial Class Administracion
         Me.dgvModalidades.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvModalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvModalidades.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgvModalidades.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvModalidades.Location = New System.Drawing.Point(0, 0)
         Me.dgvModalidades.MultiSelect = False
         Me.dgvModalidades.Name = "dgvModalidades"
@@ -91,6 +93,7 @@ Partial Class Administracion
         '
         'btnDelMod
         '
+        Me.btnDelMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnDelMod.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDelMod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnDelMod.FlatAppearance.BorderSize = 2
@@ -105,6 +108,7 @@ Partial Class Administracion
         '
         'btnUpdMod
         '
+        Me.btnUpdMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnUpdMod.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUpdMod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnUpdMod.FlatAppearance.BorderSize = 2
@@ -119,6 +123,7 @@ Partial Class Administracion
         '
         'btnAddMod
         '
+        Me.btnAddMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnAddMod.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAddMod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAddMod.FlatAppearance.BorderSize = 2
@@ -164,10 +169,12 @@ Partial Class Administracion
         Me.dgvAlojamientos.AllowUserToResizeRows = False
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvAlojamientos.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        Me.dgvAlojamientos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvAlojamientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvAlojamientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAlojamientos.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgvAlojamientos.Dock = System.Windows.Forms.DockStyle.Top
         Me.dgvAlojamientos.Location = New System.Drawing.Point(3, 3)
         Me.dgvAlojamientos.MultiSelect = False
         Me.dgvAlojamientos.Name = "dgvAlojamientos"
@@ -179,6 +186,7 @@ Partial Class Administracion
         '
         'btnDeletAloj
         '
+        Me.btnDeletAloj.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnDeletAloj.BackColor = System.Drawing.Color.White
         Me.btnDeletAloj.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDeletAloj.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -193,6 +201,7 @@ Partial Class Administracion
         '
         'btnModAloj
         '
+        Me.btnModAloj.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModAloj.BackColor = System.Drawing.Color.White
         Me.btnModAloj.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnModAloj.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -207,6 +216,7 @@ Partial Class Administracion
         '
         'btnAddAloj
         '
+        Me.btnAddAloj.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnAddAloj.BackColor = System.Drawing.Color.White
         Me.btnAddAloj.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAddAloj.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
@@ -226,6 +236,7 @@ Partial Class Administracion
         Me.ClientSize = New System.Drawing.Size(642, 315)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(658, 354)
         Me.Name = "Administracion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Administracion"
