@@ -40,7 +40,7 @@
 
     Private Sub modificarModalidad()
 
-        If seleccion(dgvAlojamientos) Then Exit Sub
+        If seleccion(dgvModalidades) Then Exit Sub
 
         Dim modalidad As New ModalidadClass
 

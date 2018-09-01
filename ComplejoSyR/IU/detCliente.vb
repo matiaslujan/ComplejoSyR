@@ -1,5 +1,13 @@
 ﻿Public Class detCliente
-
+    Private funcion_ As New Funciones
+    Public Property funcion() As Funciones
+        Get
+            Return funcion_
+        End Get
+        Set(ByVal value As Funciones)
+            funcion_ = value
+        End Set
+    End Property
     Private Cliente_ As New ClienteClass
     Public Property Cliente() As ClienteClass
         Get
@@ -79,34 +87,32 @@
 
     End Sub
 
-
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
 
-        Cliente.Nombre = txtNombre.Text
-        Cliente.Telefono = txtTelefono.Text
-        Cliente.Correo = txtCorreo.Text
-        Cliente.Domicilio = txtDomicilio.Text
+        If funcion.ValidarCampos(Me, ErrorProvider1) Then
+            Cliente.Nombre = txtNombre.Text
+            Cliente.Telefono = txtTelefono.Text
+            Cliente.Correo = txtCorreo.Text
+            Cliente.Domicilio = txtDomicilio.Text
 
 
-        If Operacion = "M" Then
-            Cliente.Id = txtId.Text
+            If Operacion = "M" Then
+                Cliente.Id = txtId.Text
 
-            Cliente.Modificar(Cliente)
-        ElseIf Operacion = "A" Then
+                Cliente.Modificar(Cliente)
+            ElseIf Operacion = "A" Then
 
-            Cliente.Agregar(Cliente)
-        Else
-            Cliente.Agregar(Cliente)
-            Cliente.cargarCombo(Combo)
+                Cliente.Agregar(Cliente)
+            Else
+                Cliente.Agregar(Cliente)
+                Cliente.cargarCombo(Combo)
 
+                Close()
+
+                Exit Sub
+            End If
             Close()
-
-            Exit Sub
         End If
-
-
-
-        Close()
 
     End Sub
 

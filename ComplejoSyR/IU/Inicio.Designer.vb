@@ -36,8 +36,8 @@ Partial Class Inicio
         Me.Splitter1 = New System.Windows.Forms.Splitter
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel
-        Me.btnBuscar = New System.Windows.Forms.Button
         Me.btnNuevaReserva = New System.Windows.Forms.Button
+        Me.btnBuscar = New System.Windows.Forms.Button
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOcupacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -208,22 +208,6 @@ Partial Class Inicio
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(328, 256)
         Me.TableLayoutPanel2.TabIndex = 136
         '
-        'btnBuscar
-        '
-        Me.btnBuscar.BackColor = System.Drawing.Color.White
-        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnBuscar.FlatAppearance.BorderSize = 3
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBuscar.Location = New System.Drawing.Point(3, 42)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(322, 32)
-        Me.btnBuscar.TabIndex = 132
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = False
-        '
         'btnNuevaReserva
         '
         Me.btnNuevaReserva.BackColor = System.Drawing.Color.White
@@ -233,12 +217,30 @@ Partial Class Inicio
         Me.btnNuevaReserva.FlatAppearance.BorderSize = 3
         Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNuevaReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevaReserva.Location = New System.Drawing.Point(3, 3)
         Me.btnNuevaReserva.Name = "btnNuevaReserva"
         Me.btnNuevaReserva.Size = New System.Drawing.Size(322, 33)
         Me.btnNuevaReserva.TabIndex = 133
         Me.btnNuevaReserva.Text = "Nueva Reserva"
         Me.btnNuevaReserva.UseVisualStyleBackColor = False
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.BackColor = System.Drawing.Color.White
+        Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.BorderSize = 3
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Location = New System.Drawing.Point(3, 42)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(322, 32)
+        Me.btnBuscar.TabIndex = 132
+        Me.btnBuscar.Text = "Buscar Reserva"
+        Me.btnBuscar.UseVisualStyleBackColor = False
         '
         'Inicio
         '

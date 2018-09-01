@@ -15,21 +15,19 @@
         a.ShowDialog()
 
     End Sub
-    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
         Dim b As New listReservas
 
         b.ShowDialog()
 
     End Sub
     '------------------------------------------------------------------------------------------------------------------------------
-
     Private Sub MonthCalendar1_DateChanged(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles Calendario.DateChanged
         Dim r As New ReservaClass
 
         r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
 
     End Sub
-
     Private Sub Inicio_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         Dim r As New ReservaClass

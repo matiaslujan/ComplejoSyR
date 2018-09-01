@@ -1,23 +1,31 @@
 ﻿Public Class Funciones
-    Private Function ValidarCampos(ByVal frm As Form, ByVal errorprovider As ErrorProvider)
+    Public Function ValidarCampos(ByVal frm As Form, ByVal errorprovider As ErrorProvider)
         ValidarCampos = True
-        'Try
-        '    For Each Control As Windows.Forms.Control In frm.Controls
 
-        '        If Control.Tag = "Validar" Then
-        '            If Control.Text = "" Then
-        '                Throw New Exception("Ingresar datos")
-        '            Else
-        '                errorprovider.SetError(Control, "")
+        Dim control As Control
 
-        '            End If
+        Try
+            For Each control In frm.Controls
 
-        '        End If
+                If control.Tag = "Validar" Then
+                    If control.Text = "" Then
+                        Throw New Exception("Por favor, ingrese un valor")
+                    Else
+                        errorprovider.SetError(control, "")
 
-        '    Next
-        'Catch ex As Exception
-        '    errorprovider.SetError(Control, ex.mensaje)
-        'End Try
+                    End If
+
+                End If
+
+            Next
+        Catch ex As Exception
+
+            errorprovider.SetError(control, ex.Message)
+
+            ValidarCampos = False
+
+
+        End Try
 
     End Function
 End Class
