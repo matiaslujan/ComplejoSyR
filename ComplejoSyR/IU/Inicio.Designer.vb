@@ -34,15 +34,17 @@ Partial Class Inicio
         Me.dgvOcupacion = New System.Windows.Forms.DataGridView
         Me.Calendario = New System.Windows.Forms.MonthCalendar
         Me.Splitter1 = New System.Windows.Forms.Splitter
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel
         Me.btnNuevaReserva = New System.Windows.Forms.Button
         Me.btnBuscar = New System.Windows.Forms.Button
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOcupacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -56,7 +58,7 @@ Partial Class Inicio
         Me.MenuStrip1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(866, 40)
+        Me.MenuStrip1.Size = New System.Drawing.Size(876, 40)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -100,10 +102,10 @@ Partial Class Inicio
         'PictureBox1
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.PictureBox1.Image = Global.ComplejoSyR.My.Resources.Resources.inci
-        Me.PictureBox1.Location = New System.Drawing.Point(535, 265)
+        Me.PictureBox1.Image = Global.ComplejoSyR.My.Resources.Resources.inicio
+        Me.PictureBox1.Location = New System.Drawing.Point(549, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(328, 257)
+        Me.PictureBox1.Size = New System.Drawing.Size(321, 519)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 132
         Me.PictureBox1.TabStop = False
@@ -139,21 +141,23 @@ Partial Class Inicio
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOcupacion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvOcupacion.Location = New System.Drawing.Point(3, 265)
+        Me.dgvOcupacion.Location = New System.Drawing.Point(3, 215)
         Me.dgvOcupacion.Margin = New System.Windows.Forms.Padding(3, 3, 3, 10)
         Me.dgvOcupacion.MultiSelect = False
         Me.dgvOcupacion.Name = "dgvOcupacion"
         Me.dgvOcupacion.RowHeadersVisible = False
         Me.dgvOcupacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvOcupacion.Size = New System.Drawing.Size(526, 250)
+        Me.dgvOcupacion.Size = New System.Drawing.Size(534, 251)
         Me.dgvOcupacion.TabIndex = 5
         '
         'Calendario
         '
+        Me.Calendario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Calendario.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.Calendario.CalendarDimensions = New System.Drawing.Size(2, 1)
         Me.Calendario.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Calendario.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Calendario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Calendario.ForeColor = System.Drawing.SystemColors.InfoText
         Me.Calendario.Location = New System.Drawing.Point(9, 9)
@@ -172,75 +176,90 @@ Partial Class Inicio
         Me.Splitter1.TabIndex = 134
         Me.Splitter1.TabStop = False
         '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.5!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.5!))
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.dgvOcupacion, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Calendario, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 1, 1)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 40)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(866, 525)
-        Me.TableLayoutPanel1.TabIndex = 135
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 1
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.btnNuevaReserva, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.btnBuscar, 0, 1)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(535, 3)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 3
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(328, 256)
-        Me.TableLayoutPanel2.TabIndex = 136
-        '
         'btnNuevaReserva
         '
-        Me.btnNuevaReserva.BackColor = System.Drawing.Color.White
+        Me.btnNuevaReserva.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnNuevaReserva.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNuevaReserva.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.FlatAppearance.BorderSize = 3
-        Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevaReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevaReserva.Location = New System.Drawing.Point(3, 3)
         Me.btnNuevaReserva.Name = "btnNuevaReserva"
-        Me.btnNuevaReserva.Size = New System.Drawing.Size(322, 33)
+        Me.btnNuevaReserva.Size = New System.Drawing.Size(261, 31)
         Me.btnNuevaReserva.TabIndex = 133
         Me.btnNuevaReserva.Text = "Nueva Reserva"
         Me.btnNuevaReserva.UseVisualStyleBackColor = False
         '
         'btnBuscar
         '
-        Me.btnBuscar.BackColor = System.Drawing.Color.White
+        Me.btnBuscar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.FlatAppearance.BorderSize = 3
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Location = New System.Drawing.Point(3, 42)
+        Me.btnBuscar.Location = New System.Drawing.Point(270, 3)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(322, 32)
+        Me.btnBuscar.Size = New System.Drawing.Size(261, 31)
         Me.btnBuscar.TabIndex = 132
         Me.btnBuscar.Text = "Buscar Reserva"
         Me.btnBuscar.UseVisualStyleBackColor = False
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 327.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 1, 0)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 40)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(873, 525)
+        Me.TableLayoutPanel1.TabIndex = 135
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 1
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Calendario, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.dgvOcupacion, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 0, 2)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 3
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.63895!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.36105!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(540, 519)
+        Me.TableLayoutPanel2.TabIndex = 0
+        '
+        'TableLayoutPanel3
+        '
+        Me.TableLayoutPanel3.ColumnCount = 2
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.btnNuevaReserva, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.btnBuscar, 1, 0)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 479)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 1
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(534, 37)
+        Me.TableLayoutPanel3.TabIndex = 7
         '
         'Inicio
         '
@@ -248,9 +267,9 @@ Partial Class Inicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(866, 565)
-        Me.Controls.Add(Me.Splitter1)
+        Me.ClientSize = New System.Drawing.Size(876, 565)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.Splitter1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(882, 604)
@@ -264,6 +283,7 @@ Partial Class Inicio
         CType(Me.dgvOcupacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
+        Me.TableLayoutPanel3.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -276,9 +296,10 @@ Partial Class Inicio
     Friend WithEvents dgvOcupacion As System.Windows.Forms.DataGridView
     Friend WithEvents Calendario As System.Windows.Forms.MonthCalendar
     Friend WithEvents Splitter1 As System.Windows.Forms.Splitter
-    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents btnBuscar As System.Windows.Forms.Button
     Friend WithEvents btnNuevaReserva As System.Windows.Forms.Button
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
 
 End Class

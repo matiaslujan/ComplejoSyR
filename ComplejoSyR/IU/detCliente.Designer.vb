@@ -37,6 +37,12 @@ Partial Class detCliente
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label6 = New System.Windows.Forms.Label
+        Me.txtProvincia = New System.Windows.Forms.TextBox
+        Me.Label7 = New System.Windows.Forms.Label
+        Me.txtVehiculo = New System.Windows.Forms.TextBox
+        Me.Label8 = New System.Windows.Forms.Label
+        Me.txtPatente = New System.Windows.Forms.TextBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,7 +70,7 @@ Partial Class detCliente
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(91, 140)
+        Me.Label4.Location = New System.Drawing.Point(91, 132)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(38, 13)
         Me.Label4.TabIndex = 22
@@ -74,7 +80,7 @@ Partial Class detCliente
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(77, 104)
+        Me.Label3.Location = New System.Drawing.Point(77, 96)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 13)
         Me.Label3.TabIndex = 21
@@ -84,7 +90,7 @@ Partial Class detCliente
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(77, 72)
+        Me.Label2.Location = New System.Drawing.Point(77, 64)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 13)
         Me.Label2.TabIndex = 20
@@ -94,7 +100,7 @@ Partial Class detCliente
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 35)
+        Me.Label1.Location = New System.Drawing.Point(14, 27)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(112, 13)
         Me.Label1.TabIndex = 19
@@ -103,14 +109,14 @@ Partial Class detCliente
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(147, 137)
+        Me.txtCorreo.Location = New System.Drawing.Point(147, 130)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(191, 20)
         Me.txtCorreo.TabIndex = 16
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(147, 104)
+        Me.txtTelefono.Location = New System.Drawing.Point(147, 96)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(191, 20)
         Me.txtTelefono.TabIndex = 15
@@ -118,7 +124,7 @@ Partial Class detCliente
         '
         'txtDomicilio
         '
-        Me.txtDomicilio.Location = New System.Drawing.Point(147, 69)
+        Me.txtDomicilio.Location = New System.Drawing.Point(147, 61)
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(191, 20)
         Me.txtDomicilio.TabIndex = 14
@@ -126,7 +132,7 @@ Partial Class detCliente
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(147, 33)
+        Me.txtNombre.Location = New System.Drawing.Point(147, 25)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(191, 20)
         Me.txtNombre.TabIndex = 13
@@ -138,7 +144,7 @@ Partial Class detCliente
         Me.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAceptar.Location = New System.Drawing.Point(47, 185)
+        Me.btnAceptar.Location = New System.Drawing.Point(47, 275)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(114, 24)
         Me.btnAceptar.TabIndex = 83
@@ -151,7 +157,7 @@ Partial Class detCliente
         Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.Location = New System.Drawing.Point(206, 185)
+        Me.btnCancelar.Location = New System.Drawing.Point(206, 275)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(114, 24)
         Me.btnCancelar.TabIndex = 84
@@ -162,12 +168,69 @@ Partial Class detCliente
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(85, 163)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(51, 13)
+        Me.Label6.TabIndex = 86
+        Me.Label6.Text = "Provincia"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtProvincia
+        '
+        Me.txtProvincia.Location = New System.Drawing.Point(147, 163)
+        Me.txtProvincia.Name = "txtProvincia"
+        Me.txtProvincia.Size = New System.Drawing.Size(191, 20)
+        Me.txtProvincia.TabIndex = 85
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(91, 227)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(44, 13)
+        Me.Label7.TabIndex = 88
+        Me.Label7.Text = "Patente"
+        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtVehiculo
+        '
+        Me.txtVehiculo.Location = New System.Drawing.Point(147, 195)
+        Me.txtVehiculo.Name = "txtVehiculo"
+        Me.txtVehiculo.Size = New System.Drawing.Size(191, 20)
+        Me.txtVehiculo.TabIndex = 87
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(88, 195)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 13)
+        Me.Label8.TabIndex = 90
+        Me.Label8.Text = "Vehiculo"
+        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtPatente
+        '
+        Me.txtPatente.Location = New System.Drawing.Point(147, 227)
+        Me.txtPatente.Name = "txtPatente"
+        Me.txtPatente.Size = New System.Drawing.Size(191, 20)
+        Me.txtPatente.TabIndex = 89
+        '
         'detCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(379, 230)
+        Me.ClientSize = New System.Drawing.Size(379, 314)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.txtPatente)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.txtVehiculo)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.txtProvincia)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Label5)
@@ -182,6 +245,8 @@ Partial Class detCliente
         Me.Controls.Add(Me.txtNombre)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(395, 353)
+        Me.MinimumSize = New System.Drawing.Size(395, 353)
         Me.Name = "detCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cliente"
@@ -203,4 +268,10 @@ Partial Class detCliente
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents txtPatente As System.Windows.Forms.TextBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtVehiculo As System.Windows.Forms.TextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents txtProvincia As System.Windows.Forms.TextBox
 End Class
