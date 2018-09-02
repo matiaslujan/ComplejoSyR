@@ -22,6 +22,7 @@ Partial Class detServicio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Me.txtDescripcion = New System.Windows.Forms.TextBox
         Me.Label5 = New System.Windows.Forms.Label
         Me.Label4 = New System.Windows.Forms.Label
@@ -34,6 +35,8 @@ Partial Class detServicio
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.btnAceptar = New System.Windows.Forms.Button
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtDescripcion
@@ -42,6 +45,7 @@ Partial Class detServicio
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(145, 20)
         Me.txtDescripcion.TabIndex = 32
+        Me.txtDescripcion.Tag = "Validar"
         '
         'Label5
         '
@@ -76,6 +80,7 @@ Partial Class detServicio
         Me.txtImporte.Name = "txtImporte"
         Me.txtImporte.Size = New System.Drawing.Size(145, 20)
         Me.txtImporte.TabIndex = 30
+        Me.txtImporte.Tag = "Validar"
         '
         'Label2
         '
@@ -150,6 +155,10 @@ Partial Class detServicio
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'detServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -172,6 +181,7 @@ Partial Class detServicio
         Me.Name = "detServicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Servicio"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -188,4 +198,5 @@ Partial Class detServicio
     Friend WithEvents dtpFecha As System.Windows.Forms.DateTimePicker
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

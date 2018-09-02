@@ -9,7 +9,15 @@
             servres_ = value
         End Set
     End Property
-
+    Private funcion_ As New Funciones
+    Public Property funcion() As Funciones
+        Get
+            Return funcion_
+        End Get
+        Set(ByVal value As Funciones)
+            funcion_ = value
+        End Set
+    End Property
     Private operacion_ As String
 
     Public Property operacion() As String
@@ -68,23 +76,29 @@
 
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
-        Dim servr As New ServicioClass
 
-        servr.IdReserva = txtIdReserva.Text
-        servr.Importe = txtImporte.Text
-        servr.Descripcion = txtDescripcion.Text
-        servr.Fecha = dtpFecha.Text
+        If funcion.ValidarCampos(Me, ErrorProvider1) Then
 
-        If operacion = "M" Then
-            servr.Id = txtId.Text
-            servr.Modificar(servr)
-        Else
+            Dim servr As New ServicioClass
 
-            servr.Agregar(servr)
+            servr.IdReserva = txtIdReserva.Text
+            servr.Importe = txtImporte.Text
+            servr.Descripcion = txtDescripcion.Text
+            servr.Fecha = dtpFecha.Text
+
+            If operacion = "M" Then
+                servr.Id = txtId.Text
+                servr.Modificar(servr)
+            Else
+
+                servr.Agregar(servr)
+
+            End If
+
+            Close()
 
         End If
 
-        Close()
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click

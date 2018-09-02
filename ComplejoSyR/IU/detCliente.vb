@@ -82,6 +82,9 @@
             txtDomicilio.Text = Cliente.Domicilio
             txtTelefono.Text = Cliente.Telefono
             txtCorreo.Text = Cliente.Correo
+            txtProvincia.Text = Cliente.Provincia
+            txtVehiculo.Text = Cliente.Vehiculo
+            txtPatente.Text = Cliente.Patente
 
         End If
 
@@ -94,7 +97,9 @@
             Cliente.Telefono = txtTelefono.Text
             Cliente.Correo = txtCorreo.Text
             Cliente.Domicilio = txtDomicilio.Text
-
+            Cliente.Provincia = txtProvincia.Text
+            Cliente.Vehiculo = txtVehiculo.Text
+            Cliente.Patente = txtPatente.Text
 
             If Operacion = "M" Then
                 Cliente.Id = txtId.Text

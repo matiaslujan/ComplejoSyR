@@ -15,7 +15,6 @@ Public Class ClienteClass
     End Property
     Private Nombre_ As String
 
-
     Public Property Nombre() As String
         Get
             Return Nombre_
@@ -35,6 +34,18 @@ Public Class ClienteClass
         End Get
         Set(ByVal value As String)
             Domicilio_ = value
+
+        End Set
+    End Property
+    Private Provincia_ As String
+
+    Public Property Provincia() As String
+        Get
+            Return Provincia_
+
+        End Get
+        Set(ByVal value As String)
+            Provincia_ = value
 
         End Set
     End Property
@@ -62,7 +73,30 @@ Public Class ClienteClass
 
         End Set
     End Property
+    Private Vehiculo_ As String
 
+    Public Property Vehiculo() As String
+        Get
+            Return Vehiculo_
+
+        End Get
+        Set(ByVal value As String)
+            Vehiculo_ = value
+
+        End Set
+    End Property
+    Private Patente_ As String
+
+    Public Property Patente() As String
+        Get
+            Return Patente_
+
+        End Get
+        Set(ByVal value As String)
+            Patente_ = value
+
+        End Set
+    End Property
     Public Sub Traer(ByVal dgv As DataGridView)
 
         Conectar()
@@ -95,6 +129,9 @@ Public Class ClienteClass
         comando.Parameters.AddWithValue("@Domicilio", Cliente.Domicilio)
         comando.Parameters.AddWithValue("@Telefono", Cliente.Telefono)
         comando.Parameters.AddWithValue("@Correo", Cliente.Correo)
+        comando.Parameters.AddWithValue("@Provincia", Cliente.Provincia)
+        comando.Parameters.AddWithValue("@Vehiculo", Cliente.Vehiculo)
+        comando.Parameters.AddWithValue("@Patente", Cliente.Patente)
 
         comando.ExecuteNonQuery()
 
@@ -115,6 +152,9 @@ Public Class ClienteClass
         comando.Parameters.AddWithValue("@Domicilio", Cliente.Domicilio)
         comando.Parameters.AddWithValue("@Telefono", Cliente.Telefono)
         comando.Parameters.AddWithValue("@Correo", Cliente.Correo)
+        comando.Parameters.AddWithValue("@Provincia", Cliente.Provincia)
+        comando.Parameters.AddWithValue("@Vehiculo", Cliente.Vehiculo)
+        comando.Parameters.AddWithValue("@Patente", Cliente.Patente)
         comando.Parameters.AddWithValue("@Id", Cliente.Id)
 
         comando.ExecuteNonQuery()
@@ -215,6 +255,8 @@ Public Class ClienteClass
         lista.Fill(table)
 
         dgv.DataSource = table
+        dgv.Columns("Id").Visible = False
+
 
         Desconectar()
 

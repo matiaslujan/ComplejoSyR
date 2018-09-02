@@ -9,6 +9,15 @@
             pago_ = value
         End Set
     End Property
+    Private funcion_ As New Funciones
+    Public Property funcion() As Funciones
+        Get
+            Return funcion_
+        End Get
+        Set(ByVal value As Funciones)
+            funcion_ = value
+        End Set
+    End Property
     Private operacion_ As String
     Public Property operacion() As String
         Get
@@ -73,27 +82,28 @@
     End Sub
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+        If funcion.ValidarCampos(Me, ErrorProvider1) Then
+            Dim pago As New PagoClass
 
-        Dim pago As New PagoClass
+            pago.IdReserva = txtIdReserva.Text
+            pago.Importe = txtIImporte.Text
+            pago.Descripcion = txtDescripcion.Text
+            pago.Fecha = dtpFecha.Text
 
-        pago.IdReserva = txtIdReserva.Text
-        pago.Importe = txtIImporte.Text
-        pago.Descripcion = txtDescripcion.Text
-        pago.Fecha = dtpFecha.Text
+            If operacion = "M" Then
 
-        If operacion = "M" Then
+                pago.Id = txtId.Text
 
-            pago.Id = txtId.Text
+                pago.Modificar(pago)
 
-            pago.Modificar(pago)
+            Else
 
-        Else
+                pago.Agregar(pago)
 
-            pago.Agregar(pago)
+            End If
 
+            Close()
         End If
-
-        Close()
 
     End Sub
 
