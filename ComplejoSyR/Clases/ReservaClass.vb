@@ -249,6 +249,7 @@ Public Class ReservaClass
 
 
         Dim comando As New SqlCommand("ReservaUltimoId", conexion)
+
         comando.CommandType = CommandType.StoredProcedure
 
 

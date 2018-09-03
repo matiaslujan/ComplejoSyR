@@ -1,4 +1,13 @@
 ﻿Public Class detAlojamiento
+    Private funcion_ As New Funciones
+    Public Property funcion() As Funciones
+        Get
+            Return funcion_
+        End Get
+        Set(ByVal value As Funciones)
+            funcion_ = value
+        End Set
+    End Property
     Private alojamiento_ As AlojamientoClass
 
     Public Property alojamiento() As AlojamientoClass
@@ -70,7 +79,7 @@
 
     End Sub
     Private Sub detAlojamiento_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+      
         If operacion = "M" Then
 
             modalidades.CargarCombo(comboModalidad)
@@ -92,35 +101,39 @@
             comboModalidad.SelectedValue = ""
 
         End If
+
+
     End Sub
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+        If funcion.ValidarCampos(Me, ErrorProvider1) Then
 
-        Dim alojamiento As New AlojamientoClass
+            Dim alojamiento As New AlojamientoClass
 
-        alojamiento.Numero = txtNumero.Text
+            alojamiento.Numero = txtNumero.Text
 
-        alojamiento.Capacidad = txtCapacidad.Text
+            alojamiento.Capacidad = txtCapacidad.Text
 
-        alojamiento.idModalidad = comboModalidad.SelectedValue
+            alojamiento.idModalidad = comboModalidad.SelectedValue
 
-        alojamiento.Sector = comboSector.SelectedItem
+            alojamiento.Sector = comboSector.SelectedItem
 
 
-        If operacion = "M" Then
+            If operacion = "M" Then
 
-            alojamiento.id = txtId.Text
+                alojamiento.id = txtId.Text
 
-            alojamiento.Modificar(alojamiento)
+                alojamiento.Modificar(alojamiento)
 
-        Else
+            Else
 
-            alojamiento.Agregar(alojamiento)
+                alojamiento.Agregar(alojamiento)
 
+            End If
+
+            alojamiento.Traer(tablaDGV)
+
+            Close()
         End If
-
-        alojamiento.Traer(tablaDGV)
-
-        Close()
 
     End Sub
 
@@ -129,4 +142,5 @@
         Close()
 
     End Sub
+
 End Class

@@ -22,6 +22,7 @@ Partial Class detModalidad
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Me.Label2 = New System.Windows.Forms.Label
         Me.txtId = New System.Windows.Forms.TextBox
         Me.txtTipo = New System.Windows.Forms.TextBox
@@ -30,6 +31,8 @@ Partial Class detModalidad
         Me.Label1 = New System.Windows.Forms.Label
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.btnAceptar = New System.Windows.Forms.Button
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -59,6 +62,7 @@ Partial Class detModalidad
         Me.txtTipo.Name = "txtTipo"
         Me.txtTipo.Size = New System.Drawing.Size(100, 20)
         Me.txtTipo.TabIndex = 42
+        Me.txtTipo.Tag = "Validar"
         '
         'txtNombre
         '
@@ -66,6 +70,7 @@ Partial Class detModalidad
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(100, 20)
         Me.txtNombre.TabIndex = 41
+        Me.txtNombre.Tag = "Validar"
         '
         'Label3
         '
@@ -111,6 +116,10 @@ Partial Class detModalidad
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'detModalidad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -129,6 +138,7 @@ Partial Class detModalidad
         Me.Name = "detModalidad"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "detModalidad"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -141,4 +151,5 @@ Partial Class detModalidad
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

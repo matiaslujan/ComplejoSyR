@@ -11,8 +11,15 @@
             operacion_ = value
         End Set
     End Property
-
-
+    Private funcion_ As New Funciones
+    Public Property funcion() As Funciones
+        Get
+            Return funcion_
+        End Get
+        Set(ByVal value As Funciones)
+            funcion_ = value
+        End Set
+    End Property
 
     Dim modalidad_ As ModalidadClass
 
@@ -85,30 +92,31 @@
         End If
     End Sub
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
+        If funcion.ValidarCampos(Me, ErrorProvider1) Then
 
-        Dim modalidad As New ModalidadClass
+            Dim modalidad As New ModalidadClass
 
-        modalidad.Nombre = txtNombre.Text
+            modalidad.Nombre = txtNombre.Text
 
-        modalidad.Tipo = txtTipo.Text
+            modalidad.Tipo = txtTipo.Text
 
-        If operacion = "M" Then
+            If operacion = "M" Then
 
-            modalidad.Id = txtId.Text
+                modalidad.Id = txtId.Text
 
-            modalidad.Modificar(modalidad)
+                modalidad.Modificar(modalidad)
 
-        Else
+            Else
 
-            modalidad.Agregar(modalidad)
+                modalidad.Agregar(modalidad)
 
+            End If
+
+
+            modalidad.Traer(tabla)
+
+            Close()
         End If
-
-
-        modalidad.Traer(tabla)
-
-        Close()
-
     End Sub
 
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click

@@ -23,19 +23,18 @@
     End Sub
     '------------------------------------------------------------------------------------------------------------------------------
     Private Sub MonthCalendar1_DateChanged(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles Calendario.DateChanged
-        Dim r As New ReservaClass
-
-        r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
-
+        Ocupacion()
     End Sub
     Private Sub Inicio_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        Ocupacion()
+    End Sub
+    Private Sub Ocupacion()
         Dim r As New ReservaClass
 
         r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
 
     End Sub
-
     Public Sub NuevaReserva()
 
         Dim res As New ReservaClass
@@ -47,10 +46,10 @@
         Dim det As New detReserva(res.FIngreso, res.FEgreso)
 
         det.ShowDialog()
-
+        Ocupacion()
     End Sub
 
-    Private Sub btnReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub btnNuevaReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevaReserva.Click
 
         NuevaReserva()
 
@@ -74,17 +73,13 @@
             Dim det As New detReserva(res)
 
             det.ShowDialog()
-
+            Ocupacion()
         End If
+
+
     End Sub
 
     Private Sub MonthCalendar1_DateSelected(ByVal sender As Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles Calendario.DateSelected
-        Dim r As New ReservaClass
-
-        r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
-
+        Ocupacion()
     End Sub
-
-
-
 End Class

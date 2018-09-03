@@ -80,7 +80,6 @@
         End If
     End Sub
     Private Sub Datos()
-
         txtId.Text = Reserva.Id
         txtCantDia.Text = Reserva.CantDias
         txtCantPer.Text = Reserva.CantPersonas
@@ -184,12 +183,16 @@
     End Sub
     'agregar alojamiento, mostrar solo los disponibles
     Private Sub btnAgregarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarAloj.Click
-        'Aviso()
+        If Aviso() = 1 Then Exit Sub
 
         Dim det As New AlojamientosDeReserva(txtId.Text, dtpFechaIngreso.Text, dtpFechaEgreso.Text)
 
         det.ShowDialog()
 
+        Dim res As New ReservaClass
+        res.Id = txtId.Text
+        res.Datos(res)
+        Reserva = res
         Datos()
 
     End Sub
@@ -216,17 +219,17 @@
 
         Datos()
     End Sub
-    'Private Function Aviso() As Integer
+    Private Function Aviso() As Integer
 
-    '    If txtId.Text = "" Then
+        If txtId.Text = "" Then
 
-    '        MsgBox("Primero debe guardar la reserva")
+            MsgBox("Primero debe guardar la reserva")
 
-    '        Return 1
+            Return 1
 
-    '    End If
+        End If
 
-    'End Function
+    End Function
     Private Sub ModificarPago()
 
         Dim p As New PagoClass

@@ -75,19 +75,10 @@
         Dim alojres As New AlojamientoReservaClass
 
         alojres.IdReserva = idres
-
-        'alojres.IdAlojamiento = dgvAlojRes.CurrentRow.Cells("Id").Value
-
-
-        If operacion = "A" Then
-
-            alojres.Agregar(alojres.IdReserva, dgvAlojRes)
-
-
-        End If
+   
+        alojres.Agregar(alojres.IdReserva, dgvAlojRes)
 
         Close()
-
 
     End Sub
 End Class

@@ -22,6 +22,7 @@ Partial Class detAlojamiento
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(detAlojamiento))
         Me.Label5 = New System.Windows.Forms.Label
         Me.txtId = New System.Windows.Forms.TextBox
@@ -35,6 +36,8 @@ Partial Class detAlojamiento
         Me.Label1 = New System.Windows.Forms.Label
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.btnAceptar = New System.Windows.Forms.Button
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label5
@@ -80,6 +83,7 @@ Partial Class detAlojamiento
         Me.txtCapacidad.Name = "txtCapacidad"
         Me.txtCapacidad.Size = New System.Drawing.Size(100, 20)
         Me.txtCapacidad.TabIndex = 37
+        Me.txtCapacidad.Tag = "Validar"
         '
         'txtNumero
         '
@@ -87,6 +91,7 @@ Partial Class detAlojamiento
         Me.txtNumero.Name = "txtNumero"
         Me.txtNumero.Size = New System.Drawing.Size(100, 20)
         Me.txtNumero.TabIndex = 36
+        Me.txtNumero.Tag = "Validar"
         '
         'Label4
         '
@@ -150,6 +155,10 @@ Partial Class detAlojamiento
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'detAlojamiento
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -171,7 +180,9 @@ Partial Class detAlojamiento
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "detAlojamiento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Tag = "Validar"
         Me.Text = "Alojamiento"
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -188,4 +199,5 @@ Partial Class detAlojamiento
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

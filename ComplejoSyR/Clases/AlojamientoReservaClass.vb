@@ -60,20 +60,7 @@ Public Class AlojamientoReservaClass
         Desconectar()
 
     End Sub
-    'Public Sub Agregar(ByVal alojres As AlojamientoReservaClass)
 
-    '    Conectar()
-
-    '    Dim comando As New SqlCommand("AlojResAgregar", conexion)
-    '    comando.CommandType = CommandType.StoredProcedure
-    '    comando.Parameters.AddWithValue("@IdReserva", alojres.IdReserva)
-    '    comando.Parameters.AddWithValue("@IdAlojamiento", alojres.IdAlojamiento)
-
-    '    comando.ExecuteNonQuery()
-
-    '    Desconectar()
-
-    'End Sub
 
     Public Sub Eliminar(ByVal Id As Integer)
 
