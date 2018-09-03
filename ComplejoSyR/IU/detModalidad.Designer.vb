@@ -135,6 +135,8 @@ Partial Class detModalidad
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(308, 231)
+        Me.MinimumSize = New System.Drawing.Size(308, 231)
         Me.Name = "detModalidad"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "detModalidad"

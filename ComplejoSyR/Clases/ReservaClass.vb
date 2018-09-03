@@ -1,6 +1,7 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
 Public Class ReservaClass
+
     Inherits ConexionClass
 
     Private Id_ As Integer
@@ -121,6 +122,8 @@ Public Class ReservaClass
             Cancelada_ = value
         End Set
     End Property
+
+
     Public Sub Traer(ByVal dgv As DataGridView)
 
         Conectar()
@@ -149,7 +152,7 @@ Public Class ReservaClass
         Dim comando As New SqlCommand("ReservaDatos", conexion)
         comando.CommandType = CommandType.StoredProcedure
 
-        comando.Parameters.AddWithValue("@Id", reserva.id)
+        comando.Parameters.AddWithValue("@Id", reserva.Id)
 
         Dim lista As SqlDataReader = comando.ExecuteReader
 
@@ -157,7 +160,7 @@ Public Class ReservaClass
 
             While lista.Read()
 
-                reserva.id = (lista("Id"))
+                reserva.Id = (lista("Id"))
                 reserva.IdCliente = (lista("IdCliente"))
                 reserva.Fecha = (lista("FReserva"))
                 reserva.FIngreso = (lista("FIngreso"))
@@ -206,7 +209,7 @@ Public Class ReservaClass
 
         Conectar()
 
-      
+
         Dim comando As New SqlCommand("ReservaModificar", conexion)
         comando.CommandType = CommandType.StoredProcedure
 

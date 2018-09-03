@@ -1,8 +1,7 @@
 ﻿Imports System.Data.SqlClient
-
 Public Class AlojamientoReservaClass
-    Inherits ConexionClass
 
+    Inherits ConexionClass
     Private Id_ As Integer
 
     Public Property Id() As Integer
@@ -35,6 +34,15 @@ Public Class AlojamientoReservaClass
             IdAlojamiento_ = value
         End Set
     End Property
+    Private detalle_ As List(Of AlojamientoReservaClass)
+    Public Property detalle() As List(Of AlojamientoReservaClass)
+        Get
+            Return detalle_
+        End Get
+        Set(ByVal value As List(Of AlojamientoReservaClass))
+            detalle_ = value
+        End Set
+    End Property
 
     Public Sub Agregar(ByVal idres As Integer, ByVal dgv As DataGridView)
 
@@ -55,8 +63,11 @@ Public Class AlojamientoReservaClass
                 comando.Parameters.AddWithValue("@IdAlojamiento", alojres.IdAlojamiento)
 
                 comando.ExecuteNonQuery()
+
             End If
+
         Next
+
         Desconectar()
 
     End Sub

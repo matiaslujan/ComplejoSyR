@@ -61,6 +61,20 @@
         FIn = FI
 
         FEg = FE
+
+    End Sub
+    Public Sub New(ByVal dgv As DataGridView, ByVal id As Integer, ByVal FI As Date, ByVal FE As Date)
+
+        InitializeComponent()
+
+        operacion = "AL"
+
+        idres = id
+
+        FIn = FI
+
+        FEg = FE
+
     End Sub
     Private Sub AlojamientoReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
@@ -71,11 +85,17 @@
     End Sub
 
     Private Sub btnCargar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCargar.Click
+        For Each row In dgvAlojRes.Rows
+            If row.selected = True Then
+                Dim aloj As New AlojamientoReservaClass
+                'alojres.detalle.Add(aloj)
+            End If
+        Next
 
         Dim alojres As New AlojamientoReservaClass
 
         alojres.IdReserva = idres
-   
+
         alojres.Agregar(alojres.IdReserva, dgvAlojRes)
 
         Close()

@@ -178,6 +178,8 @@ Partial Class detAlojamiento
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(472, 223)
+        Me.MinimumSize = New System.Drawing.Size(472, 223)
         Me.Name = "detAlojamiento"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Tag = "Validar"

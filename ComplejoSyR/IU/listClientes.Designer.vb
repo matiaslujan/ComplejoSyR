@@ -39,24 +39,19 @@ Partial Class listClientes
         Me.dgvClientes.AllowUserToDeleteRows = False
         Me.dgvClientes.AllowUserToResizeColumns = False
         Me.dgvClientes.AllowUserToResizeRows = False
-        Me.dgvClientes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.dgvClientes, "dgvClientes")
         Me.dgvClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvClientes.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dgvClientes.Location = New System.Drawing.Point(0, 0)
         Me.dgvClientes.MultiSelect = False
         Me.dgvClientes.Name = "dgvClientes"
         Me.dgvClientes.ReadOnly = True
         Me.dgvClientes.RowHeadersVisible = False
         Me.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvClientes.Size = New System.Drawing.Size(779, 271)
-        Me.dgvClientes.TabIndex = 8
         '
         'btnAgregar
         '
-        Me.btnAgregar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.btnAgregar, "btnAgregar")
         Me.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
@@ -64,17 +59,12 @@ Partial Class listClientes
         Me.btnAgregar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAgregar.Location = New System.Drawing.Point(10, 277)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(73, 28)
-        Me.btnAgregar.TabIndex = 9
-        Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'btnEliminar
         '
-        Me.btnEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.btnEliminar, "btnEliminar")
         Me.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
@@ -82,17 +72,12 @@ Partial Class listClientes
         Me.btnEliminar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnEliminar.Location = New System.Drawing.Point(183, 277)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(73, 28)
-        Me.btnEliminar.TabIndex = 11
-        Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnModificar
         '
-        Me.btnModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.btnModificar, "btnModificar")
         Me.btnModificar.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
@@ -100,38 +85,22 @@ Partial Class listClientes
         Me.btnModificar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnModificar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnModificar.Location = New System.Drawing.Point(95, 277)
         Me.btnModificar.Name = "btnModificar"
-        Me.btnModificar.Size = New System.Drawing.Size(73, 28)
-        Me.btnModificar.TabIndex = 10
-        Me.btnModificar.Text = "Modificar"
         Me.btnModificar.UseVisualStyleBackColor = False
         '
         'txtBuscar
         '
-        Me.txtBuscar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBuscar.Location = New System.Drawing.Point(609, 277)
-        Me.txtBuscar.Multiline = True
+        resources.ApplyResources(Me.txtBuscar, "txtBuscar")
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(158, 29)
-        Me.txtBuscar.TabIndex = 12
         '
         'Label1
         '
-        Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(538, 280)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(65, 20)
-        Me.Label1.TabIndex = 13
-        Me.Label1.Text = "Buscar"
         '
         'btnHistorial
         '
-        Me.btnHistorial.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        resources.ApplyResources(Me.btnHistorial, "btnHistorial")
         Me.btnHistorial.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnHistorial.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnHistorial.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
@@ -139,20 +108,14 @@ Partial Class listClientes
         Me.btnHistorial.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnHistorial.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnHistorial.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHistorial.Location = New System.Drawing.Point(381, 277)
         Me.btnHistorial.Name = "btnHistorial"
-        Me.btnHistorial.Size = New System.Drawing.Size(120, 28)
-        Me.btnHistorial.TabIndex = 14
-        Me.btnHistorial.Text = "Historial del Cliente"
         Me.btnHistorial.UseVisualStyleBackColor = False
         '
         'listClientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
-        Me.ClientSize = New System.Drawing.Size(779, 314)
         Me.Controls.Add(Me.btnHistorial)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtBuscar)
@@ -160,12 +123,8 @@ Partial Class listClientes
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(795, 353)
         Me.Name = "listClientes"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Clientes"
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
