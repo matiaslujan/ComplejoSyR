@@ -148,4 +148,5 @@
         alojamiento.Traer(dgvAlojamientos)
 
     End Sub
+
 End Class
