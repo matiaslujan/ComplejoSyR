@@ -10,6 +10,11 @@
             AlojRes_ = value
         End Set
     End Property
+    '------------------------------------------------------
+    Dim det As New AlojamientoReservaClass
+    Dim tDet As List(Of AlojamientoReservaClass)
+    Dim nuevo As Boolean
+    '------------------------------------------------------
     Private operacion_ As String
 
     Public Property operacion() As String
@@ -50,6 +55,21 @@
             FEg_ = value
         End Set
     End Property
+    '-----------------------------------------------------
+    Public Sub New(ByVal tablaDetalle As List(Of AlojamientoReservaClass), ByVal detalle As AlojamientoReservaClass, ByVal FI As Date, ByVal FE As Date) 'Este constructor carga nuevos registros.
+        InitializeComponent()
+        det = detalle
+        det.Id = 0
+        det.IdAlojamiento = 0
+        det.IdReserva = 0
+        det.mov = "A"
+        tDet = tablaDetalle
+        FIn = FI
+
+        FEg = FE
+        nuevo = True
+    End Sub
+    '-----------------------------------------------------
     Public Sub New(ByVal id As Integer, ByVal FI As Date, ByVal FE As Date)
 
         InitializeComponent()
@@ -85,12 +105,7 @@
     End Sub
 
     Private Sub btnCargar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCargar.Click
-        For Each row In dgvAlojRes.Rows
-            If row.selected = True Then
-                Dim aloj As New AlojamientoReservaClass
-                'alojres.detalle.Add(aloj)
-            End If
-        Next
+       
 
         Dim alojres As New AlojamientoReservaClass
 
@@ -100,5 +115,25 @@
 
         Close()
 
+    End Sub
+
+    Private Sub Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Add.Click
+
+        If nuevo = True Then
+
+            'For Each row In dgvAlojRes.Rows
+
+            'If row.selected = True Then
+
+            det.IdAlojamiento = dgvAlojRes.CurrentRow.Cells("Id").Value
+
+            tDet.Add(det)
+
+            'End If
+            'Next
+
+
+        End If
+        Close()
     End Sub
 End Class

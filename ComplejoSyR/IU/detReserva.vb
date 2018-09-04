@@ -1,6 +1,8 @@
 ﻿Public Class detReserva
 
+    Dim nuevo As Boolean
     Private Reserva_ As New ReservaClass
+
 
     Public Property Reserva() As ReservaClass
         Get
@@ -269,5 +271,48 @@
         Datos()
 
     End Sub
+    '------------------------------------------------------------------------------------------------------------
+    Private Sub Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Add.Click
+        Dim det As New AlojamientoReservaClass
+        'det.idArqueo = arq.id
 
+        Dim formdet As New AlojamientosDeReserva(Reserva.detalle, det, dtpFechaIngreso.Text, dtpFechaEgreso.Text)
+
+        formdet.ShowDialog()
+
+        ' Dim frmDetalleArqueo As New AlojamientosDeReserva(Reserva.detalle, det)
+        ' Dim frmDetalleArqueo As New AlojamientosDeReserva(Reserva.detalle)
+
+        ' frmDetalleArqueo.ShowDialog()
+        Reserva.actualizarTabla(dgvAlojamientos, Reserva.detalle)
+
+        'Datos()
+
+    End Sub
+
+
+    Private Sub guardar()
+        Reserva.IdCliente = cbClientes.SelectedValue
+        Reserva.FIngreso = CDate(dtpFechaIngreso.Text)
+        Reserva.FEgreso = CDate(dtpFechaEgreso.Text)
+        Reserva.Fecha = CDate(dtpFecha.Text)
+        Reserva.CantDias = txtCantDia.Text
+        Reserva.CantPersonas = txtCantPer.Text
+        Reserva.ImpDia = txtImpDia.Text
+        Reserva.ImpTotal = txtImpEstadia.Text
+        Reserva.Descripcion = txtDescripcion.Text
+        Reserva.Cancelada = CbxCancelada.Checked
+        If nuevo = True Then
+            Reserva.Agregar(Reserva)
+            Reserva.ultimoid(txtId)
+            Reserva.Id = txtId.Text
+        Else
+            Reserva.Modificar(Reserva)
+        End If
+    End Sub
+
+    Private Sub save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save.Click
+        guardar()
+        Reserva.actualizarDetalle(Reserva)
+    End Sub
 End Class

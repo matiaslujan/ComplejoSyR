@@ -25,12 +25,14 @@ Partial Class AlojamientosDeReserva
         Me.btnSalir = New System.Windows.Forms.Button
         Me.btnCargar = New System.Windows.Forms.Button
         Me.dgvAlojRes = New System.Windows.Forms.DataGridView
+        Me.Add = New System.Windows.Forms.Button
         CType(Me.dgvAlojRes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnSalir
         '
-        Me.btnSalir.Location = New System.Drawing.Point(282, 208)
+        Me.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnSalir.Location = New System.Drawing.Point(282, 212)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(107, 23)
         Me.btnSalir.TabIndex = 5
@@ -39,7 +41,8 @@ Partial Class AlojamientosDeReserva
         '
         'btnCargar
         '
-        Me.btnCargar.Location = New System.Drawing.Point(113, 208)
+        Me.btnCargar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnCargar.Location = New System.Drawing.Point(113, 212)
         Me.btnCargar.Name = "btnCargar"
         Me.btnCargar.Size = New System.Drawing.Size(104, 23)
         Me.btnCargar.TabIndex = 4
@@ -50,21 +53,35 @@ Partial Class AlojamientosDeReserva
         '
         Me.dgvAlojRes.AllowUserToAddRows = False
         Me.dgvAlojRes.AllowUserToDeleteRows = False
+        Me.dgvAlojRes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+                    Or System.Windows.Forms.AnchorStyles.Left) _
+                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvAlojRes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvAlojRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvAlojRes.Location = New System.Drawing.Point(26, 12)
+        Me.dgvAlojRes.Location = New System.Drawing.Point(12, 8)
         Me.dgvAlojRes.Name = "dgvAlojRes"
         Me.dgvAlojRes.RowHeadersVisible = False
         Me.dgvAlojRes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvAlojRes.Size = New System.Drawing.Size(445, 190)
+        Me.dgvAlojRes.Size = New System.Drawing.Size(471, 199)
         Me.dgvAlojRes.TabIndex = 3
+        '
+        'Add
+        '
+        Me.Add.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Add.Location = New System.Drawing.Point(21, 213)
+        Me.Add.Name = "Add"
+        Me.Add.Size = New System.Drawing.Size(65, 23)
+        Me.Add.TabIndex = 6
+        Me.Add.Text = "+"
+        Me.Add.UseVisualStyleBackColor = True
         '
         'AlojamientosDeReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(495, 243)
+        Me.ClientSize = New System.Drawing.Size(495, 239)
+        Me.Controls.Add(Me.Add)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCargar)
         Me.Controls.Add(Me.dgvAlojRes)
@@ -78,4 +95,5 @@ Partial Class AlojamientosDeReserva
     Friend WithEvents btnSalir As System.Windows.Forms.Button
     Friend WithEvents btnCargar As System.Windows.Forms.Button
     Friend WithEvents dgvAlojRes As System.Windows.Forms.DataGridView
+    Friend WithEvents Add As System.Windows.Forms.Button
 End Class

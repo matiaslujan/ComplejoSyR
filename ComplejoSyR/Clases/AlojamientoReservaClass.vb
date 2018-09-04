@@ -34,16 +34,15 @@ Public Class AlojamientoReservaClass
             IdAlojamiento_ = value
         End Set
     End Property
-    Private detalle_ As List(Of AlojamientoReservaClass)
-    Public Property detalle() As List(Of AlojamientoReservaClass)
+    Private mov_ As Char
+    Public Property mov() As Char
         Get
-            Return detalle_
+            Return mov_
         End Get
-        Set(ByVal value As List(Of AlojamientoReservaClass))
-            detalle_ = value
+        Set(ByVal value As Char)
+            mov_ = value
         End Set
     End Property
-
     Public Sub Agregar(ByVal idres As Integer, ByVal dgv As DataGridView)
 
         Conectar()
