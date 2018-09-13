@@ -34,62 +34,87 @@ Public Class AlojamientoReservaClass
             IdAlojamiento_ = value
         End Set
     End Property
-    Private mov_ As Char
-    Public Property mov() As Char
+    Private accion_ As String
+    Public Property accion() As String
         Get
-            Return mov_
+            Return accion_
         End Get
-        Set(ByVal value As Char)
-            mov_ = value
+        Set(ByVal value As String)
+            accion_ = value
         End Set
     End Property
-    Public Sub Agregar(ByVal idres As Integer, ByVal dgv As DataGridView)
+    Private numero_ As String
+    Public Property numero() As String
+        Get
+            Return numero_
+        End Get
+        Set(ByVal value As String)
+            numero_ = value
+        End Set
+    End Property
+    Private nombre_ As String
+    Public Property nombre() As String
+        Get
+            Return nombre_
+        End Get
+        Set(ByVal value As String)
+            nombre_ = value
+        End Set
+    End Property
+    Private capacidad_ As String
+    Public Property capacidad() As String
+        Get
+            Return capacidad_
+        End Get
+        Set(ByVal value As String)
+            capacidad_ = value
+        End Set
+    End Property
 
-        Conectar()
+    Public Sub Actualizar(ByRef lst As List(Of AlojamientoReservaClass))
+        Try
+            Conectar()
 
-        For Each Row As DataGridViewRow In dgv.Rows
+            For Each row In lst
 
-            If Row.Selected = True Then
+                If row.accion = "Agregar" Then
+                 
 
-                Dim comando As New SqlCommand("AlojResAgregar", conexion)
-                comando.CommandType = CommandType.StoredProcedure
+                    Dim comando As New SqlCommand("AlojResAgregar", conexion)
+                    comando.CommandType = CommandType.StoredProcedure
 
-                Dim alojres As New AlojamientoReservaClass
+                    comando.Parameters.AddWithValue("@idalojamiento", row.IdAlojamiento)
+                    comando.Parameters.AddWithValue("@idreserva", row.IdReserva)
 
-                alojres.IdReserva = idres
-                alojres.IdAlojamiento = Row.Cells("Id").Value
-                comando.Parameters.AddWithValue("@IdReserva", alojres.IdReserva)
-                comando.Parameters.AddWithValue("@IdAlojamiento", alojres.IdAlojamiento)
+                    comando.ExecuteNonQuery()
 
-                comando.ExecuteNonQuery()
+                ElseIf row.accion = "Eliminar" Then
 
-            End If
+                    Dim comando As New SqlCommand("AlojResEliminar", conexion)
 
-        Next
+                    comando.CommandType = CommandType.StoredProcedure
+                
+                    comando.Parameters.AddWithValue("@id", row.Id)
 
-        Desconectar()
+                    comando.ExecuteNonQuery()
+
+                End If
+
+            Next
+            Desconectar()
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
+
 
     End Sub
 
-
-    Public Sub Eliminar(ByVal Id As Integer)
-
-        Conectar()
-
-        Dim comando As New SqlCommand("AlojResEliminar", conexion)
-
-        comando.CommandType = CommandType.StoredProcedure
-
-        comando.Parameters.AddWithValue("@id", Id)
-
-        comando.ExecuteNonQuery()
-
-        Desconectar()
-
-    End Sub
     'trae los alojamientos de una reserva predeterminada
 
-    Public Sub TraerAlojamiento(ByVal id As Integer, ByVal dgv As DataGridView)
+    Public Sub TraerAlojamiento(ByVal id As Integer, ByRef lst As List(Of AlojamientoReservaClass))
 
         Conectar()
 
@@ -97,23 +122,27 @@ Public Class AlojamientoReservaClass
         comando.CommandType = CommandType.StoredProcedure
         comando.Parameters.AddWithValue("@IdReserva", id)
 
-        Dim table As New Data.DataTable
+        Dim lista As SqlDataReader = comando.ExecuteReader
 
-        Dim adapter As New SqlDataAdapter(comando)
+        If lista.HasRows Then
 
-        adapter.Fill(table)
+            For Each row In lista
 
-        dgv.DataSource = table
+                Dim alojres As New AlojamientoReservaClass
 
-        dgv.Columns("Id").Visible = False
+                alojres.Id = (lista("Id"))
+                alojres.numero = (lista("Numero"))
+                alojres.nombre = (lista("Nombre"))
+                alojres.capacidad = (lista("Capacidad"))
+
+                lst.Add(alojres)
+
+            Next
+
+        End If
 
         Desconectar()
 
-        If dgv.RowCount > 0 Then
-
-            dgv.Rows(0).Selected = False
-
-        End If
     End Sub
 
 End Class

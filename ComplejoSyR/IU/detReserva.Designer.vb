@@ -68,9 +68,6 @@ Partial Class detReserva
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
         Me.btnServicios = New System.Windows.Forms.Button
-        Me.Add = New System.Windows.Forms.Button
-        Me.del = New System.Windows.Forms.Button
-        Me.save = New System.Windows.Forms.Button
         CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvAlojamientos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -386,7 +383,7 @@ Partial Class detReserva
         '
         Me.txtId.Enabled = False
         Me.txtId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtId.Location = New System.Drawing.Point(58, -14)
+        Me.txtId.Location = New System.Drawing.Point(45, 10)
         Me.txtId.Name = "txtId"
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(29, 26)
@@ -397,7 +394,7 @@ Partial Class detReserva
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(22, -10)
+        Me.Label11.Location = New System.Drawing.Point(9, 14)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(23, 20)
         Me.Label11.TabIndex = 130
@@ -555,42 +552,12 @@ Partial Class detReserva
         Me.btnServicios.Text = "Servicios"
         Me.btnServicios.UseVisualStyleBackColor = False
         '
-        'Add
-        '
-        Me.Add.Location = New System.Drawing.Point(585, 143)
-        Me.Add.Name = "Add"
-        Me.Add.Size = New System.Drawing.Size(43, 23)
-        Me.Add.TabIndex = 164
-        Me.Add.Text = "+"
-        Me.Add.UseVisualStyleBackColor = True
-        '
-        'del
-        '
-        Me.del.Location = New System.Drawing.Point(584, 172)
-        Me.del.Name = "del"
-        Me.del.Size = New System.Drawing.Size(43, 23)
-        Me.del.TabIndex = 165
-        Me.del.Text = "-"
-        Me.del.UseVisualStyleBackColor = True
-        '
-        'save
-        '
-        Me.save.Location = New System.Drawing.Point(438, 394)
-        Me.save.Name = "save"
-        Me.save.Size = New System.Drawing.Size(43, 28)
-        Me.save.TabIndex = 166
-        Me.save.Text = "g"
-        Me.save.UseVisualStyleBackColor = True
-        '
         'detReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(898, 439)
-        Me.Controls.Add(Me.save)
-        Me.Controls.Add(Me.del)
-        Me.Controls.Add(Me.Add)
         Me.Controls.Add(Me.btnServicios)
         Me.Controls.Add(Me.Label15)
         Me.Controls.Add(Me.txtTotal)
@@ -683,7 +650,4 @@ Partial Class detReserva
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents btnServicios As System.Windows.Forms.Button
-    Friend WithEvents Add As System.Windows.Forms.Button
-    Friend WithEvents del As System.Windows.Forms.Button
-    Friend WithEvents save As System.Windows.Forms.Button
 End Class

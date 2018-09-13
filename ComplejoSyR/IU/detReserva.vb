@@ -13,16 +13,10 @@
         End Set
     End Property
 
-    Private Operacion_ As String
+    Dim Aloj As New AlojamientoReservaClass
+    Dim lstAlojamientos As New List(Of AlojamientoReservaClass)
+    Dim lstPagos As New List(Of PagoClass)
 
-    Public Property Operacion() As String
-        Get
-            Return Operacion_
-        End Get
-        Set(ByVal value As String)
-            Operacion_ = value
-        End Set
-    End Property
     'agregar con fechas seleccionadas
     Public Sub New(ByVal FI As Date, ByVal FE As Date)
 
@@ -33,7 +27,7 @@
         Reserva.FIngreso = FI
 
         ' Add any initialization after the InitializeComponent() call.
-        Operacion = "AF"
+        Reserva.Accion = "AgregarF"
 
     End Sub
     Public Sub New()
@@ -43,7 +37,7 @@
 
         Reserva = Nothing
         ' Add any initialization after the InitializeComponent() call.
-        Operacion = "A"
+        Reserva.Accion = "Agregar"
 
 
 
@@ -56,7 +50,7 @@
 
         Reserva = res
 
-        Operacion = "M"
+        Reserva.Accion = "Modificar"
 
         ' Add any initialization after the InitializeComponent() call.
 
@@ -69,11 +63,13 @@
 
         cliente.cargarCombo(cbClientes)
 
-        If Operacion = "M" Then
+        If Reserva.Accion = "Modificar" Then
+
+            Aloj.TraerAlojamiento(Reserva.Id, lstAlojamientos)
 
             Datos()
 
-        ElseIf Operacion = "AF" Then
+        ElseIf Reserva.Accion = "AgregarF" Then
 
             dtpFechaEgreso.Text = Reserva.FEgreso
 
@@ -82,6 +78,7 @@
         End If
     End Sub
     Private Sub Datos()
+
         txtId.Text = Reserva.Id
         txtCantDia.Text = Reserva.CantDias
         txtCantPer.Text = Reserva.CantPersonas
@@ -94,85 +91,67 @@
         txtDescripcion.Text = Reserva.Descripcion
         CbxCancelada.Checked = Reserva.Cancelada
         Reserva.Importes(Reserva.Id, txtTotal, txtPagado, txtDeuda)
-        Dim Aloj As New AlojamientoReservaClass
 
-        Aloj.TraerAlojamiento(Reserva.Id, dgvAlojamientos)
+        alojamientos()
+
+
         Dim p As New PagoClass
 
         p.Traer(dgvPagos, Reserva.Id)
     End Sub
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
 
+        Reserva.IdCliente = cbClientes.SelectedValue
+        Reserva.FIngreso = CDate(dtpFechaIngreso.Text)
+        Reserva.FEgreso = CDate(dtpFechaEgreso.Text)
+        Reserva.Fecha = CDate(dtpFecha.Text)
+        Reserva.CantDias = txtCantDia.Text
+        Reserva.CantPersonas = txtCantPer.Text
+        Reserva.ImpDia = txtImpDia.Text
+        Reserva.ImpTotal = txtImpEstadia.Text
+        Reserva.Descripcion = txtDescripcion.Text
+        Reserva.Cancelada = CbxCancelada.Checked
 
-        Dim reserva As New ReservaClass
+        If Reserva.Accion = "Modificar" Then
 
-        reserva.IdCliente = cbClientes.SelectedValue
-        reserva.FIngreso = CDate(dtpFechaIngreso.Text)
-        reserva.FEgreso = CDate(dtpFechaEgreso.Text)
-        reserva.Fecha = CDate(dtpFecha.Text)
-        reserva.CantDias = txtCantDia.Text
-        reserva.CantPersonas = txtCantPer.Text
-        reserva.ImpDia = txtImpDia.Text
-        reserva.ImpTotal = txtImpEstadia.Text
-        reserva.Descripcion = txtDescripcion.Text
-        reserva.Cancelada = CbxCancelada.Checked
+            Reserva.Id = txtId.Text
 
-        If Operacion = "M" Then
-
-            reserva.Id = txtId.Text
-
-            reserva.Modificar(reserva)
-
-            MsgBox("Cambios guardados")
-
+            Reserva.Modificar(Reserva)
 
         Else
 
-            reserva.Agregar(reserva)
+            Reserva.Agregar(Reserva)
 
-            reserva.ultimoid(txtId)
+            Reserva.ultimoid(txtId)
 
-            MsgBox("Datos Cargados")
+            Reserva.Id = txtId.Text
 
-            Operacion = "M"
-         
+            Reserva.Accion = "Modificar"
+
         End If
 
 
-    End Sub
+        If lstAlojamientos.Count > 0 Then
 
-    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
+            For Each row In lstAlojamientos
+
+                If row.accion = "agregar" Then
+
+                    row.IdReserva = Reserva.Id
+
+                End If
+
+            Next
+
+            Aloj.Actualizar(lstAlojamientos)
+
+        End If
 
         Close()
 
     End Sub
 
-    Private Sub btnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalcular.Click
-
-        txtImpEstadia.Text = txtCantDia.Text * txtImpDia.Text
-
-    End Sub
-
-    Private Sub dtpFechaEgreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaEgreso.ValueChanged
-
-        txtCantDia.Text = DateDiff(DateInterval.Day, CDate(dtpFechaIngreso.Text), CDate(dtpFechaEgreso.Text))
-
-    End Sub
-    Private Sub dtpFechaIngreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.ValueChanged
-
-        txtCantDia.Text = DateDiff(DateInterval.Day, CDate(dtpFechaIngreso.Text), CDate(dtpFechaEgreso.Text))
-
-    End Sub
-    'agregar nuevo cliente
-
-    Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevo.Click
-
-        Dim det As New detCliente(cbClientes)
-
-        det.ShowDialog()
-
-
-    End Sub
+ 
     'ir a lista de servicios
     Private Sub btnServicios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnServicios.Click
 
@@ -183,55 +162,57 @@
         Datos()
 
     End Sub
+    Private Sub alojamientos()
+
+        dgvAlojamientos.DataSource = ""
+
+        dgvAlojamientos.DataSource = lstAlojamientos
+
+        dgvAlojamientos.Columns("IdReserva").Visible = False
+
+        dgvAlojamientos.Columns("IdAlojamiento").Visible = False
+
+        dgvAlojamientos.Columns("Conexion").Visible = False
+
+    End Sub
     'agregar alojamiento, mostrar solo los disponibles
     Private Sub btnAgregarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarAloj.Click
-        If Aviso() = 1 Then Exit Sub
 
-        Dim det As New AlojamientosDeReserva(txtId.Text, dtpFechaIngreso.Text, dtpFechaEgreso.Text)
+        Dim det As New AlojamientosDeReserva(lstAlojamientos, dtpFechaIngreso.Text, dtpFechaEgreso.Text)
 
         det.ShowDialog()
 
-        Dim res As New ReservaClass
-        res.Id = txtId.Text
-        res.Datos(res)
-        Reserva = res
-        Datos()
+
 
     End Sub
 
     Private Sub btnEliminarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarAloj.Click
 
-        Dim aloj As New AlojamientoReservaClass
+        If dgvAlojamientos.CurrentRow.Cells("accion").Value = "A" Then
 
-        aloj.Id = dgvAlojamientos.CurrentRow.Cells("Id").Value
+            Dim pos As Integer = dgvAlojamientos.CurrentRow.Index
 
-        aloj.Eliminar(aloj.Id)
+            lstAlojamientos.RemoveAt(pos)
 
-        Datos()
+        Else
+
+            dgvAlojamientos.CurrentRow.Cells("accion").Value = "E"
+
+        End If
 
     End Sub
     '----------------------------PAGOS--------------------------------
     '-----------------------------------------------------------------
     Private Sub btnAgregarPago_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarPago.Click
-        ' Aviso()
 
         Dim det As New detPago(txtId.Text)
 
         det.ShowDialog()
 
         Datos()
+
     End Sub
-    Private Function Aviso() As Integer
 
-        If txtId.Text = "" Then
-
-            MsgBox("Primero debe guardar la reserva")
-
-            Return 1
-
-        End If
-
-    End Function
     Private Sub ModificarPago()
 
         Dim p As New PagoClass
@@ -271,48 +252,41 @@
         Datos()
 
     End Sub
-    '------------------------------------------------------------------------------------------------------------
-    Private Sub Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Add.Click
-        Dim det As New AlojamientoReservaClass
-        'det.idArqueo = arq.id
+    '-----------------------------------------------------------------------------------------------------------------
+    '-----------------------------------------------------------------------------------------------------------------
+    '-----------------------------------------------------------------------------------------------------------------
+    '-----------------------------------------------------------------------------------------------------------------
 
-        Dim formdet As New AlojamientosDeReserva(Reserva.detalle, det, dtpFechaIngreso.Text, dtpFechaEgreso.Text)
+    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
 
-        formdet.ShowDialog()
-
-        ' Dim frmDetalleArqueo As New AlojamientosDeReserva(Reserva.detalle, det)
-        ' Dim frmDetalleArqueo As New AlojamientosDeReserva(Reserva.detalle)
-
-        ' frmDetalleArqueo.ShowDialog()
-        Reserva.actualizarTabla(dgvAlojamientos, Reserva.detalle)
-
-        'Datos()
+        Close()
 
     End Sub
 
+    Private Sub btnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalcular.Click
 
-    Private Sub guardar()
-        Reserva.IdCliente = cbClientes.SelectedValue
-        Reserva.FIngreso = CDate(dtpFechaIngreso.Text)
-        Reserva.FEgreso = CDate(dtpFechaEgreso.Text)
-        Reserva.Fecha = CDate(dtpFecha.Text)
-        Reserva.CantDias = txtCantDia.Text
-        Reserva.CantPersonas = txtCantPer.Text
-        Reserva.ImpDia = txtImpDia.Text
-        Reserva.ImpTotal = txtImpEstadia.Text
-        Reserva.Descripcion = txtDescripcion.Text
-        Reserva.Cancelada = CbxCancelada.Checked
-        If nuevo = True Then
-            Reserva.Agregar(Reserva)
-            Reserva.ultimoid(txtId)
-            Reserva.Id = txtId.Text
-        Else
-            Reserva.Modificar(Reserva)
-        End If
+        txtImpEstadia.Text = txtCantDia.Text * txtImpDia.Text
+
     End Sub
 
-    Private Sub save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles save.Click
-        guardar()
-        Reserva.actualizarDetalle(Reserva)
+    Private Sub dtpFechaEgreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaEgreso.ValueChanged
+
+        txtCantDia.Text = DateDiff(DateInterval.Day, CDate(dtpFechaIngreso.Text), CDate(dtpFechaEgreso.Text))
+
+    End Sub
+    Private Sub dtpFechaIngreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.ValueChanged
+
+        txtCantDia.Text = DateDiff(DateInterval.Day, CDate(dtpFechaIngreso.Text), CDate(dtpFechaEgreso.Text))
+
+    End Sub
+    'agregar nuevo cliente
+
+    Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevo.Click
+
+        Dim det As New detCliente(cbClientes)
+
+        det.ShowDialog()
+
+
     End Sub
 End Class

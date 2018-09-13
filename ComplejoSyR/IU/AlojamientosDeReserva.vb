@@ -1,20 +1,18 @@
 ﻿Public Class AlojamientosDeReserva
-    Private AlojRes_ As New AlojamientoReservaClass
 
-    Public Property AlojRes() As AlojamientoReservaClass
+    '------------------------------------------------------
+    Dim alojres As New AlojamientoReservaClass
+    Private lstAlojamientos_ As New List(Of AlojamientoReservaClass)
+    Public Property lstAlojamientos() As List(Of AlojamientoReservaClass)
         Get
-            Return AlojRes_
-
+            Return lstAlojamientos_
         End Get
-        Set(ByVal value As AlojamientoReservaClass)
-            AlojRes_ = value
+        Set(ByVal value As List(Of AlojamientoReservaClass))
+            lstAlojamientos_ = value
         End Set
     End Property
-    '------------------------------------------------------
-    Dim det As New AlojamientoReservaClass
-    Dim tDet As List(Of AlojamientoReservaClass)
+
     Dim nuevo As Boolean
-    '------------------------------------------------------
     Private operacion_ As String
 
     Public Property operacion() As String
@@ -24,16 +22,6 @@
         Set(ByVal value As String)
             operacion_ = value
 
-        End Set
-    End Property
-
-    Private idres_ As Integer
-    Public Property idres() As Integer
-        Get
-            Return idres_
-        End Get
-        Set(ByVal value As Integer)
-            idres_ = value
         End Set
     End Property
 
@@ -56,46 +44,20 @@
         End Set
     End Property
     '-----------------------------------------------------
-    Public Sub New(ByVal tablaDetalle As List(Of AlojamientoReservaClass), ByVal detalle As AlojamientoReservaClass, ByVal FI As Date, ByVal FE As Date) 'Este constructor carga nuevos registros.
+    Public Sub New(ByRef lst As List(Of AlojamientoReservaClass), ByVal FI As Date, ByVal FE As Date) 'Este constructor carga nuevos registros.
         InitializeComponent()
-        det = detalle
-        det.Id = 0
-        det.IdAlojamiento = 0
-        det.IdReserva = 0
-        det.mov = "A"
-        tDet = tablaDetalle
+
+        alojres.accion = "Agregar"
+
         FIn = FI
 
         FEg = FE
+
+        lstAlojamientos = lst
+
         nuevo = True
     End Sub
-    '-----------------------------------------------------
-    Public Sub New(ByVal id As Integer, ByVal FI As Date, ByVal FE As Date)
 
-        InitializeComponent()
-
-        operacion = "A"
-
-        idres = id
-
-        FIn = FI
-
-        FEg = FE
-
-    End Sub
-    Public Sub New(ByVal dgv As DataGridView, ByVal id As Integer, ByVal FI As Date, ByVal FE As Date)
-
-        InitializeComponent()
-
-        operacion = "AL"
-
-        idres = id
-
-        FIn = FI
-
-        FEg = FE
-
-    End Sub
     Private Sub AlojamientoReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Dim aloj As New AlojamientoClass
@@ -105,35 +67,25 @@
     End Sub
 
     Private Sub btnCargar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCargar.Click
-       
-
-        Dim alojres As New AlojamientoReservaClass
-
-        alojres.IdReserva = idres
-
-        alojres.Agregar(alojres.IdReserva, dgvAlojRes)
-
-        Close()
-
-    End Sub
-
-    Private Sub Add_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Add.Click
 
         If nuevo = True Then
 
-            'For Each row In dgvAlojRes.Rows
+            For Each row In dgvAlojRes.Rows
 
-            'If row.selected = True Then
+                If row.selected = True Then
 
-            det.IdAlojamiento = dgvAlojRes.CurrentRow.Cells("Id").Value
+                    alojres.IdAlojamiento = dgvAlojRes.CurrentRow.Cells("Id").Value
+                    alojres.numero = dgvAlojRes.CurrentRow.Cells("numero").Value
+                    alojres.nombre = dgvAlojRes.CurrentRow.Cells("nombre").Value
+                    alojres.capacidad = dgvAlojRes.CurrentRow.Cells("capacidad").Value
+                    lstAlojamientos.Add(alojres)
 
-            tDet.Add(det)
-
-            'End If
-            'Next
-
+                End If
+            Next
 
         End If
+
         Close()
+
     End Sub
 End Class

@@ -122,124 +122,20 @@ Public Class ReservaClass
             Cancelada_ = value
         End Set
     End Property
-    '------------------------------------------------------------------------------------------------------------
-    '------------------------------------------------------------------------------------------------------------
-    Private detalle_ As List(Of AlojamientoReservaClass)
-    Public Property detalle() As List(Of AlojamientoReservaClass)
+  
+    Private Accion_ As String
+    Public Property Accion() As String
         Get
-            Return detalle_
+            Return Accion_
         End Get
-        Set(ByVal value As List(Of AlojamientoReservaClass))
-            detalle_ = value
+        Set(ByVal value As String)
+            Accion_ = value
         End Set
     End Property
-
-    Public Sub actualizarTabla(ByVal tabla As DataGridView, ByVal coleccion As List(Of AlojamientoReservaClass))
-        tabla.Rows.Clear()
-        tabla.Columns.Clear()
-        tabla.Columns.Add("id", "id")
-        tabla.Columns.Add("idalojamiento", "idalojamiento")
-        tabla.Columns.Add("idreserva", "idreserva")
-
-        ' tabla.Columns.Add("mov", "mov")
-        If coleccion IsNot Nothing Then
-            For Each row As AlojamientoReservaClass In coleccion
-                'If row.mov <> "B" Then
-                tabla.Rows.Add(row)
-                tabla.Item("id", tabla.Rows.GetLastRow(DataGridViewElementStates.None)).Value = row.Id
-                tabla.Item("idalojamiento", tabla.Rows.GetLastRow(DataGridViewElementStates.None)).Value = row.IdAlojamiento
-                tabla.Item("idreserva", tabla.Rows.GetLastRow(DataGridViewElementStates.None)).Value = row.IdReserva
-                'tabla.Item("mov", tabla.Rows.GetLastRow(DataGridViewElementStates.None)).Value = row.mov
-                ' End If
-            Next
-        End If
-        'tabla.Columns("id").Visible = False
-        'tabla.Columns("id").Width = 50
-        'tabla.Columns("idArqueo").Visible = False
-        'tabla.Columns("mov").Visible = False
-        'tabla.Columns("mov").Width = 50
-        'tabla.Columns("idDenominacion").Visible = False
-        'tabla.Columns("denominacion").AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
-        'tabla.Columns("cantidad").Width = 50
-    End Sub
-
-    Private Function recuperarAlojamientos(ByVal idreserva As Integer) As List(Of AlojamientoReservaClass)
-        Try
-            Conectar()
-            Dim listaDetalles As New List(Of AlojamientoReservaClass)
-            Dim comando As New SqlCommand("AlojResTraer", conexion)
-            comando.CommandType = CommandType.StoredProcedure
-            comando.Parameters.AddWithValue("@IdReserva", Id)
-            Dim objDataTable As New Data.DataTable
-            Dim objDataAdapter As New SqlDataAdapter(comando)
-            objDataAdapter.Fill(objDataTable)
-            If objDataTable.Rows.Count > 0 Then
-                For Each row As DataRow In objDataTable.Rows
-                    Dim det As New AlojamientoReservaClass
-                    det.id = row("id")
-                    det.IdAlojamiento = row("IdAlojamiento")
-                    det.IdReserva = row("IdReserva")
-                    'det.denominacion = row("denominacion")
-                    'det.cantidad = row("cantidad")
-                    listaDetalles.Add(det)
-                Next
-                Return listaDetalles
-            Else
-                Return Nothing
-            End If
-        Catch ex As Exception
-            Return Nothing
-            MsgBox(ex.Message)
-        Finally
-            Desconectar()
-        End Try
-    End Function
-
-    Public Sub actualizarDetalle(ByVal res As ReservaClass)
-
-        Try
-            Conectar()
-            For Each row As AlojamientoReservaClass In res.detalle
-                If row.Id = 0 Then
-                    If row.mov <> "B" Then
-
-                        Dim comando As New SqlCommand("AlojResAgregar", conexion)
-                        comando.CommandType = CommandType.StoredProcedure
-
-                        comando.Parameters.AddWithValue("@IdReserva", row.IdReserva)
-                        comando.Parameters.AddWithValue("@IdAlojamiento", row.IdAlojamiento)
-
-                        comando.ExecuteNonQuery()
-
-                        comando.Dispose()
-                    End If
-                Else
-
-                    If row.mov = "B" Then
-                        Dim comando As New SqlCommand("AlojResEliminar", conexion)
-                        comando.CommandType = CommandType.StoredProcedure
-
-                        comando.Parameters.AddWithValue("@id", row.Id)
-                        comando.ExecuteNonQuery()
-                        comando.Dispose()
-                    End If
-                End If
-            Next
-        Catch ex As Exception
-            MsgBox(ex.Message)
-        Finally
-            Desconectar()
-        End Try
-    End Sub
-    '------------------------------------------------------------------------------------------------------------
-    '------------------------------------------------------------------------------------------------------------
-
 
     Public Sub Traer(ByVal dgv As DataGridView)
 
         Conectar()
-
-
         Dim comando As New SqlCommand("ReservasTraer", conexion)
         comando.CommandType = CommandType.StoredProcedure
 
@@ -261,6 +157,7 @@ Public Class ReservaClass
         Conectar()
 
         Dim comando As New SqlCommand("ReservaDatos", conexion)
+
         comando.CommandType = CommandType.StoredProcedure
 
         comando.Parameters.AddWithValue("@Id", reserva.Id)

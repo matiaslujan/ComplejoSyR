@@ -25,7 +25,6 @@ Partial Class AlojamientosDeReserva
         Me.btnSalir = New System.Windows.Forms.Button
         Me.btnCargar = New System.Windows.Forms.Button
         Me.dgvAlojRes = New System.Windows.Forms.DataGridView
-        Me.Add = New System.Windows.Forms.Button
         CType(Me.dgvAlojRes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -65,23 +64,12 @@ Partial Class AlojamientosDeReserva
         Me.dgvAlojRes.Size = New System.Drawing.Size(471, 199)
         Me.dgvAlojRes.TabIndex = 3
         '
-        'Add
-        '
-        Me.Add.Anchor = System.Windows.Forms.AnchorStyles.Bottom
-        Me.Add.Location = New System.Drawing.Point(21, 213)
-        Me.Add.Name = "Add"
-        Me.Add.Size = New System.Drawing.Size(65, 23)
-        Me.Add.TabIndex = 6
-        Me.Add.Text = "+"
-        Me.Add.UseVisualStyleBackColor = True
-        '
         'AlojamientosDeReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(495, 239)
-        Me.Controls.Add(Me.Add)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCargar)
         Me.Controls.Add(Me.dgvAlojRes)
@@ -95,5 +83,4 @@ Partial Class AlojamientosDeReserva
     Friend WithEvents btnSalir As System.Windows.Forms.Button
     Friend WithEvents btnCargar As System.Windows.Forms.Button
     Friend WithEvents dgvAlojRes As System.Windows.Forms.DataGridView
-    Friend WithEvents Add As System.Windows.Forms.Button
 End Class
