@@ -1,8 +1,6 @@
 ﻿Public Class detReserva
 
-    Dim nuevo As Boolean
     Private Reserva_ As New ReservaClass
-
 
     Public Property Reserva() As ReservaClass
         Get
@@ -15,6 +13,7 @@
 
     Dim Aloj As New AlojamientoReservaClass
     Dim lstAlojamientos As New List(Of AlojamientoReservaClass)
+    Dim pago As New PagoClass
     Dim lstPagos As New List(Of PagoClass)
 
     'agregar con fechas seleccionadas
@@ -66,7 +65,7 @@
         If Reserva.Accion = "Modificar" Then
 
             Aloj.TraerAlojamiento(Reserva.Id, lstAlojamientos)
-
+            pago.Traer(lstPagos, Reserva.Id)
             Datos()
 
         ElseIf Reserva.Accion = "AgregarF" Then
@@ -93,11 +92,8 @@
         Reserva.Importes(Reserva.Id, txtTotal, txtPagado, txtDeuda)
 
         alojamientos()
+        pagos()
 
-
-        Dim p As New PagoClass
-
-        p.Traer(dgvPagos, Reserva.Id)
     End Sub
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
 
@@ -126,8 +122,6 @@
 
             Reserva.Id = txtId.Text
 
-            Reserva.Accion = "Modificar"
-
         End If
 
 
@@ -135,7 +129,7 @@
 
             For Each row In lstAlojamientos
 
-                If row.accion = "agregar" Then
+                If row.accion = "Agregar" Then
 
                     row.IdReserva = Reserva.Id
 
@@ -147,32 +141,52 @@
 
         End If
 
+        If lstPagos.Count > 0 Then
+
+            For Each row In lstPagos
+
+                If row.accion = "Agregar" Then
+
+                    row.IdReserva = Reserva.Id
+
+                End If
+
+            Next
+
+            pago.Actualizar(lstPagos)
+
+        End If
+
         Close()
 
     End Sub
 
- 
-    'ir a lista de servicios
-    Private Sub btnServicios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnServicios.Click
-
-        Dim s As New listServicios(txtId.Text)
-
-        s.ShowDialog()
-
-        Datos()
-
-    End Sub
     Private Sub alojamientos()
 
         dgvAlojamientos.DataSource = ""
 
         dgvAlojamientos.DataSource = lstAlojamientos
 
+
+        For Each aloj As DataGridViewRow In dgvAlojamientos.Rows
+
+            If aloj.Cells("Accion").Value = "Eliminar" Then
+
+                Dim pos As Integer = aloj.Index
+
+                dgvAlojamientos.CurrentCell = Nothing
+
+                dgvAlojamientos.Rows(pos).Visible = False
+
+            End If
+        Next
+
         dgvAlojamientos.Columns("IdReserva").Visible = False
 
         dgvAlojamientos.Columns("IdAlojamiento").Visible = False
-
+        dgvAlojamientos.Columns("Id").Visible = False
         dgvAlojamientos.Columns("Conexion").Visible = False
+        dgvAlojamientos.Columns("Accion").Visible = False
 
     End Sub
     'agregar alojamiento, mostrar solo los disponibles
@@ -182,13 +196,13 @@
 
         det.ShowDialog()
 
-
+        alojamientos()
 
     End Sub
 
     Private Sub btnEliminarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarAloj.Click
 
-        If dgvAlojamientos.CurrentRow.Cells("accion").Value = "A" Then
+        If dgvAlojamientos.CurrentRow.Cells("Accion").Value = "Agregar" Then
 
             Dim pos As Integer = dgvAlojamientos.CurrentRow.Index
 
@@ -196,37 +210,79 @@
 
         Else
 
-            dgvAlojamientos.CurrentRow.Cells("accion").Value = "E"
+            dgvAlojamientos.CurrentRow.Cells("Accion").Value = "Eliminar"
 
         End If
+
+        alojamientos()
 
     End Sub
     '----------------------------PAGOS--------------------------------
     '-----------------------------------------------------------------
+    Private Sub pagos()
+
+        dgvPagos.DataSource = ""
+
+        dgvPagos.DataSource = lstPagos
+
+        For Each pag As DataGridViewRow In dgvPagos.Rows
+
+            If pag.Cells("Accion").Value = "Eliminar" Then
+
+                Dim pos As Integer = pag.Index
+
+                dgvPagos.CurrentCell = Nothing
+
+                dgvPagos.Rows(pos).Visible = False
+
+            End If
+        Next
+        dgvPagos.Columns("IdReserva").Visible = False
+
+        dgvPagos.Columns("Id").Visible = False
+        dgvPagos.Columns("Accion").Visible = False
+
+        dgvPagos.Columns("Conexion").Visible = False
+
+    End Sub
+
     Private Sub btnAgregarPago_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarPago.Click
 
-        Dim det As New detPago(txtId.Text)
+        Dim det As New detPago(lstPagos)
 
         det.ShowDialog()
 
-        Datos()
+        pagos()
 
     End Sub
 
     Private Sub ModificarPago()
 
         Dim p As New PagoClass
-
         p.Id = dgvPagos.CurrentRow.Cells("Id").Value
         p.IdReserva = dgvPagos.CurrentRow.Cells("IdReserva").Value
         p.Importe = dgvPagos.CurrentRow.Cells("Importe").Value
         p.Fecha = dgvPagos.CurrentRow.Cells("Fecha").Value
         p.Descripcion = dgvPagos.CurrentRow.Cells("Descripcion").Value
-        Dim det As New detPago(p)
+
+        'si el pago a sido agregado pero no almacenado, se lo modifica y la accion seguira siendo Agregar
+        If dgvPagos.CurrentRow.Cells("accion").Value = "Agregar" Then
+
+            p.accion = "MA"
+
+        Else
+
+            p.accion = "Modificar"
+
+        End If
+        'obtiene posicion de la fila a modificar
+        Dim pos As Integer = dgvPagos.CurrentRow.Index
+
+        Dim det As New detPago(lstPagos, p, pos)
 
         det.ShowDialog()
 
-        Datos()
+        pagos()
 
     End Sub
 
@@ -242,14 +298,19 @@
     End Sub
 
     Private Sub btnEliminarPago_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarPago.Click
+        If dgvPagos.CurrentRow.Cells("Accion").Value = "Agregar" Then
 
-        Dim P As New PagoClass
+            Dim pos As Integer = dgvPagos.CurrentRow.Index
 
-        P.Id = dgvPagos.CurrentRow.Cells("Id").Value
+            lstPagos.RemoveAt(pos)
 
-        P.Eliminar(P.Id)
+        Else
 
-        Datos()
+            dgvPagos.CurrentRow.Cells("Accion").Value = "Eliminar"
+
+        End If
+
+        pagos()
 
     End Sub
     '-----------------------------------------------------------------------------------------------------------------
@@ -287,6 +348,22 @@
 
         det.ShowDialog()
 
+    End Sub
+
+    'ir a lista de servicios
+    Private Sub btnServicios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnServicios.Click
+        If txtId.Text = "" Then
+
+            MsgBox("Primero debe guardar la reserva")
+
+            Exit Sub
+
+        End If
+        Dim s As New listServicios(txtId.Text)
+
+        s.ShowDialog()
+
+        Datos()
 
     End Sub
 End Class

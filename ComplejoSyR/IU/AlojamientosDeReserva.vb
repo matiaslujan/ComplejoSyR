@@ -12,19 +12,6 @@
         End Set
     End Property
 
-    Dim nuevo As Boolean
-    Private operacion_ As String
-
-    Public Property operacion() As String
-        Get
-            Return operacion_
-        End Get
-        Set(ByVal value As String)
-            operacion_ = value
-
-        End Set
-    End Property
-
     Private FIn_, FEg_ As Date
 
     Public Property FIn() As Date
@@ -55,7 +42,6 @@
 
         lstAlojamientos = lst
 
-        nuevo = True
     End Sub
 
     Private Sub AlojamientoReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -67,8 +53,6 @@
     End Sub
 
     Private Sub btnCargar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCargar.Click
-
-        If nuevo = True Then
 
             For Each row In dgvAlojRes.Rows
 
@@ -82,9 +66,6 @@
 
                 End If
             Next
-
-        End If
-
         Close()
 
     End Sub

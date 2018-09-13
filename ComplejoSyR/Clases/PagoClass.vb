@@ -57,8 +57,16 @@ Public Class PagoClass
             Descripcion_ = value
         End Set
     End Property
-
-    Public Sub Traer(ByVal dgv As DataGridView, ByVal IdReserva As Integer)
+    Private accion_ As String
+    Public Property accion() As String
+        Get
+            Return accion_
+        End Get
+        Set(ByVal value As String)
+            accion_ = value
+        End Set
+    End Property
+    Public Sub Traer(ByRef lst As List(Of PagoClass), ByVal IdReserva As Integer)
 
         Conectar()
 
@@ -68,19 +76,23 @@ Public Class PagoClass
 
         comando.Parameters.AddWithValue("@IdReserva", IdReserva)
 
-        Dim table As New Data.DataTable
 
-        Dim adapter As New SqlDataAdapter(comando)
+        Dim lista As SqlDataReader = comando.ExecuteReader
 
-        adapter.Fill(table)
+        If lista.HasRows Then
 
-        dgv.DataSource = table
-        dgv.Columns("Id").Visible = False
-        dgv.Columns("IdReserva").Visible = False
+            For Each row In lista
 
-        If dgv.RowCount > 0 Then
+                Dim pago As New PagoClass
 
-            dgv.Rows(0).Selected = False
+                pago.Id = (lista("Id"))
+                pago.Descripcion = (lista("Descripcion"))
+                pago.Fecha = (lista("Fecha"))
+                pago.Importe = (lista("Importe"))
+                pago.IdReserva = (lista("IdReserva"))
+                lst.Add(pago)
+
+            Next
 
         End If
 
@@ -88,57 +100,63 @@ Public Class PagoClass
 
     End Sub
 
-    Public Sub Agregar(ByVal pago As PagoClass)
+    Public Sub Actualizar(ByRef lst As List(Of PagoClass))
+        Try
+            Conectar()
 
-        Conectar()
+            For Each row In lst
 
-        Dim comando As New SqlCommand("PagoAgregar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+                Select Case row.accion
 
-        comando.Parameters.AddWithValue("@IdReserva", pago.IdReserva)
-        comando.Parameters.AddWithValue("@Importe", pago.Importe)
-        comando.Parameters.AddWithValue("@Descripcion", pago.Descripcion)
-        comando.Parameters.AddWithValue("@Fecha", pago.Fecha)
+                    Case "Agregar"
 
-        comando.ExecuteNonQuery()
+                        Dim comando As New SqlCommand("PagoAgregar", conexion)
+                        comando.CommandType = CommandType.StoredProcedure
 
-        Desconectar()
+                        comando.Parameters.AddWithValue("@IdReserva", row.IdReserva)
+                        comando.Parameters.AddWithValue("@Importe", row.Importe)
+                        comando.Parameters.AddWithValue("@Descripcion", row.Descripcion)
+                        comando.Parameters.AddWithValue("@Fecha", row.Fecha)
 
-    End Sub
+                        comando.ExecuteNonQuery()
+
+                    Case "Modificar"
+
+                        Dim comando As New SqlCommand("PagoModificar", conexion)
+                        comando.CommandType = CommandType.StoredProcedure
+
+                        comando.Parameters.AddWithValue("@IdReserva", row.IdReserva)
+                        comando.Parameters.AddWithValue("@Importe", row.Importe)
+                        comando.Parameters.AddWithValue("@Descripcion", row.Descripcion)
+                        comando.Parameters.AddWithValue("@Fecha", row.Fecha)
+                        comando.Parameters.AddWithValue("@Id", row.Id)
+
+                        comando.ExecuteNonQuery()
+
+                    Case "Eliminar"
+
+                        Dim comando As New SqlCommand("PagoEliminar", conexion)
+
+                        comando.CommandType = CommandType.StoredProcedure
+
+                        comando.Parameters.AddWithValue("@Id", row.Id)
+
+                        comando.ExecuteNonQuery()
 
 
-    Public Sub Modificar(ByVal pago As PagoClass)
+                End Select
+                'If row.accion = "Agregar" Then
+                'ElseIf row.accion = "Eliminar" Then
+                'End If
 
-        Conectar()
+            Next
+            Desconectar()
 
+        Catch ex As Exception
 
-        Dim comando As New SqlCommand("PagoModificar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            MsgBox(ex.Message)
 
-        comando.Parameters.AddWithValue("@IdReserva", pago.IdReserva)
-        comando.Parameters.AddWithValue("@Importe", pago.Importe)
-        comando.Parameters.AddWithValue("@Descripcion", pago.Descripcion)
-        comando.Parameters.AddWithValue("@Fecha", pago.Fecha)
-        comando.Parameters.AddWithValue("@Id", pago.Id)
-
-        comando.ExecuteNonQuery()
-
-        Desconectar()
-
-    End Sub
-
-    Public Sub Eliminar(ByVal id As Integer)
-
-        Conectar()
-
-        Dim comando As New SqlCommand("PagoEliminar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
-
-        comando.Parameters.AddWithValue("@Id", id)
-
-        comando.ExecuteNonQuery()
-
-        Desconectar()
+        End Try
 
     End Sub
 
