@@ -160,7 +160,16 @@
         Close()
 
     End Sub
+    Private Function filaseleccionada(ByVal dgv As DataGridView) As Boolean
 
+        If dgv.CurrentRow Is Nothing Then
+
+            MsgBox("Seleccione un registro")
+
+            Return True
+
+        End If
+    End Function
     Private Sub alojamientos()
 
         dgvAlojamientos.DataSource = ""
@@ -213,13 +222,8 @@
 
     Private Sub btnEliminarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarAloj.Click
 
-        If dgvAlojamientos.CurrentRow Is Nothing Then
+        If filaseleccionada(dgvAlojamientos) Then Exit Sub
 
-            MsgBox("Seleccione un registro")
-
-            Exit Sub
-
-        End If
 
         If dgvAlojamientos.CurrentRow.Cells("Accion").Value = "Agregar" Then
 
@@ -253,10 +257,8 @@
         eliminarregistro(dgvPagos)
 
         dgvPagos.Columns("IdReserva").Visible = False
-
         dgvPagos.Columns("Id").Visible = False
         dgvPagos.Columns("Accion").Visible = False
-
         dgvPagos.Columns("Conexion").Visible = False
 
     End Sub
@@ -272,11 +274,7 @@
     End Sub
 
     Private Sub ModificarPago()
-        If dgvPagos.CurrentRow Is Nothing Then
-            MsgBox("Seleccione un registro")
-            Exit Sub
-
-        End If
+        filaseleccionada(dgvPagos)
         Dim p As New PagoClass
         p.Id = dgvPagos.CurrentRow.Cells("Id").Value
         p.IdReserva = dgvPagos.CurrentRow.Cells("IdReserva").Value
@@ -294,6 +292,7 @@
             p.accion = "Modificar"
 
         End If
+
         'obtiene posicion de la fila a modificar
         Dim pos As Integer = dgvPagos.CurrentRow.Index
 
@@ -317,11 +316,7 @@
     End Sub
 
     Private Sub btnEliminarPago_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarPago.Click
-        If dgvPagos.CurrentRow Is Nothing Then
-            MsgBox("Seleccione un registro")
-            Exit Sub
-
-        End If
+        If filaseleccionada(dgvPagos) Then Exit Sub
 
         If dgvPagos.CurrentRow.Cells("Accion").Value = "Agregar" Then
 
@@ -376,7 +371,7 @@
     End Sub
 
     'ir a lista de servicios
-    Private Sub btnServicios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnServicios.Click
+    Private Sub btnServicios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         If txtId.Text = "" Then
 
@@ -394,4 +389,15 @@
 
     End Sub
 
+    Private Sub btnNuevServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevServ.Click
+
+    End Sub
+
+    Private Sub btnModServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModServ.Click
+
+    End Sub
+
+    Private Sub btnElimServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnElimServ.Click
+
+    End Sub
 End Class
