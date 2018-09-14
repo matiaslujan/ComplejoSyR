@@ -75,7 +75,4 @@
 
     End Sub
 
-    'Private Sub MonthCalendar1_DateSelected(ByVal sender As Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles Calendario.DateSelected
-    '    Ocupacion()
-    'End Sub
 End Class

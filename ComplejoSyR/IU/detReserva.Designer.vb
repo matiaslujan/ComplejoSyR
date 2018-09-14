@@ -68,6 +68,7 @@ Partial Class detReserva
         Me.txtTotal = New System.Windows.Forms.TextBox
         Me.Label15 = New System.Windows.Forms.Label
         Me.btnServicios = New System.Windows.Forms.Button
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
         CType(Me.dgvAlojamientos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -204,6 +205,7 @@ Partial Class detReserva
         '
         'btnGuardar
         '
+        Me.btnGuardar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnGuardar.BackColor = System.Drawing.Color.White
         Me.btnGuardar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnGuardar.FlatAppearance.BorderSize = 3
@@ -218,6 +220,7 @@ Partial Class detReserva
         '
         'btnSalir
         '
+        Me.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnSalir.BackColor = System.Drawing.Color.White
         Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnSalir.FlatAppearance.BorderSize = 3
@@ -552,6 +555,22 @@ Partial Class detReserva
         Me.btnServicios.Text = "Servicios"
         Me.btnServicios.UseVisualStyleBackColor = False
         '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 324.0!))
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.MinimumSize = New System.Drawing.Size(898, 439)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(898, 439)
+        Me.TableLayoutPanel1.TabIndex = 164
+        '
         'detReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -599,6 +618,7 @@ Partial Class detReserva
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "detReserva"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -650,4 +670,5 @@ Partial Class detReserva
     Friend WithEvents txtTotal As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents btnServicios As System.Windows.Forms.Button
+    Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
 End Class

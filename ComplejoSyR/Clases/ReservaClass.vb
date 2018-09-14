@@ -318,7 +318,12 @@ Public Class ReservaClass
         dgv.Columns("Nombre").HeaderText = "Modalidad"
         dgv.Columns("FIngreso").HeaderText = "Ingreso"
         dgv.Columns("FEgreso").HeaderText = "Egreso"
-        dgv.Columns("Numero").Width = 100
+        dgv.Columns("Numero").HeaderText = "N°"
+        dgv.Columns("FIngreso").Width = 100
+        dgv.Columns("FEgreso").Width = 100
+        dgv.Columns("FEgreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        dgv.Columns("FIngreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        dgv.Columns("Numero").Width = 90
         dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         Desconectar()
@@ -331,9 +336,10 @@ Public Class ReservaClass
                 If IsDBNull(Row.Cells("IdReserva").Value) = True Then
 
                     Row.DefaultCellStyle.BackColor = Color.GreenYellow
+
                 Else
                     Row.DefaultCellStyle.BackColor = Color.Salmon
-
+                    Row.DefaultCellStyle.ForeColor = Color.White
                 End If
             Next
 
@@ -364,8 +370,6 @@ Public Class ReservaClass
                 txtTot.Text = (lista("Total"))
                 txtPag.Text = (lista("Pagado"))
                 txtDeuda.Text = (lista("Deuda"))
-                'txtServ.Text = (lista("Servicios"))
-
 
             End While
 

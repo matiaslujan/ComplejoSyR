@@ -167,28 +167,39 @@
 
         dgvAlojamientos.DataSource = lstAlojamientos
 
+        If dgvAlojamientos.Rows.Count > 0 Then
 
-        For Each aloj As DataGridViewRow In dgvAlojamientos.Rows
+            dgvAlojamientos.Rows(0).Selected = False
 
-            If aloj.Cells("Accion").Value = "Eliminar" Then
+        End If
 
-                Dim pos As Integer = aloj.Index
-
-                dgvAlojamientos.CurrentCell = Nothing
-
-                dgvAlojamientos.Rows(pos).Visible = False
-
-            End If
-        Next
+        eliminarregistro(dgvAlojamientos)
 
         dgvAlojamientos.Columns("IdReserva").Visible = False
-
         dgvAlojamientos.Columns("IdAlojamiento").Visible = False
         dgvAlojamientos.Columns("Id").Visible = False
         dgvAlojamientos.Columns("Conexion").Visible = False
         dgvAlojamientos.Columns("Accion").Visible = False
 
     End Sub
+    'recorre el dgv y oculta los registros a eliminar
+    Private Sub eliminarregistro(ByRef dgv As DataGridView)
+
+        For Each row As DataGridViewRow In dgv.Rows
+
+            If row.Cells("Accion").Value = "Eliminar" Then
+
+                Dim pos As Integer = row.Index
+
+                dgv.CurrentCell = Nothing
+
+                dgv.Rows(pos).Visible = False
+
+            End If
+        Next
+
+    End Sub
+
     'agregar alojamiento, mostrar solo los disponibles
     Private Sub btnAgregarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarAloj.Click
 
@@ -201,6 +212,14 @@
     End Sub
 
     Private Sub btnEliminarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarAloj.Click
+
+        If dgvAlojamientos.CurrentRow Is Nothing Then
+
+            MsgBox("Seleccione un registro")
+
+            Exit Sub
+
+        End If
 
         If dgvAlojamientos.CurrentRow.Cells("Accion").Value = "Agregar" Then
 
@@ -225,18 +244,14 @@
 
         dgvPagos.DataSource = lstPagos
 
-        For Each pag As DataGridViewRow In dgvPagos.Rows
+        If dgvPagos.Rows.Count > 0 Then
 
-            If pag.Cells("Accion").Value = "Eliminar" Then
+            dgvPagos.Rows(0).Selected = False
 
-                Dim pos As Integer = pag.Index
+        End If
 
-                dgvPagos.CurrentCell = Nothing
+        eliminarregistro(dgvPagos)
 
-                dgvPagos.Rows(pos).Visible = False
-
-            End If
-        Next
         dgvPagos.Columns("IdReserva").Visible = False
 
         dgvPagos.Columns("Id").Visible = False
@@ -257,7 +272,11 @@
     End Sub
 
     Private Sub ModificarPago()
+        If dgvPagos.CurrentRow Is Nothing Then
+            MsgBox("Seleccione un registro")
+            Exit Sub
 
+        End If
         Dim p As New PagoClass
         p.Id = dgvPagos.CurrentRow.Cells("Id").Value
         p.IdReserva = dgvPagos.CurrentRow.Cells("IdReserva").Value
@@ -298,6 +317,12 @@
     End Sub
 
     Private Sub btnEliminarPago_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarPago.Click
+        If dgvPagos.CurrentRow Is Nothing Then
+            MsgBox("Seleccione un registro")
+            Exit Sub
+
+        End If
+
         If dgvPagos.CurrentRow.Cells("Accion").Value = "Agregar" Then
 
             Dim pos As Integer = dgvPagos.CurrentRow.Index
@@ -352,6 +377,7 @@
 
     'ir a lista de servicios
     Private Sub btnServicios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnServicios.Click
+
         If txtId.Text = "" Then
 
             MsgBox("Primero debe guardar la reserva")
@@ -359,6 +385,7 @@
             Exit Sub
 
         End If
+
         Dim s As New listServicios(txtId.Text)
 
         s.ShowDialog()
@@ -366,4 +393,5 @@
         Datos()
 
     End Sub
+
 End Class

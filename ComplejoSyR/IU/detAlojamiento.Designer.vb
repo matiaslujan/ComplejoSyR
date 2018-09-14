@@ -63,7 +63,7 @@ Partial Class detAlojamiento
         'comboSector
         '
         Me.comboSector.FormattingEnabled = True
-        Me.comboSector.Items.AddRange(New Object() {"PB", "PA"})
+        Me.comboSector.Items.AddRange(New Object() {"PB", "PA", "Camping"})
         Me.comboSector.Location = New System.Drawing.Point(296, 86)
         Me.comboSector.Name = "comboSector"
         Me.comboSector.Size = New System.Drawing.Size(121, 21)

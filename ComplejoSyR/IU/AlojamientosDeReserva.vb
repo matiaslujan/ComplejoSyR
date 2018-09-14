@@ -1,7 +1,7 @@
 ﻿Public Class AlojamientosDeReserva
 
     '------------------------------------------------------
-    Dim alojres As New AlojamientoReservaClass
+
     Private lstAlojamientos_ As New List(Of AlojamientoReservaClass)
     Public Property lstAlojamientos() As List(Of AlojamientoReservaClass)
         Get
@@ -34,8 +34,6 @@
     Public Sub New(ByRef lst As List(Of AlojamientoReservaClass), ByVal FI As Date, ByVal FE As Date) 'Este constructor carga nuevos registros.
         InitializeComponent()
 
-        alojres.accion = "Agregar"
-
         FIn = FI
 
         FEg = FE
@@ -57,12 +55,13 @@
             For Each row In dgvAlojRes.Rows
 
                 If row.selected = True Then
-
-                    alojres.IdAlojamiento = dgvAlojRes.CurrentRow.Cells("Id").Value
-                    alojres.numero = dgvAlojRes.CurrentRow.Cells("numero").Value
-                    alojres.nombre = dgvAlojRes.CurrentRow.Cells("nombre").Value
-                    alojres.capacidad = dgvAlojRes.CurrentRow.Cells("capacidad").Value
-                    lstAlojamientos.Add(alojres)
+                Dim alojres As New AlojamientoReservaClass
+                alojres.IdAlojamiento = row.Cells("Id").Value
+                alojres.numero = row.Cells("numero").Value
+                alojres.nombre = row.Cells("nombre").Value
+                alojres.capacidad = row.Cells("capacidad").Value
+                alojres.accion = "Agregar"
+                lstAlojamientos.Add(alojres)
 
                 End If
             Next
