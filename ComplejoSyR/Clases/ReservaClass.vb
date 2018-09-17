@@ -136,7 +136,9 @@ Public Class ReservaClass
     Public Sub Traer(ByVal dgv As DataGridView)
 
         Conectar()
+
         Dim comando As New SqlCommand("ReservasTraer", conexion)
+
         comando.CommandType = CommandType.StoredProcedure
 
         Dim table As New Data.DataTable
@@ -146,8 +148,14 @@ Public Class ReservaClass
         adapter.Fill(table)
 
         dgv.DataSource = table
+
         dgv.Columns("Id").Visible = False
 
+        If dgv.Rows.Count > 0 Then
+
+            dgv.Rows(0).Selected = False
+
+        End If
         Desconectar()
 
     End Sub
@@ -288,6 +296,10 @@ Public Class ReservaClass
 
         dgv.DataSource = tabla
 
+        If dgv.Rows.Count > 0 Then
+
+            dgv.Rows(0).Selected = False
+        End If
         Desconectar()
 
     End Sub
@@ -376,6 +388,9 @@ Public Class ReservaClass
         End If
 
         Desconectar()
+
+    End Sub
+    Public Sub ActualizarTabla(ByRef dgv As DataGridView)
 
     End Sub
 End Class

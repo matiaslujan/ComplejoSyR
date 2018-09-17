@@ -61,7 +61,75 @@ Public Class ServicioClass
         End Set
     End Property
 
-    Public Sub Traer(ByVal dgv As DataGridView, ByVal id As Integer)
+    Private Accion_ As String
+    Public Property Accion() As String
+        Get
+            Return Accion_
+        End Get
+        Set(ByVal value As String)
+            Accion_ = value
+        End Set
+    End Property
+
+    Public Sub actualizar(ByRef lst As List(Of ServicioClass))
+
+        Try
+            Conectar()
+
+            For Each row In lst
+
+                Select Case row.Accion
+
+                    Case "Agregar"
+
+                        Dim comando As New SqlCommand("ServicioAgregar", conexion)
+                        comando.CommandType = CommandType.StoredProcedure
+
+                        comando.Parameters.AddWithValue("@IdReserva", row.IdReserva)
+                        comando.Parameters.AddWithValue("@Importe", row.Importe)
+                        comando.Parameters.AddWithValue("@Descripcion", row.Descripcion)
+                        comando.Parameters.AddWithValue("@Fecha", row.Fecha)
+
+                        comando.ExecuteNonQuery()
+
+                    Case "Modificar"
+
+                        Dim comando As New SqlCommand("ServicioModificar", conexion)
+                        comando.CommandType = CommandType.StoredProcedure
+
+                        comando.Parameters.AddWithValue("@IdReserva", row.IdReserva)
+                        comando.Parameters.AddWithValue("@Importe", row.Importe)
+                        comando.Parameters.AddWithValue("@Descripcion", row.Descripcion)
+                        comando.Parameters.AddWithValue("@Fecha", row.Fecha)
+                        comando.Parameters.AddWithValue("@Id", row.Id)
+
+                        comando.ExecuteNonQuery()
+
+                    Case "Eliminar"
+
+                        Dim comando As New SqlCommand("ServicioEliminar", conexion)
+
+                        comando.CommandType = CommandType.StoredProcedure
+
+                        comando.Parameters.AddWithValue("@Id", row.Id)
+
+                        comando.ExecuteNonQuery()
+
+
+                End Select
+       
+
+            Next
+            Desconectar()
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
+
+    End Sub
+    Public Sub Traer(ByRef lst As List(Of ServicioClass), ByVal id As Integer)
 
         Conectar()
 
@@ -69,17 +137,27 @@ Public Class ServicioClass
 
         comando.CommandType = CommandType.StoredProcedure
 
-        comando.Parameters.AddWithValue("@idreserva", id)
+        comando.Parameters.AddWithValue("@IdReserva", id)
 
-        Dim tabla As New Data.DataTable
 
-        Dim adaptador As New SqlDataAdapter(comando)
+        Dim lista As SqlDataReader = comando.ExecuteReader
 
-        adaptador.Fill(tabla)
+        If lista.HasRows Then
 
-        dgv.DataSource = tabla
-        dgv.Columns("Id").Visible = False
-        dgv.Columns("IdReserva").Visible = False
+            For Each row In lista
+
+                Dim servicio As New ServicioClass
+
+                servicio.Id = (lista("Id"))
+                servicio.Descripcion = (lista("Descripcion"))
+                servicio.Fecha = (lista("Fecha"))
+                servicio.Importe = (lista("Importe"))
+                servicio.IdReserva = (lista("IdReserva"))
+                lst.Add(servicio)
+
+            Next
+
+        End If
 
         Desconectar()
 

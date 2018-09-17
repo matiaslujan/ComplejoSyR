@@ -248,7 +248,6 @@ Partial Class detReserva
         Me.Label11.Size = New System.Drawing.Size(23, 20)
         Me.Label11.TabIndex = 130
         Me.Label11.Text = "Id"
-        Me.Label11.Visible = False
         '
         'txtId
         '
@@ -259,7 +258,6 @@ Partial Class detReserva
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(29, 26)
         Me.txtId.TabIndex = 115
-        Me.txtId.Visible = False
         '
         'dtpFechaIngreso
         '

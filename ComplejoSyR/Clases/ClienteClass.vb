@@ -115,6 +115,12 @@ Public Class ClienteClass
 
         dgv.Columns("Id").Visible = False
 
+        If dgv.Rows.Count > 0 Then
+
+            dgv.Rows(0).Selected = False
+
+        End If
+
         Desconectar()
 
     End Sub

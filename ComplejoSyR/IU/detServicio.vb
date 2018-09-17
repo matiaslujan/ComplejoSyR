@@ -1,12 +1,12 @@
 ﻿Public Class detServicio
 
-    Private servres_ As ServicioClass
-    Public Property servres() As ServicioClass
+    Private lstServicios_ As List(Of ServicioClass)
+    Public Property lstServicios() As List(Of ServicioClass)
         Get
-            Return servres_
+            Return lstServicios_
         End Get
-        Set(ByVal value As ServicioClass)
-            servres_ = value
+        Set(ByVal value As List(Of ServicioClass))
+            lstServicios_ = value
         End Set
     End Property
     Private funcion_ As New Funciones
@@ -18,58 +18,47 @@
             funcion_ = value
         End Set
     End Property
-    Private operacion_ As String
 
-    Public Property operacion() As String
-        Get
-            Return operacion_
-        End Get
-        Set(ByVal value As String)
-            operacion_ = value
-        End Set
-    End Property
 
-    'se recibe la tabla de servicios  y el id de la reserva para agregar un nuevo servicio
+    Dim servicio As New ServicioClass
+    Dim posicion As Integer
+    Public Sub New(ByRef lst As List(Of ServicioClass))
 
-    Public Sub New(ByVal id As Integer)
-
-        ' This call is required by the Windows Form Designer.
+        ' Llamada necesaria para el Diseñador de Windows Forms.
         InitializeComponent()
 
-        ' Add any initialization after the InitializeComponent() call.
-        operacion = "A"
-
-        txtIdReserva.Text = id
+        servicio.accion = "Agregar"
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        lstServicios = lst
 
     End Sub
+    Public Sub New(ByRef lst As List(Of ServicioClass), ByVal s As ServicioClass, ByVal pos As Integer)
 
-    'tabla de servicios  y el servicio a modificar
-
-    Public Sub New(ByVal sr As ServicioClass)
-        ' This call is required by the Windows Form Designer.
+        ' Llamada necesaria para el Diseñador de Windows Forms.
         InitializeComponent()
 
-        ' Add any initialization after the InitializeComponent() call.
+        ' Agregue cualquier inicialización después de la llamada a InitializeComponent().
+        lstServicios = lst
 
-        operacion = "M"
+        servicio = s
 
-        servres = sr
-
+        posicion = pos
     End Sub
+
 
     Private Sub detServicio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        If operacion = "M" Then
+        If servicio.Accion = "Modificar" Or servicio.Accion = "MA" Then
 
-            txtId.Text = servres.Id
+            txtId.Text = servicio.Id
 
-            txtIdReserva.Text = servres.IdReserva
+            txtIdReserva.Text = servicio.IdReserva
 
-            txtDescripcion.Text = servres.Descripcion
+            txtDescripcion.Text = servicio.Descripcion
 
-            txtImporte.Text = servres.Importe
+            txtImporte.Text = servicio.Importe
 
-            dtpFecha.Text = servres.Fecha
+            dtpFecha.Text = servicio.Fecha
 
         End If
     End Sub
@@ -79,28 +68,37 @@
 
         If funcion.ValidarCampos(Me, ErrorProvider1) Then
 
-            Dim servr As New ServicioClass
+            Select Case servicio.Accion
 
-            servr.IdReserva = txtIdReserva.Text
-            servr.Importe = txtImporte.Text
-            servr.Descripcion = txtDescripcion.Text
-            servr.Fecha = dtpFecha.Text
+                Case "Agregar"
+                    Datos()
+                    lstServicios.Add(servicio)
 
-            If operacion = "M" Then
-                servr.Id = txtId.Text
-                servr.Modificar(servr)
-            Else
+                Case "Modificar"
 
-                servr.Agregar(servr)
+                    Datos()
 
-            End If
+                    lstServicios(posicion) = servicio
 
+
+                Case "MA"
+
+                    servicio.Accion = "Agregar"
+
+                    Datos()
+
+                    lstServicios(posicion) = servicio
+
+            End Select
             Close()
-
         End If
 
     End Sub
-
+    Private Sub Datos()
+        servicio.Importe = txtImporte.Text
+        servicio.Descripcion = txtDescripcion.Text
+        servicio.Fecha = dtpFecha.Text
+    End Sub
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
         Close()
 

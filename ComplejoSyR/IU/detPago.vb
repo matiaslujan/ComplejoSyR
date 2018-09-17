@@ -19,15 +19,6 @@
         End Set
     End Property
 
-    Private IdReserva_ As Integer
-    Public Property IdReserva() As Integer
-        Get
-            Return IdReserva_
-        End Get
-        Set(ByVal value As Integer)
-            IdReserva_ = value
-        End Set
-    End Property
     Dim pago As New PagoClass
     Dim posicion As Integer
     Public Sub New(ByRef lst As List(Of PagoClass))

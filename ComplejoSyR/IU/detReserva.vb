@@ -15,8 +15,10 @@
     Dim lstAlojamientos As New List(Of AlojamientoReservaClass)
     Dim pago As New PagoClass
     Dim lstPagos As New List(Of PagoClass)
-
+    Dim servicio As New ServicioClass
+    Dim lstServicios As New List(Of ServicioClass)
     'agregar con fechas seleccionadas
+
     Public Sub New(ByVal FI As Date, ByVal FE As Date)
 
         ' This call is required by the Windows Form Designer.
@@ -66,6 +68,8 @@
 
             Aloj.TraerAlojamiento(Reserva.Id, lstAlojamientos)
             pago.Traer(lstPagos, Reserva.Id)
+            servicio.Traer(lstServicios, Reserva.Id)
+
             Datos()
 
         ElseIf Reserva.Accion = "AgregarF" Then
@@ -93,7 +97,7 @@
 
         alojamientos()
         pagos()
-
+        servicios()
     End Sub
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
 
@@ -154,6 +158,23 @@
             Next
 
             pago.Actualizar(lstPagos)
+
+        End If
+
+
+        If lstServicios.Count > 0 Then
+
+            For Each row In lstServicios
+
+                If row.Accion = "Agregar" Then
+
+                    row.IdReserva = Reserva.Id
+
+                End If
+
+            Next
+
+            servicio.Actualizar(lstServicios)
 
         End If
 
@@ -370,42 +391,99 @@
 
     End Sub
 
-    'ir a lista de servicios
+    '--------------------------------------SERVICIOS-----------------------------------------------------
+    '----------------------------------------------------------------------------------------------------
+    '----------------------------------------------------------------------------------------------------
+
     Private Sub btnNuevServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevServ.Click
-        'Dim servicios As New detServicio(idres)
+        Dim det As New detServicio(lstServicios)
 
-        'servicios.ShowDialog()
-        'Datos()
+        det.ShowDialog()
+        servicios()
     End Sub
-    Private Sub modificar()
+    Private Sub modificarservicio()
+        filaseleccionada(dgvServicios)
+        Dim s As New ServicioClass
+        s.Id = dgvServicios.CurrentRow.Cells("Id").Value
+        s.IdReserva = dgvServicios.CurrentRow.Cells("IdReserva").Value
+        s.Importe = dgvServicios.CurrentRow.Cells("Importe").Value
+        s.Fecha = dgvServicios.CurrentRow.Cells("Fecha").Value
+        s.Descripcion = dgvServicios.CurrentRow.Cells("Descripcion").Value
 
-        'Dim servres As New ServicioClass
+        'si el pago a sido agregado pero no almacenado, se lo modifica y la accion seguira siendo Agregar
+        If dgvServicios.CurrentRow.Cells("accion").Value = "Agregar" Then
 
-        'servres.Id = dgvServiciosReserva.CurrentRow.Cells("Id").Value
-        'servres.IdReserva = dgvServiciosReserva.CurrentRow.Cells("IdReserva").Value
-        'servres.Importe = dgvServiciosReserva.CurrentRow.Cells("Importe").Value
-        'servres.Fecha = CDate(dgvServiciosReserva.CurrentRow.Cells("Fecha").Value)
-        'servres.Descripcion = dgvServiciosReserva.CurrentRow.Cells("Descripcion").Value
+            s.Accion = "MA"
 
-        'Dim det As New detServicio(servres)
+        Else
 
-        'det.ShowDialog()
+            s.Accion = "Modificar"
 
-        'Datos()
+        End If
+
+        'obtiene posicion de la fila a modificar
+        Dim pos As Integer = dgvServicios.CurrentRow.Index
+
+        Dim det As New detServicio(lstServicios, s, pos)
+
+        det.ShowDialog()
+
+        servicios()
+
+
     End Sub
     Private Sub btnModServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModServ.Click
 
-        modificar()
+        modificarservicio()
 
     End Sub
 
     Private Sub btnElimServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnElimServ.Click
 
+        If filaseleccionada(dgvServicios) Then Exit Sub
+
+        If dgvServicios.CurrentRow.Cells("Accion").Value = "Agregar" Then
+
+            Dim pos As Integer = dgvServicios.CurrentRow.Index
+
+            lstServicios.RemoveAt(pos)
+
+        Else
+
+            dgvServicios.CurrentRow.Cells("Accion").Value = "Eliminar"
+
+        End If
+
+        servicios()
+
     End Sub
 
     Private Sub dgvServicios_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvServicios.CellDoubleClick
 
-        modificar()
+        modificarservicio()
 
     End Sub
+    Private Sub servicios()
+
+        dgvServicios.DataSource = ""
+
+        dgvServicios.DataSource = lstServicios
+
+        If dgvServicios.Rows.Count > 0 Then
+
+            dgvServicios.Rows(0).Selected = False
+
+        End If
+
+        eliminarregistro(dgvServicios)
+
+        dgvServicios.Columns("IdReserva").Visible = False
+        dgvServicios.Columns("Id").Visible = False
+        dgvServicios.Columns("Accion").Visible = False
+        dgvServicios.Columns("Conexion").Visible = False
+
+    End Sub
+
+
+
 End Class
