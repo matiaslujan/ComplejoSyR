@@ -371,33 +371,41 @@
     End Sub
 
     'ir a lista de servicios
-    Private Sub btnServicios_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-        If txtId.Text = "" Then
-
-            MsgBox("Primero debe guardar la reserva")
-
-            Exit Sub
-
-        End If
-
-        Dim s As New listServicios(txtId.Text)
-
-        s.ShowDialog()
-
-        Datos()
-
-    End Sub
-
     Private Sub btnNuevServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevServ.Click
+        'Dim servicios As New detServicio(idres)
 
+        'servicios.ShowDialog()
+        'Datos()
     End Sub
+    Private Sub modificar()
 
+        'Dim servres As New ServicioClass
+
+        'servres.Id = dgvServiciosReserva.CurrentRow.Cells("Id").Value
+        'servres.IdReserva = dgvServiciosReserva.CurrentRow.Cells("IdReserva").Value
+        'servres.Importe = dgvServiciosReserva.CurrentRow.Cells("Importe").Value
+        'servres.Fecha = CDate(dgvServiciosReserva.CurrentRow.Cells("Fecha").Value)
+        'servres.Descripcion = dgvServiciosReserva.CurrentRow.Cells("Descripcion").Value
+
+        'Dim det As New detServicio(servres)
+
+        'det.ShowDialog()
+
+        'Datos()
+    End Sub
     Private Sub btnModServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModServ.Click
+
+        modificar()
 
     End Sub
 
     Private Sub btnElimServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnElimServ.Click
+
+    End Sub
+
+    Private Sub dgvServicios_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvServicios.CellDoubleClick
+
+        modificar()
 
     End Sub
 End Class
