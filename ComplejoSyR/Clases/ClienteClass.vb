@@ -267,4 +267,19 @@ Public Class ClienteClass
         Desconectar()
 
     End Sub
+
+    Public Sub ultimoid(ByRef cliente As ClienteClass)
+
+        Conectar()
+
+        Dim comando As New SqlCommand("ClienteUltimo", conexion)
+
+        comando.CommandType = CommandType.StoredProcedure
+
+        cliente.Id = comando.ExecuteScalar
+
+        Desconectar()
+
+    End Sub
+
 End Class

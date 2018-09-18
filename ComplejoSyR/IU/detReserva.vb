@@ -389,6 +389,12 @@
 
         det.ShowDialog()
 
+        Dim c As New ClienteClass
+
+        c.ultimoid(c)
+
+        cbClientes.SelectedValue = c.Id
+
     End Sub
 
     '--------------------------------------SERVICIOS-----------------------------------------------------

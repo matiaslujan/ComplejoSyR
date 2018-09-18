@@ -25,12 +25,15 @@
     Private Sub MonthCalendar1_DateChanged(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles Calendario.DateChanged
         Ocupacion()
     End Sub
+
+
     Private Sub Inicio_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
         Ocupacion()
 
     End Sub
     Private Sub Ocupacion()
+
         Dim r As New ReservaClass
 
         r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)

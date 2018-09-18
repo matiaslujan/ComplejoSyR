@@ -38,11 +38,11 @@ Partial Class detCliente
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Label6 = New System.Windows.Forms.Label
-        Me.txtProvincia = New System.Windows.Forms.TextBox
         Me.Label7 = New System.Windows.Forms.Label
         Me.txtVehiculo = New System.Windows.Forms.TextBox
         Me.Label8 = New System.Windows.Forms.Label
         Me.txtPatente = New System.Windows.Forms.TextBox
+        Me.cbProvincia = New System.Windows.Forms.ComboBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -178,13 +178,6 @@ Partial Class detCliente
         Me.Label6.Text = "Provincia"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'txtProvincia
-        '
-        Me.txtProvincia.Location = New System.Drawing.Point(147, 163)
-        Me.txtProvincia.Name = "txtProvincia"
-        Me.txtProvincia.Size = New System.Drawing.Size(191, 20)
-        Me.txtProvincia.TabIndex = 85
-        '
         'Label7
         '
         Me.Label7.AutoSize = True
@@ -219,18 +212,27 @@ Partial Class detCliente
         Me.txtPatente.Size = New System.Drawing.Size(191, 20)
         Me.txtPatente.TabIndex = 89
         '
+        'cbProvincia
+        '
+        Me.cbProvincia.FormattingEnabled = True
+        Me.cbProvincia.Items.AddRange(New Object() {"Cordoba", "Buenos Aires"})
+        Me.cbProvincia.Location = New System.Drawing.Point(147, 160)
+        Me.cbProvincia.Name = "cbProvincia"
+        Me.cbProvincia.Size = New System.Drawing.Size(191, 21)
+        Me.cbProvincia.TabIndex = 91
+        '
         'detCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Gainsboro
         Me.ClientSize = New System.Drawing.Size(379, 314)
+        Me.Controls.Add(Me.cbProvincia)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtPatente)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtVehiculo)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.txtProvincia)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Label5)
@@ -273,5 +275,5 @@ Partial Class detCliente
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtVehiculo As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents txtProvincia As System.Windows.Forms.TextBox
+    Friend WithEvents cbProvincia As System.Windows.Forms.ComboBox
 End Class

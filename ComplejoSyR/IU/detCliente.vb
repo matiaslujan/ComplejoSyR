@@ -82,7 +82,7 @@
             txtDomicilio.Text = Cliente.Domicilio
             txtTelefono.Text = Cliente.Telefono
             txtCorreo.Text = Cliente.Correo
-            txtProvincia.Text = Cliente.Provincia
+            cbProvincia.SelectedItem = Cliente.Provincia
             txtVehiculo.Text = Cliente.Vehiculo
             txtPatente.Text = Cliente.Patente
 
@@ -97,7 +97,7 @@
             Cliente.Telefono = txtTelefono.Text
             Cliente.Correo = txtCorreo.Text
             Cliente.Domicilio = txtDomicilio.Text
-            Cliente.Provincia = txtProvincia.Text
+            Cliente.Provincia = cbProvincia.SelectedItem
             Cliente.Vehiculo = txtVehiculo.Text
             Cliente.Patente = txtPatente.Text
 

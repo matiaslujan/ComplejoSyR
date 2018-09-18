@@ -331,11 +331,11 @@ Public Class ReservaClass
         dgv.Columns("FIngreso").HeaderText = "Ingreso"
         dgv.Columns("FEgreso").HeaderText = "Egreso"
         dgv.Columns("Numero").HeaderText = "N°"
-        dgv.Columns("FIngreso").Width = 100
-        dgv.Columns("FEgreso").Width = 100
+        'dgv.Columns("Ingreso").Width = 100
+        'dgv.Columns("Egreso").Width = 100
         dgv.Columns("FEgreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         dgv.Columns("FIngreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        dgv.Columns("Numero").Width = 90
+        'dgv.Columns("Numero").Width = 90
         dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         Desconectar()
