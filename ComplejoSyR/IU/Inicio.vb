@@ -38,6 +38,7 @@
 
         r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
 
+    
     End Sub
     Public Sub NuevaReserva()
 
@@ -78,4 +79,10 @@
 
     End Sub
 
+    Private Sub dgvOcupacion_ColumnHeaderMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvOcupacion.ColumnHeaderMouseClick
+        Dim r As New ReservaClass
+        r.colorear(dgvOcupacion)
+
+
+    End Sub
 End Class

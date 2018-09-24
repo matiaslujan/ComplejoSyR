@@ -331,31 +331,18 @@ Public Class ReservaClass
         dgv.Columns("FIngreso").HeaderText = "Ingreso"
         dgv.Columns("FEgreso").HeaderText = "Egreso"
         dgv.Columns("Numero").HeaderText = "N°"
-        'dgv.Columns("Ingreso").Width = 100
-        'dgv.Columns("Egreso").Width = 100
+        dgv.Columns("FIngreso").Width = 100
+        dgv.Columns("FEgreso").Width = 100
         dgv.Columns("FEgreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         dgv.Columns("FIngreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        'dgv.Columns("Numero").Width = 90
+        dgv.Columns("Numero").Width = 50
         dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
         Desconectar()
 
         If dgv.RowCount > 0 Then
 
-
-            For Each Row As DataGridViewRow In dgv.Rows
-
-                If IsDBNull(Row.Cells("IdReserva").Value) = True Then
-
-                    Row.DefaultCellStyle.BackColor = Color.GreenYellow
-
-                Else
-                    Row.DefaultCellStyle.BackColor = Color.Salmon
-                    Row.DefaultCellStyle.ForeColor = Color.White
-                End If
-            Next
-
-            dgv.Rows(0).Selected = False
+            colorear(dgv)
 
         End If
 
@@ -389,6 +376,20 @@ Public Class ReservaClass
 
         Desconectar()
 
+    End Sub
+    Public Sub colorear(ByRef dgv As DataGridView)
+
+        For Each Row As DataGridViewRow In dgv.Rows
+
+            If IsDBNull(Row.Cells("IdReserva").Value) = True Then
+
+                Row.DefaultCellStyle.BackColor = Color.GreenYellow
+
+            Else
+                Row.DefaultCellStyle.BackColor = Color.Salmon
+                Row.DefaultCellStyle.ForeColor = Color.White
+            End If
+        Next
     End Sub
     Public Sub ActualizarTabla(ByRef dgv As DataGridView)
 
