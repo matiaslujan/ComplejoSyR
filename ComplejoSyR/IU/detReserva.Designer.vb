@@ -22,6 +22,7 @@ Partial Class detReserva
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
@@ -74,9 +75,11 @@ Partial Class detReserva
         Me.btnElimServ = New System.Windows.Forms.Button
         Me.btnModServ = New System.Windows.Forms.Button
         Me.btnNuevServ = New System.Windows.Forms.Button
+        Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.dgvAlojamientos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServicios, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Pagado
@@ -184,6 +187,7 @@ Partial Class detReserva
         Me.txtCantPer.Name = "txtCantPer"
         Me.txtCantPer.Size = New System.Drawing.Size(112, 26)
         Me.txtCantPer.TabIndex = 124
+        Me.txtCantPer.Tag = "Validar"
         '
         'txtCantDia
         '
@@ -192,6 +196,7 @@ Partial Class detReserva
         Me.txtCantDia.Name = "txtCantDia"
         Me.txtCantDia.Size = New System.Drawing.Size(111, 26)
         Me.txtCantDia.TabIndex = 125
+        Me.txtCantDia.Tag = "Validar"
         '
         'txtImpDia
         '
@@ -200,6 +205,7 @@ Partial Class detReserva
         Me.txtImpDia.Name = "txtImpDia"
         Me.txtImpDia.Size = New System.Drawing.Size(112, 26)
         Me.txtImpDia.TabIndex = 126
+        Me.txtImpDia.Tag = "Validar"
         '
         'txtImpEstadia
         '
@@ -208,6 +214,7 @@ Partial Class detReserva
         Me.txtImpEstadia.Name = "txtImpEstadia"
         Me.txtImpEstadia.Size = New System.Drawing.Size(112, 26)
         Me.txtImpEstadia.TabIndex = 127
+        Me.txtImpEstadia.Tag = "Validar"
         '
         'btnGuardar
         '
@@ -638,6 +645,10 @@ Partial Class detReserva
         Me.btnNuevServ.Text = "Agregar"
         Me.btnNuevServ.UseVisualStyleBackColor = False
         '
+        'ErrorProvider1
+        '
+        Me.ErrorProvider1.ContainerControl = Me
+        '
         'detReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -696,6 +707,7 @@ Partial Class detReserva
         CType(Me.dgvAlojamientos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvServicios, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -745,4 +757,5 @@ Partial Class detReserva
     Friend WithEvents btnElimServ As System.Windows.Forms.Button
     Friend WithEvents btnModServ As System.Windows.Forms.Button
     Friend WithEvents btnNuevServ As System.Windows.Forms.Button
+    Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
 End Class

@@ -98,8 +98,9 @@
 
             modalidades.CargarCombo(comboModalidad)
 
-            comboModalidad.SelectedValue = ""
+            comboModalidad.SelectedIndex = 0
 
+            comboSector.SelectedIndex = 0
         End If
 
 

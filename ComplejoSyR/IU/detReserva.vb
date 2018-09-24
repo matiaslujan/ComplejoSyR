@@ -1,22 +1,25 @@
 ﻿Public Class detReserva
 
-    Private Reserva_ As New ReservaClass
+    'Private Reserva_ As New ReservaClass
 
-    Public Property Reserva() As ReservaClass
-        Get
-            Return Reserva_
-        End Get
-        Set(ByVal value As ReservaClass)
-            Reserva_ = value
-        End Set
-    End Property
+    'Public Property Reserva() As ReservaClass
+    '    Get
+    '        Return Reserva_
+    '    End Get
+    '    Set(ByVal value As ReservaClass)
+    '        Reserva_ = value
+    '    End Set
+    'End Property
+    Dim f As New Funciones
 
+    Dim Reserva As New ReservaClass
     Dim Aloj As New AlojamientoReservaClass
     Dim lstAlojamientos As New List(Of AlojamientoReservaClass)
     Dim pago As New PagoClass
     Dim lstPagos As New List(Of PagoClass)
     Dim servicio As New ServicioClass
     Dim lstServicios As New List(Of ServicioClass)
+
     'agregar con fechas seleccionadas
 
     Public Sub New(ByVal FI As Date, ByVal FE As Date)
@@ -35,8 +38,6 @@
 
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
-
-        Reserva = Nothing
         ' Add any initialization after the InitializeComponent() call.
         Reserva.Accion = "Agregar"
 
@@ -100,86 +101,88 @@
         servicios()
     End Sub
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
+        If f.ValidarCampos(Me, ErrorProvider1) Then
 
-        Reserva.IdCliente = cbClientes.SelectedValue
-        Reserva.FIngreso = CDate(dtpFechaIngreso.Text)
-        Reserva.FEgreso = CDate(dtpFechaEgreso.Text)
-        Reserva.Fecha = CDate(dtpFecha.Text)
-        Reserva.CantDias = txtCantDia.Text
-        Reserva.CantPersonas = txtCantPer.Text
-        Reserva.ImpDia = txtImpDia.Text
-        Reserva.ImpTotal = txtImpEstadia.Text
-        Reserva.Descripcion = txtDescripcion.Text
-        Reserva.Cancelada = CbxCancelada.Checked
 
-        If Reserva.Accion = "Modificar" Then
+            Reserva.IdCliente = cbClientes.SelectedValue
+            Reserva.FIngreso = CDate(dtpFechaIngreso.Text)
+            Reserva.FEgreso = CDate(dtpFechaEgreso.Text)
+            Reserva.Fecha = CDate(dtpFecha.Text)
+            Reserva.CantDias = txtCantDia.Text
+            Reserva.CantPersonas = txtCantPer.Text
+            Reserva.ImpDia = txtImpDia.Text
+            Reserva.ImpTotal = txtImpEstadia.Text
+            Reserva.Descripcion = txtDescripcion.Text
+            Reserva.Cancelada = CbxCancelada.Checked
 
-            Reserva.Id = txtId.Text
+            If Reserva.Accion = "Modificar" Then
 
-            Reserva.Modificar(Reserva)
+                Reserva.Id = txtId.Text
 
-        Else
+                Reserva.Modificar(Reserva)
 
-            Reserva.Agregar(Reserva)
+            Else
 
-            Reserva.ultimoid(txtId)
+                Reserva.Agregar(Reserva)
 
-            Reserva.Id = txtId.Text
+                Reserva.ultimoid(txtId)
 
+                Reserva.Id = txtId.Text
+
+            End If
+
+
+            If lstAlojamientos.Count > 0 Then
+
+                For Each row In lstAlojamientos
+
+                    If row.accion = "Agregar" Then
+
+                        row.IdReserva = Reserva.Id
+
+                    End If
+
+                Next
+
+                Aloj.Actualizar(lstAlojamientos)
+
+            End If
+
+            If lstPagos.Count > 0 Then
+
+                For Each row In lstPagos
+
+                    If row.accion = "Agregar" Then
+
+                        row.IdReserva = Reserva.Id
+
+                    End If
+
+                Next
+
+                pago.Actualizar(lstPagos)
+
+            End If
+
+
+            If lstServicios.Count > 0 Then
+
+                For Each row In lstServicios
+
+                    If row.Accion = "Agregar" Then
+
+                        row.IdReserva = Reserva.Id
+
+                    End If
+
+                Next
+
+                servicio.actualizar(lstServicios)
+
+            End If
+
+            Close()
         End If
-
-
-        If lstAlojamientos.Count > 0 Then
-
-            For Each row In lstAlojamientos
-
-                If row.accion = "Agregar" Then
-
-                    row.IdReserva = Reserva.Id
-
-                End If
-
-            Next
-
-            Aloj.Actualizar(lstAlojamientos)
-
-        End If
-
-        If lstPagos.Count > 0 Then
-
-            For Each row In lstPagos
-
-                If row.accion = "Agregar" Then
-
-                    row.IdReserva = Reserva.Id
-
-                End If
-
-            Next
-
-            pago.Actualizar(lstPagos)
-
-        End If
-
-
-        If lstServicios.Count > 0 Then
-
-            For Each row In lstServicios
-
-                If row.Accion = "Agregar" Then
-
-                    row.IdReserva = Reserva.Id
-
-                End If
-
-            Next
-
-            servicio.Actualizar(lstServicios)
-
-        End If
-
-        Close()
-
     End Sub
     Private Function filaseleccionada(ByVal dgv As DataGridView) As Boolean
 
