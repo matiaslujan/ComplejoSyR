@@ -144,6 +144,7 @@ Partial Class detCliente
         Me.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnAceptar.Location = New System.Drawing.Point(47, 275)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(114, 24)
@@ -157,6 +158,7 @@ Partial Class detCliente
         Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnCancelar.Location = New System.Drawing.Point(206, 275)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(114, 24)
@@ -215,7 +217,7 @@ Partial Class detCliente
         'cbProvincia
         '
         Me.cbProvincia.FormattingEnabled = True
-        Me.cbProvincia.Items.AddRange(New Object() {"Cordoba", "Buenos Aires"})
+        Me.cbProvincia.Items.AddRange(New Object() {"Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucumán", "Otro"})
         Me.cbProvincia.Location = New System.Drawing.Point(147, 160)
         Me.cbProvincia.Name = "cbProvincia"
         Me.cbProvincia.Size = New System.Drawing.Size(191, 21)
