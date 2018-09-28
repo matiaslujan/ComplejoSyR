@@ -94,6 +94,7 @@
         cbClientes.SelectedValue = Reserva.IdCliente
         txtDescripcion.Text = Reserva.Descripcion
         CbxCancelada.Checked = Reserva.Cancelada
+
         Reserva.Importes(Reserva.Id, txtTotal, txtPagado, txtDeuda)
 
         alojamientos()
@@ -114,7 +115,10 @@
             Reserva.ImpTotal = txtImpEstadia.Text
             Reserva.Descripcion = txtDescripcion.Text
             Reserva.Cancelada = CbxCancelada.Checked
-
+            If lstAlojamientos.Count = 0 Then
+                MsgBox("Agrege un alojamiento")
+                Exit Sub
+            End If
             If Reserva.Accion = "Modificar" Then
 
                 Reserva.Id = txtId.Text
@@ -492,7 +496,5 @@
         dgvServicios.Columns("Conexion").Visible = False
 
     End Sub
-
-
 
 End Class

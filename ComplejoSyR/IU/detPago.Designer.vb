@@ -135,6 +135,7 @@ Partial Class detPago
         Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnCancelar.Location = New System.Drawing.Point(201, 160)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(114, 24)
@@ -148,6 +149,7 @@ Partial Class detPago
         Me.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.btnAceptar.Location = New System.Drawing.Point(42, 160)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(114, 24)
