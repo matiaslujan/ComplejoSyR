@@ -78,36 +78,36 @@ Partial Class detReserva
         Me.btnSalir = New System.Windows.Forms.Button
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel
-        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel
-        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel6 = New System.Windows.Forms.TableLayoutPanel
-        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel
-        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel9 = New System.Windows.Forms.TableLayoutPanel
+        Me.TableLayoutPanel4 = New System.Windows.Forms.TableLayoutPanel
+        Me.TableLayoutPanel8 = New System.Windows.Forms.TableLayoutPanel
+        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel
+        Me.TableLayoutPanel7 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel10 = New System.Windows.Forms.TableLayoutPanel
-        Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel12 = New System.Windows.Forms.TableLayoutPanel
-        Me.TableLayoutPanel13 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel14 = New System.Windows.Forms.TableLayoutPanel
+        Me.TableLayoutPanel13 = New System.Windows.Forms.TableLayoutPanel
+        Me.TableLayoutPanel11 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel15 = New System.Windows.Forms.TableLayoutPanel
+        Me.TableLayoutPanel5 = New System.Windows.Forms.TableLayoutPanel
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvServicios, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvPagos, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvAlojamientos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
-        Me.TableLayoutPanel4.SuspendLayout()
         Me.TableLayoutPanel6.SuspendLayout()
-        Me.TableLayoutPanel7.SuspendLayout()
-        Me.TableLayoutPanel8.SuspendLayout()
         Me.TableLayoutPanel9.SuspendLayout()
+        Me.TableLayoutPanel4.SuspendLayout()
+        Me.TableLayoutPanel8.SuspendLayout()
+        Me.TableLayoutPanel3.SuspendLayout()
+        Me.TableLayoutPanel7.SuspendLayout()
         Me.TableLayoutPanel10.SuspendLayout()
-        Me.TableLayoutPanel11.SuspendLayout()
         Me.TableLayoutPanel12.SuspendLayout()
-        Me.TableLayoutPanel13.SuspendLayout()
         Me.TableLayoutPanel14.SuspendLayout()
+        Me.TableLayoutPanel13.SuspendLayout()
+        Me.TableLayoutPanel11.SuspendLayout()
         Me.TableLayoutPanel15.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -161,7 +161,7 @@ Partial Class detReserva
         Me.dgvServicios.DefaultCellStyle = DataGridViewCellStyle1
         Me.dgvServicios.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvServicios.GridColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.dgvServicios.Location = New System.Drawing.Point(3, 42)
+        Me.dgvServicios.Location = New System.Drawing.Point(3, 41)
         Me.dgvServicios.MultiSelect = False
         Me.dgvServicios.Name = "dgvServicios"
         Me.dgvServicios.ReadOnly = True
@@ -169,7 +169,7 @@ Partial Class detReserva
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.White
         Me.dgvServicios.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvServicios.Size = New System.Drawing.Size(413, 111)
+        Me.dgvServicios.Size = New System.Drawing.Size(413, 110)
         Me.dgvServicios.TabIndex = 168
         '
         'Label12
@@ -179,7 +179,7 @@ Partial Class detReserva
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(3, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(413, 39)
+        Me.Label12.Size = New System.Drawing.Size(413, 38)
         Me.Label12.TabIndex = 169
         Me.Label12.Text = "Servicios"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -286,7 +286,7 @@ Partial Class detReserva
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.White
         Me.dgvPagos.RowsDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPagos.Size = New System.Drawing.Size(413, 109)
+        Me.dgvPagos.Size = New System.Drawing.Size(413, 110)
         Me.dgvPagos.TabIndex = 153
         '
         'Label9
@@ -363,7 +363,7 @@ Partial Class detReserva
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
         Me.dgvAlojamientos.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvAlojamientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvAlojamientos.Size = New System.Drawing.Size(413, 109)
+        Me.dgvAlojamientos.Size = New System.Drawing.Size(413, 110)
         Me.dgvAlojamientos.TabIndex = 148
         '
         'Label4
@@ -385,7 +385,7 @@ Partial Class detReserva
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(3, 34)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(121, 42)
+        Me.Label5.Size = New System.Drawing.Size(120, 42)
         Me.Label5.TabIndex = 119
         Me.Label5.Text = "Cliente"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -397,7 +397,7 @@ Partial Class detReserva
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(3, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(121, 34)
+        Me.Label11.Size = New System.Drawing.Size(120, 34)
         Me.Label11.TabIndex = 130
         Me.Label11.Text = "Id"
         Me.Label11.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -409,7 +409,7 @@ Partial Class detReserva
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(3, 115)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(121, 39)
+        Me.Label3.Size = New System.Drawing.Size(120, 39)
         Me.Label3.TabIndex = 118
         Me.Label3.Text = "Cant. Personas"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -421,7 +421,7 @@ Partial Class detReserva
         Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(3, 193)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(121, 40)
+        Me.Label15.Size = New System.Drawing.Size(120, 40)
         Me.Label15.TabIndex = 162
         Me.Label15.Text = "Total"
         Me.Label15.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -433,7 +433,7 @@ Partial Class detReserva
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(3, 154)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(121, 39)
+        Me.Label6.Size = New System.Drawing.Size(120, 39)
         Me.Label6.TabIndex = 120
         Me.Label6.Text = "Importe por Dia"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -445,7 +445,7 @@ Partial Class detReserva
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 76)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(121, 39)
+        Me.Label2.Size = New System.Drawing.Size(120, 39)
         Me.Label2.TabIndex = 117
         Me.Label2.Text = "Ingreso"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -455,9 +455,9 @@ Partial Class detReserva
         Me.btnCalcular.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCalcular.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCalcular.Location = New System.Drawing.Point(270, 157)
+        Me.btnCalcular.Location = New System.Drawing.Point(269, 157)
         Me.btnCalcular.Name = "btnCalcular"
-        Me.btnCalcular.Size = New System.Drawing.Size(37, 30)
+        Me.btnCalcular.Size = New System.Drawing.Size(38, 30)
         Me.btnCalcular.TabIndex = 139
         Me.btnCalcular.Text = "$"
         Me.btnCalcular.UseVisualStyleBackColor = True
@@ -467,7 +467,7 @@ Partial Class detReserva
         Me.txtTotal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtTotal.Enabled = False
         Me.txtTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotal.Location = New System.Drawing.Point(130, 196)
+        Me.txtTotal.Location = New System.Drawing.Point(129, 196)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
         Me.txtTotal.Size = New System.Drawing.Size(134, 26)
@@ -477,7 +477,7 @@ Partial Class detReserva
         '
         Me.txtImpDia.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtImpDia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtImpDia.Location = New System.Drawing.Point(130, 157)
+        Me.txtImpDia.Location = New System.Drawing.Point(129, 157)
         Me.txtImpDia.Name = "txtImpDia"
         Me.txtImpDia.Size = New System.Drawing.Size(134, 26)
         Me.txtImpDia.TabIndex = 126
@@ -487,7 +487,7 @@ Partial Class detReserva
         '
         Me.txtCantPer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtCantPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantPer.Location = New System.Drawing.Point(130, 118)
+        Me.txtCantPer.Location = New System.Drawing.Point(129, 118)
         Me.txtCantPer.Name = "txtCantPer"
         Me.txtCantPer.Size = New System.Drawing.Size(134, 26)
         Me.txtCantPer.TabIndex = 124
@@ -498,7 +498,7 @@ Partial Class detReserva
         Me.dtpFechaIngreso.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dtpFechaIngreso.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFechaIngreso.Location = New System.Drawing.Point(130, 79)
+        Me.dtpFechaIngreso.Location = New System.Drawing.Point(129, 79)
         Me.dtpFechaIngreso.Name = "dtpFechaIngreso"
         Me.dtpFechaIngreso.Size = New System.Drawing.Size(134, 26)
         Me.dtpFechaIngreso.TabIndex = 131
@@ -508,9 +508,9 @@ Partial Class detReserva
         Me.btnNuevo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnNuevo.Location = New System.Drawing.Point(270, 37)
+        Me.btnNuevo.Location = New System.Drawing.Point(269, 37)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(37, 35)
+        Me.btnNuevo.Size = New System.Drawing.Size(38, 35)
         Me.btnNuevo.TabIndex = 144
         Me.btnNuevo.Text = "+"
         Me.btnNuevo.UseVisualStyleBackColor = True
@@ -520,7 +520,7 @@ Partial Class detReserva
         Me.cbClientes.Dock = System.Windows.Forms.DockStyle.Fill
         Me.cbClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbClientes.FormattingEnabled = True
-        Me.cbClientes.Location = New System.Drawing.Point(130, 37)
+        Me.cbClientes.Location = New System.Drawing.Point(129, 37)
         Me.cbClientes.Name = "cbClientes"
         Me.cbClientes.Size = New System.Drawing.Size(134, 28)
         Me.cbClientes.TabIndex = 141
@@ -530,7 +530,7 @@ Partial Class detReserva
         Me.txtId.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtId.Enabled = False
         Me.txtId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtId.Location = New System.Drawing.Point(130, 3)
+        Me.txtId.Location = New System.Drawing.Point(129, 3)
         Me.txtId.Name = "txtId"
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(134, 26)
@@ -773,36 +773,41 @@ Partial Class detReserva
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(425, 600)
         Me.TableLayoutPanel2.TabIndex = 0
         '
-        'TableLayoutPanel3
+        'TableLayoutPanel6
         '
-        Me.TableLayoutPanel3.ColumnCount = 1
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.dgvAlojamientos, 0, 1)
-        Me.TableLayoutPanel3.Controls.Add(Me.Label4, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel7, 0, 2)
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 3
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(419, 193)
-        Me.TableLayoutPanel3.TabIndex = 1
+        Me.TableLayoutPanel6.ColumnCount = 1
+        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel6.Controls.Add(Me.TableLayoutPanel9, 0, 2)
+        Me.TableLayoutPanel6.Controls.Add(Me.Label12, 0, 0)
+        Me.TableLayoutPanel6.Controls.Add(Me.dgvServicios, 0, 1)
+        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel6.Location = New System.Drawing.Point(3, 403)
+        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
+        Me.TableLayoutPanel6.RowCount = 3
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
+        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(419, 194)
+        Me.TableLayoutPanel6.TabIndex = 3
         '
-        'TableLayoutPanel5
+        'TableLayoutPanel9
         '
-        Me.TableLayoutPanel5.ColumnCount = 1
-        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
-        Me.TableLayoutPanel5.RowCount = 3
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel5.Size = New System.Drawing.Size(200, 100)
-        Me.TableLayoutPanel5.TabIndex = 0
+        Me.TableLayoutPanel9.ColumnCount = 5
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel9.Controls.Add(Me.btnNuevServ, 0, 0)
+        Me.TableLayoutPanel9.Controls.Add(Me.btnModServ, 1, 0)
+        Me.TableLayoutPanel9.Controls.Add(Me.btnElimServ, 2, 0)
+        Me.TableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel9.Location = New System.Drawing.Point(3, 157)
+        Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
+        Me.TableLayoutPanel9.RowCount = 1
+        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel9.Size = New System.Drawing.Size(413, 34)
+        Me.TableLayoutPanel9.TabIndex = 170
         '
         'TableLayoutPanel4
         '
@@ -812,49 +817,14 @@ Partial Class detReserva
         Me.TableLayoutPanel4.Controls.Add(Me.Label9, 0, 0)
         Me.TableLayoutPanel4.Controls.Add(Me.dgvPagos, 0, 1)
         Me.TableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 202)
+        Me.TableLayoutPanel4.Location = New System.Drawing.Point(3, 203)
         Me.TableLayoutPanel4.Name = "TableLayoutPanel4"
         Me.TableLayoutPanel4.RowCount = 3
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(419, 193)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(419, 194)
         Me.TableLayoutPanel4.TabIndex = 2
-        '
-        'TableLayoutPanel6
-        '
-        Me.TableLayoutPanel6.ColumnCount = 1
-        Me.TableLayoutPanel6.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel6.Controls.Add(Me.TableLayoutPanel9, 0, 2)
-        Me.TableLayoutPanel6.Controls.Add(Me.Label12, 0, 0)
-        Me.TableLayoutPanel6.Controls.Add(Me.dgvServicios, 0, 1)
-        Me.TableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel6.Location = New System.Drawing.Point(3, 401)
-        Me.TableLayoutPanel6.Name = "TableLayoutPanel6"
-        Me.TableLayoutPanel6.RowCount = 3
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
-        Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(419, 196)
-        Me.TableLayoutPanel6.TabIndex = 3
-        '
-        'TableLayoutPanel7
-        '
-        Me.TableLayoutPanel7.ColumnCount = 5
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel7.Controls.Add(Me.btnAgregarAloj, 0, 0)
-        Me.TableLayoutPanel7.Controls.Add(Me.btnEliminarAloj, 1, 0)
-        Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel7.Location = New System.Drawing.Point(3, 156)
-        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
-        Me.TableLayoutPanel7.RowCount = 1
-        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(413, 34)
-        Me.TableLayoutPanel7.TabIndex = 150
         '
         'TableLayoutPanel8
         '
@@ -870,31 +840,47 @@ Partial Class detReserva
         Me.TableLayoutPanel8.Controls.Add(Me.Pagado, 3, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.txtPagado, 4, 0)
         Me.TableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel8.Location = New System.Drawing.Point(3, 156)
+        Me.TableLayoutPanel8.Location = New System.Drawing.Point(3, 157)
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 1
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel8.Size = New System.Drawing.Size(413, 34)
         Me.TableLayoutPanel8.TabIndex = 155
         '
-        'TableLayoutPanel9
+        'TableLayoutPanel3
         '
-        Me.TableLayoutPanel9.ColumnCount = 5
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel9.Controls.Add(Me.btnNuevServ, 0, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.btnModServ, 1, 0)
-        Me.TableLayoutPanel9.Controls.Add(Me.btnElimServ, 2, 0)
-        Me.TableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel9.Location = New System.Drawing.Point(3, 159)
-        Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
-        Me.TableLayoutPanel9.RowCount = 1
-        Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel9.Size = New System.Drawing.Size(413, 34)
-        Me.TableLayoutPanel9.TabIndex = 170
+        Me.TableLayoutPanel3.ColumnCount = 1
+        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel3.Controls.Add(Me.dgvAlojamientos, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.Label4, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.TableLayoutPanel7, 0, 2)
+        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
+        Me.TableLayoutPanel3.RowCount = 3
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(419, 194)
+        Me.TableLayoutPanel3.TabIndex = 1
+        '
+        'TableLayoutPanel7
+        '
+        Me.TableLayoutPanel7.ColumnCount = 5
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel7.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel7.Controls.Add(Me.btnAgregarAloj, 0, 0)
+        Me.TableLayoutPanel7.Controls.Add(Me.btnEliminarAloj, 1, 0)
+        Me.TableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel7.Location = New System.Drawing.Point(3, 157)
+        Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
+        Me.TableLayoutPanel7.RowCount = 1
+        Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(413, 34)
+        Me.TableLayoutPanel7.TabIndex = 150
         '
         'TableLayoutPanel10
         '
@@ -911,26 +897,6 @@ Partial Class detReserva
         Me.TableLayoutPanel10.Size = New System.Drawing.Size(639, 600)
         Me.TableLayoutPanel10.TabIndex = 1
         '
-        'TableLayoutPanel11
-        '
-        Me.TableLayoutPanel11.ColumnCount = 2
-        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 502.0!))
-        Me.TableLayoutPanel11.Controls.Add(Me.txtDescripcion, 1, 1)
-        Me.TableLayoutPanel11.Controls.Add(Me.Descripcion, 0, 1)
-        Me.TableLayoutPanel11.Controls.Add(Me.CbxCancelada, 1, 2)
-        Me.TableLayoutPanel11.Controls.Add(Me.TableLayoutPanel15, 1, 3)
-        Me.TableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel11.Location = New System.Drawing.Point(3, 248)
-        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
-        Me.TableLayoutPanel11.RowCount = 4
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel11.Size = New System.Drawing.Size(633, 349)
-        Me.TableLayoutPanel11.TabIndex = 0
-        '
         'TableLayoutPanel12
         '
         Me.TableLayoutPanel12.ColumnCount = 2
@@ -945,39 +911,6 @@ Partial Class detReserva
         Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel12.Size = New System.Drawing.Size(633, 239)
         Me.TableLayoutPanel12.TabIndex = 1
-        '
-        'TableLayoutPanel13
-        '
-        Me.TableLayoutPanel13.ColumnCount = 3
-        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.56554!))
-        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.43446!))
-        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
-        Me.TableLayoutPanel13.Controls.Add(Me.Label5, 0, 1)
-        Me.TableLayoutPanel13.Controls.Add(Me.txtId, 1, 0)
-        Me.TableLayoutPanel13.Controls.Add(Me.Label2, 0, 2)
-        Me.TableLayoutPanel13.Controls.Add(Me.Label3, 0, 3)
-        Me.TableLayoutPanel13.Controls.Add(Me.btnNuevo, 2, 1)
-        Me.TableLayoutPanel13.Controls.Add(Me.cbClientes, 1, 1)
-        Me.TableLayoutPanel13.Controls.Add(Me.Label6, 0, 4)
-        Me.TableLayoutPanel13.Controls.Add(Me.Label15, 0, 5)
-        Me.TableLayoutPanel13.Controls.Add(Me.txtTotal, 1, 5)
-        Me.TableLayoutPanel13.Controls.Add(Me.txtImpDia, 1, 4)
-        Me.TableLayoutPanel13.Controls.Add(Me.txtCantPer, 1, 3)
-        Me.TableLayoutPanel13.Controls.Add(Me.dtpFechaIngreso, 1, 2)
-        Me.TableLayoutPanel13.Controls.Add(Me.btnCalcular, 2, 4)
-        Me.TableLayoutPanel13.Controls.Add(Me.Label11, 0, 0)
-        Me.TableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel13.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel13.Name = "TableLayoutPanel13"
-        Me.TableLayoutPanel13.RowCount = 6
-        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.59227!))
-        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.02575!))
-        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
-        Me.TableLayoutPanel13.Size = New System.Drawing.Size(310, 233)
-        Me.TableLayoutPanel13.TabIndex = 0
         '
         'TableLayoutPanel14
         '
@@ -1007,6 +940,59 @@ Partial Class detReserva
         Me.TableLayoutPanel14.Size = New System.Drawing.Size(311, 233)
         Me.TableLayoutPanel14.TabIndex = 1
         '
+        'TableLayoutPanel13
+        '
+        Me.TableLayoutPanel13.ColumnCount = 3
+        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.56554!))
+        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.43446!))
+        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43.0!))
+        Me.TableLayoutPanel13.Controls.Add(Me.Label5, 0, 1)
+        Me.TableLayoutPanel13.Controls.Add(Me.txtId, 1, 0)
+        Me.TableLayoutPanel13.Controls.Add(Me.Label2, 0, 2)
+        Me.TableLayoutPanel13.Controls.Add(Me.Label3, 0, 3)
+        Me.TableLayoutPanel13.Controls.Add(Me.btnNuevo, 2, 1)
+        Me.TableLayoutPanel13.Controls.Add(Me.cbClientes, 1, 1)
+        Me.TableLayoutPanel13.Controls.Add(Me.Label6, 0, 4)
+        Me.TableLayoutPanel13.Controls.Add(Me.Label15, 0, 5)
+        Me.TableLayoutPanel13.Controls.Add(Me.txtTotal, 1, 5)
+        Me.TableLayoutPanel13.Controls.Add(Me.txtImpDia, 1, 4)
+        Me.TableLayoutPanel13.Controls.Add(Me.txtCantPer, 1, 3)
+        Me.TableLayoutPanel13.Controls.Add(Me.dtpFechaIngreso, 1, 2)
+        Me.TableLayoutPanel13.Controls.Add(Me.btnCalcular, 2, 4)
+        Me.TableLayoutPanel13.Controls.Add(Me.Label11, 0, 0)
+        Me.TableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel13.Location = New System.Drawing.Point(3, 3)
+        Me.TableLayoutPanel13.Name = "TableLayoutPanel13"
+        Me.TableLayoutPanel13.RowCount = 6
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.59227!))
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.02575!))
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.TableLayoutPanel13.Size = New System.Drawing.Size(310, 233)
+        Me.TableLayoutPanel13.TabIndex = 0
+        '
+        'TableLayoutPanel11
+        '
+        Me.TableLayoutPanel11.ColumnCount = 2
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel11.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 502.0!))
+        Me.TableLayoutPanel11.Controls.Add(Me.txtDescripcion, 1, 1)
+        Me.TableLayoutPanel11.Controls.Add(Me.Descripcion, 0, 1)
+        Me.TableLayoutPanel11.Controls.Add(Me.CbxCancelada, 1, 2)
+        Me.TableLayoutPanel11.Controls.Add(Me.TableLayoutPanel15, 1, 3)
+        Me.TableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel11.Location = New System.Drawing.Point(3, 248)
+        Me.TableLayoutPanel11.Name = "TableLayoutPanel11"
+        Me.TableLayoutPanel11.RowCount = 4
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel11.Size = New System.Drawing.Size(633, 349)
+        Me.TableLayoutPanel11.TabIndex = 0
+        '
         'TableLayoutPanel15
         '
         Me.TableLayoutPanel15.ColumnCount = 2
@@ -1020,6 +1006,20 @@ Partial Class detReserva
         Me.TableLayoutPanel15.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel15.Size = New System.Drawing.Size(200, 39)
         Me.TableLayoutPanel15.TabIndex = 144
+        '
+        'TableLayoutPanel5
+        '
+        Me.TableLayoutPanel5.ColumnCount = 1
+        Me.TableLayoutPanel5.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel5.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel5.Name = "TableLayoutPanel5"
+        Me.TableLayoutPanel5.RowCount = 3
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel5.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TableLayoutPanel5.Size = New System.Drawing.Size(200, 100)
+        Me.TableLayoutPanel5.TabIndex = 0
         '
         'detReserva
         '
@@ -1040,24 +1040,24 @@ Partial Class detReserva
         CType(Me.dgvAlojamientos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.TableLayoutPanel3.PerformLayout()
-        Me.TableLayoutPanel4.ResumeLayout(False)
-        Me.TableLayoutPanel4.PerformLayout()
         Me.TableLayoutPanel6.ResumeLayout(False)
         Me.TableLayoutPanel6.PerformLayout()
-        Me.TableLayoutPanel7.ResumeLayout(False)
+        Me.TableLayoutPanel9.ResumeLayout(False)
+        Me.TableLayoutPanel4.ResumeLayout(False)
+        Me.TableLayoutPanel4.PerformLayout()
         Me.TableLayoutPanel8.ResumeLayout(False)
         Me.TableLayoutPanel8.PerformLayout()
-        Me.TableLayoutPanel9.ResumeLayout(False)
+        Me.TableLayoutPanel3.ResumeLayout(False)
+        Me.TableLayoutPanel3.PerformLayout()
+        Me.TableLayoutPanel7.ResumeLayout(False)
         Me.TableLayoutPanel10.ResumeLayout(False)
-        Me.TableLayoutPanel11.ResumeLayout(False)
-        Me.TableLayoutPanel11.PerformLayout()
         Me.TableLayoutPanel12.ResumeLayout(False)
-        Me.TableLayoutPanel13.ResumeLayout(False)
-        Me.TableLayoutPanel13.PerformLayout()
         Me.TableLayoutPanel14.ResumeLayout(False)
         Me.TableLayoutPanel14.PerformLayout()
+        Me.TableLayoutPanel13.ResumeLayout(False)
+        Me.TableLayoutPanel13.PerformLayout()
+        Me.TableLayoutPanel11.ResumeLayout(False)
+        Me.TableLayoutPanel11.PerformLayout()
         Me.TableLayoutPanel15.ResumeLayout(False)
         Me.ResumeLayout(False)
 

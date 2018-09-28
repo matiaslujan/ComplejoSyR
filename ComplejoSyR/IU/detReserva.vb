@@ -102,7 +102,7 @@
         servicios()
     End Sub
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
-        If f.ValidarCampos(Me, ErrorProvider1) Then
+        If f.ValidarCampos2(Me.Controls, ErrorProvider1) Then
 
 
             Reserva.IdCliente = cbClientes.SelectedValue
