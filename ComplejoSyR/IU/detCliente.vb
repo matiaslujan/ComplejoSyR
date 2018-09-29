@@ -92,7 +92,7 @@
 
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
 
-        If funcion.ValidarCampos(Me, ErrorProvider1) Then
+        If funcion.ValidarCampos(Me.Controls, ErrorProvider1) Then
             Cliente.Nombre = txtNombre.Text
             Cliente.Telefono = txtTelefono.Text
             Cliente.Correo = txtCorreo.Text

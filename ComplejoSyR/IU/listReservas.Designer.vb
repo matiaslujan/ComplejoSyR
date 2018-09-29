@@ -101,7 +101,7 @@ Partial Class listReservas
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.dgvReservas)

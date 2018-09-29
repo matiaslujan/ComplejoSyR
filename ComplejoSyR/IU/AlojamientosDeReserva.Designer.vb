@@ -31,22 +31,36 @@ Partial Class AlojamientosDeReserva
         'btnSalir
         '
         Me.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnSalir.BackColor = System.Drawing.Color.White
+        Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnSalir.FlatAppearance.BorderSize = 2
+        Me.btnSalir.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Location = New System.Drawing.Point(282, 212)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(107, 23)
         Me.btnSalir.TabIndex = 5
         Me.btnSalir.Text = "Salir"
-        Me.btnSalir.UseVisualStyleBackColor = True
+        Me.btnSalir.UseVisualStyleBackColor = False
         '
         'btnCargar
         '
         Me.btnCargar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.btnCargar.BackColor = System.Drawing.Color.White
+        Me.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCargar.FlatAppearance.BorderSize = 2
+        Me.btnCargar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCargar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCargar.Location = New System.Drawing.Point(113, 212)
         Me.btnCargar.Name = "btnCargar"
         Me.btnCargar.Size = New System.Drawing.Size(104, 23)
         Me.btnCargar.TabIndex = 4
         Me.btnCargar.Text = "Cargar"
-        Me.btnCargar.UseVisualStyleBackColor = True
+        Me.btnCargar.UseVisualStyleBackColor = False
         '
         'dgvAlojRes
         '
@@ -68,7 +82,7 @@ Partial Class AlojamientosDeReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.White
+        Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.ClientSize = New System.Drawing.Size(495, 239)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCargar)

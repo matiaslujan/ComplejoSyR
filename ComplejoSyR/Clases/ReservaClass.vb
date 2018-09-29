@@ -340,11 +340,11 @@ Public Class ReservaClass
 
         Desconectar()
 
-        If dgv.RowCount > 0 Then
+     
+        colorear(dgv)
 
-            colorear(dgv)
+        dgv.Rows(0).Selected = False
 
-        End If
 
 
 
@@ -382,16 +382,11 @@ Public Class ReservaClass
         For Each Row As DataGridViewRow In dgv.Rows
 
             If IsDBNull(Row.Cells("IdReserva").Value) = True Then
-
-                Row.DefaultCellStyle.BackColor = Color.GreenYellow
-
+                Row.DefaultCellStyle.BackColor = Color.LemonChiffon
             Else
-                Row.DefaultCellStyle.BackColor = Color.Salmon
-                Row.DefaultCellStyle.ForeColor = Color.White
+                Row.DefaultCellStyle.BackColor = Color.Goldenrod
             End If
         Next
     End Sub
-    Public Sub ActualizarTabla(ByRef dgv As DataGridView)
-
-    End Sub
+ 
 End Class

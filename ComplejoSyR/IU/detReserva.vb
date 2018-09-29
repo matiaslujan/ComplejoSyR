@@ -1,15 +1,5 @@
 ﻿Public Class detReserva
 
-    'Private Reserva_ As New ReservaClass
-
-    'Public Property Reserva() As ReservaClass
-    '    Get
-    '        Return Reserva_
-    '    End Get
-    '    Set(ByVal value As ReservaClass)
-    '        Reserva_ = value
-    '    End Set
-    'End Property
     Dim f As New Funciones
 
     Dim Reserva As New ReservaClass
@@ -64,6 +54,7 @@
         Dim cliente As New ClienteClass
 
         cliente.cargarCombo(cbClientes)
+        cbClientes.SelectedIndex = -1
 
         If Reserva.Accion = "Modificar" Then
 
@@ -100,10 +91,10 @@
         alojamientos()
         pagos()
         servicios()
+
     End Sub
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
-        If f.ValidarCampos2(Me.Controls, ErrorProvider1) Then
-
+        If f.ValidarCampos(TableLayoutPanel13.Controls, ErrorProvider1) Then
 
             Reserva.IdCliente = cbClientes.SelectedValue
             Reserva.FIngreso = CDate(dtpFechaIngreso.Text)
@@ -368,29 +359,38 @@
 
     Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
 
+
         Close()
 
     End Sub
+    Private Sub txtCantDia_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCantDia.TextChanged
+        Calcular()
+    End Sub
+    Private Sub txtImpDia_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtImpDia.TextChanged
+        Calcular()
+    End Sub
+    Private Sub Calcular()
+        If txtCantDia.Text <> "" And txtImpDia.Text <> "" Then
 
-    Private Sub btnCalcular_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCalcular.Click
+            txtImpEstadia.Text = txtCantDia.Text * txtImpDia.Text
 
-        txtImpEstadia.Text = txtCantDia.Text * txtImpDia.Text
+        End If
 
     End Sub
 
-    Private Sub dtpFechaEgreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaEgreso.ValueChanged
+    Private Sub dtpFechaEgreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         txtCantDia.Text = DateDiff(DateInterval.Day, CDate(dtpFechaIngreso.Text), CDate(dtpFechaEgreso.Text))
 
     End Sub
-    Private Sub dtpFechaIngreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.ValueChanged
+    Private Sub dtpFechaIngreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         txtCantDia.Text = DateDiff(DateInterval.Day, CDate(dtpFechaIngreso.Text), CDate(dtpFechaEgreso.Text))
 
     End Sub
     'agregar nuevo cliente
 
-    Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevo.Click
+    Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         Dim det As New detCliente(cbClientes)
 
@@ -497,4 +497,5 @@
 
     End Sub
 
+ 
 End Class

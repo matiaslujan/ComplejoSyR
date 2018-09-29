@@ -140,11 +140,15 @@ Partial Class detCliente
         '
         'btnAceptar
         '
-        Me.btnAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnAceptar.BackColor = System.Drawing.Color.White
         Me.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnAceptar.FlatAppearance.BorderSize = 2
+        Me.btnAceptar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAceptar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAceptar.ForeColor = System.Drawing.Color.Black
         Me.btnAceptar.Location = New System.Drawing.Point(47, 275)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(114, 24)
@@ -154,11 +158,15 @@ Partial Class detCliente
         '
         'btnCancelar
         '
-        Me.btnCancelar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCancelar.BackColor = System.Drawing.Color.White
         Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCancelar.FlatAppearance.BorderSize = 2
+        Me.btnCancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnCancelar.ForeColor = System.Drawing.Color.Black
         Me.btnCancelar.Location = New System.Drawing.Point(206, 275)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(114, 24)
@@ -227,7 +235,7 @@ Partial Class detCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Gainsboro
+        Me.BackColor = System.Drawing.Color.PowderBlue
         Me.ClientSize = New System.Drawing.Size(379, 314)
         Me.Controls.Add(Me.cbProvincia)
         Me.Controls.Add(Me.Label8)

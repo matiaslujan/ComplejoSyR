@@ -16,9 +16,9 @@
 
     End Sub
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
-        Dim b As New listReservas
+        Dim l As New listReservas
 
-        b.ShowDialog()
+        l.ShowDialog()
 
     End Sub
     '------------------------------------------------------------------------------------------------------------------------------
@@ -71,9 +71,11 @@
             res.Datos(res)
 
             Dim det As New detReserva(res)
-
+            'da error index -1 
             det.ShowDialog()
+
             Ocupacion()
+
         End If
 
 
@@ -81,6 +83,7 @@
 
     Private Sub dgvOcupacion_ColumnHeaderMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvOcupacion.ColumnHeaderMouseClick
         Dim r As New ReservaClass
+
         r.colorear(dgvOcupacion)
 
 

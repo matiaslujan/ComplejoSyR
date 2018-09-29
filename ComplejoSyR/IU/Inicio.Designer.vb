@@ -25,6 +25,7 @@ Partial Class Inicio
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inicio))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
         Me.btnReservas = New System.Windows.Forms.ToolStripMenuItem
@@ -92,6 +93,8 @@ Partial Class Inicio
         'btnAdministracion
         '
         Me.btnAdministracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAdministracion.Checked = True
+        Me.btnAdministracion.CheckState = System.Windows.Forms.CheckState.Checked
         Me.btnAdministracion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAdministracion.ForeColor = System.Drawing.SystemColors.ControlText
         Me.btnAdministracion.Name = "btnAdministracion"
@@ -136,8 +139,8 @@ Partial Class Inicio
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.PowderBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOcupacion.Dock = System.Windows.Forms.DockStyle.Fill
@@ -145,6 +148,14 @@ Partial Class Inicio
         Me.dgvOcupacion.Margin = New System.Windows.Forms.Padding(3, 3, 3, 10)
         Me.dgvOcupacion.MultiSelect = False
         Me.dgvOcupacion.Name = "dgvOcupacion"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.PowderBlue
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvOcupacion.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvOcupacion.RowHeadersVisible = False
         Me.dgvOcupacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvOcupacion.Size = New System.Drawing.Size(511, 251)
@@ -184,7 +195,9 @@ Partial Class Inicio
         Me.btnNuevaReserva.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnNuevaReserva.FlatAppearance.BorderSize = 3
+        Me.btnNuevaReserva.FlatAppearance.BorderSize = 2
+        Me.btnNuevaReserva.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
+        Me.btnNuevaReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevaReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -203,7 +216,9 @@ Partial Class Inicio
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnBuscar.FlatAppearance.BorderSize = 3
+        Me.btnBuscar.FlatAppearance.BorderSize = 2
+        Me.btnBuscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -216,6 +231,7 @@ Partial Class Inicio
         '
         'TableLayoutPanel1
         '
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.LightSkyBlue
         Me.TableLayoutPanel1.ColumnCount = 2
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
@@ -231,6 +247,7 @@ Partial Class Inicio
         '
         'TableLayoutPanel2
         '
+        Me.TableLayoutPanel2.BackColor = System.Drawing.Color.LightSkyBlue
         Me.TableLayoutPanel2.ColumnCount = 1
         Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Calendario, 0, 0)

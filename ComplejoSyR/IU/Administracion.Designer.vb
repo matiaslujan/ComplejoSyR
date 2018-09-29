@@ -26,7 +26,6 @@ Partial Class Administracion
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Administracion))
         Me.tabModalidades = New System.Windows.Forms.TabPage
         Me.dgvModalidades = New System.Windows.Forms.DataGridView
@@ -48,6 +47,7 @@ Partial Class Administracion
         '
         'tabModalidades
         '
+        Me.tabModalidades.BackColor = System.Drawing.Color.LightSkyBlue
         Me.tabModalidades.Controls.Add(Me.dgvModalidades)
         Me.tabModalidades.Controls.Add(Me.btnDelMod)
         Me.tabModalidades.Controls.Add(Me.btnUpdMod)
@@ -57,7 +57,6 @@ Partial Class Administracion
         Me.tabModalidades.Size = New System.Drawing.Size(634, 282)
         Me.tabModalidades.TabIndex = 2
         Me.tabModalidades.Text = "Modalidades"
-        Me.tabModalidades.UseVisualStyleBackColor = True
         '
         'dgvModalidades
         '
@@ -95,6 +94,7 @@ Partial Class Administracion
         'btnDelMod
         '
         Me.btnDelMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnDelMod.BackColor = System.Drawing.Color.White
         Me.btnDelMod.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDelMod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnDelMod.FlatAppearance.BorderSize = 2
@@ -105,11 +105,12 @@ Partial Class Administracion
         Me.btnDelMod.Size = New System.Drawing.Size(87, 32)
         Me.btnDelMod.TabIndex = 8
         Me.btnDelMod.Text = "Eliminar"
-        Me.btnDelMod.UseVisualStyleBackColor = True
+        Me.btnDelMod.UseVisualStyleBackColor = False
         '
         'btnUpdMod
         '
         Me.btnUpdMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnUpdMod.BackColor = System.Drawing.Color.White
         Me.btnUpdMod.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnUpdMod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnUpdMod.FlatAppearance.BorderSize = 2
@@ -120,11 +121,12 @@ Partial Class Administracion
         Me.btnUpdMod.Size = New System.Drawing.Size(87, 32)
         Me.btnUpdMod.TabIndex = 7
         Me.btnUpdMod.Text = "Modificar"
-        Me.btnUpdMod.UseVisualStyleBackColor = True
+        Me.btnUpdMod.UseVisualStyleBackColor = False
         '
         'btnAddMod
         '
         Me.btnAddMod.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAddMod.BackColor = System.Drawing.Color.White
         Me.btnAddMod.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAddMod.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
         Me.btnAddMod.FlatAppearance.BorderSize = 2
@@ -135,7 +137,7 @@ Partial Class Administracion
         Me.btnAddMod.Size = New System.Drawing.Size(87, 32)
         Me.btnAddMod.TabIndex = 6
         Me.btnAddMod.Text = "Agregar"
-        Me.btnAddMod.UseVisualStyleBackColor = True
+        Me.btnAddMod.UseVisualStyleBackColor = False
         '
         'TabControl1
         '
@@ -151,6 +153,7 @@ Partial Class Administracion
         '
         'tabAlojamientos
         '
+        Me.tabAlojamientos.BackColor = System.Drawing.Color.LightSkyBlue
         Me.tabAlojamientos.Controls.Add(Me.dgvAlojamientos)
         Me.tabAlojamientos.Controls.Add(Me.btnDeletAloj)
         Me.tabAlojamientos.Controls.Add(Me.btnModAloj)
@@ -161,7 +164,6 @@ Partial Class Administracion
         Me.tabAlojamientos.Size = New System.Drawing.Size(634, 282)
         Me.tabAlojamientos.TabIndex = 0
         Me.tabAlojamientos.Text = "Alojamientos"
-        Me.tabAlojamientos.UseVisualStyleBackColor = True
         '
         'dgvAlojamientos
         '
@@ -176,14 +178,6 @@ Partial Class Administracion
         Me.dgvAlojamientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvAlojamientos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAlojamientos.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvAlojamientos.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgvAlojamientos.Location = New System.Drawing.Point(3, 3)
         Me.dgvAlojamientos.MultiSelect = False
         Me.dgvAlojamientos.Name = "dgvAlojamientos"
@@ -242,6 +236,7 @@ Partial Class Administracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightSkyBlue
         Me.ClientSize = New System.Drawing.Size(642, 315)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

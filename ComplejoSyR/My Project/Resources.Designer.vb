@@ -60,6 +60,13 @@ Namespace My.Resources
             End Set
         End Property
         
+        Friend ReadOnly Property Add_User() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Add_User", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property admin() As System.Drawing.Icon
             Get
                 Dim obj As Object = ResourceManager.GetObject("admin", resourceCulture)
