@@ -122,7 +122,7 @@ Partial Class detReserva
         Me.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ErrorProvider1.SetIconAlignment(Me.btnNuevo, System.Windows.Forms.ErrorIconAlignment.TopLeft)
-        Me.btnNuevo.Location = New System.Drawing.Point(344, 53)
+        Me.btnNuevo.Location = New System.Drawing.Point(343, 53)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(38, 35)
         Me.btnNuevo.TabIndex = 195
@@ -633,7 +633,7 @@ Partial Class detReserva
         Me.TableLayoutPanel13.ColumnCount = 3
         Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.30769!))
         Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.69231!))
-        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 93.0!))
+        Me.TableLayoutPanel13.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94.0!))
         Me.TableLayoutPanel13.Controls.Add(Me.txtDeuda, 1, 10)
         Me.TableLayoutPanel13.Controls.Add(Me.Label13, 0, 10)
         Me.TableLayoutPanel13.Controls.Add(Me.Label5, 0, 2)
@@ -688,7 +688,7 @@ Partial Class detReserva
         Me.txtDeuda.Location = New System.Drawing.Point(79, 453)
         Me.txtDeuda.Name = "txtDeuda"
         Me.txtDeuda.ReadOnly = True
-        Me.txtDeuda.Size = New System.Drawing.Size(259, 26)
+        Me.txtDeuda.Size = New System.Drawing.Size(258, 26)
         Me.txtDeuda.TabIndex = 206
         '
         'Label13
@@ -697,7 +697,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(3, 450)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(70, 50)
@@ -711,7 +711,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(3, 50)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(70, 50)
@@ -725,7 +725,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(3, 350)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(70, 50)
@@ -739,7 +739,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.Location = New System.Drawing.Point(3, 400)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(70, 50)
@@ -758,7 +758,7 @@ Partial Class detReserva
         Me.txtImpEstadia.Location = New System.Drawing.Point(79, 353)
         Me.txtImpEstadia.Name = "txtImpEstadia"
         Me.txtImpEstadia.ReadOnly = True
-        Me.txtImpEstadia.Size = New System.Drawing.Size(259, 26)
+        Me.txtImpEstadia.Size = New System.Drawing.Size(258, 26)
         Me.txtImpEstadia.TabIndex = 203
         Me.txtImpEstadia.Tag = "Validar"
         '
@@ -777,6 +777,7 @@ Partial Class detReserva
         'CbxCancelada
         '
         Me.CbxCancelada.AutoSize = True
+        Me.CbxCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxCancelada.Location = New System.Drawing.Point(79, 503)
         Me.CbxCancelada.Name = "CbxCancelada"
         Me.CbxCancelada.Size = New System.Drawing.Size(85, 17)
@@ -795,7 +796,7 @@ Partial Class detReserva
         Me.txtCantDia.Location = New System.Drawing.Point(79, 203)
         Me.txtCantDia.Name = "txtCantDia"
         Me.txtCantDia.ReadOnly = True
-        Me.txtCantDia.Size = New System.Drawing.Size(259, 26)
+        Me.txtCantDia.Size = New System.Drawing.Size(258, 26)
         Me.txtCantDia.TabIndex = 202
         Me.txtCantDia.Tag = "Validar"
         '
@@ -805,7 +806,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(3, 300)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 50)
@@ -823,7 +824,7 @@ Partial Class detReserva
         Me.txtTotal.Location = New System.Drawing.Point(79, 403)
         Me.txtTotal.Name = "txtTotal"
         Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(259, 26)
+        Me.txtTotal.Size = New System.Drawing.Size(258, 26)
         Me.txtTotal.TabIndex = 196
         '
         'Label3
@@ -832,7 +833,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(3, 250)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(70, 50)
@@ -847,7 +848,7 @@ Partial Class detReserva
         Me.txtImpDia.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtImpDia.Location = New System.Drawing.Point(79, 303)
         Me.txtImpDia.Name = "txtImpDia"
-        Me.txtImpDia.Size = New System.Drawing.Size(259, 26)
+        Me.txtImpDia.Size = New System.Drawing.Size(258, 26)
         Me.txtImpDia.TabIndex = 191
         Me.txtImpDia.Tag = "Validar"
         '
@@ -857,7 +858,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(3, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(70, 50)
@@ -871,7 +872,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(3, 200)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(70, 50)
@@ -889,7 +890,7 @@ Partial Class detReserva
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFecha.Location = New System.Drawing.Point(79, 3)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(259, 26)
+        Me.dtpFecha.Size = New System.Drawing.Size(258, 26)
         Me.dtpFecha.TabIndex = 205
         '
         'txtCantPer
@@ -899,7 +900,7 @@ Partial Class detReserva
         Me.txtCantPer.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtCantPer.Location = New System.Drawing.Point(79, 253)
         Me.txtCantPer.Name = "txtCantPer"
-        Me.txtCantPer.Size = New System.Drawing.Size(259, 26)
+        Me.txtCantPer.Size = New System.Drawing.Size(258, 26)
         Me.txtCantPer.TabIndex = 190
         Me.txtCantPer.Tag = "Validar"
         '
@@ -911,7 +912,7 @@ Partial Class detReserva
         Me.cbClientes.FormattingEnabled = True
         Me.cbClientes.Location = New System.Drawing.Point(79, 53)
         Me.cbClientes.Name = "cbClientes"
-        Me.cbClientes.Size = New System.Drawing.Size(259, 28)
+        Me.cbClientes.Size = New System.Drawing.Size(258, 28)
         Me.cbClientes.TabIndex = 194
         '
         'dtpFechaEgreso
@@ -923,7 +924,7 @@ Partial Class detReserva
         Me.dtpFechaEgreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaEgreso.Location = New System.Drawing.Point(79, 153)
         Me.dtpFechaEgreso.Name = "dtpFechaEgreso"
-        Me.dtpFechaEgreso.Size = New System.Drawing.Size(259, 26)
+        Me.dtpFechaEgreso.Size = New System.Drawing.Size(258, 26)
         Me.dtpFechaEgreso.TabIndex = 204
         '
         'Label7
@@ -932,7 +933,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(3, 150)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(70, 50)
@@ -944,7 +945,7 @@ Partial Class detReserva
         '
         Me.txtId.Enabled = False
         Me.txtId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtId.Location = New System.Drawing.Point(344, 103)
+        Me.txtId.Location = New System.Drawing.Point(343, 103)
         Me.txtId.Name = "txtId"
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(33, 26)
@@ -956,7 +957,7 @@ Partial Class detReserva
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(3, 100)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(70, 50)
@@ -972,7 +973,7 @@ Partial Class detReserva
         Me.dtpFechaIngreso.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaIngreso.Location = New System.Drawing.Point(79, 103)
         Me.dtpFechaIngreso.Name = "dtpFechaIngreso"
-        Me.dtpFechaIngreso.Size = New System.Drawing.Size(259, 26)
+        Me.dtpFechaIngreso.Size = New System.Drawing.Size(258, 26)
         Me.dtpFechaIngreso.TabIndex = 192
         '
         'TableLayoutPanel11
