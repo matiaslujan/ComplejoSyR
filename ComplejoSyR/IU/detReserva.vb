@@ -196,12 +196,6 @@
 
         dgvAlojamientos.DataSource = lstAlojamientos
 
-        If dgvAlojamientos.Rows.Count > 0 Then
-
-            dgvAlojamientos.Rows(0).Selected = False
-
-        End If
-
         Reserva.eliminarregistro(dgvAlojamientos)
 
         dgvAlojamientos.Columns("IdReserva").Visible = False
@@ -211,23 +205,6 @@
         dgvAlojamientos.Columns("Accion").Visible = False
 
     End Sub
-    'recorre el dgv y oculta los registros a eliminar
-    'Private Sub eliminarregistro(ByRef dgv As DataGridView)
-
-    '    For Each row As DataGridViewRow In dgv.Rows
-
-    '        If row.Cells("Accion").Value = "Eliminar" Then
-
-    '            Dim pos As Integer = row.Index
-
-    '            dgv.CurrentCell = Nothing
-
-    '            dgv.Rows(pos).Visible = False
-
-    '        End If
-    '    Next
-
-    'End Sub
 
     'agregar alojamiento, mostrar solo los disponibles
     Private Sub btnAgregarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarAloj.Click
@@ -267,12 +244,6 @@
         dgvPagos.DataSource = ""
 
         dgvPagos.DataSource = lstPagos
-
-        If dgvPagos.Rows.Count > 0 Then
-
-            dgvPagos.Rows(0).Selected = False
-
-        End If
 
         Reserva.eliminarregistro(dgvPagos)
 
@@ -488,12 +459,6 @@
         dgvServicios.DataSource = ""
 
         dgvServicios.DataSource = lstServicios
-
-        If dgvServicios.Rows.Count > 0 Then
-
-            dgvServicios.Rows(0).Selected = False
-
-        End If
 
         Reserva.eliminarregistro(dgvServicios)
 

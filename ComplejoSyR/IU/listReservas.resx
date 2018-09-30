@@ -150,11 +150,14 @@
   <data name="btnAgregar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btnAgregar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
   <data name="btnAgregar.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 280</value>
   </data>
   <data name="btnAgregar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 28</value>
+    <value>83, 31</value>
   </data>
   <data name="btnAgregar.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -180,11 +183,14 @@
   <data name="btnEliminar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btnEliminar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
   <data name="btnEliminar.Location" type="System.Drawing.Point, System.Drawing">
     <value>183, 280</value>
   </data>
   <data name="btnEliminar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 28</value>
+    <value>83, 31</value>
   </data>
   <data name="btnEliminar.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -210,11 +216,14 @@
   <data name="btnModificar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
+  <data name="btnModificar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
   <data name="btnModificar.Location" type="System.Drawing.Point, System.Drawing">
     <value>95, 280</value>
   </data>
   <data name="btnModificar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 28</value>
+    <value>83, 31</value>
   </data>
   <data name="btnModificar.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -271,7 +280,7 @@
     <value>Bottom, Right</value>
   </data>
   <data name="txtBuscar.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 14.25pt</value>
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="txtBuscar.Location" type="System.Drawing.Point, System.Drawing">
     <value>599, 279</value>

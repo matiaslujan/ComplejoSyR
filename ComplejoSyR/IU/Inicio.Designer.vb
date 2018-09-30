@@ -70,7 +70,7 @@ Partial Class Inicio
         Me.btnReservas.Checked = True
         Me.btnReservas.CheckState = System.Windows.Forms.CheckState.Indeterminate
         Me.btnReservas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnReservas.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnReservas.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnReservas.ImageTransparentColor = System.Drawing.Color.Transparent
         Me.btnReservas.MergeAction = System.Windows.Forms.MergeAction.Insert
         Me.btnReservas.Name = "btnReservas"
@@ -84,7 +84,7 @@ Partial Class Inicio
         '
         Me.btnClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnClientes.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnClientes.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnClientes.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.Padding = New System.Windows.Forms.Padding(4)
         Me.btnClientes.Size = New System.Drawing.Size(89, 36)
@@ -96,7 +96,7 @@ Partial Class Inicio
         Me.btnAdministracion.Checked = True
         Me.btnAdministracion.CheckState = System.Windows.Forms.CheckState.Checked
         Me.btnAdministracion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAdministracion.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.btnAdministracion.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnAdministracion.Name = "btnAdministracion"
         Me.btnAdministracion.Padding = New System.Windows.Forms.Padding(4)
         Me.btnAdministracion.Size = New System.Drawing.Size(146, 36)
@@ -136,11 +136,11 @@ Partial Class Inicio
         Me.dgvOcupacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvOcupacion.Cursor = System.Windows.Forms.Cursors.Hand
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Goldenrod
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.PeachPuff
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOcupacion.Dock = System.Windows.Forms.DockStyle.Fill
@@ -152,8 +152,8 @@ Partial Class Inicio
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Goldenrod
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.PeachPuff
         DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.dgvOcupacion.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvOcupacion.RowHeadersVisible = False
@@ -166,7 +166,7 @@ Partial Class Inicio
         Me.Calendario.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Calendario.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.Calendario.BackColor = System.Drawing.SystemColors.Desktop
         Me.Calendario.CalendarDimensions = New System.Drawing.Size(2, 1)
         Me.Calendario.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Calendario.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -201,6 +201,7 @@ Partial Class Inicio
         Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevaReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnNuevaReserva.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnNuevaReserva.Location = New System.Drawing.Point(3, 3)
         Me.btnNuevaReserva.Name = "btnNuevaReserva"
         Me.btnNuevaReserva.Size = New System.Drawing.Size(249, 31)
@@ -222,6 +223,7 @@ Partial Class Inicio
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnBuscar.Location = New System.Drawing.Point(258, 3)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(250, 31)
@@ -292,7 +294,7 @@ Partial Class Inicio
         Me.MinimumSize = New System.Drawing.Size(892, 604)
         Me.Name = "Inicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = "Inicio"
+        Me.Text = " "
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

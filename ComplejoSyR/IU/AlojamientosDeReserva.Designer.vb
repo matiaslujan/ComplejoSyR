@@ -22,6 +22,8 @@ Partial Class AlojamientosDeReserva
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.btnSalir = New System.Windows.Forms.Button
         Me.btnCargar = New System.Windows.Forms.Button
         Me.dgvAlojRes = New System.Windows.Forms.DataGridView
@@ -66,11 +68,30 @@ Partial Class AlojamientosDeReserva
         '
         Me.dgvAlojRes.AllowUserToAddRows = False
         Me.dgvAlojRes.AllowUserToDeleteRows = False
+        Me.dgvAlojRes.AllowUserToResizeColumns = False
+        Me.dgvAlojRes.AllowUserToResizeRows = False
         Me.dgvAlojRes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgvAlojRes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dgvAlojRes.BackgroundColor = System.Drawing.Color.LemonChiffon
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.PeachPuff
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvAlojRes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvAlojRes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LemonChiffon
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.PeachPuff
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvAlojRes.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvAlojRes.Location = New System.Drawing.Point(12, 8)
         Me.dgvAlojRes.Name = "dgvAlojRes"
         Me.dgvAlojRes.RowHeadersVisible = False

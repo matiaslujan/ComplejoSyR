@@ -43,9 +43,10 @@ Partial Class detPago
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(58, 121)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(60, 38)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(63, 13)
+        Me.Label5.Size = New System.Drawing.Size(92, 20)
         Me.Label5.TabIndex = 24
         Me.Label5.Text = "Descripcion"
         '
@@ -62,18 +63,20 @@ Partial Class detPago
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(58, 87)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(98, 76)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
+        Me.Label3.Size = New System.Drawing.Size(54, 20)
         Me.Label3.TabIndex = 22
         Me.Label3.Text = "Fecha"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(58, 43)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(88, 110)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(42, 13)
+        Me.Label2.Size = New System.Drawing.Size(64, 20)
         Me.Label2.TabIndex = 21
         Me.Label2.Text = "Importe"
         '
@@ -89,21 +92,21 @@ Partial Class detPago
         '
         'dtpFecha
         '
-        Me.dtpFecha.Location = New System.Drawing.Point(166, 81)
+        Me.dtpFecha.Location = New System.Drawing.Point(165, 76)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(160, 20)
         Me.dtpFecha.TabIndex = 16
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(165, 114)
+        Me.txtDescripcion.Location = New System.Drawing.Point(165, 40)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(161, 20)
         Me.txtDescripcion.TabIndex = 17
         '
         'txtIImporte
         '
-        Me.txtIImporte.Location = New System.Drawing.Point(166, 40)
+        Me.txtIImporte.Location = New System.Drawing.Point(166, 112)
         Me.txtIImporte.Name = "txtIImporte"
         Me.txtIImporte.Size = New System.Drawing.Size(111, 20)
         Me.txtIImporte.TabIndex = 15
@@ -139,10 +142,11 @@ Partial Class detPago
         Me.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCancelar.ForeColor = System.Drawing.Color.Black
+        Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCancelar.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnCancelar.Location = New System.Drawing.Point(201, 160)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(114, 24)
+        Me.btnCancelar.Size = New System.Drawing.Size(83, 31)
         Me.btnCancelar.TabIndex = 86
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
@@ -157,10 +161,11 @@ Partial Class detPago
         Me.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAceptar.ForeColor = System.Drawing.Color.Black
-        Me.btnAceptar.Location = New System.Drawing.Point(42, 160)
+        Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAceptar.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnAceptar.Location = New System.Drawing.Point(92, 160)
         Me.btnAceptar.Name = "btnAceptar"
-        Me.btnAceptar.Size = New System.Drawing.Size(114, 24)
+        Me.btnAceptar.Size = New System.Drawing.Size(83, 31)
         Me.btnAceptar.TabIndex = 85
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
