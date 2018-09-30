@@ -75,6 +75,8 @@
     End Sub
     Private Sub detCliente_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
+        cbProvincia.SelectedIndex = 0
+
         If Operacion = "M" Then
 
             txtId.Text = Cliente.Id

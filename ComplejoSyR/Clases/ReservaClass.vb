@@ -384,9 +384,34 @@ Public Class ReservaClass
             If IsDBNull(Row.Cells("IdReserva").Value) = True Then
                 Row.DefaultCellStyle.BackColor = Color.LemonChiffon
             Else
-                Row.DefaultCellStyle.BackColor = Color.Goldenrod
+                'Row.DefaultCellStyle.BackColor = Color.Goldenrod
+                Row.DefaultCellStyle.BackColor = Color.FromArgb(241, 185, 138)
+
             End If
         Next
     End Sub
- 
+
+    Public Sub CantidadDeDias(ByRef txt As TextBox, ByVal Ingreso As DateTimePicker, ByVal Egreso As DateTimePicker)
+
+        txt.Text = DateDiff(DateInterval.Day, CDate(Ingreso.Text), CDate(Egreso.Text))
+
+    End Sub
+    'eliminar registros de las listas de reserva
+    'recorre el dgv y oculta los registros a eliminar
+    Public Sub eliminarregistro(ByRef dgv As DataGridView)
+
+        For Each row As DataGridViewRow In dgv.Rows
+
+            If row.Cells("Accion").Value = "Eliminar" Then
+
+                Dim pos As Integer = row.Index
+
+                dgv.CurrentCell = Nothing
+
+                dgv.Rows(pos).Visible = False
+
+            End If
+        Next
+
+    End Sub
 End Class

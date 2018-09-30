@@ -1,12 +1,15 @@
 ﻿Public Class Inicio
     Private Sub btnReservas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReservas.Click
+        Dim lst As New listReservas
 
-        listReservas.ShowDialog()
+        lst.ShowDialog()
 
     End Sub
 
     Private Sub btnClientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClientes.Click
-        listClientes.ShowDialog()
+        Dim lst As New listClientes
+
+        lst.ShowDialog()
 
     End Sub
     Private Sub btnAdministracion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdministracion.Click
@@ -16,6 +19,7 @@
 
     End Sub
     Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+
         Dim l As New listReservas
 
         l.ShowDialog()
@@ -23,7 +27,9 @@
     End Sub
     '------------------------------------------------------------------------------------------------------------------------------
     Private Sub MonthCalendar1_DateChanged(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles Calendario.DateChanged
+
         Ocupacion()
+
     End Sub
 
 
@@ -82,6 +88,7 @@
     End Sub
 
     Private Sub dgvOcupacion_ColumnHeaderMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvOcupacion.ColumnHeaderMouseClick
+
         Dim r As New ReservaClass
 
         r.colorear(dgvOcupacion)

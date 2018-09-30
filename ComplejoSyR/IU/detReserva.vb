@@ -55,7 +55,7 @@
 
         cliente.cargarCombo(cbClientes)
         cbClientes.SelectedIndex = -1
-
+        txtPagado.Text = "0"
         If Reserva.Accion = "Modificar" Then
 
             Aloj.TraerAlojamiento(Reserva.Id, lstAlojamientos)
@@ -69,6 +69,7 @@
             dtpFechaEgreso.Text = Reserva.FEgreso
 
             dtpFechaIngreso.Text = Reserva.FIngreso
+
 
         End If
     End Sub
@@ -201,7 +202,7 @@
 
         End If
 
-        eliminarregistro(dgvAlojamientos)
+        Reserva.eliminarregistro(dgvAlojamientos)
 
         dgvAlojamientos.Columns("IdReserva").Visible = False
         dgvAlojamientos.Columns("IdAlojamiento").Visible = False
@@ -211,22 +212,22 @@
 
     End Sub
     'recorre el dgv y oculta los registros a eliminar
-    Private Sub eliminarregistro(ByRef dgv As DataGridView)
+    'Private Sub eliminarregistro(ByRef dgv As DataGridView)
 
-        For Each row As DataGridViewRow In dgv.Rows
+    '    For Each row As DataGridViewRow In dgv.Rows
 
-            If row.Cells("Accion").Value = "Eliminar" Then
+    '        If row.Cells("Accion").Value = "Eliminar" Then
 
-                Dim pos As Integer = row.Index
+    '            Dim pos As Integer = row.Index
 
-                dgv.CurrentCell = Nothing
+    '            dgv.CurrentCell = Nothing
 
-                dgv.Rows(pos).Visible = False
+    '            dgv.Rows(pos).Visible = False
 
-            End If
-        Next
+    '        End If
+    '    Next
 
-    End Sub
+    'End Sub
 
     'agregar alojamiento, mostrar solo los disponibles
     Private Sub btnAgregarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregarAloj.Click
@@ -273,7 +274,7 @@
 
         End If
 
-        eliminarregistro(dgvPagos)
+        Reserva.eliminarregistro(dgvPagos)
 
         dgvPagos.Columns("IdReserva").Visible = False
         dgvPagos.Columns("Id").Visible = False
@@ -378,16 +379,17 @@
 
     End Sub
 
-    Private Sub dtpFechaEgreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub dtpFechaEgreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaEgreso.ValueChanged
 
-        txtCantDia.Text = DateDiff(DateInterval.Day, CDate(dtpFechaIngreso.Text), CDate(dtpFechaEgreso.Text))
-
-    End Sub
-    Private Sub dtpFechaIngreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-        txtCantDia.Text = DateDiff(DateInterval.Day, CDate(dtpFechaIngreso.Text), CDate(dtpFechaEgreso.Text))
+        Reserva.CantidadDeDias(txtCantDia, dtpFechaIngreso, dtpFechaEgreso)
 
     End Sub
+    Private Sub dtpFechaIngreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.ValueChanged
+
+        Reserva.CantidadDeDias(txtCantDia, dtpFechaIngreso, dtpFechaEgreso)
+
+    End Sub
+
     'agregar nuevo cliente
 
     Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -409,14 +411,19 @@
     '----------------------------------------------------------------------------------------------------
 
     Private Sub btnNuevServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevServ.Click
+
         Dim det As New detServicio(lstServicios)
 
         det.ShowDialog()
+
         servicios()
+
     End Sub
     Private Sub modificarservicio()
         filaseleccionada(dgvServicios)
+
         Dim s As New ServicioClass
+
         s.Id = dgvServicios.CurrentRow.Cells("Id").Value
         s.IdReserva = dgvServicios.CurrentRow.Cells("IdReserva").Value
         s.Importe = dgvServicios.CurrentRow.Cells("Importe").Value
@@ -488,7 +495,7 @@
 
         End If
 
-        eliminarregistro(dgvServicios)
+        Reserva.eliminarregistro(dgvServicios)
 
         dgvServicios.Columns("IdReserva").Visible = False
         dgvServicios.Columns("Id").Visible = False

@@ -38,7 +38,7 @@ Partial Class AlojamientosDeReserva
         Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Location = New System.Drawing.Point(282, 212)
+        Me.btnSalir.Location = New System.Drawing.Point(245, 292)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(107, 23)
         Me.btnSalir.TabIndex = 5
@@ -55,7 +55,7 @@ Partial Class AlojamientosDeReserva
         Me.btnCargar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCargar.Location = New System.Drawing.Point(113, 212)
+        Me.btnCargar.Location = New System.Drawing.Point(76, 292)
         Me.btnCargar.Name = "btnCargar"
         Me.btnCargar.Size = New System.Drawing.Size(104, 23)
         Me.btnCargar.TabIndex = 4
@@ -75,7 +75,7 @@ Partial Class AlojamientosDeReserva
         Me.dgvAlojRes.Name = "dgvAlojRes"
         Me.dgvAlojRes.RowHeadersVisible = False
         Me.dgvAlojRes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvAlojRes.Size = New System.Drawing.Size(471, 199)
+        Me.dgvAlojRes.Size = New System.Drawing.Size(397, 279)
         Me.dgvAlojRes.TabIndex = 3
         '
         'AlojamientosDeReserva
@@ -83,10 +83,11 @@ Partial Class AlojamientosDeReserva
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.ClientSize = New System.Drawing.Size(495, 239)
+        Me.ClientSize = New System.Drawing.Size(421, 319)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCargar)
         Me.Controls.Add(Me.dgvAlojRes)
+        Me.MinimumSize = New System.Drawing.Size(437, 358)
         Me.Name = "AlojamientosDeReserva"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Alojamientos Disponibles"

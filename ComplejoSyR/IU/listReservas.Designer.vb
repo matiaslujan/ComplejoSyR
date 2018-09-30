@@ -51,7 +51,7 @@ Partial Class listReservas
         'btnAgregar
         '
         resources.ApplyResources(Me.btnAgregar, "btnAgregar")
-        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnAgregar.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnAgregar.FlatAppearance.BorderSize = 2
@@ -64,7 +64,7 @@ Partial Class listReservas
         'btnEliminar
         '
         resources.ApplyResources(Me.btnEliminar, "btnEliminar")
-        Me.btnEliminar.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnEliminar.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnEliminar.FlatAppearance.BorderSize = 2
@@ -77,7 +77,7 @@ Partial Class listReservas
         'btnModificar
         '
         resources.ApplyResources(Me.btnModificar, "btnModificar")
-        Me.btnModificar.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnModificar.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnModificar.FlatAppearance.BorderSize = 2
@@ -108,7 +108,6 @@ Partial Class listReservas
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
-        Me.MaximizeBox = False
         Me.Name = "listReservas"
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
