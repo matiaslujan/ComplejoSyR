@@ -68,4 +68,9 @@
         Close()
 
     End Sub
+
+    Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
+        Close()
+
+    End Sub
 End Class

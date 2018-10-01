@@ -180,16 +180,16 @@
             Close()
         End If
     End Sub
-    Private Function filaseleccionada(ByVal dgv As DataGridView) As Boolean
+    'Private Function filaseleccionada(ByVal dgv As DataGridView) As Boolean
 
-        If dgv.CurrentRow Is Nothing Then
+    '    If dgv.CurrentRow Is Nothing Then
 
-            MsgBox("Seleccione un registro")
+    '        MsgBox("Seleccione un registro")
 
-            Return True
+    '        Return True
 
-        End If
-    End Function
+    '    End If
+    'End Function
     Private Sub alojamientos()
 
         dgvAlojamientos.DataSource = ""
@@ -219,7 +219,7 @@
 
     Private Sub btnEliminarAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarAloj.Click
 
-        If filaseleccionada(dgvAlojamientos) Then Exit Sub
+        If f.filanoseleccionada(dgvAlojamientos) Then Exit Sub
 
 
         If dgvAlojamientos.CurrentRow.Cells("Accion").Value = "Agregar" Then
@@ -265,7 +265,9 @@
     End Sub
 
     Private Sub ModificarPago()
-        filaseleccionada(dgvPagos)
+
+        If f.filanoseleccionada(dgvPagos) Then Exit Sub
+
         Dim p As New PagoClass
         p.Id = dgvPagos.CurrentRow.Cells("Id").Value
         p.IdReserva = dgvPagos.CurrentRow.Cells("IdReserva").Value
@@ -307,7 +309,7 @@
     End Sub
 
     Private Sub btnEliminarPago_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminarPago.Click
-        If filaseleccionada(dgvPagos) Then Exit Sub
+        If f.filanoseleccionada(dgvPagos) Then Exit Sub
 
         If dgvPagos.CurrentRow.Cells("Accion").Value = "Agregar" Then
 
@@ -391,7 +393,7 @@
 
     End Sub
     Private Sub modificarservicio()
-        filaseleccionada(dgvServicios)
+        If f.filanoseleccionada(dgvServicios) Then Exit Sub
 
         Dim s As New ServicioClass
 
@@ -431,7 +433,7 @@
 
     Private Sub btnElimServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnElimServ.Click
 
-        If filaseleccionada(dgvServicios) Then Exit Sub
+        If f.filanoseleccionada(dgvServicios) Then Exit Sub
 
         If dgvServicios.CurrentRow.Cells("Accion").Value = "Agregar" Then
 

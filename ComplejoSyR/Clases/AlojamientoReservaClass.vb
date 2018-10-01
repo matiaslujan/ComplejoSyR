@@ -115,33 +115,39 @@ Public Class AlojamientoReservaClass
     'trae los alojamientos de una reserva predeterminada
 
     Public Sub TraerAlojamiento(ByVal id As Integer, ByRef lst As List(Of AlojamientoReservaClass))
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("AlojResTraer", conexion)
+            comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@IdReserva", id)
 
-        Dim comando As New SqlCommand("AlojResTraer", conexion)
-        comando.CommandType = CommandType.StoredProcedure
-        comando.Parameters.AddWithValue("@IdReserva", id)
+            Dim lista As SqlDataReader = comando.ExecuteReader
 
-        Dim lista As SqlDataReader = comando.ExecuteReader
+            If lista.HasRows Then
 
-        If lista.HasRows Then
+                For Each row In lista
 
-            For Each row In lista
+                    Dim alojres As New AlojamientoReservaClass
 
-                Dim alojres As New AlojamientoReservaClass
+                    alojres.Id = (lista("Id"))
+                    alojres.numero = (lista("Numero"))
+                    alojres.nombre = (lista("Nombre"))
+                    alojres.capacidad = (lista("Capacidad"))
 
-                alojres.Id = (lista("Id"))
-                alojres.numero = (lista("Numero"))
-                alojres.nombre = (lista("Nombre"))
-                alojres.capacidad = (lista("Capacidad"))
+                    lst.Add(alojres)
 
-                lst.Add(alojres)
+                Next
 
-            Next
+            End If
 
-        End If
+            Desconectar()
 
-        Desconectar()
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 

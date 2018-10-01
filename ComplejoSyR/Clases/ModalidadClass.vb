@@ -36,109 +36,134 @@ Public Class ModalidadClass
     End Property
 
     Public Sub Traer(ByVal dgv As DataGridView)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ModalidadTraer", conexion)
 
-        Dim comando As New SqlCommand("ModalidadTraer", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            Dim tabla As New Data.DataTable
 
-        Dim tabla As New Data.DataTable
+            Dim lista As New SqlDataAdapter(comando)
 
-        Dim lista As New SqlDataAdapter(comando)
+            lista.Fill(tabla)
 
-        lista.Fill(tabla)
+            dgv.DataSource = tabla
 
-        dgv.DataSource = tabla
-        dgv.Columns("Id").Visible = False
+            dgv.Columns("Id").Visible = False
 
-        Desconectar()
+            Desconectar()
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
     Public Sub Agregar(ByVal modalidad As ModalidadClass)
+        Try
+            Conectar()
+            Dim comando As New SqlCommand("ModalidadAgregar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        Conectar()
-        Dim comando As New SqlCommand("ModalidadAgregar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Nombre", modalidad.Nombre)
 
-        comando.Parameters.AddWithValue("@Nombre", modalidad.Nombre)
+            comando.Parameters.AddWithValue("@Tipo", modalidad.Tipo)
 
-        comando.Parameters.AddWithValue("@Tipo", modalidad.Tipo)
+            comando.ExecuteNonQuery()
 
-        comando.ExecuteNonQuery()
+            Desconectar()
+        Catch ex As Exception
 
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
+
     End Sub
 
     Public Sub Modificar(ByVal modalidad As ModalidadClass)
+        Try
+            Conectar()
+            Dim comando As New SqlCommand("ModalidadModificar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        Conectar()
-        Dim comando As New SqlCommand("ModalidadModificar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Nombre", modalidad.Nombre)
 
-        comando.Parameters.AddWithValue("@Nombre", modalidad.Nombre)
+            comando.Parameters.AddWithValue("@Tipo", modalidad.Tipo)
 
-        comando.Parameters.AddWithValue("@Tipo", modalidad.Tipo)
+            comando.Parameters.AddWithValue("@Id", modalidad.Id)
 
-        comando.Parameters.AddWithValue("@Id", modalidad.Id)
+            comando.ExecuteNonQuery()
 
-        comando.ExecuteNonQuery()
+            Desconectar()
+        Catch ex As Exception
 
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 
     Public Sub Eliminar(ByVal id As Integer)
+        Try
+            Conectar()
 
-        Conectar()
-
-        Dim comando As New SqlCommand("ModalidadEliminar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            Dim comando As New SqlCommand("ModalidadEliminar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
 
-        comando.Parameters.AddWithValue("@id", id)
+            comando.Parameters.AddWithValue("@id", id)
 
-        comando.ExecuteNonQuery()
+            comando.ExecuteNonQuery()
 
-        Desconectar()
+            Desconectar()
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 
     Public Sub CargarCombo(ByVal combo As ComboBox)
+        Try
+            Conectar()
+            Dim comando As New SqlCommand("ModalidadTraer", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        Conectar()
-        Dim comando As New SqlCommand("ModalidadTraer", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            Dim lista As SqlDataReader = comando.ExecuteReader
 
-        Dim lista As SqlDataReader = comando.ExecuteReader
+            Dim lista2 As New List(Of ModalidadClass)
 
-        Dim lista2 As New List(Of ModalidadClass)
+            If lista.HasRows Then
 
-        If lista.HasRows Then
+                While lista.Read()
 
-            While lista.Read()
+                    Dim modalidad As New ModalidadClass
 
-                Dim modalidad As New ModalidadClass
+                    modalidad.Id = (lista("id"))
 
-                modalidad.Id = (lista("id"))
+                    modalidad.Nombre = (lista("nombre"))
 
-                modalidad.Nombre = (lista("nombre"))
+                    lista2.Add(modalidad)
 
-                lista2.Add(modalidad)
+                End While
 
-            End While
+                combo.DataSource = lista2
 
-            combo.DataSource = lista2
+                combo.DisplayMember = "Nombre"
 
-            combo.DisplayMember = "Nombre"
+                combo.ValueMember = "id"
 
-            combo.ValueMember = "id"
+            End If
 
-        End If
+            Desconectar()
+        Catch ex As Exception
 
+            MsgBox(ex.Message)
 
-
-        Desconectar()
+        End Try
 
     End Sub
 End Class

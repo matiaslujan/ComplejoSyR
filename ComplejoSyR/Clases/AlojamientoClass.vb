@@ -60,116 +60,127 @@ Public Class AlojamientoClass
     End Property
 
     Public Sub Traer(ByVal dgv As DataGridView)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("AlojamientoTraer", conexion)
 
-  
-        Dim comando As New SqlCommand("AlojamientoTraer", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            Dim table As New Data.DataTable
 
-        Dim table As New Data.DataTable
+            Dim adapter As New SqlDataAdapter(comando)
 
-        Dim adapter As New SqlDataAdapter(comando)
+            adapter.Fill(table)
 
-        adapter.Fill(table)
+            dgv.DataSource = table
+            dgv.Columns("Id").Visible = False
+            dgv.Columns("IdModalidad").Visible = False
 
-        dgv.DataSource = table
-        dgv.Columns("Id").Visible = False
-        dgv.Columns("IdModalidad").Visible = False
+            Desconectar()
+        Catch ex As Exception
 
-        If dgv.RowCount > 0 Then
+            MsgBox(ex.Message)
 
-            dgv.Rows(0).Selected = False
-
-        End If
-
-        Desconectar()
+        End Try
 
     End Sub
 
     Public Sub Agregar(ByVal alojamiento As AlojamientoClass)
+        Try
+            Conectar()
+            Dim comando As New SqlCommand("AlojamientoAgregar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        Conectar()
-        Dim comando As New SqlCommand("AlojamientoAgregar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Numero", alojamiento.Numero)
+            comando.Parameters.AddWithValue("@Capacidad", alojamiento.Capacidad)
+            comando.Parameters.AddWithValue("@idModalidad", alojamiento.idModalidad)
+            comando.Parameters.AddWithValue("@Sector", alojamiento.Sector)
+            comando.ExecuteNonQuery()
 
-        comando.Parameters.AddWithValue("@Numero", alojamiento.Numero)
-        comando.Parameters.AddWithValue("@Capacidad", alojamiento.Capacidad)
-        comando.Parameters.AddWithValue("@idModalidad", alojamiento.idModalidad)
-        comando.Parameters.AddWithValue("@Sector", alojamiento.Sector)
-        comando.ExecuteNonQuery()
+            Desconectar()
+        Catch ex As Exception
 
+            MsgBox(ex.Message)
 
-        Desconectar()
+        End Try
 
     End Sub
 
     Public Sub Modificar(ByVal alojamiento As AlojamientoClass)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("AlojamientoModificar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        Dim comando As New SqlCommand("AlojamientoModificar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Numero", alojamiento.Numero)
+            comando.Parameters.AddWithValue("@Capacidad", alojamiento.Capacidad)
+            comando.Parameters.AddWithValue("@idModalidad", alojamiento.idModalidad)
+            comando.Parameters.AddWithValue("@Sector", alojamiento.Sector)
+            comando.Parameters.AddWithValue("@Id", alojamiento.id)
 
-        comando.Parameters.AddWithValue("@Numero", alojamiento.Numero)
-        comando.Parameters.AddWithValue("@Capacidad", alojamiento.Capacidad)
-        comando.Parameters.AddWithValue("@idModalidad", alojamiento.idModalidad)
-        comando.Parameters.AddWithValue("@Sector", alojamiento.Sector)
-        comando.Parameters.AddWithValue("@Id", alojamiento.id)
+            comando.ExecuteNonQuery()
 
-        comando.ExecuteNonQuery()
+            Desconectar()
+        Catch ex As Exception
 
+            MsgBox(ex.Message)
 
-        Desconectar()
+        End Try
 
     End Sub
 
     Public Sub Eliminar(ByVal Id As Integer)
 
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("AlojamientoEliminar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        Dim comando As New SqlCommand("AlojamientoEliminar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Id", Id)
 
-        comando.Parameters.AddWithValue("@Id", Id)
+            comando.ExecuteNonQuery()
 
-        comando.ExecuteNonQuery()
+            Desconectar()
+        Catch ex As Exception
 
+            MsgBox(ex.Message)
 
-        Desconectar()
+        End Try
 
     End Sub
     '' taer alojamientos disponibles segun las fechas ingresadas
 
     Public Sub AlojDisponibles(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date)
+        Try
 
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("AlojamientosDisponibles", conexion)
 
-        Dim comando As New SqlCommand("AlojamientosDisponibles", conexion)
-      
-        comando.CommandType = CommandType.StoredProcedure
-        comando.Parameters.AddWithValue("@FI", FIng)
-        comando.Parameters.AddWithValue("@FE", FEg)
+            comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@FI", FIng)
+            comando.Parameters.AddWithValue("@FE", FEg)
 
-        Dim table As New Data.DataTable
+            Dim table As New Data.DataTable
 
-        Dim adapter As New SqlDataAdapter(comando)
+            Dim adapter As New SqlDataAdapter(comando)
 
-        adapter.Fill(table)
+            adapter.Fill(table)
 
-        dgv.DataSource = table
+            dgv.DataSource = table
 
-        dgv.Columns("Id").Visible = False
+            dgv.Columns("Id").Visible = False
 
-        If dgv.RowCount > 0 Then
+            Desconectar()
 
-            dgv.Rows(0).Selected = False
+        Catch ex As Exception
 
-        End If
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 End Class

@@ -66,4 +66,18 @@
             End Try
         Next
     End Function
+
+    Public Function filanoseleccionada(ByVal dgv As DataGridView) As Boolean
+
+        If dgv.CurrentRow Is Nothing Then
+
+            MsgBox("Seleccione un registro")
+
+            Return True
+
+        Else
+            Return False
+
+        End If
+    End Function
 End Class

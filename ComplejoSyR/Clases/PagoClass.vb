@@ -67,36 +67,41 @@ Public Class PagoClass
         End Set
     End Property
     Public Sub Traer(ByRef lst As List(Of PagoClass), ByVal IdReserva As Integer)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("PagosTraer", conexion)
 
-        Dim comando As New SqlCommand("PagosTraer", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
-
-        comando.Parameters.AddWithValue("@IdReserva", IdReserva)
+            comando.Parameters.AddWithValue("@IdReserva", IdReserva)
 
 
-        Dim lista As SqlDataReader = comando.ExecuteReader
+            Dim lista As SqlDataReader = comando.ExecuteReader
 
-        If lista.HasRows Then
+            If lista.HasRows Then
 
-            For Each row In lista
+                For Each row In lista
 
-                Dim pago As New PagoClass
+                    Dim pago As New PagoClass
 
-                pago.Id = (lista("Id"))
-                pago.Descripcion = (lista("Descripcion"))
-                pago.Fecha = (lista("Fecha"))
-                pago.Importe = (lista("Importe"))
-                pago.IdReserva = (lista("IdReserva"))
-                lst.Add(pago)
+                    pago.Id = (lista("Id"))
+                    pago.Descripcion = (lista("Descripcion"))
+                    pago.Fecha = (lista("Fecha"))
+                    pago.Importe = (lista("Importe"))
+                    pago.IdReserva = (lista("IdReserva"))
+                    lst.Add(pago)
 
-            Next
+                Next
 
-        End If
+            End If
 
-        Desconectar()
+            Desconectar()
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 
@@ -145,10 +150,7 @@ Public Class PagoClass
 
 
                 End Select
-                'If row.accion = "Agregar" Then
-                'ElseIf row.accion = "Eliminar" Then
-                'End If
-
+   
             Next
             Desconectar()
 

@@ -1,21 +1,22 @@
 ﻿Public Class listReservas
 
+    Dim f As New Funciones
+    Dim res As New ReservaClass
 
     Private Sub listReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Traer()
-    End Sub
-    Private Sub Traer()
-        Dim res As New ReservaClass
+
         res.Traer(dgvReservas)
 
     End Sub
+
     Private Sub btnAgregar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAgregar.Click
 
         Dim det As New detReserva()
 
         det.ShowDialog()
 
-        Traer()
+        res.Traer(dgvReservas)
+
     End Sub
 
     Private Sub btnModificar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModificar.Click
@@ -30,36 +31,35 @@
     End Sub
     Private Sub modificar()
 
-        Dim res As New ReservaClass
+        If f.filanoseleccionada(dgvReservas) Then Exit Sub
 
         res.Id = dgvReservas.CurrentRow.Cells("Id").Value
-
         'con el id se recuperan todos los datos de la reserva
         res.Datos(res)
 
         Dim det As New detReserva(res)
-
         det.ShowDialog()
 
-        Traer()
+        res.Traer(dgvReservas)
+
+
     End Sub
 
     Private Sub btnEliminar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEliminar.Click
 
-        Dim res As New ReservaClass
+        If f.filanoseleccionada(dgvReservas) Then Exit Sub
 
         res.Id = dgvReservas.CurrentRow.Cells("Id").Value
 
         res.Eliminar(res.Id)
 
         res.Traer(dgvReservas)
+
     End Sub
 
     Private Sub txtBuscar_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscar.TextChanged
-        Dim r As New ReservaClass
 
-        r.Buscar(txtBuscar.Text, dgvReservas)
-
+        res.Buscar(txtBuscar.Text, dgvReservas)
 
     End Sub
 End Class

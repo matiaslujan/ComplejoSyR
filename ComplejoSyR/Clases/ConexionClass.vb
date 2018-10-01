@@ -15,19 +15,30 @@ Public Class ConexionClass
     End Property
 
     Public Sub Conectar()
+        Try
 
-        'matias
-        conexion.ConnectionString = "Server=LAPTOP-K16JEHVE\DEVELOPER;Database=complejosolyrio;Trusted_connection=true;"
+            conexion.ConnectionString = "Server=LAPTOP-K16JEHVE\DEVELOPER;Database=complejosolyrio2;Trusted_connection=true;"
 
+            conexion.Open()
 
-        conexion.Open()
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 
     Public Sub Desconectar()
 
-        conexion.Close()
+        Try
+            conexion.Close()
 
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 End Class

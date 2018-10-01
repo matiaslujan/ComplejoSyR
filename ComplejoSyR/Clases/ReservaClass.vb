@@ -134,247 +134,282 @@ Public Class ReservaClass
     End Property
 
     Public Sub Traer(ByVal dgv As DataGridView)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ReservasTraer", conexion)
 
-        Dim comando As New SqlCommand("ReservasTraer", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            Dim table As New Data.DataTable
 
-        Dim table As New Data.DataTable
+            Dim adapter As New SqlDataAdapter(comando)
 
-        Dim adapter As New SqlDataAdapter(comando)
+            adapter.Fill(table)
 
-        adapter.Fill(table)
+            dgv.DataSource = table
 
-        dgv.DataSource = table
+            dgv.Columns("Id").Visible = False
 
-        dgv.Columns("Id").Visible = False
+            If dgv.Rows.Count > 0 Then
 
-        If dgv.Rows.Count > 0 Then
+                dgv.Rows(0).Selected = False
 
-            dgv.Rows(0).Selected = False
+            End If
+            Desconectar()
+        Catch ex As Exception
 
-        End If
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
+
 
     End Sub
 
     Public Sub Datos(ByVal reserva As ReservaClass)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ReservaDatos", conexion)
 
-        Dim comando As New SqlCommand("ReservaDatos", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Id", reserva.Id)
 
-        comando.Parameters.AddWithValue("@Id", reserva.Id)
+            Dim lista As SqlDataReader = comando.ExecuteReader
 
-        Dim lista As SqlDataReader = comando.ExecuteReader
+            If lista.HasRows Then
 
-        If lista.HasRows Then
+                While lista.Read()
 
-            While lista.Read()
+                    reserva.Id = (lista("Id"))
+                    reserva.IdCliente = (lista("IdCliente"))
+                    reserva.Fecha = (lista("FReserva"))
+                    reserva.FIngreso = (lista("FIngreso"))
+                    reserva.FEgreso = (lista("FEgreso"))
+                    reserva.CantPersonas = (lista("CantPersonas"))
+                    reserva.CantDias = (lista("CantDias"))
+                    reserva.ImpDia = (lista("ImpDia"))
+                    reserva.ImpTotal = (lista("ImpTotal"))
+                    reserva.Descripcion = (lista("Descripcion"))
+                    reserva.Cancelada = (lista("Cancelada"))
 
-                reserva.Id = (lista("Id"))
-                reserva.IdCliente = (lista("IdCliente"))
-                reserva.Fecha = (lista("FReserva"))
-                reserva.FIngreso = (lista("FIngreso"))
-                reserva.FEgreso = (lista("FEgreso"))
-                reserva.CantPersonas = (lista("CantPersonas"))
-                reserva.CantDias = (lista("CantDias"))
-                reserva.ImpDia = (lista("ImpDia"))
-                reserva.ImpTotal = (lista("ImpTotal"))
-                reserva.Descripcion = (lista("Descripcion"))
-                reserva.Cancelada = (lista("Cancelada"))
+                End While
 
-            End While
+            End If
 
-        End If
+            Desconectar()
+        Catch ex As Exception
 
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
     Public Sub Agregar(ByVal reserva As ReservaClass)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ReservaAgregar", conexion)
 
-        Dim comando As New SqlCommand("ReservaAgregar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@IdCliente", reserva.IdCliente)
+            comando.Parameters.AddWithValue("@FIngreso", reserva.FIngreso)
+            comando.Parameters.AddWithValue("@FEgreso", reserva.FEgreso)
+            comando.Parameters.AddWithValue("@FReserva", reserva.Fecha)
+            comando.Parameters.AddWithValue("@CantDias", reserva.CantDias)
+            comando.Parameters.AddWithValue("@cantPersonas", reserva.CantPersonas)
+            comando.Parameters.AddWithValue("@impDia", reserva.ImpDia)
+            comando.Parameters.AddWithValue("@ImpTotal", reserva.ImpTotal)
+            comando.Parameters.AddWithValue("@Descripcion", reserva.Descripcion)
+            comando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
 
-        comando.Parameters.AddWithValue("@IdCliente", reserva.IdCliente)
-        comando.Parameters.AddWithValue("@FIngreso", reserva.FIngreso)
-        comando.Parameters.AddWithValue("@FEgreso", reserva.FEgreso)
-        comando.Parameters.AddWithValue("@FReserva", reserva.Fecha)
-        comando.Parameters.AddWithValue("@CantDias", reserva.CantDias)
-        comando.Parameters.AddWithValue("@cantPersonas", reserva.CantPersonas)
-        comando.Parameters.AddWithValue("@impDia", reserva.ImpDia)
-        comando.Parameters.AddWithValue("@ImpTotal", reserva.ImpTotal)
-        comando.Parameters.AddWithValue("@Descripcion", reserva.Descripcion)
-        comando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
+            comando.ExecuteNonQuery()
 
-        comando.ExecuteNonQuery()
+            Desconectar()
+        Catch ex As Exception
 
+            MsgBox(ex.Message)
 
-        Desconectar()
+        End Try
 
     End Sub
 
     Public Sub Modificar(ByVal reserva As ReservaClass)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ReservaModificar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
+            comando.Parameters.AddWithValue("@IdCliente", reserva.IdCliente)
+            comando.Parameters.AddWithValue("@FIngreso", reserva.FIngreso)
+            comando.Parameters.AddWithValue("@FEgreso", reserva.FEgreso)
+            comando.Parameters.AddWithValue("@FReserva", reserva.Fecha)
+            comando.Parameters.AddWithValue("@CantDias", reserva.CantDias)
+            comando.Parameters.AddWithValue("@CantPersonas", reserva.CantPersonas)
+            comando.Parameters.AddWithValue("@ImpDia", reserva.ImpDia)
+            comando.Parameters.AddWithValue("@ImpTotal", reserva.ImpTotal)
+            comando.Parameters.AddWithValue("@Descripcion", reserva.Descripcion)
+            comando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
+            comando.Parameters.AddWithValue("@Id", reserva.Id)
 
-        Dim comando As New SqlCommand("ReservaModificar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            comando.ExecuteNonQuery()
 
-        comando.Parameters.AddWithValue("@IdCliente", reserva.IdCliente)
-        comando.Parameters.AddWithValue("@FIngreso", reserva.FIngreso)
-        comando.Parameters.AddWithValue("@FEgreso", reserva.FEgreso)
-        comando.Parameters.AddWithValue("@FReserva", reserva.Fecha)
-        comando.Parameters.AddWithValue("@CantDias", reserva.CantDias)
-        comando.Parameters.AddWithValue("@CantPersonas", reserva.CantPersonas)
-        comando.Parameters.AddWithValue("@ImpDia", reserva.ImpDia)
-        comando.Parameters.AddWithValue("@ImpTotal", reserva.ImpTotal)
-        comando.Parameters.AddWithValue("@Descripcion", reserva.Descripcion)
-        comando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
-        comando.Parameters.AddWithValue("@Id", reserva.Id)
+            Desconectar()
+        Catch ex As Exception
 
-        comando.ExecuteNonQuery()
+            MsgBox(ex.Message)
 
-        Desconectar()
+        End Try
 
     End Sub
 
     Public Sub Eliminar(ByVal Id As Integer)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ReservaEliminar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        Dim comando As New SqlCommand("ReservaEliminar", conexion)
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@id", Id)
 
-        comando.Parameters.AddWithValue("@id", Id)
+            comando.ExecuteNonQuery()
 
-        comando.ExecuteNonQuery()
+            Desconectar()
+        Catch ex As Exception
 
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 
     Public Sub ultimoid(ByVal txt As TextBox)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ReservaUltimoId", conexion)
 
+            comando.CommandType = CommandType.StoredProcedure
 
-        Dim comando As New SqlCommand("ReservaUltimoId", conexion)
+            txt.Text = comando.ExecuteScalar
 
-        comando.CommandType = CommandType.StoredProcedure
+            Desconectar()
+        Catch ex As Exception
 
+            MsgBox(ex.Message)
 
-        txt.Text = comando.ExecuteScalar
-
-        Desconectar()
-
-
+        End Try
     End Sub
     Public Sub Buscar(ByVal Nombre As String, ByVal dgv As DataGridView)
+        Try
 
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ReservaBuscar", conexion)
 
-        Dim comando As New SqlCommand("ReservaBuscar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Nombre", Nombre)
+            Dim tabla As New Data.DataTable
 
-        comando.Parameters.AddWithValue("@Nombre", Nombre)
-        Dim tabla As New Data.DataTable
+            Dim lista As New SqlDataAdapter(comando)
 
-        Dim lista As New SqlDataAdapter(comando)
+            lista.Fill(tabla)
 
-        lista.Fill(tabla)
+            dgv.DataSource = tabla
 
-        dgv.DataSource = tabla
+            If dgv.Rows.Count > 0 Then
 
-        If dgv.Rows.Count > 0 Then
+                dgv.Rows(0).Selected = False
+            End If
+            Desconectar()
+        Catch ex As Exception
 
-            dgv.Rows(0).Selected = False
-        End If
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 
     Public Sub TraerOcupacion(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date)
-
-        Conectar()
-
-
-        Dim comando As New SqlCommand("AlojamientosOcupacion", conexion)
-
-        comando.CommandType = CommandType.StoredProcedure
-
-        comando.Parameters.AddWithValue("@FI", FIng)
-
-        comando.Parameters.AddWithValue("@FE", FEg)
-
-        Dim table As New Data.DataTable
-
-        Dim adapter As New SqlDataAdapter(comando)
-
-        adapter.Fill(table)
-
-        dgv.DataSource = table
-
-        dgv.Columns("Id").Visible = False
-        dgv.Columns("IdReserva").Visible = False
-        dgv.Columns("Nombre").HeaderText = "Modalidad"
-        dgv.Columns("FIngreso").HeaderText = "Ingreso"
-        dgv.Columns("FEgreso").HeaderText = "Egreso"
-        dgv.Columns("Numero").HeaderText = "N°"
-        dgv.Columns("FIngreso").Width = 100
-        dgv.Columns("FEgreso").Width = 100
-        dgv.Columns("FEgreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        dgv.Columns("FIngreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-        dgv.Columns("Numero").Width = 50
-        dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
-
-        Desconectar()
-
-     
-        colorear(dgv)
-
-        dgv.Rows(0).Selected = False
+        Try
+            Conectar()
 
 
+            Dim comando As New SqlCommand("AlojamientosOcupacion", conexion)
 
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@FI", FIng)
+
+            comando.Parameters.AddWithValue("@FE", FEg)
+
+            Dim table As New Data.DataTable
+
+            Dim adapter As New SqlDataAdapter(comando)
+
+            adapter.Fill(table)
+
+            dgv.DataSource = table
+
+            dgv.Columns("Id").Visible = False
+            dgv.Columns("IdReserva").Visible = False
+            dgv.Columns("Nombre").HeaderText = "Modalidad"
+            dgv.Columns("FIngreso").HeaderText = "Ingreso"
+            dgv.Columns("FEgreso").HeaderText = "Egreso"
+            dgv.Columns("Numero").HeaderText = "N°"
+            dgv.Columns("FIngreso").Width = 100
+            dgv.Columns("FEgreso").Width = 100
+            dgv.Columns("FEgreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            dgv.Columns("FIngreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            dgv.Columns("Numero").Width = 50
+            dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+            Desconectar()
+
+            colorear(dgv)
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 
     Public Sub Importes(ByVal id As Integer, ByVal txtTot As TextBox, ByVal txtPag As TextBox, ByVal txtDeuda As TextBox)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ReservaImportes", conexion)
 
-        Dim comando As New SqlCommand("ReservaImportes", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Id", id)
 
-        comando.Parameters.AddWithValue("@Id", id)
+            Dim lista As SqlDataReader = comando.ExecuteReader
 
-        Dim lista As SqlDataReader = comando.ExecuteReader
+            If lista.HasRows Then
 
-        If lista.HasRows Then
+                While lista.Read()
 
-            While lista.Read()
+                    txtTot.Text = (lista("Total"))
+                    txtPag.Text = (lista("Pagado"))
+                    txtDeuda.Text = (lista("Deuda"))
 
-                txtTot.Text = (lista("Total"))
-                txtPag.Text = (lista("Pagado"))
-                txtDeuda.Text = (lista("Deuda"))
+                End While
 
-            End While
+            End If
 
-        End If
+            Desconectar()
+        Catch ex As Exception
 
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
     Public Sub colorear(ByRef dgv As DataGridView)

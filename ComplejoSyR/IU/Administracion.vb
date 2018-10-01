@@ -1,12 +1,11 @@
 ﻿Public Class Administracion
-
+    Dim f As New Funciones
+    Dim m As New ModalidadClass
+    Dim a As New AlojamientoClass
     ' MODALIDADES
     Private Sub tabModalidades_Entr(ByVal sender As Object, ByVal e As System.EventArgs) Handles tabModalidades.Enter
 
-        Dim m As New ModalidadClass
-
         m.Traer(dgvModalidades)
-
 
     End Sub
 
@@ -15,9 +14,9 @@
 
         Dim detalle As New detModalidad(dgvModalidades)
 
-
         detalle.ShowDialog()
 
+        m.Traer(dgvModalidades)
 
     End Sub
 
@@ -40,51 +39,47 @@
 
     Private Sub modificarModalidad()
 
-        If seleccion(dgvModalidades) Then Exit Sub
+        If f.filanoseleccionada(dgvModalidades) Then Exit Sub
 
-        Dim modalidad As New ModalidadClass
+        m.Id = dgvModalidades.CurrentRow.Cells("Id").Value
 
-        modalidad.Id = dgvModalidades.CurrentRow.Cells("Id").Value
+        m.Nombre = dgvModalidades.CurrentRow.Cells("Nombre").Value
 
-        modalidad.Nombre = dgvModalidades.CurrentRow.Cells("Nombre").Value
+        m.Tipo = dgvModalidades.CurrentRow.Cells("Tipo").Value
 
-        modalidad.Tipo = dgvModalidades.CurrentRow.Cells("Tipo").Value
-
-        Dim detalle As New detModalidad(modalidad, dgvModalidades)
+        Dim detalle As New detModalidad(m, dgvModalidades)
 
         detalle.ShowDialog()
 
+        m.Traer(dgvModalidades)
     End Sub
 
     'eliminar
     Private Sub btnDelMod_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDelMod.Click
 
-        If seleccion(dgvModalidades) Then Exit Sub
+        If f.filanoseleccionada(dgvModalidades) Then Exit Sub
 
-        Dim modalidad As New ModalidadClass
+        m.Id = dgvModalidades.CurrentRow.Cells("Id").Value
 
-        modalidad.Id = dgvModalidades.CurrentRow.Cells("Id").Value
+        m.Eliminar(m.Id)
 
-        modalidad.Eliminar(modalidad.Id)
-
-        modalidad.Traer(dgvModalidades)
+        m.Traer(dgvModalidades)
 
     End Sub
-
     'ALOJAMIENTOS
-
     Private Sub tabAlojamientos_Enter(ByVal sender As Object, ByVal e As System.EventArgs) Handles tabAlojamientos.Enter
-        Dim a As New AlojamientoClass
+
         a.Traer(dgvAlojamientos)
+
     End Sub
-
     'agregar
-
     Private Sub btnAddAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddAloj.Click
 
         Dim detalle As New detAlojamiento(dgvAlojamientos)
 
         detalle.ShowDialog()
+
+        a.Traer(dgvAlojamientos)
 
     End Sub
 
@@ -103,49 +98,36 @@
 
     End Sub
 
-    Private Function seleccion(ByVal dgv As DataGridView) As Boolean
-
-        If dgv.SelectedRows.Count < 1 Then
-
-            MsgBox("Seleccione un Registro")
-            Return True
-
-        End If
-
-    End Function
     'llenar formdetalle y abrir para modificar
 
     Public Sub modificarAlojamiento()
 
-        If Seleccion(dgvAlojamientos) Then Exit Sub
+        If f.filanoseleccionada(dgvAlojamientos) Then Exit Sub
 
+        a.id = dgvAlojamientos.CurrentRow.Cells("id").Value
+        a.Numero = dgvAlojamientos.CurrentRow.Cells("numero").Value
+        a.Capacidad = dgvAlojamientos.CurrentRow.Cells("capacidad").Value
+        a.idModalidad = dgvAlojamientos.CurrentRow.Cells("idmodalidad").Value
+        a.Sector = dgvAlojamientos.CurrentRow.Cells("sector").Value
 
-        Dim alojamiento As New AlojamientoClass
-
-        alojamiento.id = dgvAlojamientos.CurrentRow.Cells("id").Value
-        alojamiento.Numero = dgvAlojamientos.CurrentRow.Cells("numero").Value
-        alojamiento.Capacidad = dgvAlojamientos.CurrentRow.Cells("capacidad").Value
-        alojamiento.idModalidad = dgvAlojamientos.CurrentRow.Cells("idmodalidad").Value
-        alojamiento.Sector = dgvAlojamientos.CurrentRow.Cells("sector").Value
-
-        Dim detalle As New detAlojamiento(alojamiento, dgvAlojamientos)
+        Dim detalle As New detAlojamiento(a, dgvAlojamientos)
 
         detalle.ShowDialog()
+
+        a.Traer(dgvAlojamientos)
 
     End Sub
 
     'eliminar
     Private Sub btnDeletAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDeletAloj.Click
 
-        If seleccion(dgvAlojamientos) Then Exit Sub
+        If f.filanoseleccionada(dgvAlojamientos) Then Exit Sub
 
-        Dim alojamiento As New AlojamientoClass
+        a.id = dgvAlojamientos.CurrentRow.Cells("Id").Value
 
-        alojamiento.id = dgvAlojamientos.CurrentRow.Cells("Id").Value
+        a.Eliminar(a.id)
 
-        alojamiento.Eliminar(alojamiento.id)
-
-        alojamiento.Traer(dgvAlojamientos)
+        a.Traer(dgvAlojamientos)
 
     End Sub
 

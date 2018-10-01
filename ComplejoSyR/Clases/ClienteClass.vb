@@ -98,187 +98,218 @@ Public Class ClienteClass
         End Set
     End Property
     Public Sub Traer(ByVal dgv As DataGridView)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ClienteTraer", conexion)
 
-        Dim comando As New SqlCommand("ClienteTraer", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            Dim lista As New SqlDataAdapter(comando)
 
-        Dim lista As New SqlDataAdapter(comando)
+            Dim tabla As New Data.DataTable
 
-        Dim tabla As New Data.DataTable
+            lista.Fill(tabla)
 
-        lista.Fill(tabla)
+            dgv.DataSource = tabla
 
-        dgv.DataSource = tabla
+            dgv.Columns("Id").Visible = False
 
-        dgv.Columns("Id").Visible = False
+            Desconectar()
+        Catch ex As Exception
 
-        If dgv.Rows.Count > 0 Then
+            MsgBox(ex.Message)
 
-            dgv.Rows(0).Selected = False
-
-        End If
-
-        Desconectar()
+        End Try
 
     End Sub
     Public Sub Agregar(ByVal Cliente As ClienteClass)
-        Conectar()
+        Try
+            Conectar()
 
-        Dim comando As New SqlCommand("ClienteAgregar", conexion)
+            Dim comando As New SqlCommand("ClienteAgregar", conexion)
 
-        comando.CommandType = CommandType.StoredProcedure
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.Parameters.AddWithValue("@Nombre", Cliente.Nombre)
-        comando.Parameters.AddWithValue("@Domicilio", Cliente.Domicilio)
-        comando.Parameters.AddWithValue("@Telefono", Cliente.Telefono)
-        comando.Parameters.AddWithValue("@Correo", Cliente.Correo)
-        comando.Parameters.AddWithValue("@Provincia", Cliente.Provincia)
-        comando.Parameters.AddWithValue("@Vehiculo", Cliente.Vehiculo)
-        comando.Parameters.AddWithValue("@Patente", Cliente.Patente)
+            comando.Parameters.AddWithValue("@Nombre", Cliente.Nombre)
+            comando.Parameters.AddWithValue("@Domicilio", Cliente.Domicilio)
+            comando.Parameters.AddWithValue("@Telefono", Cliente.Telefono)
+            comando.Parameters.AddWithValue("@Correo", Cliente.Correo)
+            comando.Parameters.AddWithValue("@Provincia", Cliente.Provincia)
+            comando.Parameters.AddWithValue("@Vehiculo", Cliente.Vehiculo)
+            comando.Parameters.AddWithValue("@Patente", Cliente.Patente)
 
-        comando.ExecuteNonQuery()
+            comando.ExecuteNonQuery()
 
+            Desconectar()
 
-        Desconectar()
+        Catch ex As Exception
 
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
     Public Sub Modificar(ByVal Cliente As ClienteClass)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ClienteModificar", conexion)
 
-        Dim comando As New SqlCommand("ClienteModificar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Nombre", Cliente.Nombre)
+            comando.Parameters.AddWithValue("@Domicilio", Cliente.Domicilio)
+            comando.Parameters.AddWithValue("@Telefono", Cliente.Telefono)
+            comando.Parameters.AddWithValue("@Correo", Cliente.Correo)
+            comando.Parameters.AddWithValue("@Provincia", Cliente.Provincia)
+            comando.Parameters.AddWithValue("@Vehiculo", Cliente.Vehiculo)
+            comando.Parameters.AddWithValue("@Patente", Cliente.Patente)
+            comando.Parameters.AddWithValue("@Id", Cliente.Id)
 
-        comando.Parameters.AddWithValue("@Nombre", Cliente.Nombre)
-        comando.Parameters.AddWithValue("@Domicilio", Cliente.Domicilio)
-        comando.Parameters.AddWithValue("@Telefono", Cliente.Telefono)
-        comando.Parameters.AddWithValue("@Correo", Cliente.Correo)
-        comando.Parameters.AddWithValue("@Provincia", Cliente.Provincia)
-        comando.Parameters.AddWithValue("@Vehiculo", Cliente.Vehiculo)
-        comando.Parameters.AddWithValue("@Patente", Cliente.Patente)
-        comando.Parameters.AddWithValue("@Id", Cliente.Id)
+            comando.ExecuteNonQuery()
 
-        comando.ExecuteNonQuery()
+            Desconectar()
+        Catch ex As Exception
 
+            MsgBox(ex.Message)
 
-        Desconectar()
+        End Try
 
     End Sub
     Public Sub Eliminar(ByVal Id As Integer)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ClienteEliminar", conexion)
 
-        Dim comando As New SqlCommand("ClienteEliminar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Id", Id)
 
-        comando.Parameters.AddWithValue("@Id", Id)
+            comando.ExecuteNonQuery()
 
-        comando.ExecuteNonQuery()
+            Desconectar()
+        Catch ex As Exception
 
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
     Public Sub cargarCombo(ByVal combo As ComboBox)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ClienteTraer", conexion)
 
-        Dim comando As New SqlCommand("ClienteTraer", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            Dim lista As SqlDataReader = comando.ExecuteReader
 
+            Dim lista2 As New List(Of ClienteClass)
 
-        Dim lista As SqlDataReader = comando.ExecuteReader
+            If lista.HasRows Then
 
-        Dim lista2 As New List(Of ClienteClass)
+                While lista.Read()
 
-        If lista.HasRows Then
+                    Dim cliente As New ClienteClass
 
-            While lista.Read()
+                    cliente.Id = (lista("id"))
 
-                Dim cliente As New ClienteClass
+                    cliente.Nombre = (lista("nombre"))
 
-                cliente.Id = (lista("id"))
+                    lista2.Add(cliente)
 
-                cliente.Nombre = (lista("nombre"))
+                End While
 
-                lista2.Add(cliente)
+                combo.DataSource = lista2
 
-            End While
+                combo.DisplayMember = "Nombre"
 
-            combo.DataSource = lista2
+                combo.ValueMember = "id"
 
-            combo.DisplayMember = "Nombre"
+            End If
 
-            combo.ValueMember = "id"
+            Desconectar()
+        Catch ex As Exception
 
-        End If
+            MsgBox(ex.Message)
 
-        Desconectar()
+        End Try
+
     End Sub
 
     Public Sub Buscar(ByVal Nombre As String, ByVal dgv As DataGridView)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ClienteBuscar", conexion)
 
-        Dim comando As New SqlCommand("ClienteBuscar", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Nombre", Nombre)
 
-        comando.Parameters.AddWithValue("@Nombre", Nombre)
+            Dim tabla As New Data.DataTable
 
-        Dim tabla As New Data.DataTable
+            Dim lista As New SqlDataAdapter(comando)
 
-        Dim lista As New SqlDataAdapter(comando)
+            lista.Fill(tabla)
 
-        lista.Fill(tabla)
+            dgv.DataSource = tabla
 
-        dgv.DataSource = tabla
+            Desconectar()
+        Catch ex As Exception
 
-        Desconectar()
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 
     Public Sub Historial(ByVal id As Integer, ByVal dgv As DataGridView)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ClienteHistorial", conexion)
 
+            comando.CommandType = CommandType.StoredProcedure
 
+            comando.Parameters.AddWithValue("@Id", id)
 
-        Dim comando As New SqlCommand("ClienteHistorial", conexion)
+            Dim table As New Data.DataTable
+            Dim lista As New SqlDataAdapter(comando)
+            lista.Fill(table)
 
-        comando.CommandType = CommandType.StoredProcedure
+            dgv.DataSource = table
+            dgv.Columns("Id").Visible = False
 
-        comando.Parameters.AddWithValue("@Id", id)
+            Desconectar()
+        Catch ex As Exception
 
-        Dim table As New Data.DataTable
-        Dim lista As New SqlDataAdapter(comando)
-        lista.Fill(table)
+            MsgBox(ex.Message)
 
-        dgv.DataSource = table
-        dgv.Columns("Id").Visible = False
-
-
-        Desconectar()
+        End Try
 
     End Sub
 
     Public Sub ultimoid(ByRef cliente As ClienteClass)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ClienteUltimo", conexion)
 
-        Dim comando As New SqlCommand("ClienteUltimo", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
+            cliente.Id = comando.ExecuteScalar
 
-        cliente.Id = comando.ExecuteScalar
+            Desconectar()
 
-        Desconectar()
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 

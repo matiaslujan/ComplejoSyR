@@ -130,117 +130,43 @@ Public Class ServicioClass
 
     End Sub
     Public Sub Traer(ByRef lst As List(Of ServicioClass), ByVal id As Integer)
+        Try
+            Conectar()
 
-        Conectar()
+            Dim comando As New SqlCommand("ServicioTraer", conexion)
 
-        Dim comando As New SqlCommand("ServicioTraer", conexion)
+            comando.CommandType = CommandType.StoredProcedure
 
-        comando.CommandType = CommandType.StoredProcedure
-
-        comando.Parameters.AddWithValue("@IdReserva", id)
-
-
-        Dim lista As SqlDataReader = comando.ExecuteReader
-
-        If lista.HasRows Then
-
-            For Each row In lista
-
-                Dim servicio As New ServicioClass
-
-                servicio.Id = (lista("Id"))
-                servicio.Descripcion = (lista("Descripcion"))
-                servicio.Fecha = (lista("Fecha"))
-                servicio.Importe = (lista("Importe"))
-                servicio.IdReserva = (lista("IdReserva"))
-                lst.Add(servicio)
-
-            Next
-
-        End If
-
-        Desconectar()
-
-    End Sub
+            comando.Parameters.AddWithValue("@IdReserva", id)
 
 
-    Public Sub Agregar(ByVal serv As ServicioClass)
+            Dim lista As SqlDataReader = comando.ExecuteReader
 
-        Conectar()
+            If lista.HasRows Then
 
-        Dim comando As New SqlCommand("ServicioAgregar", conexion)
+                For Each row In lista
 
-        comando.CommandType = CommandType.StoredProcedure
+                    Dim servicio As New ServicioClass
 
-        comando.Parameters.AddWithValue("@IdReserva", serv.IdReserva)
-        comando.Parameters.AddWithValue("@Fecha", serv.Fecha)
-        comando.Parameters.AddWithValue("@Importe", serv.Importe)
-        comando.Parameters.AddWithValue("@Descripcion", serv.Descripcion)
+                    servicio.Id = (lista("Id"))
+                    servicio.Descripcion = (lista("Descripcion"))
+                    servicio.Fecha = (lista("Fecha"))
+                    servicio.Importe = (lista("Importe"))
+                    servicio.IdReserva = (lista("IdReserva"))
+                    lst.Add(servicio)
 
-        comando.ExecuteNonQuery()
+                Next
 
-        Desconectar()
+            End If
+
+            Desconectar()
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+
+        End Try
 
     End Sub
 
-    Public Sub Modificar(ByVal serv As ServicioClass)
-        Conectar()
 
-        Dim comando As New SqlCommand("ServicioModificar", conexion)
-
-        comando.CommandType = CommandType.StoredProcedure
-
-        comando.Parameters.AddWithValue("@IdReserva", serv.IdReserva)
-        comando.Parameters.AddWithValue("@Fecha", serv.Fecha)
-        comando.Parameters.AddWithValue("@Importe", serv.Importe)
-        comando.Parameters.AddWithValue("@Descripcion", serv.Descripcion)
-        comando.Parameters.AddWithValue("@Id", serv.Id)
-
-        comando.ExecuteNonQuery()
-
-        Desconectar()
-
-    End Sub
-
-    Public Sub Eliminar(ByVal id As Integer)
-
-        Conectar()
-
-        Dim comando As New SqlCommand("ServicioEliminar", conexion)
-
-        comando.CommandType = CommandType.StoredProcedure
-
-        comando.Parameters.AddWithValue("@Id", id)
-        comando.ExecuteNonQuery()
-
-        Desconectar()
-
-    End Sub
-    Public Sub SubTotal(ByVal txt As TextBox, ByVal id As Integer)
-
-        Conectar()
-
-
-        Dim comando As New SqlCommand("ReservaImportes", conexion)
-
-        comando.CommandType = CommandType.StoredProcedure
-
-        comando.Parameters.AddWithValue("@Id", id)
-
-        Dim lista As SqlDataReader = comando.ExecuteReader
-
-        If lista.HasRows Then
-
-            While lista.Read()
-
-
-                txt.Text = (lista("Servicios"))
-
-
-            End While
-
-        End If
-
-        Desconectar()
-    End Sub
 End Class
