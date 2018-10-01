@@ -49,7 +49,7 @@ Partial Class Historial
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.LemonChiffon
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Chocolate
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.PeachPuff
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvReservas.DefaultCellStyle = DataGridViewCellStyle2

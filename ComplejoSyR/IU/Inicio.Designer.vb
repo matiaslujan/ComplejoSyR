@@ -68,7 +68,7 @@ Partial Class Inicio
         Me.btnReservas.BackColor = System.Drawing.Color.Transparent
         Me.btnReservas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnReservas.Checked = True
-        Me.btnReservas.CheckState = System.Windows.Forms.CheckState.Indeterminate
+        Me.btnReservas.CheckState = System.Windows.Forms.CheckState.Checked
         Me.btnReservas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnReservas.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnReservas.ImageTransparentColor = System.Drawing.Color.Transparent
@@ -139,7 +139,7 @@ Partial Class Inicio
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Chocolate
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.PeachPuff
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
@@ -148,6 +148,7 @@ Partial Class Inicio
         Me.dgvOcupacion.Margin = New System.Windows.Forms.Padding(3, 3, 3, 10)
         Me.dgvOcupacion.MultiSelect = False
         Me.dgvOcupacion.Name = "dgvOcupacion"
+        Me.dgvOcupacion.ReadOnly = True
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -194,7 +195,7 @@ Partial Class Inicio
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNuevaReserva.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnNuevaReserva.FlatAppearance.BorderSize = 2
         Me.btnNuevaReserva.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
         Me.btnNuevaReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
@@ -216,7 +217,7 @@ Partial Class Inicio
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnBuscar.FlatAppearance.BorderSize = 2
         Me.btnBuscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White

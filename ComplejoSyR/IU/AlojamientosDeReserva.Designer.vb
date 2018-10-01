@@ -34,15 +34,14 @@ Partial Class AlojamientosDeReserva
         '
         Me.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnSalir.BackColor = System.Drawing.Color.White
-        Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSalir.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnSalir.FlatAppearance.BorderSize = 2
-        Me.btnSalir.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnSalir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Location = New System.Drawing.Point(245, 292)
+        Me.btnSalir.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnSalir.Location = New System.Drawing.Point(243, 289)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(107, 23)
+        Me.btnSalir.Size = New System.Drawing.Size(83, 31)
         Me.btnSalir.TabIndex = 5
         Me.btnSalir.Text = "Salir"
         Me.btnSalir.UseVisualStyleBackColor = False
@@ -51,15 +50,14 @@ Partial Class AlojamientosDeReserva
         '
         Me.btnCargar.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.btnCargar.BackColor = System.Drawing.Color.White
-        Me.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCargar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCargar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnCargar.FlatAppearance.BorderSize = 2
-        Me.btnCargar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnCargar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnCargar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCargar.Location = New System.Drawing.Point(76, 292)
+        Me.btnCargar.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnCargar.Location = New System.Drawing.Point(100, 289)
         Me.btnCargar.Name = "btnCargar"
-        Me.btnCargar.Size = New System.Drawing.Size(104, 23)
+        Me.btnCargar.Size = New System.Drawing.Size(83, 31)
         Me.btnCargar.TabIndex = 4
         Me.btnCargar.Text = "Cargar"
         Me.btnCargar.UseVisualStyleBackColor = False
@@ -88,23 +86,24 @@ Partial Class AlojamientosDeReserva
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.LemonChiffon
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.Color.SaddleBrown
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Chocolate
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.PeachPuff
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvAlojRes.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgvAlojRes.Location = New System.Drawing.Point(12, 8)
         Me.dgvAlojRes.Name = "dgvAlojRes"
+        Me.dgvAlojRes.ReadOnly = True
         Me.dgvAlojRes.RowHeadersVisible = False
         Me.dgvAlojRes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvAlojRes.Size = New System.Drawing.Size(397, 279)
+        Me.dgvAlojRes.Size = New System.Drawing.Size(397, 271)
         Me.dgvAlojRes.TabIndex = 3
         '
         'AlojamientosDeReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.LightSkyBlue
-        Me.ClientSize = New System.Drawing.Size(421, 319)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(421, 332)
         Me.Controls.Add(Me.btnSalir)
         Me.Controls.Add(Me.btnCargar)
         Me.Controls.Add(Me.dgvAlojRes)

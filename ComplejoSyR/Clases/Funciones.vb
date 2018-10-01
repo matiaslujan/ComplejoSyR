@@ -9,8 +9,6 @@
 
             Try
 
-
-
                 If control.Tag = "Validar" Then
                     If TypeOf control Is TextBox Then
                         If control.Text = "" Then
@@ -21,6 +19,7 @@
                         End If
 
                     End If
+
                 End If
             Catch ex As Exception
 
@@ -55,6 +54,17 @@
                         End If
 
                     End If
+                End If
+
+                If TypeOf control Is ComboBox Then
+                    Dim c As ComboBox = control
+                    If c.SelectedIndex = -1 Then
+                        Throw New Exception("Por favor, seleccione un cliente")
+                    Else
+                        errorprovider.SetError(control, "")
+
+                    End If
+
                 End If
             Catch ex As Exception
 

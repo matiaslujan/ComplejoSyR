@@ -417,13 +417,17 @@ Public Class ReservaClass
         For Each Row As DataGridViewRow In dgv.Rows
 
             If IsDBNull(Row.Cells("IdReserva").Value) = True Then
+
                 Row.DefaultCellStyle.BackColor = Color.LemonChiffon
+
             Else
-                'Row.DefaultCellStyle.BackColor = Color.Goldenrod
+
                 Row.DefaultCellStyle.BackColor = Color.FromArgb(241, 185, 138)
 
             End If
+
         Next
+
     End Sub
 
     Public Sub CantidadDeDias(ByRef txt As TextBox, ByVal Ingreso As DateTimePicker, ByVal Egreso As DateTimePicker)

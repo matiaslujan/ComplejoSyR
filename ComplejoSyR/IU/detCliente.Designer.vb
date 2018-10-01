@@ -74,9 +74,11 @@ Partial Class detCliente
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(91, 132)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(99, 132)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(38, 13)
+        Me.Label4.Size = New System.Drawing.Size(44, 13)
         Me.Label4.TabIndex = 22
         Me.Label4.Text = "Correo"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -84,9 +86,11 @@ Partial Class detCliente
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(77, 96)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(86, 96)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 13)
+        Me.Label3.Size = New System.Drawing.Size(57, 13)
         Me.Label3.TabIndex = 21
         Me.Label3.Text = "Telefono"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -94,9 +98,11 @@ Partial Class detCliente
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(77, 64)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(85, 64)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(49, 13)
+        Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 20
         Me.Label2.Text = "Domicilio"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -104,23 +110,25 @@ Partial Class detCliente
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(14, 27)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(10, 27)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 13)
+        Me.Label1.Size = New System.Drawing.Size(133, 13)
         Me.Label1.TabIndex = 19
         Me.Label1.Text = "Nombre/s y Apellido/s"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(147, 130)
+        Me.txtCorreo.Location = New System.Drawing.Point(159, 130)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(191, 20)
         Me.txtCorreo.TabIndex = 16
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(147, 96)
+        Me.txtTelefono.Location = New System.Drawing.Point(159, 96)
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.Size = New System.Drawing.Size(191, 20)
         Me.txtTelefono.TabIndex = 15
@@ -128,7 +136,7 @@ Partial Class detCliente
         '
         'txtDomicilio
         '
-        Me.txtDomicilio.Location = New System.Drawing.Point(147, 61)
+        Me.txtDomicilio.Location = New System.Drawing.Point(159, 61)
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(191, 20)
         Me.txtDomicilio.TabIndex = 14
@@ -136,7 +144,7 @@ Partial Class detCliente
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(147, 25)
+        Me.txtNombre.Location = New System.Drawing.Point(159, 25)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(191, 20)
         Me.txtNombre.TabIndex = 13
@@ -146,11 +154,8 @@ Partial Class detCliente
         '
         Me.btnAceptar.BackColor = System.Drawing.Color.White
         Me.btnAceptar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnAceptar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnAceptar.FlatAppearance.BorderSize = 2
-        Me.btnAceptar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnAceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnAceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.Color.SaddleBrown
@@ -165,15 +170,12 @@ Partial Class detCliente
         '
         Me.btnCancelar.BackColor = System.Drawing.Color.White
         Me.btnCancelar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnCancelar.FlatAppearance.BorderSize = 2
-        Me.btnCancelar.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.btnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnCancelar.Location = New System.Drawing.Point(212, 272)
+        Me.btnCancelar.Location = New System.Drawing.Point(216, 272)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(83, 30)
         Me.btnCancelar.TabIndex = 84
@@ -187,9 +189,11 @@ Partial Class detCliente
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(85, 163)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(83, 163)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 13)
+        Me.Label6.Size = New System.Drawing.Size(60, 13)
         Me.Label6.TabIndex = 86
         Me.Label6.Text = "Provincia"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -197,16 +201,18 @@ Partial Class detCliente
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(91, 227)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(92, 227)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(44, 13)
+        Me.Label7.Size = New System.Drawing.Size(51, 13)
         Me.Label7.TabIndex = 88
         Me.Label7.Text = "Patente"
         Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtVehiculo
         '
-        Me.txtVehiculo.Location = New System.Drawing.Point(147, 195)
+        Me.txtVehiculo.Location = New System.Drawing.Point(159, 195)
         Me.txtVehiculo.Name = "txtVehiculo"
         Me.txtVehiculo.Size = New System.Drawing.Size(191, 20)
         Me.txtVehiculo.TabIndex = 87
@@ -214,16 +220,18 @@ Partial Class detCliente
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(88, 195)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(87, 195)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 13)
+        Me.Label8.Size = New System.Drawing.Size(56, 13)
         Me.Label8.TabIndex = 90
         Me.Label8.Text = "Vehiculo"
         Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'txtPatente
         '
-        Me.txtPatente.Location = New System.Drawing.Point(147, 227)
+        Me.txtPatente.Location = New System.Drawing.Point(159, 227)
         Me.txtPatente.Name = "txtPatente"
         Me.txtPatente.Size = New System.Drawing.Size(191, 20)
         Me.txtPatente.TabIndex = 89
@@ -232,7 +240,7 @@ Partial Class detCliente
         '
         Me.cbProvincia.FormattingEnabled = True
         Me.cbProvincia.Items.AddRange(New Object() {"Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucumán", "Otro"})
-        Me.cbProvincia.Location = New System.Drawing.Point(147, 160)
+        Me.cbProvincia.Location = New System.Drawing.Point(159, 160)
         Me.cbProvincia.Name = "cbProvincia"
         Me.cbProvincia.Size = New System.Drawing.Size(191, 21)
         Me.cbProvincia.TabIndex = 91
@@ -243,7 +251,7 @@ Partial Class detCliente
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(126, 27)
+        Me.Label9.Location = New System.Drawing.Point(142, 27)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(15, 20)
         Me.Label9.TabIndex = 92
@@ -256,7 +264,7 @@ Partial Class detCliente
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(126, 64)
+        Me.Label10.Location = New System.Drawing.Point(142, 64)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(15, 20)
         Me.Label10.TabIndex = 93
@@ -269,18 +277,22 @@ Partial Class detCliente
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(126, 96)
+        Me.Label11.Location = New System.Drawing.Point(142, 96)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(15, 20)
         Me.Label11.TabIndex = 94
         Me.Label11.Text = "*"
         Me.ToolTip1.SetToolTip(Me.Label11, "Campo obligatorio")
         '
+        'ToolTip1
+        '
+        Me.ToolTip1.ForeColor = System.Drawing.Color.Firebrick
+        '
         'detCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.PowderBlue
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(196, Byte), Integer), CType(CType(147, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(379, 314)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
