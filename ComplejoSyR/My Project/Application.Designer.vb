@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.ComplejoSyR.Inicio
+            Me.MainForm = Global.ComplejoSolYRio.Inicio
         End Sub
     End Class
 End Namespace

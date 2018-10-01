@@ -117,7 +117,7 @@ Partial Class detReserva
         '
         'btnNuevo
         '
-        Me.btnNuevo.BackgroundImage = Global.ComplejoSyR.My.Resources.Resources.Add_User
+        Me.btnNuevo.BackgroundImage = Global.ComplejoSolYRio.My.Resources.Resources.Add_User
         Me.btnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnNuevo.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

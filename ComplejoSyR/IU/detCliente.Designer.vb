@@ -43,6 +43,10 @@ Partial Class detCliente
         Me.Label8 = New System.Windows.Forms.Label
         Me.txtPatente = New System.Windows.Forms.TextBox
         Me.cbProvincia = New System.Windows.Forms.ComboBox
+        Me.Label9 = New System.Windows.Forms.Label
+        Me.Label10 = New System.Windows.Forms.Label
+        Me.Label11 = New System.Windows.Forms.Label
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -150,7 +154,7 @@ Partial Class detCliente
         Me.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAceptar.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnAceptar.Location = New System.Drawing.Point(73, 272)
+        Me.btnAceptar.Location = New System.Drawing.Point(80, 272)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(83, 30)
         Me.btnAceptar.TabIndex = 83
@@ -169,7 +173,7 @@ Partial Class detCliente
         Me.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancelar.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnCancelar.Location = New System.Drawing.Point(232, 272)
+        Me.btnCancelar.Location = New System.Drawing.Point(212, 272)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(83, 30)
         Me.btnCancelar.TabIndex = 84
@@ -233,12 +237,54 @@ Partial Class detCliente
         Me.cbProvincia.Size = New System.Drawing.Size(191, 21)
         Me.cbProvincia.TabIndex = 91
         '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.Red
+        Me.Label9.Location = New System.Drawing.Point(126, 27)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(15, 20)
+        Me.Label9.TabIndex = 92
+        Me.Label9.Text = "*"
+        Me.ToolTip1.SetToolTip(Me.Label9, "Campo obligatorio")
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.Red
+        Me.Label10.Location = New System.Drawing.Point(126, 64)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(15, 20)
+        Me.Label10.TabIndex = 93
+        Me.Label10.Text = "*"
+        Me.ToolTip1.SetToolTip(Me.Label10, "Campo obligatorio")
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(126, 96)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(15, 20)
+        Me.Label11.TabIndex = 94
+        Me.Label11.Text = "*"
+        Me.ToolTip1.SetToolTip(Me.Label11, "Campo obligatorio")
+        '
         'detCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.PowderBlue
         Me.ClientSize = New System.Drawing.Size(379, 314)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cbProvincia)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtPatente)
@@ -288,4 +334,8 @@ Partial Class detCliente
     Friend WithEvents txtVehiculo As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents cbProvincia As System.Windows.Forms.ComboBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
 End Class

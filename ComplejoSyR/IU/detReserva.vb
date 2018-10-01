@@ -180,16 +180,7 @@
             Close()
         End If
     End Sub
-    'Private Function filaseleccionada(ByVal dgv As DataGridView) As Boolean
 
-    '    If dgv.CurrentRow Is Nothing Then
-
-    '        MsgBox("Seleccione un registro")
-
-    '        Return True
-
-    '    End If
-    'End Function
     Private Sub alojamientos()
 
         dgvAlojamientos.DataSource = ""
@@ -344,6 +335,7 @@
         Calcular()
     End Sub
     Private Sub Calcular()
+
         If txtCantDia.Text <> "" And txtImpDia.Text <> "" Then
 
             txtImpEstadia.Text = txtCantDia.Text * txtImpDia.Text
@@ -365,7 +357,7 @@
 
     'agregar nuevo cliente
 
-    Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevo.Click
 
         Dim det As New detCliente(cbClientes)
 

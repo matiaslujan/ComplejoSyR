@@ -40,7 +40,7 @@ Partial Class SplashScreen
         '
         'MainLayoutPanel
         '
-        Me.MainLayoutPanel.BackgroundImage = Global.ComplejoSyR.My.Resources.Resources.inci
+        Me.MainLayoutPanel.BackgroundImage = Global.ComplejoSolYRio.My.Resources.Resources.inci
         Me.MainLayoutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MainLayoutPanel.ColumnCount = 2
         Me.MainLayoutPanel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 243.0!))

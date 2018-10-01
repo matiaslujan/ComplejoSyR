@@ -17,7 +17,7 @@ Public Class ConexionClass
     Public Sub Conectar()
         Try
 
-            conexion.ConnectionString = "Server=LAPTOP-K16JEHVE\DEVELOPER;Database=complejosolyrio2;Trusted_connection=true;"
+            conexion.ConnectionString = "Server=LAPTOP-K16JEHVE\DEVELOPER;Database=complejosolyrio;Trusted_connection=true;"
 
             conexion.Open()
 
