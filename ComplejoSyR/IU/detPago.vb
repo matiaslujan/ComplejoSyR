@@ -18,7 +18,15 @@
             funcion_ = value
         End Set
     End Property
-
+    Private deuda_ As Decimal
+    Public Property deuda() As Decimal
+        Get
+            Return deuda_
+        End Get
+        Set(ByVal value As Decimal)
+            deuda_ = value
+        End Set
+    End Property
     Dim pago As New PagoClass
     Dim posicion As Integer
     Public Sub New(ByRef lst As List(Of PagoClass))
@@ -61,6 +69,14 @@
     Private Sub btnAceptar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAceptar.Click
 
         If funcion.ValidarCampos(Me.Controls, ErrorProvider1) Then
+
+            If CDec(txtIImporte.Text) > deuda Then
+
+                MsgBox("El importe ingresado supera la deuda actual de: $" + CStr(deuda))
+
+                Exit Sub
+
+            End If
 
             Select Case pago.accion
 

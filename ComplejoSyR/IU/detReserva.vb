@@ -264,6 +264,8 @@
 
         Dim det As New detPago(lstPagos)
 
+        det.deuda = CDec(txtDeuda.Text)
+
         det.ShowDialog()
 
         pagos()
@@ -296,6 +298,8 @@
         Dim pos As Integer = dgvPagos.CurrentRow.Index
 
         Dim det As New detPago(lstPagos, p, pos)
+
+        det.deuda = CDec(txtDeuda.Text)
 
         det.ShowDialog()
 
@@ -439,11 +443,16 @@
             Reserva.ImpDia = txtImpDia.Text
             Reserva.ImpTotal = txtImpEstadia.Text
             Reserva.Descripcion = txtDescripcion.Text
-            Reserva.Cancelada = CbxCancelada.Checked
+            reserva.Cancelada = CbxCancelada.Checked
+
             If lstAlojamientos.Count = 0 Then
+
                 MsgBox("Agrege un alojamiento")
+
                 Exit Sub
+
             End If
+
             If Reserva.Accion = "Modificar" Then
 
                 Reserva.Id = txtId.Text
@@ -520,4 +529,5 @@
         Close()
 
     End Sub
+
 End Class

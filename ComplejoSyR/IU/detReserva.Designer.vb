@@ -193,7 +193,7 @@ Partial Class detReserva
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         Me.dgvServicios.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvServicios.Size = New System.Drawing.Size(350, 88)
+        Me.dgvServicios.Size = New System.Drawing.Size(349, 88)
         Me.dgvServicios.TabIndex = 168
         '
         'Label12
@@ -204,7 +204,7 @@ Partial Class detReserva
         Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.Label12.Location = New System.Drawing.Point(3, 0)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(350, 25)
+        Me.Label12.Size = New System.Drawing.Size(349, 25)
         Me.Label12.TabIndex = 169
         Me.Label12.Text = "Servicios"
         Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -215,9 +215,9 @@ Partial Class detReserva
         Me.Pagado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Pagado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pagado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Pagado.Location = New System.Drawing.Point(220, 0)
+        Me.Pagado.Location = New System.Drawing.Point(230, 0)
         Me.Pagado.Name = "Pagado"
-        Me.Pagado.Size = New System.Drawing.Size(44, 46)
+        Me.Pagado.Size = New System.Drawing.Size(46, 46)
         Me.Pagado.TabIndex = 156
         Me.Pagado.Text = "Pagado"
         Me.Pagado.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -225,11 +225,12 @@ Partial Class detReserva
         'txtPagado
         '
         Me.txtPagado.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
+        Me.txtPagado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtPagado.Enabled = False
-        Me.txtPagado.Location = New System.Drawing.Point(290, 3)
+        Me.txtPagado.Location = New System.Drawing.Point(303, 3)
         Me.txtPagado.Name = "txtPagado"
         Me.txtPagado.ReadOnly = True
-        Me.txtPagado.Size = New System.Drawing.Size(57, 21)
+        Me.txtPagado.Size = New System.Drawing.Size(43, 21)
         Me.txtPagado.TabIndex = 155
         '
         'btnEliminarPago
@@ -243,9 +244,9 @@ Partial Class detReserva
         Me.btnEliminarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminarPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminarPago.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnEliminarPago.Location = New System.Drawing.Point(149, 3)
+        Me.btnEliminarPago.Location = New System.Drawing.Point(156, 3)
         Me.btnEliminarPago.Name = "btnEliminarPago"
-        Me.btnEliminarPago.Size = New System.Drawing.Size(65, 33)
+        Me.btnEliminarPago.Size = New System.Drawing.Size(68, 33)
         Me.btnEliminarPago.TabIndex = 152
         Me.btnEliminarPago.Text = "Eliminar"
         Me.btnEliminarPago.UseVisualStyleBackColor = False
@@ -261,9 +262,9 @@ Partial Class detReserva
         Me.btnModificarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnModificarPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModificarPago.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnModificarPago.Location = New System.Drawing.Point(71, 3)
+        Me.btnModificarPago.Location = New System.Drawing.Point(74, 3)
         Me.btnModificarPago.Name = "btnModificarPago"
-        Me.btnModificarPago.Size = New System.Drawing.Size(72, 33)
+        Me.btnModificarPago.Size = New System.Drawing.Size(76, 33)
         Me.btnModificarPago.TabIndex = 151
         Me.btnModificarPago.Text = "Modificar"
         Me.btnModificarPago.UseVisualStyleBackColor = False
@@ -281,9 +282,10 @@ Partial Class detReserva
         Me.btnAgregarPago.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnAgregarPago.Location = New System.Drawing.Point(3, 3)
         Me.btnAgregarPago.Name = "btnAgregarPago"
-        Me.btnAgregarPago.Size = New System.Drawing.Size(62, 33)
+        Me.btnAgregarPago.Size = New System.Drawing.Size(65, 33)
         Me.btnAgregarPago.TabIndex = 150
         Me.btnAgregarPago.Text = "Agregar"
+        Me.ToolTip1.SetToolTip(Me.btnAgregarPago, "la reserva ya ha sido abonada en su totalidad")
         Me.btnAgregarPago.UseVisualStyleBackColor = False
         '
         'dgvPagos
@@ -318,7 +320,7 @@ Partial Class detReserva
         DataGridViewCellStyle6.BackColor = System.Drawing.Color.White
         Me.dgvPagos.RowsDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvPagos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvPagos.Size = New System.Drawing.Size(350, 86)
+        Me.dgvPagos.Size = New System.Drawing.Size(349, 86)
         Me.dgvPagos.TabIndex = 153
         '
         'Label9
@@ -329,7 +331,7 @@ Partial Class detReserva
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.Label9.Location = New System.Drawing.Point(3, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(350, 25)
+        Me.Label9.Size = New System.Drawing.Size(349, 25)
         Me.Label9.TabIndex = 154
         Me.Label9.Text = "Pagos"
         Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -344,9 +346,9 @@ Partial Class detReserva
         Me.btnEliminarAloj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminarAloj.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminarAloj.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnEliminarAloj.Location = New System.Drawing.Point(73, 3)
+        Me.btnEliminarAloj.Location = New System.Drawing.Point(72, 3)
         Me.btnEliminarAloj.Name = "btnEliminarAloj"
-        Me.btnEliminarAloj.Size = New System.Drawing.Size(76, 31)
+        Me.btnEliminarAloj.Size = New System.Drawing.Size(75, 31)
         Me.btnEliminarAloj.TabIndex = 147
         Me.btnEliminarAloj.Text = "Eliminar"
         Me.btnEliminarAloj.UseVisualStyleBackColor = False
@@ -363,7 +365,7 @@ Partial Class detReserva
         Me.btnAgregarAloj.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnAgregarAloj.Location = New System.Drawing.Point(3, 3)
         Me.btnAgregarAloj.Name = "btnAgregarAloj"
-        Me.btnAgregarAloj.Size = New System.Drawing.Size(64, 31)
+        Me.btnAgregarAloj.Size = New System.Drawing.Size(63, 31)
         Me.btnAgregarAloj.TabIndex = 145
         Me.btnAgregarAloj.Text = "Agregar"
         Me.btnAgregarAloj.UseVisualStyleBackColor = False
@@ -400,7 +402,7 @@ Partial Class detReserva
         DataGridViewCellStyle9.BackColor = System.Drawing.Color.White
         Me.dgvAlojamientos.RowsDefaultCellStyle = DataGridViewCellStyle9
         Me.dgvAlojamientos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvAlojamientos.Size = New System.Drawing.Size(350, 86)
+        Me.dgvAlojamientos.Size = New System.Drawing.Size(349, 86)
         Me.dgvAlojamientos.TabIndex = 148
         Me.dgvAlojamientos.Tag = "Alojamientos"
         '
@@ -412,7 +414,7 @@ Partial Class detReserva
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(3, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(350, 25)
+        Me.Label4.Size = New System.Drawing.Size(349, 25)
         Me.Label4.TabIndex = 149
         Me.Label4.Text = "Alojamientos"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
@@ -424,7 +426,7 @@ Partial Class detReserva
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.12117!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.87883!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel10, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel11, 0, 1)
@@ -455,7 +457,7 @@ Partial Class detReserva
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(362, 527)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(361, 527)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'TableLayoutPanel6
@@ -472,7 +474,7 @@ Partial Class detReserva
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.0!))
         Me.TableLayoutPanel6.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel6.Size = New System.Drawing.Size(356, 171)
+        Me.TableLayoutPanel6.Size = New System.Drawing.Size(355, 171)
         Me.TableLayoutPanel6.TabIndex = 3
         '
         'TableLayoutPanel9
@@ -483,7 +485,7 @@ Partial Class detReserva
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.73868!))
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.4216!))
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.968641!))
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62.0!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63.0!))
         Me.TableLayoutPanel9.Controls.Add(Me.Label24, 4, 0)
         Me.TableLayoutPanel9.Controls.Add(Me.btnNuevServ, 0, 0)
         Me.TableLayoutPanel9.Controls.Add(Me.btnModServ, 1, 0)
@@ -495,16 +497,16 @@ Partial Class detReserva
         Me.TableLayoutPanel9.Name = "TableLayoutPanel9"
         Me.TableLayoutPanel9.RowCount = 1
         Me.TableLayoutPanel9.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel9.Size = New System.Drawing.Size(350, 46)
+        Me.TableLayoutPanel9.Size = New System.Drawing.Size(349, 46)
         Me.TableLayoutPanel9.TabIndex = 170
         '
         'Label24
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(270, 0)
+        Me.Label24.Location = New System.Drawing.Point(266, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(14, 15)
+        Me.Label24.Size = New System.Drawing.Size(13, 15)
         Me.Label24.TabIndex = 212
         Me.Label24.Text = "$"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -522,7 +524,7 @@ Partial Class detReserva
         Me.btnNuevServ.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnNuevServ.Location = New System.Drawing.Point(3, 3)
         Me.btnNuevServ.Name = "btnNuevServ"
-        Me.btnNuevServ.Size = New System.Drawing.Size(62, 33)
+        Me.btnNuevServ.Size = New System.Drawing.Size(61, 33)
         Me.btnNuevServ.TabIndex = 150
         Me.btnNuevServ.Text = "Agregar"
         Me.btnNuevServ.UseVisualStyleBackColor = False
@@ -538,9 +540,9 @@ Partial Class detReserva
         Me.btnModServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnModServ.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModServ.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnModServ.Location = New System.Drawing.Point(71, 3)
+        Me.btnModServ.Location = New System.Drawing.Point(70, 3)
         Me.btnModServ.Name = "btnModServ"
-        Me.btnModServ.Size = New System.Drawing.Size(72, 33)
+        Me.btnModServ.Size = New System.Drawing.Size(71, 33)
         Me.btnModServ.TabIndex = 151
         Me.btnModServ.Text = "Modificar"
         Me.btnModServ.UseVisualStyleBackColor = False
@@ -556,9 +558,9 @@ Partial Class detReserva
         Me.btnElimServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnElimServ.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnElimServ.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnElimServ.Location = New System.Drawing.Point(149, 3)
+        Me.btnElimServ.Location = New System.Drawing.Point(147, 3)
         Me.btnElimServ.Name = "btnElimServ"
-        Me.btnElimServ.Size = New System.Drawing.Size(65, 33)
+        Me.btnElimServ.Size = New System.Drawing.Size(64, 33)
         Me.btnElimServ.TabIndex = 152
         Me.btnElimServ.Text = "Eliminar"
         Me.btnElimServ.UseVisualStyleBackColor = False
@@ -569,9 +571,9 @@ Partial Class detReserva
         Me.Label26.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label26.Location = New System.Drawing.Point(220, 0)
+        Me.Label26.Location = New System.Drawing.Point(217, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(44, 46)
+        Me.Label26.Size = New System.Drawing.Size(43, 46)
         Me.Label26.TabIndex = 156
         Me.Label26.Text = "subtotal"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -580,7 +582,7 @@ Partial Class detReserva
         '
         Me.txtImpServ.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtImpServ.Enabled = False
-        Me.txtImpServ.Location = New System.Drawing.Point(290, 3)
+        Me.txtImpServ.Location = New System.Drawing.Point(285, 3)
         Me.txtImpServ.Name = "txtImpServ"
         Me.txtImpServ.ReadOnly = True
         Me.txtImpServ.Size = New System.Drawing.Size(57, 21)
@@ -600,7 +602,7 @@ Partial Class detReserva
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.0!))
         Me.TableLayoutPanel4.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel4.Size = New System.Drawing.Size(356, 169)
+        Me.TableLayoutPanel4.Size = New System.Drawing.Size(355, 169)
         Me.TableLayoutPanel4.TabIndex = 2
         '
         'TableLayoutPanel8
@@ -611,7 +613,7 @@ Partial Class detReserva
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.73868!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.4216!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.968641!))
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61.0!))
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47.0!))
         Me.TableLayoutPanel8.Controls.Add(Me.Label23, 4, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.btnAgregarPago, 0, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.btnModificarPago, 1, 0)
@@ -623,16 +625,16 @@ Partial Class detReserva
         Me.TableLayoutPanel8.Name = "TableLayoutPanel8"
         Me.TableLayoutPanel8.RowCount = 1
         Me.TableLayoutPanel8.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel8.Size = New System.Drawing.Size(350, 46)
+        Me.TableLayoutPanel8.Size = New System.Drawing.Size(349, 46)
         Me.TableLayoutPanel8.TabIndex = 155
         '
         'Label23
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(270, 0)
+        Me.Label23.Location = New System.Drawing.Point(282, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(14, 15)
+        Me.Label23.Size = New System.Drawing.Size(15, 15)
         Me.Label23.TabIndex = 212
         Me.Label23.Text = "$"
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -651,7 +653,7 @@ Partial Class detReserva
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(356, 169)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(355, 169)
         Me.TableLayoutPanel3.TabIndex = 1
         '
         'TableLayoutPanel7
@@ -669,7 +671,7 @@ Partial Class detReserva
         Me.TableLayoutPanel7.Name = "TableLayoutPanel7"
         Me.TableLayoutPanel7.RowCount = 1
         Me.TableLayoutPanel7.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel7.Size = New System.Drawing.Size(350, 46)
+        Me.TableLayoutPanel7.Size = New System.Drawing.Size(349, 46)
         Me.TableLayoutPanel7.TabIndex = 150
         '
         'TableLayoutPanel10
@@ -1201,7 +1203,7 @@ Partial Class detReserva
         Me.TableLayoutPanel14.Name = "TableLayoutPanel14"
         Me.TableLayoutPanel14.RowCount = 1
         Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel14.Size = New System.Drawing.Size(362, 53)
+        Me.TableLayoutPanel14.Size = New System.Drawing.Size(361, 53)
         Me.TableLayoutPanel14.TabIndex = 3
         '
         'btnSalir
