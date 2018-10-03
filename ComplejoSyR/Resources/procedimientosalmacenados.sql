@@ -137,8 +137,9 @@ CREATE PROCEDURE AlojResTraer
 AS
 BEGIN 
 
-	SET NOCOUNT ON;
-select aljr.Id, a.Numero, a.Capacidad  from alojamientos a
+SET NOCOUNT ON;
+select aljr.Id, a.Numero,m.Nombre Modalidad , a.Capacidad  from alojamientos a
+inner join Modalidades m on m.Id = a.IdModalidad 
 inner join AlojamientoDeReserva aljr on aljr.IdAlojamiento = a.Id
 where aljr.IdReserva = @IdReserva 
 

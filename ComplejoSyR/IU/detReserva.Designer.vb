@@ -503,10 +503,10 @@ Partial Class detReserva
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label24.Location = New System.Drawing.Point(270, 0)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(14, 15)
+        Me.Label24.Size = New System.Drawing.Size(14, 20)
         Me.Label24.TabIndex = 212
         Me.Label24.Text = "$"
         Me.Label24.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -632,10 +632,10 @@ Partial Class detReserva
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label23.Location = New System.Drawing.Point(270, 0)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(14, 15)
+        Me.Label23.Size = New System.Drawing.Size(14, 20)
         Me.Label23.TabIndex = 212
         Me.Label23.Text = "$"
         Me.Label23.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -765,10 +765,10 @@ Partial Class detReserva
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label25.Location = New System.Drawing.Point(124, 441)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(15, 15)
+        Me.Label25.Size = New System.Drawing.Size(15, 24)
         Me.Label25.TabIndex = 214
         Me.Label25.Text = "$"
         Me.Label25.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -809,10 +809,10 @@ Partial Class detReserva
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label22.Location = New System.Drawing.Point(124, 392)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(15, 15)
+        Me.Label22.Size = New System.Drawing.Size(15, 24)
         Me.Label22.TabIndex = 211
         Me.Label22.Text = "$"
         Me.Label22.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -1139,10 +1139,10 @@ Partial Class detReserva
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.Location = New System.Drawing.Point(124, 343)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(15, 15)
+        Me.Label21.Size = New System.Drawing.Size(15, 24)
         Me.Label21.TabIndex = 210
         Me.Label21.Text = "$"
         Me.Label21.TextAlign = System.Drawing.ContentAlignment.TopRight
