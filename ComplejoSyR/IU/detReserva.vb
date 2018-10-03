@@ -94,14 +94,22 @@
 
     End Sub
     Private Sub Calcular()
+
         reserva.CalcularImportes(txtCantDia, txtImpDia, txtImpEstadia, txtTotal, txtPagado, txtDeuda, txtImpServ)
+
         If reserva.Accion = "Modificar" Then
+
             If CDec(txtDeuda.Text) = 0 Then
+
                 btnAgregarPago.Enabled = False
+
             Else
+
                 btnAgregarPago.Enabled = True
+
             End If
         End If
+
     End Sub
     Private Sub detReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim cliente As New ClienteClass
