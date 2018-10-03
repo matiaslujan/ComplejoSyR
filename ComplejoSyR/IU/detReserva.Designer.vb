@@ -164,6 +164,9 @@ Partial Class detReserva
         'dgvServicios
         '
         Me.dgvServicios.AllowUserToAddRows = False
+        Me.dgvServicios.AllowUserToDeleteRows = False
+        Me.dgvServicios.AllowUserToResizeColumns = False
+        Me.dgvServicios.AllowUserToResizeRows = False
         Me.dgvServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvServicios.BackgroundColor = System.Drawing.Color.LemonChiffon
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -285,12 +288,14 @@ Partial Class detReserva
         Me.btnAgregarPago.Size = New System.Drawing.Size(62, 33)
         Me.btnAgregarPago.TabIndex = 150
         Me.btnAgregarPago.Text = "Agregar"
-        Me.ToolTip1.SetToolTip(Me.btnAgregarPago, "la reserva ya ha sido abonada en su totalidad")
         Me.btnAgregarPago.UseVisualStyleBackColor = False
         '
         'dgvPagos
         '
         Me.dgvPagos.AllowUserToAddRows = False
+        Me.dgvPagos.AllowUserToDeleteRows = False
+        Me.dgvPagos.AllowUserToResizeColumns = False
+        Me.dgvPagos.AllowUserToResizeRows = False
         Me.dgvPagos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvPagos.BackgroundColor = System.Drawing.Color.LemonChiffon
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -373,6 +378,9 @@ Partial Class detReserva
         'dgvAlojamientos
         '
         Me.dgvAlojamientos.AllowUserToAddRows = False
+        Me.dgvAlojamientos.AllowUserToDeleteRows = False
+        Me.dgvAlojamientos.AllowUserToResizeColumns = False
+        Me.dgvAlojamientos.AllowUserToResizeRows = False
         Me.dgvAlojamientos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvAlojamientos.BackgroundColor = System.Drawing.Color.LemonChiffon
         DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft

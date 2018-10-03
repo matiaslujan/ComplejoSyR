@@ -108,6 +108,17 @@
                 btnAgregarPago.Enabled = True
 
             End If
+
+        Else
+            If CDec(txtTotal.Text) = 0 Then
+
+                btnAgregarPago.Enabled = False
+
+            Else
+
+                btnAgregarPago.Enabled = True
+
+            End If
         End If
 
     End Sub
