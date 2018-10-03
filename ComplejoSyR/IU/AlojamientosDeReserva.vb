@@ -52,24 +52,28 @@
 
     Private Sub btnCargar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCargar.Click
 
-            For Each row In dgvAlojRes.Rows
+        For Each row In dgvAlojRes.Rows
 
-                If row.selected = True Then
+            If row.selected = True Then
+
                 Dim alojres As New AlojamientoReservaClass
                 alojres.IdAlojamiento = row.Cells("Id").Value
                 alojres.numero = row.Cells("numero").Value
-                alojres.nombre = row.Cells("nombre").Value
+                alojres.modalidad = row.Cells("modalidad").Value
                 alojres.capacidad = row.Cells("capacidad").Value
                 alojres.accion = "Agregar"
                 lstAlojamientos.Add(alojres)
 
-                End If
-            Next
+            End If
+
+        Next
+
         Close()
 
     End Sub
 
     Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
+
         Close()
 
     End Sub

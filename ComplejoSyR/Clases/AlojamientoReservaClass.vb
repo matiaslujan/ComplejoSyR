@@ -52,13 +52,13 @@ Public Class AlojamientoReservaClass
             numero_ = value
         End Set
     End Property
-    Private nombre_ As String
-    Public Property nombre() As String
+    Private modalidad_ As String
+    Public Property modalidad() As String
         Get
-            Return nombre_
+            Return modalidad_
         End Get
         Set(ByVal value As String)
-            nombre_ = value
+            modalidad_ = value
         End Set
     End Property
     Private capacidad_ As String
@@ -132,7 +132,7 @@ Public Class AlojamientoReservaClass
 
                     alojres.Id = (lista("Id"))
                     alojres.numero = (lista("Numero"))
-                    alojres.nombre = (lista("Nombre"))
+                    alojres.modalidad = (lista("Modalidad"))
                     alojres.capacidad = (lista("Capacidad"))
 
                     lst.Add(alojres)

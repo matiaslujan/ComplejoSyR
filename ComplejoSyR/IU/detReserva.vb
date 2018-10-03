@@ -112,8 +112,8 @@
 
         If dgv.Tag = "Alojamientos" Then
 
-            dgv.Columns.Add("Nro", "Numero")
-            dgv.Columns.Add("N", "Nombre")
+            dgv.Columns.Add("N", "Numero")
+            dgv.Columns.Add("M", "Modalidad")
             dgv.Columns.Add("C", "Capacidad")
 
         Else

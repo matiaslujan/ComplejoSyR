@@ -39,17 +39,6 @@ Public Class ServicioClass
         End Set
     End Property
 
-    Private Importe_ As Decimal
-
-    Public Property Importe() As Decimal
-        Get
-            Return Importe_
-        End Get
-        Set(ByVal value As Decimal)
-            Importe_ = value
-        End Set
-    End Property
-
     Private Descripcion_ As String
 
     Public Property Descripcion() As String
@@ -61,6 +50,16 @@ Public Class ServicioClass
         End Set
     End Property
 
+    Private Importe_ As Decimal
+
+    Public Property Importe() As Decimal
+        Get
+            Return Importe_
+        End Get
+        Set(ByVal value As Decimal)
+            Importe_ = value
+        End Set
+    End Property
     Private Accion_ As String
     Public Property Accion() As String
         Get

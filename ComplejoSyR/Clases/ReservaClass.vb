@@ -571,9 +571,10 @@ Public Class ReservaClass
         If dgv.Tag = "Alojamientos" Then
 
             dgv.Columns("IdAlojamiento").Visible = False
-            dgv.Columns("Nro").Visible = False
             dgv.Columns("N").Visible = False
+            dgv.Columns("M").Visible = False
             dgv.Columns("C").Visible = False
+
         Else
 
             dgv.Columns("F").Visible = False
