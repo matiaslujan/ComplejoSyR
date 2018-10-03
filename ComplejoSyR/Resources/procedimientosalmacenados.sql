@@ -96,8 +96,7 @@ BEGIN
 	
 	SET NOCOUNT ON;
 
-		
-		select * from (
+			select * from (
 (SELECT a.Id, a.Numero, m.Nombre,a.Capacidad, c.Nombre Cliente,  r.FIngreso , r.FEgreso, r.Id IdReserva  FROM Alojamientos a 
 
 INNER JOIN Modalidades m on m.Id = a.IdModalidad 
@@ -105,24 +104,24 @@ INNER JOIN AlojamientoDeReserva  ar on ar.IdAlojamiento= a.Id
 INNER JOIN Reservas r on r.id = ar.IdReserva
 inner join Clientes c on c.Id = r.idcliente 
 
-where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso ) or 
-		(@FI >= r.FIngreso  and  @FE <= r.FEgreso) or 
-		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI <= r.FEgreso) or
-		(@FI <=r.FIngreso  and @FE >=r.FEgreso))
+where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso and r.Cancelada = 0 ) or 
+		(@FI >= r.FIngreso  and  @FE <= r.FEgreso and r.Cancelada = 0 ) or 
+		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI <= r.FEgreso and r.Cancelada = 0 ) or
+		(@FI <=r.FIngreso  and @FE >=r.FEgreso and r.Cancelada = 0))
 		
 union all 
 
-SELECT a.Id, a.Numero,m.Nombre,a.Capacidad, null ,null, null, null FROM Alojamientos a
+SELECT a.Id,a.Numero, m.Nombre,a.Capacidad, null ,null, null, null FROM Alojamientos a
 INNER JOIN Modalidades m on m.Id = a.IdModalidad  
 where a.Id not in (SELECT a.Id  FROM Alojamientos a 
 INNER JOIN Modalidades m on m.Id = a.IdModalidad 
 INNER JOIN AlojamientoDeReserva  ar on ar.IdAlojamiento= a.Id 
 INNER JOIN Reservas r on r.id = ar.IdReserva 
 
-where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso ) or 
-		(@FI >= r.FIngreso  and  @FE <= r.FEgreso) or 
-		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI <= r.FEgreso) or
-		(@FI <=r.FIngreso  and @FE >=r.FEgreso))
+where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso and r.Cancelada = 0 ) or 
+		(@FI >= r.FIngreso  and  @FE <= r.FEgreso and r.Cancelada = 0 ) or 
+		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI <= r.FEgreso and r.Cancelada = 0 ) or
+		(@FI <=r.FIngreso  and @FE >=r.FEgreso and r.Cancelada = 0 ))
 		)as disp
  order by numero asc, FIngreso asc
 END
