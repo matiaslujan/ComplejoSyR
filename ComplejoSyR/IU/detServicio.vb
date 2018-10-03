@@ -18,9 +18,17 @@
             funcion_ = value
         End Set
     End Property
+    Private Servicio_ As New ServicioClass
+    Public Property Servicio() As ServicioClass
+        Get
+            Return Servicio_
+        End Get
+        Set(ByVal value As ServicioClass)
+            Servicio_ = value
+        End Set
+    End Property
 
-
-    Dim servicio As New ServicioClass
+    'Dim servicio As New ServicioClass
     Dim posicion As Integer
     Public Sub New(ByRef lst As List(Of ServicioClass))
 

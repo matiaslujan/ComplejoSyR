@@ -380,7 +380,7 @@ Public Class ReservaClass
 
     End Sub
 
-    Public Sub Importes(ByVal id As Integer, ByVal txtTot As TextBox, ByVal txtPag As TextBox, ByVal txtDeuda As TextBox)
+    Public Sub Importes(ByVal id As Integer, ByVal txtTot As TextBox, ByVal txtPag As TextBox, ByVal txtDeuda As TextBox, ByVal txtServ As TextBox)
         Try
             Conectar()
 
@@ -399,7 +399,7 @@ Public Class ReservaClass
                     txtTot.Text = (lista("Total"))
                     txtPag.Text = (lista("Pagado"))
                     txtDeuda.Text = (lista("Deuda"))
-
+                    txtServ.Text = (lista("Servicios"))
                 End While
 
             End If
@@ -560,4 +560,60 @@ Public Class ReservaClass
         Return True
 
     End Function
+
+    Public Sub OcultarColumnas(ByRef dgv As DataGridView)
+
+        dgv.Columns("IdReserva").Visible = False
+        dgv.Columns("Id").Visible = False
+        dgv.Columns("Accion").Visible = False
+        dgv.Columns("Conexion").Visible = False
+
+        If dgv.Tag = "Alojamientos" Then
+
+            dgv.Columns("IdAlojamiento").Visible = False
+            dgv.Columns("Nro").Visible = False
+            dgv.Columns("N").Visible = False
+            dgv.Columns("C").Visible = False
+        Else
+
+            dgv.Columns("F").Visible = False
+            dgv.Columns("D").Visible = False
+            dgv.Columns("I").Visible = False
+
+        End If
+    End Sub
+    'subtotalpagado y servicios
+    Public Sub subtotal(ByVal dgv As DataGridView, ByVal txt As TextBox)
+
+        If dgv.Rows.Count > 0 Then
+
+            txt.Text = "0"
+
+            For Each row In dgv.Rows
+                If row.cells("accion").value <> "Eliminar" Then
+                    txt.Text = CDec(txt.Text) + CDec(row.cells("importe").value)
+                End If
+            Next
+
+        Else
+            txt.Text = "0"
+
+        End If
+    End Sub
+
+    Public Sub CalcularImportes(ByVal txtdias As TextBox, ByVal txtimpdia As TextBox, ByVal txtimpestadia As TextBox, ByVal txtTot As TextBox, ByVal txtPag As TextBox, ByVal txtDeuda As TextBox, ByVal txtServ As TextBox)
+
+        If txtdias.Text <> "" And txtimpdia.Text <> "" Then
+
+            txtimpestadia.Text = CDec(txtdias.Text) * CDec(txtimpdia.Text)
+
+        End If
+
+        txtTot.Text = CDec(txtimpestadia.Text) + CDec(txtServ.Text)
+
+        txtDeuda.Text = CDec(txtTot.Text) - CDec(txtPag.Text)
+
+    End Sub
+
+ 
 End Class
