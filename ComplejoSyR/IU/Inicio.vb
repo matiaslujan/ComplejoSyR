@@ -1,30 +1,39 @@
 ﻿Public Class Inicio
-    Private Sub btnReservas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReservas.Click
+    Private Sub listareservas()
+
         Dim lst As New listReservas
 
         lst.ShowDialog()
 
+        Ocupacion()
+
+    End Sub
+    Private Sub btnReservas_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnReservas.Click
+
+        listareservas()
+
+    End Sub
+    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
+
+        listareservas()
+
     End Sub
 
     Private Sub btnClientes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnClientes.Click
+
         Dim lst As New listClientes
 
         lst.ShowDialog()
 
     End Sub
     Private Sub btnAdministracion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdministracion.Click
+
         Dim a As New Administracion
 
         a.ShowDialog()
 
     End Sub
-    Private Sub btnBuscar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnBuscar.Click
-
-        Dim l As New listReservas
-
-        l.ShowDialog()
-
-    End Sub
+ 
     '------------------------------------------------------------------------------------------------------------------------------
     Private Sub MonthCalendar1_DateChanged(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DateRangeEventArgs) Handles Calendario.DateChanged
 
@@ -47,8 +56,23 @@
     
     End Sub
     Public Sub NuevaReserva()
+        If dgvOcupacion.CurrentRow Is Nothing Then
 
-        Dim det As New detReserva(Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
+            MsgBox("Seleccione un alojamiento")
+
+            Exit Sub
+
+        End If
+
+        Dim alojres As New AlojamientoReservaClass
+
+        alojres.IdAlojamiento = dgvOcupacion.CurrentRow.Cells("Id").Value
+        alojres.numero = dgvOcupacion.CurrentRow.Cells("numero").Value
+        alojres.modalidad = dgvOcupacion.CurrentRow.Cells("nombre").Value
+        alojres.capacidad = dgvOcupacion.CurrentRow.Cells("capacidad").Value
+        alojres.accion = "Agregar"
+
+        Dim det As New detReserva(Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString, alojres)
 
         det.ShowDialog()
 

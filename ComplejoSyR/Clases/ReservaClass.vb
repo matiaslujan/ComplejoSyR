@@ -367,6 +367,9 @@ Public Class ReservaClass
             dgv.Columns("FIngreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             dgv.Columns("Numero").Width = 50
             dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            dgv.Columns("Capacidad").Width = 100
+            dgv.Columns("Capacidad").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
 
             Desconectar()
 

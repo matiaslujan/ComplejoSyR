@@ -10,7 +10,7 @@
             reserva_ = value
         End Set
     End Property
-    ' Dim Reserva As New ReservaClass
+
     Dim Aloj As New AlojamientoReservaClass
     Dim lstAlojamientos As New List(Of AlojamientoReservaClass)
     Dim pago As New PagoClass
@@ -20,16 +20,18 @@
 
     'agregar con fechas seleccionadas
 
-    Public Sub New(ByVal FI As Date, ByVal FE As Date)
+    Public Sub New(ByVal FI As Date, ByVal FE As Date, ByVal alojres As AlojamientoReservaClass)
 
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
 
-        Reserva.FEgreso = FE
-        Reserva.FIngreso = FI
+        reserva.FEgreso = FE
+        reserva.FIngreso = FI
 
         ' Add any initialization after the InitializeComponent() call.
-        Reserva.Accion = "AgregarF"
+        reserva.Accion = "AgregarF"
+
+        lstAlojamientos.Add(alojres)
 
     End Sub
     Public Sub New()
@@ -75,6 +77,14 @@
         agregarcolumnas(dgvPagos)
         agregarcolumnas(dgvServicios)
         agregarcolumnas(dgvAlojamientos)
+
+        If lstAlojamientos.Count > 0 Then
+
+            dgvAlojamientos.DataSource = lstAlojamientos
+
+            reserva.OcultarColumnas(dgvAlojamientos)
+
+        End If
 
         If Reserva.Accion = "Modificar" Then
 

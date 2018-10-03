@@ -98,7 +98,7 @@ BEGIN
 
 		
 		select * from (
-(SELECT a.Id, a.Numero,m.Nombre, c.Nombre Cliente,  r.FIngreso , r.FEgreso, r.Id IdReserva  FROM Alojamientos a 
+(SELECT a.Id, a.Numero, m.Nombre,a.Capacidad, c.Nombre Cliente,  r.FIngreso , r.FEgreso, r.Id IdReserva  FROM Alojamientos a 
 
 INNER JOIN Modalidades m on m.Id = a.IdModalidad 
 INNER JOIN AlojamientoDeReserva  ar on ar.IdAlojamiento= a.Id 
@@ -112,7 +112,7 @@ where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso ) or
 		
 union all 
 
-SELECT a.Id,a.Numero,m.Nombre, null ,null, null, null FROM Alojamientos a
+SELECT a.Id, a.Numero,m.Nombre,a.Capacidad, null ,null, null, null FROM Alojamientos a
 INNER JOIN Modalidades m on m.Id = a.IdModalidad  
 where a.Id not in (SELECT a.Id  FROM Alojamientos a 
 INNER JOIN Modalidades m on m.Id = a.IdModalidad 
