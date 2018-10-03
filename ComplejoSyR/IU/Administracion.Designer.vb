@@ -48,7 +48,7 @@ Partial Class Administracion
         '
         'tabModalidades
         '
-        Me.tabModalidades.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.tabModalidades.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.tabModalidades.Controls.Add(Me.dgvModalidades)
         Me.tabModalidades.Controls.Add(Me.btnDelMod)
         Me.tabModalidades.Controls.Add(Me.btnUpdMod)
@@ -165,7 +165,7 @@ Partial Class Administracion
         '
         'tabAlojamientos
         '
-        Me.tabAlojamientos.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.tabAlojamientos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.tabAlojamientos.Controls.Add(Me.dgvAlojamientos)
         Me.tabAlojamientos.Controls.Add(Me.btnDeletAloj)
         Me.tabAlojamientos.Controls.Add(Me.btnModAloj)
@@ -271,7 +271,7 @@ Partial Class Administracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(642, 315)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

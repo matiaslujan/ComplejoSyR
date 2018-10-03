@@ -77,6 +77,7 @@
         det.ShowDialog()
 
         Ocupacion()
+
     End Sub
 
     Private Sub btnNuevaReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevaReserva.Click

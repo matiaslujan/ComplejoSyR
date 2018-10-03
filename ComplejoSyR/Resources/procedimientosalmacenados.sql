@@ -74,7 +74,7 @@ BEGIN
 
 	SET NOCOUNT ON;
 
-    SELECT a.Id,a.Numero,m.Nombre, a.Capacidad  FROM Alojamientos a
+    SELECT a.Id,a.Numero,m.Nombre Modalidad, a.Capacidad  FROM Alojamientos a
 INNER JOIN Modalidades m on m.Id = a.IdModalidad  
 where a.Id not in (SELECT a.Id  FROM Alojamientos a 
 INNER JOIN Modalidades m on m.Id = a.IdModalidad 

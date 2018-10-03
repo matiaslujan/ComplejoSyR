@@ -124,7 +124,7 @@ Partial Class listReservas
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(247, Byte), Integer), CType(CType(231, Byte), Integer), CType(CType(212, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.dgvReservas)
