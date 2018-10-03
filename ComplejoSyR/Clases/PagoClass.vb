@@ -25,16 +25,6 @@ Public Class PagoClass
         End Set
     End Property
 
-    Private Importe_ As Decimal
-
-    Public Property Importe() As Decimal
-        Get
-            Return Importe_
-        End Get
-        Set(ByVal value As Decimal)
-            Importe_ = value
-        End Set
-    End Property
 
     Private Fecha_ As Date
 
@@ -57,6 +47,17 @@ Public Class PagoClass
             Descripcion_ = value
         End Set
     End Property
+
+    Private Importe_ As Decimal
+
+    Public Property Importe() As Decimal
+        Get
+            Return Importe_
+        End Get
+        Set(ByVal value As Decimal)
+            Importe_ = value
+        End Set
+    End Property
     Private accion_ As String
     Public Property accion() As String
         Get
@@ -66,7 +67,7 @@ Public Class PagoClass
             accion_ = value
         End Set
     End Property
-    Public Sub Traer(ByRef lst As List(Of PagoClass), ByVal IdReserva As Integer)
+    Public Sub Traer(ByVal lst As List(Of PagoClass), ByVal IdReserva As Integer)
         Try
             Conectar()
 

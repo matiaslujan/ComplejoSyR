@@ -48,7 +48,7 @@
     End Sub
     Public Sub NuevaReserva()
 
-        Dim det As New detReserva(Calendario.SelectionRange.Start.ToString,  Calendario.SelectionRange.End.ToString)
+        Dim det As New detReserva(Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
 
         det.ShowDialog()
 
@@ -77,8 +77,17 @@
             res.Datos(res)
 
             Dim det As New detReserva(res)
-            'da error index -1 
-            det.ShowDialog()
+
+            Try
+                'det.idreserva = res.Id
+
+                det.ShowDialog()
+
+            Catch ex As Exception
+
+                MsgBox(ex.Message)
+
+            End Try
 
             Ocupacion()
 

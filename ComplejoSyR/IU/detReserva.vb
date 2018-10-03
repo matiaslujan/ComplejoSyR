@@ -1,8 +1,16 @@
 ﻿Public Class detReserva
 
     Dim f As New Funciones
-
-    Dim Reserva As New ReservaClass
+    Private reserva_ As New ReservaClass
+    Public Property reserva() As ReservaClass
+        Get
+            Return reserva_
+        End Get
+        Set(ByVal value As ReservaClass)
+            reserva_ = value
+        End Set
+    End Property
+    ' Dim Reserva As New ReservaClass
     Dim Aloj As New AlojamientoReservaClass
     Dim lstAlojamientos As New List(Of AlojamientoReservaClass)
     Dim pago As New PagoClass
@@ -59,8 +67,35 @@
         If Reserva.Accion = "Modificar" Then
 
             Aloj.TraerAlojamiento(Reserva.Id, lstAlojamientos)
-            pago.Traer(lstPagos, Reserva.Id)
-            servicio.Traer(lstServicios, Reserva.Id)
+
+            Dim p As New PagoClass
+
+            'p.Traer(lstPagos, reserva.Id)
+
+            'dgvPagos.DataSource = lstPagos
+
+            If reserva.TraerPagos(lstPagos, reserva.Id) Then
+
+                dgvPagos.DataSource = lstPagos
+
+                dgvPagos.Columns("IdReserva").Visible = False
+                dgvPagos.Columns("Id").Visible = False
+                dgvPagos.Columns("Accion").Visible = False
+                dgvPagos.Columns("Conexion").Visible = False
+
+            End If
+
+
+            If reserva.TraerServicios(lstServicios, reserva.Id) Then
+
+                dgvServicios.DataSource = lstServicios
+                dgvServicios.Columns("IdReserva").Visible = False
+                dgvServicios.Columns("Id").Visible = False
+                dgvServicios.Columns("Accion").Visible = False
+                dgvServicios.Columns("Conexion").Visible = False
+
+            End If
+            'servicio.Traer(lstServicios, Reserva.Id)
 
             Datos()
 
@@ -90,8 +125,8 @@
         Reserva.Importes(Reserva.Id, txtTotal, txtPagado, txtDeuda)
 
         alojamientos()
-        pagos()
-        servicios()
+        'pagos()
+        'servicios()
 
     End Sub
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
@@ -463,5 +498,4 @@
 
     End Sub
 
- 
 End Class
