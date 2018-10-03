@@ -59,7 +59,50 @@
 
     End Sub
 
+    Private Sub agregarcolumnas(ByRef dgv As DataGridView)
 
+        If dgv.Tag = "Alojamientos" Then
+
+            dgv.Columns.Add("N", "Numero")
+            dgv.Columns.Add("M", "Modalidad")
+            dgv.Columns.Add("C", "Capacidad")
+
+        Else
+            dgv.Columns.Add("F", "Fecha")
+            dgv.Columns.Add("D", "Descripcion")
+            dgv.Columns.Add("I", "Importe")
+        End If
+
+    End Sub
+    Private Sub Datos()
+
+        txtId.Text = reserva.Id
+        txtCantPer.Text = reserva.CantPersonas
+        txtImpEstadia.Text = reserva.ImpTotal
+        reserva.Importes(reserva.Id, txtTotal, txtPagado, txtDeuda, txtImpServ)
+        txtImpDia.Text = reserva.ImpDia
+        dtpFecha.Text = reserva.Fecha
+        dtpFechaEgreso.Text = reserva.FEgreso
+        dtpFechaIngreso.Text = reserva.FIngreso
+        txtCantDia.Text = reserva.CantDias
+        cbClientes.SelectedValue = reserva.IdCliente
+        txtDescripcion.Text = reserva.Descripcion
+        CbxCancelada.Checked = reserva.Cancelada
+
+
+        alojamientos()
+
+    End Sub
+    Private Sub Calcular()
+        reserva.CalcularImportes(txtCantDia, txtImpDia, txtImpEstadia, txtTotal, txtPagado, txtDeuda, txtImpServ)
+        If reserva.Accion = "Modificar" Then
+            If CDec(txtDeuda.Text) = 0 Then
+                btnAgregarPago.Enabled = False
+            Else
+                btnAgregarPago.Enabled = True
+            End If
+        End If
+    End Sub
     Private Sub detReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim cliente As New ClienteClass
 
@@ -118,65 +161,15 @@
 
         End If
     End Sub
-    Private Sub agregarcolumnas(ByRef dgv As DataGridView)
-
-        If dgv.Tag = "Alojamientos" Then
-
-            dgv.Columns.Add("N", "Numero")
-            dgv.Columns.Add("M", "Modalidad")
-            dgv.Columns.Add("C", "Capacidad")
-
-        Else
-            dgv.Columns.Add("F", "Fecha")
-            dgv.Columns.Add("D", "Descripcion")
-            dgv.Columns.Add("I", "Importe")
-        End If
-
-    End Sub
-    Private Sub Datos()
-
-        txtId.Text = reserva.Id
-        txtCantPer.Text = reserva.CantPersonas
-        txtImpEstadia.Text = reserva.ImpTotal
-        reserva.Importes(reserva.Id, txtTotal, txtPagado, txtDeuda, txtImpServ)
-        txtImpDia.Text = reserva.ImpDia
-        dtpFecha.Text = reserva.Fecha
-        dtpFechaEgreso.Text = reserva.FEgreso
-        dtpFechaIngreso.Text = reserva.FIngreso
-        txtCantDia.Text = reserva.CantDias
-        cbClientes.SelectedValue = reserva.IdCliente
-        txtDescripcion.Text = reserva.Descripcion
-        CbxCancelada.Checked = reserva.Cancelada
 
 
-        alojamientos()
-
-    End Sub
     Private Sub txtCantDia_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCantDia.TextChanged
         Calcular()
     End Sub
     Private Sub txtImpDia_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtImpDia.TextChanged
         Calcular()
     End Sub
-    Private Sub Calcular()
 
-        reserva.CalcularImportes(txtCantDia, txtImpDia, txtImpEstadia, txtTotal, txtPagado, txtDeuda, txtImpServ)
-
-        If reserva.Accion = "Modificar" Then
-
-            If CDec(txtDeuda.Text) = 0 Then
-
-                btnAgregarPago.Enabled = False
-
-            Else
-
-                btnAgregarPago.Enabled = True
-
-            End If
-
-        End If
-
-    End Sub
 
     Private Sub dtpFechaEgreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaEgreso.ValueChanged
 
