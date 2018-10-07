@@ -115,13 +115,13 @@ Public Class ClienteClass
 
             dgv.Columns("Id").Visible = False
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
     Public Sub Agregar(ByVal Cliente As ClienteClass)
         Try
@@ -141,14 +141,14 @@ Public Class ClienteClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
 
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
     Public Sub Modificar(ByVal Cliente As ClienteClass)
         Try
@@ -169,13 +169,13 @@ Public Class ClienteClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
     Public Sub Eliminar(ByVal Id As Integer)
         Try
@@ -189,13 +189,13 @@ Public Class ClienteClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
 
+        Desconectar()
     End Sub
     Public Sub cargarCombo(ByVal combo As ComboBox)
         Try
@@ -231,13 +231,13 @@ Public Class ClienteClass
 
             End If
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Buscar(ByVal Nombre As String, ByVal dgv As DataGridView)
@@ -258,13 +258,13 @@ Public Class ClienteClass
 
             dgv.DataSource = tabla
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Historial(ByVal id As Integer, ByVal dgv As DataGridView)
@@ -284,13 +284,13 @@ Public Class ClienteClass
             dgv.DataSource = table
             dgv.Columns("Id").Visible = False
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub ultimoid(ByRef cliente As ClienteClass)
@@ -303,7 +303,7 @@ Public Class ClienteClass
 
             cliente.Id = comando.ExecuteScalar
 
-            Desconectar()
+
 
         Catch ex As Exception
 
@@ -311,6 +311,7 @@ Public Class ClienteClass
 
         End Try
 
+        Desconectar()
     End Sub
 
 End Class

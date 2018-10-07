@@ -77,13 +77,13 @@ Public Class AlojamientoClass
             dgv.Columns("Id").Visible = False
             dgv.Columns("IdModalidad").Visible = False
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Agregar(ByVal alojamiento As AlojamientoClass)
@@ -98,13 +98,13 @@ Public Class AlojamientoClass
             comando.Parameters.AddWithValue("@Sector", alojamiento.Sector)
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Modificar(ByVal alojamiento As AlojamientoClass)
@@ -122,13 +122,13 @@ Public Class AlojamientoClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Eliminar(ByVal Id As Integer)
@@ -143,13 +143,13 @@ Public Class AlojamientoClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
     '' taer alojamientos disponibles segun las fechas ingresadas
 
@@ -174,13 +174,11 @@ Public Class AlojamientoClass
 
             dgv.Columns("Id").Visible = False
 
-            Desconectar()
-
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 End Class

@@ -34,9 +34,9 @@
         'con el id se recuperan todos los datos de la reserva
         res.Datos(res)
 
-        'Dim det As New detReserva(res)
+        Dim det As New detReserva(res)
 
-        'det.ShowDialog()
+        det.ShowDialog()
 
     End Sub
 

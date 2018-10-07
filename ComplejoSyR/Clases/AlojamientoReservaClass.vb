@@ -101,14 +101,14 @@ Public Class AlojamientoReservaClass
                 End If
 
             Next
-            Desconectar()
+
 
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
 
     End Sub
 
@@ -141,14 +141,14 @@ Public Class AlojamientoReservaClass
 
             End If
 
-            Desconectar()
+
 
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
 End Class

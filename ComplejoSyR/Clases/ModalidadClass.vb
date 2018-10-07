@@ -73,19 +73,21 @@ Public Class ModalidadClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Modificar(ByVal modalidad As ModalidadClass)
         Try
             Conectar()
+
             Dim comando As New SqlCommand("ModalidadModificar", conexion)
+
             comando.CommandType = CommandType.StoredProcedure
 
             comando.Parameters.AddWithValue("@Nombre", modalidad.Nombre)
@@ -96,13 +98,12 @@ Public Class ModalidadClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Eliminar(ByVal id As Integer)
@@ -117,13 +118,13 @@ Public Class ModalidadClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub CargarCombo(ByVal combo As ComboBox)
@@ -158,12 +159,12 @@ Public Class ModalidadClass
 
             End If
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 End Class

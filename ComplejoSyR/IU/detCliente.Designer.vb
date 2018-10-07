@@ -31,7 +31,6 @@ Partial Class detCliente
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
         Me.txtCorreo = New System.Windows.Forms.TextBox
-        Me.txtTelefono = New System.Windows.Forms.TextBox
         Me.txtDomicilio = New System.Windows.Forms.TextBox
         Me.txtNombre = New System.Windows.Forms.TextBox
         Me.btnAceptar = New System.Windows.Forms.Button
@@ -47,6 +46,7 @@ Partial Class detCliente
         Me.Label10 = New System.Windows.Forms.Label
         Me.Label11 = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.txtTelefono = New System.Windows.Forms.MaskedTextBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -125,14 +125,6 @@ Partial Class detCliente
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(191, 20)
         Me.txtCorreo.TabIndex = 16
-        '
-        'txtTelefono
-        '
-        Me.txtTelefono.Location = New System.Drawing.Point(159, 96)
-        Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(191, 20)
-        Me.txtTelefono.TabIndex = 15
-        Me.txtTelefono.Tag = "Validar"
         '
         'txtDomicilio
         '
@@ -288,12 +280,21 @@ Partial Class detCliente
         '
         Me.ToolTip1.ForeColor = System.Drawing.Color.Firebrick
         '
+        'txtTelefono
+        '
+        Me.txtTelefono.Location = New System.Drawing.Point(159, 95)
+        Me.txtTelefono.Mask = "99999999999"
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.Size = New System.Drawing.Size(191, 20)
+        Me.txtTelefono.TabIndex = 95
+        '
         'detCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(379, 314)
+        Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label9)
@@ -312,7 +313,6 @@ Partial Class detCliente
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtCorreo)
-        Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.txtDomicilio)
         Me.Controls.Add(Me.txtNombre)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -334,7 +334,6 @@ Partial Class detCliente
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtCorreo As System.Windows.Forms.TextBox
-    Friend WithEvents txtTelefono As System.Windows.Forms.TextBox
     Friend WithEvents txtDomicilio As System.Windows.Forms.TextBox
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
@@ -350,4 +349,5 @@ Partial Class detCliente
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
+    Friend WithEvents txtTelefono As System.Windows.Forms.MaskedTextBox
 End Class

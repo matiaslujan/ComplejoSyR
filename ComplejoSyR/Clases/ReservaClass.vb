@@ -156,13 +156,13 @@ Public Class ReservaClass
                 dgv.Rows(0).Selected = False
 
             End If
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
 
     End Sub
 
@@ -198,13 +198,13 @@ Public Class ReservaClass
 
             End If
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
     Public Sub Agregar(ByVal reserva As ReservaClass)
         Try
@@ -227,13 +227,13 @@ Public Class ReservaClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Modificar(ByVal reserva As ReservaClass)
@@ -257,13 +257,13 @@ Public Class ReservaClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Eliminar(ByVal Id As Integer)
@@ -277,13 +277,13 @@ Public Class ReservaClass
 
             comando.ExecuteNonQuery()
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub ultimoid(ByVal txt As TextBox)
@@ -296,12 +296,13 @@ Public Class ReservaClass
 
             txt.Text = comando.ExecuteScalar
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
+        Desconectar()
     End Sub
     Public Sub Buscar(ByVal Nombre As String, ByVal dgv As DataGridView)
         Try
@@ -325,19 +326,18 @@ Public Class ReservaClass
 
                 dgv.Rows(0).Selected = False
             End If
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub TraerOcupacion(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date)
         Try
             Conectar()
-
 
             Dim comando As New SqlCommand("AlojamientosOcupacion", conexion)
 
@@ -346,6 +346,8 @@ Public Class ReservaClass
             comando.Parameters.AddWithValue("@FI", FIng)
 
             comando.Parameters.AddWithValue("@FE", FEg)
+
+            'comando.Parameters.AddWithValue("@Tipo", tipo)
 
             Dim table As New Data.DataTable
 
@@ -371,7 +373,6 @@ Public Class ReservaClass
             dgv.Columns("Capacidad").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
 
-            Desconectar()
 
             colorear(dgv)
 
@@ -381,6 +382,7 @@ Public Class ReservaClass
 
         End Try
 
+        Desconectar()
     End Sub
 
     Public Sub Importes(ByVal id As Integer, ByVal txtTot As TextBox, ByVal txtPag As TextBox, ByVal txtDeuda As TextBox, ByVal txtServ As TextBox)
@@ -407,13 +409,13 @@ Public Class ReservaClass
 
             End If
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
     Public Sub colorear(ByRef dgv As DataGridView)
 
@@ -514,7 +516,7 @@ Public Class ReservaClass
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
         Return True
 
     End Function
@@ -560,6 +562,7 @@ Public Class ReservaClass
             MsgBox(ex.Message)
 
         End Try
+        Desconectar()
         Return True
 
     End Function

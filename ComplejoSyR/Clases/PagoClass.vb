@@ -97,13 +97,13 @@ Public Class PagoClass
 
             End If
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
-
+        Desconectar()
     End Sub
 
     Public Sub Actualizar(ByRef lst As List(Of PagoClass))
@@ -153,13 +153,15 @@ Public Class PagoClass
                 End Select
    
             Next
-            Desconectar()
+
 
         Catch ex As Exception
 
             MsgBox(ex.Message)
 
         End Try
+
+        Desconectar()
 
     End Sub
 
