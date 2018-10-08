@@ -89,7 +89,7 @@ Partial Class Administracion
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.PeachPuff
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvModalidades.DefaultCellStyle = DataGridViewCellStyle2
-        Me.dgvModalidades.Location = New System.Drawing.Point(0, 0)
+        Me.dgvModalidades.Location = New System.Drawing.Point(4, 3)
         Me.dgvModalidades.MultiSelect = False
         Me.dgvModalidades.Name = "dgvModalidades"
         Me.dgvModalidades.ReadOnly = True
@@ -97,7 +97,7 @@ Partial Class Administracion
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dgvModalidades.RowsDefaultCellStyle = DataGridViewCellStyle3
         Me.dgvModalidades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvModalidades.Size = New System.Drawing.Size(634, 237)
+        Me.dgvModalidades.Size = New System.Drawing.Size(628, 237)
         Me.dgvModalidades.TabIndex = 9
         '
         'btnDelMod
