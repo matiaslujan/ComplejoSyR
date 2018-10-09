@@ -25,12 +25,16 @@
 
         lst.ShowDialog()
 
+        Ocupacion()
+
     End Sub
     Private Sub btnAdministracion_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAdministracion.Click
 
         Dim a As New Administracion
 
         a.ShowDialog()
+
+        Ocupacion()
 
     End Sub
  
@@ -86,19 +90,9 @@
 
             NuevaReserva()
 
-        End If
-
-    End Sub
-
-    Private Sub dgvOcupacion_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvOcupacion.CellClick
-
-        If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Then
-
-            btnNuevaReserva.Enabled = False
-
         Else
 
-            btnNuevaReserva.Enabled = True
+            MsgBox("Alojamiento no disponible")
 
         End If
 

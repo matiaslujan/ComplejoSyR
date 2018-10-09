@@ -67,45 +67,45 @@ Public Class PagoClass
             accion_ = value
         End Set
     End Property
-    Public Sub Traer(ByVal lst As List(Of PagoClass), ByVal IdReserva As Integer)
-        Try
-            Conectar()
+    'Public Sub Traer(ByVal lst As List(Of PagoClass), ByVal IdReserva As Integer)
+    '    Try
+    '        Conectar()
 
-            Dim comando As New SqlCommand("PagosTraer", conexion)
+    '        Dim comando As New SqlCommand("PagosTraer", conexion)
 
-            comando.CommandType = CommandType.StoredProcedure
+    '        comando.CommandType = CommandType.StoredProcedure
 
-            comando.Parameters.AddWithValue("@IdReserva", IdReserva)
-
-
-            Dim lista As SqlDataReader = comando.ExecuteReader
-
-            If lista.HasRows Then
-
-                For Each row In lista
-
-                    Dim pago As New PagoClass
-
-                    pago.Id = (lista("Id"))
-                    pago.Descripcion = (lista("Descripcion"))
-                    pago.Fecha = (lista("Fecha"))
-                    pago.Importe = (lista("Importe"))
-                    pago.IdReserva = (lista("IdReserva"))
-                    lst.Add(pago)
-
-                Next
-
-            End If
+    '        comando.Parameters.AddWithValue("@IdReserva", IdReserva)
 
 
-        Catch ex As Exception
+    '        Dim lista As SqlDataReader = comando.ExecuteReader
 
-            MsgBox(ex.Message)
-        Finally
-            Desconectar()
-        End Try
+    '        If lista.HasRows Then
 
-    End Sub
+    '            For Each row In lista
+
+    '                Dim pago As New PagoClass
+
+    '                pago.Id = (lista("Id"))
+    '                pago.Descripcion = (lista("Descripcion"))
+    '                pago.Fecha = (lista("Fecha"))
+    '                pago.Importe = (lista("Importe"))
+    '                pago.IdReserva = (lista("IdReserva"))
+    '                lst.Add(pago)
+
+    '            Next
+
+    '        End If
+
+
+    '    Catch ex As Exception
+
+    '        MsgBox(ex.Message)
+    '    Finally
+    '        Desconectar()
+    '    End Try
+
+    'End Sub
 
     Public Sub Actualizar(ByRef lst As List(Of PagoClass))
         Try
