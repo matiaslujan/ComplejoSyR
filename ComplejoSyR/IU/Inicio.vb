@@ -82,12 +82,35 @@
 
     Private Sub btnNuevaReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevaReserva.Click
 
-        NuevaReserva()
+        If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Then
+
+            NuevaReserva()
+
+        End If
+
+    End Sub
+
+    Private Sub dgvOcupacion_CellClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvOcupacion.CellClick
+
+        If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Then
+
+            btnNuevaReserva.Enabled = False
+
+        Else
+
+            btnNuevaReserva.Enabled = True
+
+        End If
 
     End Sub
 
     Private Sub dgvOcupacion_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvOcupacion.CellDoubleClick
 
+        Reserva()
+
+
+    End Sub
+    Private Sub RESERVA()
         If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Then
 
             NuevaReserva()
@@ -117,9 +140,8 @@
             Ocupacion()
 
         End If
-
-
     End Sub
+
 
     Private Sub dgvOcupacion_ColumnHeaderMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvOcupacion.ColumnHeaderMouseClick
 
@@ -130,4 +152,5 @@
 
     End Sub
 
+   
 End Class
