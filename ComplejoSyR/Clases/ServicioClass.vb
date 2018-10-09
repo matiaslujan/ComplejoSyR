@@ -124,9 +124,10 @@ Public Class ServicioClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
-        Desconectar()
+
     End Sub
     Public Sub Traer(ByRef lst As List(Of ServicioClass), ByVal id As Integer)
         Try
@@ -162,9 +163,10 @@ Public Class ServicioClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
-        Desconectar()
+
     End Sub
 
 

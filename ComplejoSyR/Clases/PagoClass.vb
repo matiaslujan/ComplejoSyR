@@ -101,9 +101,10 @@ Public Class PagoClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
-        Desconectar()
+
     End Sub
 
     Public Sub Actualizar(ByRef lst As List(Of PagoClass))
@@ -158,10 +159,9 @@ Public Class PagoClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
-
-        Desconectar()
 
     End Sub
 

@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data
+Imports System.Data.SqlClient
 
 Public Class AlojamientoClass
 
@@ -81,9 +82,10 @@ Public Class AlojamientoClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
+        Finally
+            Desconectar()
 
         End Try
-        Desconectar()
     End Sub
 
     Public Sub Agregar(ByVal alojamiento As AlojamientoClass)
@@ -102,9 +104,10 @@ Public Class AlojamientoClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
+        Finally
+            Desconectar()
 
         End Try
-        Desconectar()
     End Sub
 
     Public Sub Modificar(ByVal alojamiento As AlojamientoClass)
@@ -126,9 +129,10 @@ Public Class AlojamientoClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
+        Finally
+            Desconectar()
 
         End Try
-        Desconectar()
     End Sub
 
     Public Sub Eliminar(ByVal Id As Integer)
@@ -147,9 +151,10 @@ Public Class AlojamientoClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
+        Finally
+            Desconectar()
 
         End Try
-        Desconectar()
     End Sub
     '' taer alojamientos disponibles segun las fechas ingresadas
 
@@ -177,8 +182,10 @@ Public Class AlojamientoClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
+        Finally
+
+            Desconectar()
 
         End Try
-        Desconectar()
     End Sub
 End Class

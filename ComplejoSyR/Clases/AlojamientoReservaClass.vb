@@ -106,9 +106,11 @@ Public Class AlojamientoReservaClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
+        Finally
+            Desconectar()
 
         End Try
-        Desconectar()
+
 
     End Sub
 
@@ -146,9 +148,10 @@ Public Class AlojamientoReservaClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
-        Desconectar()
+
     End Sub
 
 End Class

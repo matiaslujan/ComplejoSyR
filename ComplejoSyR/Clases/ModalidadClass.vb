@@ -53,11 +53,12 @@ Public Class ModalidadClass
 
             dgv.Columns("Id").Visible = False
 
-            Desconectar()
+
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
 
     End Sub
@@ -77,9 +78,10 @@ Public Class ModalidadClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
-        Desconectar()
+
     End Sub
 
     Public Sub Modificar(ByVal modalidad As ModalidadClass)
@@ -101,9 +103,10 @@ Public Class ModalidadClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
-        Desconectar()
+
     End Sub
 
     Public Sub Eliminar(ByVal id As Integer)
@@ -122,9 +125,10 @@ Public Class ModalidadClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
-        Desconectar()
+
     End Sub
 
     Public Sub CargarCombo(ByVal combo As ComboBox)
@@ -163,8 +167,9 @@ Public Class ModalidadClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-
+        Finally
+            Desconectar()
         End Try
-        Desconectar()
+
     End Sub
 End Class
