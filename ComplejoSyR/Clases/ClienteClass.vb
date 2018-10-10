@@ -3,7 +3,6 @@ Imports System.Data.SqlClient
 
 Public Class ClienteClass
     Inherits ConexionClass
-
     Private Id_ As Integer
 
     Public Property Id() As Integer

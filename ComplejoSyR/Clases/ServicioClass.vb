@@ -69,6 +69,53 @@ Public Class ServicioClass
             Accion_ = value
         End Set
     End Property
+    Public Function Traer(ByRef lst As List(Of ServicioClass), ByVal id As Integer) As Boolean
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("ServicioTraer", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@IdReserva", id)
+
+
+            Dim lista As SqlDataReader = comando.ExecuteReader
+
+            If lista.HasRows Then
+
+                For Each row In lista
+
+                    Dim servicio As New ServicioClass
+
+                    servicio.Id = (lista("Id"))
+                    servicio.Descripcion = (lista("Descripcion"))
+                    servicio.Fecha = (lista("Fecha"))
+                    servicio.Importe = (lista("Importe"))
+                    servicio.IdReserva = (lista("IdReserva"))
+                    lst.Add(servicio)
+
+                Next
+
+            Else
+
+                Desconectar()
+
+                Return False
+
+            End If
+            Desconectar()
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
+        Desconectar()
+        Return True
+
+    End Function
+
 
     Public Sub actualizar(ByRef lst As List(Of ServicioClass))
 

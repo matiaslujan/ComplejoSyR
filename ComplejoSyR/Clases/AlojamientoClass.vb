@@ -59,7 +59,7 @@ Public Class AlojamientoClass
             Sector_ = value
         End Set
     End Property
-
+    'lista de alojamientos
     Public Sub Traer(ByVal dgv As DataGridView)
         Try
             Conectar()
@@ -156,7 +156,7 @@ Public Class AlojamientoClass
 
         End Try
     End Sub
-    '' taer alojamientos disponibles segun las fechas ingresadas
+    '' traer alojamientos disponibles segun las fechas ingresadas
 
     Public Sub AlojDisponibles(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date)
         Try

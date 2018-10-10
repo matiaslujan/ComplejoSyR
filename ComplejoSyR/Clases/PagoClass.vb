@@ -68,7 +68,55 @@ Public Class PagoClass
             accion_ = value
         End Set
     End Property
-  
+    Public Function Traer(ByRef lst As List(Of PagoClass), ByVal IdReserva As Integer) As Boolean
+        Try
+
+            Conectar()
+
+            Dim comando As New SqlCommand("PagosTraer", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@IdReserva", IdReserva)
+
+
+            Dim lista As SqlDataReader = comando.ExecuteReader
+
+            If lista.HasRows Then
+
+                For Each row In lista
+
+                    Dim pago As New PagoClass
+
+                    pago.Id = (lista("Id"))
+                    pago.Descripcion = (lista("Descripcion"))
+                    pago.Fecha = (lista("Fecha"))
+                    pago.Importe = (lista("Importe"))
+                    pago.IdReserva = (lista("IdReserva"))
+                    lst.Add(pago)
+
+                Next
+
+            Else
+
+                Desconectar()
+
+                Return False
+
+            End If
+
+            Desconectar()
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
+
+        Return True
+
+    End Function
     Public Sub Actualizar(ByRef lst As List(Of PagoClass))
         Try
             Conectar()

@@ -152,7 +152,8 @@
 
             Aloj.TraerAlojamiento(Reserva.Id, lstAlojamientos)
 
-            If reserva.TraerPagos(lstPagos, reserva.Id) Then
+            'If reserva.TraerPagos(lstPagos, reserva.Id) Then
+            If pago.Traer(lstPagos, reserva.Id) Then
 
                 dgvPagos.DataSource = lstPagos
 
@@ -160,7 +161,8 @@
 
             End If
 
-            If reserva.TraerServicios(lstServicios, reserva.Id) Then
+            'If reserva.TraerServicios(lstServicios, reserva.Id) Then
+            If servicio.Traer(lstServicios, reserva.Id) Then
 
                 dgvServicios.DataSource = lstServicios
 
@@ -170,11 +172,11 @@
 
             Datos()
 
-        ElseIf Reserva.Accion = "AgregarF" Then
+        ElseIf reserva.Accion = "AgregarF" Then
 
-            dtpFechaEgreso.Text = Reserva.FEgreso
+            dtpFechaEgreso.Text = reserva.FEgreso
 
-            dtpFechaIngreso.Text = Reserva.FIngreso
+            dtpFechaIngreso.Text = reserva.FIngreso
 
 
         End If
