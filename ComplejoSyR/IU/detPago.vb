@@ -29,6 +29,7 @@
     End Property
     Dim pago As New PagoClass
     Dim posicion As Integer
+    Dim importeanterior As Decimal
     Public Sub New(ByRef lst As List(Of PagoClass))
 
         ' Llamada necesaria para el Diseñador de Windows Forms.
@@ -61,6 +62,7 @@
             txtIImporte.Text = pago.Importe
             dtpFecha.Text = pago.Fecha
             txtDescripcion.Text = pago.Descripcion
+            importeanterior = pago.Importe
 
         End If
 
@@ -70,13 +72,39 @@
 
         If funcion.ValidarCampos(Me.Controls, ErrorProvider1) Then
 
-            If CDec(txtIImporte.Text) > deuda Then
+            If pago.accion = "Agregar" Then
 
-                MsgBox("El importe ingresado supera la deuda actual de: $" + CStr(deuda))
+                If CDec(txtIImporte.Text) > deuda Then
 
-                Exit Sub
+                    MsgBox("El importe ingresado supera la deuda actual de: $" + CStr(deuda))
 
+                    Exit Sub
+
+                End If
+
+            Else
+                If deuda = 0 Then
+
+                    If CDec(txtIImporte.Text) > importeanterior Then
+
+                        MsgBox("El importe ingresado supera el importe anterior de: $" + CStr(importeanterior) + ",siendo la deuda actual de : $0 ")
+
+                        Exit Sub
+
+                    End If
+                Else
+
+                    If CDec(txtIImporte.Text) > deuda + importeanterior Then
+
+                        MsgBox("El importe ingresado supera la deuda actual de: $" + CStr(deuda))
+
+                        Exit Sub
+
+                    End If
+                End If
             End If
+
+       
 
             Select Case pago.accion
 
