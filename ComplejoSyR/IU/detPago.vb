@@ -87,14 +87,14 @@
 
                     If CDec(txtIImporte.Text) > importeanterior Then
 
-                        MsgBox("El importe ingresado supera el importe anterior de: $" + CStr(importeanterior) + ",siendo la deuda actual de : $0 ")
+                        MsgBox("El importe ingresado supera el importe anterior de: ($" + CStr(importeanterior) + "),siendo la deuda actual de : ($00,00)")
 
                         Exit Sub
 
                     End If
                 Else
 
-                    If CDec(txtIImporte.Text) > deuda + importeanterior Then
+                    If CDec(txtIImporte.Text) > (deuda + importeanterior) Then
 
                         MsgBox("El importe ingresado supera la deuda actual de: $" + CStr(deuda))
 
