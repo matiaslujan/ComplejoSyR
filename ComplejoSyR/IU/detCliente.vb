@@ -79,6 +79,8 @@
 
         If Operacion = "M" Then
 
+            Me.Text = "Modificar " + CStr(Me.Text)
+
             txtId.Text = Cliente.Id
             txtNombre.Text = Cliente.Nombre
             txtDomicilio.Text = Cliente.Domicilio
@@ -87,7 +89,8 @@
             cbProvincia.SelectedItem = Cliente.Provincia
             txtVehiculo.Text = Cliente.Vehiculo
             txtPatente.Text = Cliente.Patente
-
+        Else
+            Me.Text = "Nuevo " + CStr(Me.Text)
         End If
 
     End Sub

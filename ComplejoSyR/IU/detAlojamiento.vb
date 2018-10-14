@@ -82,6 +82,8 @@
       
         If operacion = "M" Then
 
+            Me.Text = "Modificar " + CStr(Me.Text)
+
             modalidades.CargarCombo(comboModalidad)
 
             txtId.Text = alojamiento.id
@@ -95,6 +97,8 @@
             comboSector.SelectedItem = alojamiento.Sector
 
         Else
+
+            Me.Text = "Nuevo " + CStr(Me.Text)
 
             modalidades.CargarCombo(comboModalidad)
 

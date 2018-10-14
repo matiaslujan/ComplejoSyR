@@ -36,12 +36,13 @@ Partial Class detServicio
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label21 = New System.Windows.Forms.Label
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(145, 38)
+        Me.txtDescripcion.Location = New System.Drawing.Point(150, 38)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(145, 20)
         Me.txtDescripcion.TabIndex = 0
@@ -52,7 +53,7 @@ Partial Class detServicio
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(52, 38)
+        Me.Label5.Location = New System.Drawing.Point(49, 38)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(83, 15)
         Me.Label5.TabIndex = 39
@@ -63,7 +64,7 @@ Partial Class detServicio
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(80, 111)
+        Me.Label4.Location = New System.Drawing.Point(77, 111)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(56, 15)
         Me.Label4.TabIndex = 38
@@ -74,7 +75,7 @@ Partial Class detServicio
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(90, 75)
+        Me.Label3.Location = New System.Drawing.Point(87, 75)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(46, 15)
         Me.Label3.TabIndex = 37
@@ -82,7 +83,7 @@ Partial Class detServicio
         '
         'txtImporte
         '
-        Me.txtImporte.Location = New System.Drawing.Point(145, 115)
+        Me.txtImporte.Location = New System.Drawing.Point(150, 111)
         Me.txtImporte.Name = "txtImporte"
         Me.txtImporte.Size = New System.Drawing.Size(145, 20)
         Me.txtImporte.TabIndex = 2
@@ -130,7 +131,7 @@ Partial Class detServicio
         '
         'dtpFecha
         '
-        Me.dtpFecha.Location = New System.Drawing.Point(145, 76)
+        Me.dtpFecha.Location = New System.Drawing.Point(150, 75)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(145, 20)
         Me.dtpFecha.TabIndex = 1
@@ -171,12 +172,25 @@ Partial Class detServicio
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.BackColor = System.Drawing.Color.Transparent
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(134, 111)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(16, 18)
+        Me.Label21.TabIndex = 211
+        Me.Label21.Text = "$"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'detServicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(362, 202)
+        Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.txtDescripcion)
@@ -191,6 +205,8 @@ Partial Class detServicio
         Me.Controls.Add(Me.dtpFecha)
         Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(378, 241)
+        Me.MinimumSize = New System.Drawing.Size(378, 241)
         Me.Name = "detServicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Servicio"
@@ -212,4 +228,5 @@ Partial Class detServicio
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents Label21 As System.Windows.Forms.Label
 End Class

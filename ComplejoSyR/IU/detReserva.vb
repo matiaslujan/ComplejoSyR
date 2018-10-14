@@ -123,6 +123,7 @@
 
     End Sub
     Private Sub detReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         Dim cliente As New ClienteClass
 
         cliente.cargarCombo(cbClientes)
@@ -148,11 +149,12 @@
 
         End If
 
-        If Reserva.Accion = "Modificar" Then
+        If reserva.Accion = "Modificar" Then
 
-            Aloj.TraerAlojamiento(Reserva.Id, lstAlojamientos)
+            Me.Text = "Modificar " + CStr(Me.Text)
 
-            'If reserva.TraerPagos(lstPagos, reserva.Id) Then
+            Aloj.TraerAlojamiento(reserva.Id, lstAlojamientos)
+
             If pago.Traer(lstPagos, reserva.Id) Then
 
                 dgvPagos.DataSource = lstPagos
@@ -161,7 +163,6 @@
 
             End If
 
-            'If reserva.TraerServicios(lstServicios, reserva.Id) Then
             If servicio.Traer(lstServicios, reserva.Id) Then
 
                 dgvServicios.DataSource = lstServicios
@@ -174,10 +175,29 @@
 
         ElseIf reserva.Accion = "AgregarF" Then
 
+            Me.Text = "Nueva " + CStr(Me.Text)
+
             dtpFechaEgreso.Text = reserva.FEgreso
 
             dtpFechaIngreso.Text = reserva.FIngreso
 
+        Else
+
+            Me.Text = "Nueva " + CStr(Me.Text)
+
+        End If
+
+        If dgvPagos.RowCount = 0 Then
+
+            btnModificarPago.Enabled = False
+            btnEliminarPago.Enabled = False
+
+        End If
+
+        If dgvServicios.RowCount = 0 Then
+
+            btnModServ.Enabled = False
+            btnElimServ.Enabled = False
 
         End If
     End Sub

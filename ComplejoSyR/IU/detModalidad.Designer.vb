@@ -176,7 +176,7 @@ Partial Class detModalidad
         Me.MinimumSize = New System.Drawing.Size(308, 231)
         Me.Name = "detModalidad"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "detModalidad"
+        Me.Text = "Modalidad"
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

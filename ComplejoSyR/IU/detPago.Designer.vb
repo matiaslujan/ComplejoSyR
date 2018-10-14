@@ -37,6 +37,7 @@ Partial Class detPago
         Me.btnCancelar = New System.Windows.Forms.Button
         Me.btnAceptar = New System.Windows.Forms.Button
         Me.ErrorProvider1 = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label21 = New System.Windows.Forms.Label
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -95,21 +96,21 @@ Partial Class detPago
         '
         'dtpFecha
         '
-        Me.dtpFecha.Location = New System.Drawing.Point(165, 76)
+        Me.dtpFecha.Location = New System.Drawing.Point(168, 76)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(160, 20)
         Me.dtpFecha.TabIndex = 1
         '
         'txtDescripcion
         '
-        Me.txtDescripcion.Location = New System.Drawing.Point(165, 40)
+        Me.txtDescripcion.Location = New System.Drawing.Point(168, 40)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.Size = New System.Drawing.Size(161, 20)
         Me.txtDescripcion.TabIndex = 0
         '
         'txtIImporte
         '
-        Me.txtIImporte.Location = New System.Drawing.Point(166, 112)
+        Me.txtIImporte.Location = New System.Drawing.Point(169, 112)
         Me.txtIImporte.Name = "txtIImporte"
         Me.txtIImporte.Size = New System.Drawing.Size(111, 20)
         Me.txtIImporte.TabIndex = 2
@@ -171,12 +172,25 @@ Partial Class detPago
         '
         Me.ErrorProvider1.ContainerControl = Me
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.BackColor = System.Drawing.Color.Transparent
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(153, 113)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(16, 18)
+        Me.Label21.TabIndex = 212
+        Me.Label21.Text = "$"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
         'detPago
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(357, 202)
+        Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Label5)
@@ -191,6 +205,8 @@ Partial Class detPago
         Me.Controls.Add(Me.txtId)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(373, 241)
+        Me.MinimumSize = New System.Drawing.Size(373, 241)
         Me.Name = "detPago"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pago"
@@ -212,4 +228,5 @@ Partial Class detPago
     Friend WithEvents btnCancelar As System.Windows.Forms.Button
     Friend WithEvents btnAceptar As System.Windows.Forms.Button
     Friend WithEvents ErrorProvider1 As System.Windows.Forms.ErrorProvider
+    Friend WithEvents Label21 As System.Windows.Forms.Label
 End Class

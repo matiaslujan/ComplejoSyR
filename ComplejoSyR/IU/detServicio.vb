@@ -111,4 +111,12 @@
         Close()
 
     End Sub
+
+  
+    Private Sub txtImporte_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtImporte.KeyPress
+
+        funcion.IngresoImportes(e)
+
+    End Sub
+
 End Class

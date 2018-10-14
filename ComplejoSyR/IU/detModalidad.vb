@@ -87,7 +87,7 @@
 
             txtTipo.Text = modalidad.Tipo
         Else
-            Me.Text = "Agregar " + CStr(Me.Text)
+            Me.Text = "Nueva " + CStr(Me.Text)
 
         End If
     End Sub

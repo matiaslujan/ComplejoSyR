@@ -91,4 +91,20 @@
 
         End If
     End Function
+
+    Public Sub IngresoImportes(ByVal e As System.Windows.Forms.KeyPressEventArgs)
+
+        If Char.IsControl(e.KeyChar) Or Char.IsNumber(e.KeyChar) Or e.KeyChar = "," Or e.KeyChar = "." Then
+
+            e.Handled = False
+
+        Else
+
+            e.Handled = True
+
+
+        End If
+
+
+    End Sub
 End Class

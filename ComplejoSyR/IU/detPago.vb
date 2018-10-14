@@ -141,6 +141,11 @@
         pago.Fecha = dtpFecha.Text
 
     End Sub
+    Private Sub txtImporte_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtIImporte.KeyPress
+
+        funcion.IngresoImportes(e)
+
+    End Sub
     Private Sub btnCancelar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancelar.Click
 
         Close()
