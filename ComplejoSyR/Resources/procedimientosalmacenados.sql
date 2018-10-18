@@ -68,7 +68,7 @@ END
 GO
 -------------------------------------------------------
 CREATE PROCEDURE AlojamientosDisponibles
-@FI date, @FE date
+@FI date, @FE date,@Tipo varchar(20)
 AS
 BEGIN
 
@@ -76,7 +76,7 @@ BEGIN
 
     SELECT a.Id,a.Numero,m.Nombre Modalidad, a.Capacidad  FROM Alojamientos a
 INNER JOIN Modalidades m on m.Id = a.IdModalidad  
-where a.Id not in (SELECT a.Id  FROM Alojamientos a 
+where m.Tipo like @Tipo and a.Id not in (SELECT a.Id  FROM Alojamientos a 
 INNER JOIN Modalidades m on m.Id = a.IdModalidad 
 INNER JOIN AlojamientoDeReserva  ar on ar.IdAlojamiento= a.Id 
 INNER JOIN Reservas r on r.id = ar.IdReserva 
@@ -90,7 +90,8 @@ GO
 -------------------------------------------------------
 CREATE PROCEDURE AlojamientosOcupacion
 @FI date,
-@FE date
+@FE date,
+@Tipo varchar (20)
 AS
 BEGIN
 	
@@ -104,16 +105,16 @@ INNER JOIN AlojamientoDeReserva  ar on ar.IdAlojamiento= a.Id
 INNER JOIN Reservas r on r.id = ar.IdReserva
 inner join Clientes c on c.Id = r.idcliente 
 
-where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso and r.Cancelada = 0 ) or 
-		(@FI >= r.FIngreso  and  @FE <= r.FEgreso and r.Cancelada = 0 ) or 
-		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI <= r.FEgreso and r.Cancelada = 0 ) or
-		(@FI <=r.FIngreso  and @FE >=r.FEgreso and r.Cancelada = 0))
+where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso and r.Cancelada = 0 and m.Tipo like @Tipo ) or 
+		(@FI >= r.FIngreso  and  @FE <= r.FEgreso and r.Cancelada = 0 and m.Tipo like @Tipo) or 
+		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI <= r.FEgreso and r.Cancelada = 0 and m.Tipo like @Tipo) or
+		(@FI <=r.FIngreso  and @FE >=r.FEgreso and r.Cancelada = 0 and m.Tipo like @Tipo))
 		
 union all 
 
 SELECT a.Id,a.Numero, m.Nombre,a.Capacidad, null ,null, null, null FROM Alojamientos a
 INNER JOIN Modalidades m on m.Id = a.IdModalidad  
-where a.Id not in (SELECT a.Id  FROM Alojamientos a 
+where  m.Tipo like @Tipo and a.Id not in (SELECT a.Id  FROM Alojamientos a 
 INNER JOIN Modalidades m on m.Id = a.IdModalidad 
 INNER JOIN AlojamientoDeReserva  ar on ar.IdAlojamiento= a.Id 
 INNER JOIN Reservas r on r.id = ar.IdReserva 
@@ -305,7 +306,7 @@ GO
 CREATE PROCEDURE ModalidadAgregar 
 	-- parametros
 	@Nombre varchar (60),
-	@Tipo varchar (10)
+	@Tipo varchar (20)
 AS
 BEGIN
 
@@ -322,7 +323,7 @@ CREATE PROCEDURE ModalidadModificar
 	-- parametros
 	@Id int,
 	@Nombre varchar (60),
-	@Tipo varchar (10)
+	@Tipo varchar (20)
 AS
 BEGIN
 
