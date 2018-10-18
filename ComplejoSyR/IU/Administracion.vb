@@ -77,7 +77,7 @@
     'agregar
     Private Sub btnAddAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddAloj.Click
 
-        Dim detalle As New detAlojamiento(dgvAlojamientos)
+        Dim detalle As New detAlojamiento()
 
         detalle.ShowDialog()
 
@@ -112,7 +112,7 @@
         a.idModalidad = dgvAlojamientos.CurrentRow.Cells("idmodalidad").Value
         a.Sector = dgvAlojamientos.CurrentRow.Cells("sector").Value
 
-        Dim detalle As New detAlojamiento(a, dgvAlojamientos)
+        Dim detalle As New detAlojamiento(a)
 
         detalle.ShowDialog()
 

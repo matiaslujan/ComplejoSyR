@@ -8,7 +8,7 @@
             funcion_ = value
         End Set
     End Property
-    Private alojamiento_ As AlojamientoClass
+    Private alojamiento_ As New AlojamientoClass
 
     Public Property alojamiento() As AlojamientoClass
         Get
@@ -46,16 +46,8 @@
         End Set
     End Property
 
-    Private tablaDGV_ As DataGridView
-    Public Property tablaDGV() As DataGridView
-        Get
-            Return tablaDGV_
-        End Get
-        Set(ByVal value As DataGridView)
-            tablaDGV_ = value
-        End Set
-    End Property
-    Public Sub New(ByVal tabla As DataGridView)
+
+    Public Sub New()
 
         InitializeComponent()
 
@@ -63,11 +55,11 @@
 
         operacion = "A"
 
-        tablaDGV = tabla
+
 
     End Sub
 
-    Public Sub New(ByVal aloj As AlojamientoClass, ByVal tabla As DataGridView)
+    Public Sub New(ByVal aloj As AlojamientoClass)
 
         InitializeComponent()
 
@@ -75,7 +67,6 @@
 
         operacion = "M"
 
-        tablaDGV = tabla
 
     End Sub
     Private Sub detAlojamiento_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -135,8 +126,6 @@
 
             End If
 
-            alojamiento.Traer(tablaDGV)
-
             Close()
         End If
 
@@ -148,4 +137,11 @@
 
     End Sub
 
+    Private Sub txtCapacidad_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCapacidad.KeyPress
+        funcion.IngresoSoloNumeros(e)
+    End Sub
+
+    Private Sub txtNumero_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtNumero.KeyPress
+        funcion.IngresoSoloNumeros(e)
+    End Sub
 End Class

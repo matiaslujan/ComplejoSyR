@@ -140,7 +140,7 @@ Partial Class detReserva
         Me.btnNuevo.ForeColor = System.Drawing.Color.SaddleBrown
         Me.ErrorProvider1.SetIconAlignment(Me.btnNuevo, System.Windows.Forms.ErrorIconAlignment.TopLeft)
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnNuevo.Location = New System.Drawing.Point(374, 52)
+        Me.btnNuevo.Location = New System.Drawing.Point(373, 52)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(58, 28)
         Me.btnNuevo.TabIndex = 195
@@ -217,9 +217,9 @@ Partial Class detReserva
         Me.Pagado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Pagado.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Pagado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Pagado.Location = New System.Drawing.Point(211, 0)
+        Me.Pagado.Location = New System.Drawing.Point(210, 0)
         Me.Pagado.Name = "Pagado"
-        Me.Pagado.Size = New System.Drawing.Size(42, 46)
+        Me.Pagado.Size = New System.Drawing.Size(41, 46)
         Me.Pagado.TabIndex = 156
         Me.Pagado.Text = "subtotal"
         Me.Pagado.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -229,10 +229,10 @@ Partial Class detReserva
         Me.txtPagado.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtPagado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtPagado.Enabled = False
-        Me.txtPagado.Location = New System.Drawing.Point(278, 3)
+        Me.txtPagado.Location = New System.Drawing.Point(276, 3)
         Me.txtPagado.Name = "txtPagado"
         Me.txtPagado.ReadOnly = True
-        Me.txtPagado.Size = New System.Drawing.Size(117, 21)
+        Me.txtPagado.Size = New System.Drawing.Size(119, 21)
         Me.txtPagado.TabIndex = 155
         '
         'btnEliminarPago
@@ -246,7 +246,7 @@ Partial Class detReserva
         Me.btnEliminarPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnEliminarPago.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnEliminarPago.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnEliminarPago.Location = New System.Drawing.Point(143, 3)
+        Me.btnEliminarPago.Location = New System.Drawing.Point(142, 3)
         Me.btnEliminarPago.Name = "btnEliminarPago"
         Me.btnEliminarPago.Size = New System.Drawing.Size(62, 33)
         Me.btnEliminarPago.TabIndex = 152
@@ -266,7 +266,7 @@ Partial Class detReserva
         Me.btnModificarPago.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnModificarPago.Location = New System.Drawing.Point(68, 3)
         Me.btnModificarPago.Name = "btnModificarPago"
-        Me.btnModificarPago.Size = New System.Drawing.Size(69, 33)
+        Me.btnModificarPago.Size = New System.Drawing.Size(68, 33)
         Me.btnModificarPago.TabIndex = 151
         Me.btnModificarPago.Text = "Modificar"
         Me.btnModificarPago.UseVisualStyleBackColor = False
@@ -433,7 +433,7 @@ Partial Class detReserva
         Me.TableLayoutPanel1.ColumnCount = 3
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.11913!))
         Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.88087!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17.0!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel10, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel11, 0, 1)
@@ -459,7 +459,7 @@ Partial Class detReserva
         Me.TableLayoutPanel2.Controls.Add(Me.TableLayoutPanel3, 0, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(456, 3)
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(455, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.0!))
@@ -493,7 +493,7 @@ Partial Class detReserva
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.73868!))
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.4216!))
         Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.968641!))
-        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121.0!))
+        Me.TableLayoutPanel9.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123.0!))
         Me.TableLayoutPanel9.Controls.Add(Me.Label24, 4, 0)
         Me.TableLayoutPanel9.Controls.Add(Me.btnNuevServ, 0, 0)
         Me.TableLayoutPanel9.Controls.Add(Me.btnModServ, 1, 0)
@@ -512,7 +512,7 @@ Partial Class detReserva
         '
         Me.Label24.AutoSize = True
         Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(259, 0)
+        Me.Label24.Location = New System.Drawing.Point(257, 0)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(13, 20)
         Me.Label24.TabIndex = 212
@@ -550,7 +550,7 @@ Partial Class detReserva
         Me.btnModServ.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnModServ.Location = New System.Drawing.Point(68, 3)
         Me.btnModServ.Name = "btnModServ"
-        Me.btnModServ.Size = New System.Drawing.Size(69, 33)
+        Me.btnModServ.Size = New System.Drawing.Size(68, 33)
         Me.btnModServ.TabIndex = 151
         Me.btnModServ.Text = "Modificar"
         Me.btnModServ.UseVisualStyleBackColor = False
@@ -566,7 +566,7 @@ Partial Class detReserva
         Me.btnElimServ.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnElimServ.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnElimServ.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnElimServ.Location = New System.Drawing.Point(143, 3)
+        Me.btnElimServ.Location = New System.Drawing.Point(142, 3)
         Me.btnElimServ.Name = "btnElimServ"
         Me.btnElimServ.Size = New System.Drawing.Size(62, 33)
         Me.btnElimServ.TabIndex = 152
@@ -579,9 +579,9 @@ Partial Class detReserva
         Me.Label26.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label26.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label26.Location = New System.Drawing.Point(211, 0)
+        Me.Label26.Location = New System.Drawing.Point(210, 0)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(42, 46)
+        Me.Label26.Size = New System.Drawing.Size(41, 46)
         Me.Label26.TabIndex = 156
         Me.Label26.Text = "subtotal"
         Me.Label26.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -591,10 +591,10 @@ Partial Class detReserva
         Me.txtImpServ.BackColor = System.Drawing.SystemColors.GradientInactiveCaption
         Me.txtImpServ.Dock = System.Windows.Forms.DockStyle.Fill
         Me.txtImpServ.Enabled = False
-        Me.txtImpServ.Location = New System.Drawing.Point(278, 3)
+        Me.txtImpServ.Location = New System.Drawing.Point(276, 3)
         Me.txtImpServ.Name = "txtImpServ"
         Me.txtImpServ.ReadOnly = True
-        Me.txtImpServ.Size = New System.Drawing.Size(117, 21)
+        Me.txtImpServ.Size = New System.Drawing.Size(119, 21)
         Me.txtImpServ.TabIndex = 155
         '
         'TableLayoutPanel4
@@ -622,7 +622,7 @@ Partial Class detReserva
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.73868!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.4216!))
         Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.968641!))
-        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 121.0!))
+        Me.TableLayoutPanel8.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123.0!))
         Me.TableLayoutPanel8.Controls.Add(Me.Label23, 4, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.btnAgregarPago, 0, 0)
         Me.TableLayoutPanel8.Controls.Add(Me.btnModificarPago, 1, 0)
@@ -641,7 +641,7 @@ Partial Class detReserva
         '
         Me.Label23.AutoSize = True
         Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(259, 0)
+        Me.Label23.Location = New System.Drawing.Point(257, 0)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(13, 20)
         Me.Label23.TabIndex = 212
@@ -694,7 +694,7 @@ Partial Class detReserva
         Me.TableLayoutPanel10.Name = "TableLayoutPanel10"
         Me.TableLayoutPanel10.RowCount = 1
         Me.TableLayoutPanel10.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel10.Size = New System.Drawing.Size(447, 527)
+        Me.TableLayoutPanel10.Size = New System.Drawing.Size(446, 527)
         Me.TableLayoutPanel10.TabIndex = 1
         '
         'TableLayoutPanel12
@@ -708,7 +708,7 @@ Partial Class detReserva
         Me.TableLayoutPanel12.Name = "TableLayoutPanel12"
         Me.TableLayoutPanel12.RowCount = 1
         Me.TableLayoutPanel12.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel12.Size = New System.Drawing.Size(441, 521)
+        Me.TableLayoutPanel12.Size = New System.Drawing.Size(440, 521)
         Me.TableLayoutPanel12.TabIndex = 1
         '
         'TableLayoutPanel13
@@ -767,7 +767,7 @@ Partial Class detReserva
         Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
         Me.TableLayoutPanel13.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel13.Size = New System.Drawing.Size(435, 515)
+        Me.TableLayoutPanel13.Size = New System.Drawing.Size(434, 515)
         Me.TableLayoutPanel13.TabIndex = 0
         '
         'Label25
@@ -1003,7 +1003,7 @@ Partial Class detReserva
         Me.txtId.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txtId.Enabled = False
         Me.txtId.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtId.Location = New System.Drawing.Point(399, 101)
+        Me.txtId.Location = New System.Drawing.Point(398, 101)
         Me.txtId.Name = "txtId"
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(33, 26)
@@ -1171,7 +1171,7 @@ Partial Class detReserva
         Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
         Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
         Me.TableLayoutPanel11.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53.0!))
-        Me.TableLayoutPanel11.Size = New System.Drawing.Size(447, 53)
+        Me.TableLayoutPanel11.Size = New System.Drawing.Size(446, 53)
         Me.TableLayoutPanel11.TabIndex = 2
         '
         'Label14
@@ -1195,7 +1195,7 @@ Partial Class detReserva
         Me.txtDescripcion.Location = New System.Drawing.Point(144, 3)
         Me.txtDescripcion.Multiline = True
         Me.txtDescripcion.Name = "txtDescripcion"
-        Me.txtDescripcion.Size = New System.Drawing.Size(300, 47)
+        Me.txtDescripcion.Size = New System.Drawing.Size(299, 47)
         Me.txtDescripcion.TabIndex = 187
         '
         'TableLayoutPanel14
@@ -1208,7 +1208,7 @@ Partial Class detReserva
         Me.TableLayoutPanel14.Controls.Add(Me.btnSalir, 2, 0)
         Me.TableLayoutPanel14.Controls.Add(Me.btnGuardar, 1, 0)
         Me.TableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel14.Location = New System.Drawing.Point(456, 536)
+        Me.TableLayoutPanel14.Location = New System.Drawing.Point(455, 536)
         Me.TableLayoutPanel14.Name = "TableLayoutPanel14"
         Me.TableLayoutPanel14.RowCount = 1
         Me.TableLayoutPanel14.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
