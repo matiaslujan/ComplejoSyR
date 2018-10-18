@@ -122,6 +122,34 @@
         End If
 
     End Sub
+    Private Sub ControlBotones()
+
+
+        If dgvPagos.RowCount = 0 Then
+
+            btnModificarPago.Enabled = False
+            btnEliminarPago.Enabled = False
+
+        Else
+
+            btnModificarPago.Enabled = True
+            btnEliminarPago.Enabled = True
+
+        End If
+
+        If dgvServicios.RowCount = 0 Then
+
+            btnModServ.Enabled = False
+            btnElimServ.Enabled = False
+
+        Else
+
+            btnModServ.Enabled = True
+            btnElimServ.Enabled = True
+
+        End If
+    End Sub
+
     Private Sub detReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Dim cliente As New ClienteClass
@@ -187,24 +215,23 @@
 
         End If
 
-        If dgvPagos.RowCount = 0 Then
+        ControlBotones()
 
-            btnModificarPago.Enabled = False
-            btnEliminarPago.Enabled = False
+    End Sub
 
-        End If
-
-        If dgvServicios.RowCount = 0 Then
-
-            btnModServ.Enabled = False
-            btnElimServ.Enabled = False
-
-        End If
+    Private Sub txtCantDia_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCantDia.KeyPress
+        f.IngresoSoloNumeros(e)
     End Sub
 
 
     Private Sub txtCantDia_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtCantDia.TextChanged
         Calcular()
+    End Sub
+
+    Private Sub txtImpDia_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtImpDia.KeyPress
+
+        f.IngresoSoloNumeros(e)
+
     End Sub
     Private Sub txtImpDia_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtImpDia.TextChanged
         Calcular()
@@ -213,12 +240,12 @@
 
     Private Sub dtpFechaEgreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaEgreso.ValueChanged
 
-        Reserva.CantidadDeDias(txtCantDia, dtpFechaIngreso, dtpFechaEgreso)
+        reserva.CantidadDeDias(txtCantDia, dtpFechaIngreso, dtpFechaEgreso)
 
     End Sub
     Private Sub dtpFechaIngreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.ValueChanged
 
-        Reserva.CantidadDeDias(txtCantDia, dtpFechaIngreso, dtpFechaEgreso)
+        reserva.CantidadDeDias(txtCantDia, dtpFechaIngreso, dtpFechaEgreso)
 
     End Sub
 
@@ -247,8 +274,8 @@
         reserva.eliminarregistro(dgvAlojamientos)
 
         reserva.OcultarColumnas(dgvAlojamientos)
-    
-        
+
+
     End Sub
 
     'agregar alojamiento, mostrar solo los disponibles
@@ -284,7 +311,7 @@
         alojamientos()
 
     End Sub
-    
+
     '----------------------------PAGOS--------------------------------
     '-----------------------------------------------------------------
     Private Sub pagos()
@@ -312,6 +339,8 @@
         det.ShowDialog()
 
         pagos()
+
+        ControlBotones()
 
     End Sub
 
@@ -347,6 +376,8 @@
         det.ShowDialog()
 
         pagos()
+
+        ControlBotones()
 
     End Sub
 
@@ -391,6 +422,8 @@
 
         servicios()
 
+        ControlBotones()
+
     End Sub
     Private Sub modificarservicio()
 
@@ -424,6 +457,7 @@
 
         servicios()
 
+        ControlBotones()
 
     End Sub
     Private Sub btnModServ_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnModServ.Click
@@ -450,6 +484,7 @@
 
         servicios()
 
+        ControlBotones()
     End Sub
 
     Private Sub dgvServicios_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvServicios.CellDoubleClick
@@ -463,29 +498,29 @@
 
         dgvServicios.DataSource = lstServicios
 
-        Reserva.eliminarregistro(dgvServicios)
+        reserva.eliminarregistro(dgvServicios)
 
         reserva.subtotal(dgvServicios, txtImpServ)
 
         Calcular()
 
         reserva.OcultarColumnas(dgvServicios)
-  
+
 
     End Sub
 
     Private Sub btnGuardar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardar.Click
-        If f.ValidarCampos(TableLayoutPanel13.Controls, ErrorProvider1) Then
+        If f.ValidarCamposReserva(TableLayoutPanel13.Controls, ErrorProvider1) Then
 
-            Reserva.IdCliente = cbClientes.SelectedValue
-            Reserva.FIngreso = CDate(dtpFechaIngreso.Text)
-            Reserva.FEgreso = CDate(dtpFechaEgreso.Text)
-            Reserva.Fecha = CDate(dtpFecha.Text)
-            Reserva.CantDias = txtCantDia.Text
-            Reserva.CantPersonas = txtCantPer.Text
-            Reserva.ImpDia = txtImpDia.Text
-            Reserva.ImpTotal = txtImpEstadia.Text
-            Reserva.Descripcion = txtDescripcion.Text
+            reserva.IdCliente = cbClientes.SelectedValue
+            reserva.FIngreso = CDate(dtpFechaIngreso.Text)
+            reserva.FEgreso = CDate(dtpFechaEgreso.Text)
+            reserva.Fecha = CDate(dtpFecha.Text)
+            reserva.CantDias = txtCantDia.Text
+            reserva.CantPersonas = txtCantPer.Text
+            reserva.ImpDia = txtImpDia.Text
+            reserva.ImpTotal = txtImpEstadia.Text
+            reserva.Descripcion = txtDescripcion.Text
             reserva.Cancelada = CbxCancelada.Checked
 
             If lstAlojamientos.Count = 0 Then
@@ -496,19 +531,19 @@
 
             End If
 
-            If Reserva.Accion = "Modificar" Then
+            If reserva.Accion = "Modificar" Then
 
-                Reserva.Id = txtId.Text
+                reserva.Id = txtId.Text
 
-                Reserva.Modificar(Reserva)
+                reserva.Modificar(reserva)
 
             Else
 
-                Reserva.Agregar(Reserva)
+                reserva.Agregar(reserva)
 
-                Reserva.ultimoid(txtId)
+                reserva.ultimoid(txtId)
 
-                Reserva.Id = txtId.Text
+                reserva.Id = txtId.Text
 
             End If
 
@@ -519,7 +554,7 @@
 
                     If row.accion = "Agregar" Then
 
-                        row.IdReserva = Reserva.Id
+                        row.IdReserva = reserva.Id
 
                     End If
 
@@ -535,7 +570,7 @@
 
                     If row.accion = "Agregar" Then
 
-                        row.IdReserva = Reserva.Id
+                        row.IdReserva = reserva.Id
 
                     End If
 
@@ -552,7 +587,7 @@
 
                     If row.Accion = "Agregar" Then
 
-                        row.IdReserva = Reserva.Id
+                        row.IdReserva = reserva.Id
 
                     End If
 
@@ -572,5 +607,10 @@
         Close()
 
     End Sub
+
+    Private Sub txtCantPer_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtCantPer.KeyPress
+        f.IngresoSoloNumeros(e)
+    End Sub
+
 
 End Class

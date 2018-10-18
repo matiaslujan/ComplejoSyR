@@ -33,17 +33,18 @@
         End Set
     End Property
 
-    Private tabla_ As DataGridView
-    Public Property tabla() As DataGridView
-        Get
-            Return tabla_
-        End Get
-        Set(ByVal value As DataGridView)
-            tabla_ = value
-        End Set
-    End Property
+    'Private tabla_ As DataGridView
+    'Public Property tabla() As DataGridView
+    '    Get
+    '        Return tabla_
+    '    End Get
+    '    Set(ByVal value As DataGridView)
+    '        tabla_ = value
+    '    End Set
+    'End Property
 
-    Public Sub New(ByVal modal As ModalidadClass, ByVal dgv As DataGridView)
+    'Public Sub New(ByVal modal As ModalidadClass, ByVal dgv As DataGridView)
+    Public Sub New(ByVal modal As ModalidadClass)
 
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
@@ -52,15 +53,15 @@
 
         operacion = "M"
 
-        tabla = dgv
+        ' tabla = dgv
 
 
         ' Add any initialization after the InitializeComponent() call.
 
     End Sub
 
-    Public Sub New(ByVal dgv As DataGridView)
-
+    'Public Sub New(ByVal dgv As DataGridView)
+    Public Sub New()
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
 
@@ -68,7 +69,7 @@
 
         operacion = "A"
 
-        tabla = dgv
+        ' tabla = dgv
 
         ' Add any initialization after the InitializeComponent() call.
 
@@ -85,7 +86,11 @@
 
             txtNombre.Text = modalidad.Nombre
 
-            txtTipo.Text = modalidad.Tipo
+            'txtTipo.Text = modalidad.Tipo
+
+            cbTipo.SelectedItem = modalidad.Tipo
+
+
         Else
             Me.Text = "Nueva " + CStr(Me.Text)
 
@@ -98,7 +103,9 @@
 
             modalidad.Nombre = txtNombre.Text
 
-            modalidad.Tipo = txtTipo.Text
+            modalidad.Tipo = cbTipo.SelectedItem
+
+            ' modalidad.Tipo = txtTipo.Text
 
             If operacion = "M" Then
 
@@ -111,9 +118,6 @@
                 modalidad.Agregar(modalidad)
 
             End If
-
-
-            modalidad.Traer(tabla)
 
             Close()
         End If

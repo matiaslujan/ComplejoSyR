@@ -12,7 +12,8 @@
     'agregar
     Private Sub btnAddMod_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddMod.Click
 
-        Dim detalle As New detModalidad(dgvModalidades)
+        'Dim detalle As New detModalidad(dgvModalidades)
+        Dim detalle As New detModalidad()
 
         detalle.ShowDialog()
 
@@ -47,7 +48,8 @@
 
         m.Tipo = dgvModalidades.CurrentRow.Cells("Tipo").Value
 
-        Dim detalle As New detModalidad(m, dgvModalidades)
+        'Dim detalle As New detModalidad(m, dgvModalidades)
+        Dim detalle As New detModalidad(m)
 
         detalle.ShowDialog()
 

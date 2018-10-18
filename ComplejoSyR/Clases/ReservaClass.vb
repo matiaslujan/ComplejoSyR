@@ -342,7 +342,7 @@ Public Class ReservaClass
 
     End Sub
 
-    Public Sub TraerOcupacion(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date)
+    Public Sub TraerOcupacion(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date, ByVal Tipo As String)
         Try
             Conectar()
 
@@ -354,7 +354,7 @@ Public Class ReservaClass
 
             comando.Parameters.AddWithValue("@FE", FEg)
 
-            'comando.Parameters.AddWithValue("@Tipo", tipo)
+            comando.Parameters.AddWithValue("@Tipo", Tipo)
 
             Dim table As New Data.DataTable
 

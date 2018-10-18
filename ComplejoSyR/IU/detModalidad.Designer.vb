@@ -25,7 +25,6 @@ Partial Class detModalidad
         Me.components = New System.ComponentModel.Container
         Me.Label2 = New System.Windows.Forms.Label
         Me.txtId = New System.Windows.Forms.TextBox
-        Me.txtTipo = New System.Windows.Forms.TextBox
         Me.txtNombre = New System.Windows.Forms.TextBox
         Me.Label3 = New System.Windows.Forms.Label
         Me.Label1 = New System.Windows.Forms.Label
@@ -35,6 +34,7 @@ Partial Class detModalidad
         Me.Label19 = New System.Windows.Forms.Label
         Me.Label4 = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.cbTipo = New System.Windows.Forms.ComboBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -58,14 +58,6 @@ Partial Class detModalidad
         Me.txtId.Size = New System.Drawing.Size(100, 20)
         Me.txtId.TabIndex = 40
         Me.txtId.Visible = False
-        '
-        'txtTipo
-        '
-        Me.txtTipo.Location = New System.Drawing.Point(122, 85)
-        Me.txtTipo.Name = "txtTipo"
-        Me.txtTipo.Size = New System.Drawing.Size(100, 20)
-        Me.txtTipo.TabIndex = 42
-        Me.txtTipo.Tag = "Validar"
         '
         'txtNombre
         '
@@ -155,19 +147,29 @@ Partial Class detModalidad
         Me.Label4.Text = "*"
         Me.ToolTip1.SetToolTip(Me.Label4, "Campo obligatorio")
         '
+        'cbTipo
+        '
+        Me.cbTipo.FormattingEnabled = True
+        Me.cbTipo.Items.AddRange(New Object() {"Camping", "Habitacional"})
+        Me.cbTipo.Location = New System.Drawing.Point(122, 84)
+        Me.cbTipo.Name = "cbTipo"
+        Me.cbTipo.Size = New System.Drawing.Size(100, 21)
+        Me.cbTipo.TabIndex = 212
+        Me.cbTipo.Tag = "Validar"
+        '
         'detModalidad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(292, 192)
+        Me.Controls.Add(Me.cbTipo)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.btnCancelar)
         Me.Controls.Add(Me.btnAceptar)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtId)
-        Me.Controls.Add(Me.txtTipo)
         Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
@@ -184,7 +186,6 @@ Partial Class detModalidad
     End Sub
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtId As System.Windows.Forms.TextBox
-    Friend WithEvents txtTipo As System.Windows.Forms.TextBox
     Friend WithEvents txtNombre As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -194,4 +195,5 @@ Partial Class detModalidad
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents cbTipo As System.Windows.Forms.ComboBox
 End Class

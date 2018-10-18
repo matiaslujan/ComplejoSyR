@@ -48,6 +48,9 @@
 
     Private Sub Inicio_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        cbTipo.SelectedIndex = 0
+
+
         Ocupacion()
 
     End Sub
@@ -55,7 +58,7 @@
 
         Dim r As New ReservaClass
 
-        r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString)
+        r.TraerOcupacion(dgvOcupacion, Calendario.SelectionRange.Start.ToString, Calendario.SelectionRange.End.ToString, cbTipo.SelectedItem)
 
     
     End Sub
@@ -147,4 +150,7 @@
     End Sub
 
    
+    Private Sub cbTipo_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cbTipo.SelectedIndexChanged
+        Ocupacion()
+    End Sub
 End Class

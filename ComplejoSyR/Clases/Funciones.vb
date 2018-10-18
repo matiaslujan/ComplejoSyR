@@ -19,7 +19,19 @@
                         End If
 
                     End If
+                    If TypeOf control Is ComboBox Then
+                        Dim c As ComboBox = control
 
+                        If c.SelectedIndex = -1 Then
+
+                            Throw New Exception("Por favor, seleccione un Tipo")
+                        Else
+
+                            errorprovider.SetError(control, "")
+
+                        End If
+
+                    End If
                 End If
             Catch ex As Exception
 
@@ -32,8 +44,8 @@
         Next
     End Function
 
-    Public Function ValidarCampos(ByVal Controles As TableLayoutPanel.ControlCollection, ByVal errorprovider As ErrorProvider)
-        ValidarCampos = True
+    Public Function ValidarCamposReserva(ByVal Controles As TableLayoutPanel.ControlCollection, ByVal errorprovider As ErrorProvider)
+        ValidarCamposReserva = True
 
         Dim control As Control
 
@@ -43,6 +55,7 @@
             Try
 
                 If control.Tag = "Validar" Then
+
                     If TypeOf control Is TextBox Then
                         If control.Text = "" Then
                             Throw New Exception("Por favor, ingrese un valor")
@@ -52,26 +65,29 @@
                         End If
 
                     End If
-                End If
 
-                If TypeOf control Is ComboBox Then
-                    Dim c As ComboBox = control
+                    If TypeOf control Is ComboBox Then
+                        Dim c As ComboBox = control
 
-                    If c.SelectedIndex = -1 Then
+                        If c.SelectedIndex = -1 Then
 
-                        Throw New Exception("Por favor, seleccione un cliente")
-                    Else
+                            Throw New Exception("Por favor, seleccione un cliente")
+                        Else
 
-                        errorprovider.SetError(control, "")
+                            errorprovider.SetError(control, "")
+
+                        End If
 
                     End If
 
                 End If
+
+        
             Catch ex As Exception
 
                 errorprovider.SetError(control, ex.Message)
 
-                ValidarCampos = False
+                ValidarCamposReserva = False
 
 
             End Try
@@ -92,7 +108,7 @@
         End If
     End Function
 
-    Public Sub IngresoImportes(ByVal e As System.Windows.Forms.KeyPressEventArgs)
+    Public Sub IngresoSoloNumeros(ByVal e As System.Windows.Forms.KeyPressEventArgs)
 
         If Char.IsControl(e.KeyChar) Or Char.IsNumber(e.KeyChar) Or e.KeyChar = "," Or e.KeyChar = "." Then
 

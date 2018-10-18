@@ -31,6 +31,7 @@ Partial Class Inicio
         Me.btnReservas = New System.Windows.Forms.ToolStripMenuItem
         Me.btnClientes = New System.Windows.Forms.ToolStripMenuItem
         Me.btnAdministracion = New System.Windows.Forms.ToolStripMenuItem
+        Me.cbTipo = New System.Windows.Forms.ToolStripComboBox
         Me.PictureBox1 = New System.Windows.Forms.PictureBox
         Me.dgvOcupacion = New System.Windows.Forms.DataGridView
         Me.Calendario = New System.Windows.Forms.MonthCalendar
@@ -53,7 +54,7 @@ Partial Class Inicio
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.MenuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(30, 30)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnReservas, Me.btnClientes, Me.btnAdministracion})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btnReservas, Me.btnClientes, Me.btnAdministracion, Me.cbTipo})
         Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
@@ -101,6 +102,16 @@ Partial Class Inicio
         Me.btnAdministracion.Padding = New System.Windows.Forms.Padding(4)
         Me.btnAdministracion.Size = New System.Drawing.Size(146, 36)
         Me.btnAdministracion.Text = "Administracion"
+        '
+        'cbTipo
+        '
+        Me.cbTipo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
+        Me.cbTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.cbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.cbTipo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbTipo.Items.AddRange(New Object() {"Habitacional", "Camping"})
+        Me.cbTipo.Name = "cbTipo"
+        Me.cbTipo.Size = New System.Drawing.Size(121, 36)
         '
         'PictureBox1
         '
@@ -321,5 +332,6 @@ Partial Class Inicio
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
+    Friend WithEvents cbTipo As System.Windows.Forms.ToolStripComboBox
 
 End Class
