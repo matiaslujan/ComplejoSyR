@@ -41,12 +41,19 @@
         lstAlojamientos = lst
 
     End Sub
-
-    Private Sub AlojamientoReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+    Private Sub Disponibilidad()
 
         Dim aloj As New AlojamientoClass
 
-        aloj.AlojDisponibles(dgvAlojRes, FIn, FEg)
+        aloj.AlojDisponibles(dgvAlojRes, FIn, FEg, cbTipo.SelectedItem)
+
+    End Sub
+
+    Private Sub AlojamientoReserva_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        cbTipo.SelectedIndex = 1
+
+        Disponibilidad()
 
     End Sub
 
@@ -75,6 +82,12 @@
     Private Sub btnSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSalir.Click
 
         Close()
+
+    End Sub
+
+    Private Sub cbTipo_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cbTipo.SelectedIndexChanged
+
+        Disponibilidad()
 
     End Sub
 End Class

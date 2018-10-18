@@ -48,7 +48,7 @@
 
     Private Sub Inicio_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
-        cbTipo.SelectedIndex = 0
+        cbTipo.SelectedIndex = 1
 
 
         Ocupacion()

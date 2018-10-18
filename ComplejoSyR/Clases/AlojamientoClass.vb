@@ -158,7 +158,7 @@ Public Class AlojamientoClass
     End Sub
     '' traer alojamientos disponibles segun las fechas ingresadas
 
-    Public Sub AlojDisponibles(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date)
+    Public Sub AlojDisponibles(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date, ByVal Tipo As String)
         Try
 
             Conectar()
@@ -168,6 +168,7 @@ Public Class AlojamientoClass
             comando.CommandType = CommandType.StoredProcedure
             comando.Parameters.AddWithValue("@FI", FIng)
             comando.Parameters.AddWithValue("@FE", FEg)
+            comando.Parameters.AddWithValue("@Tipo", Tipo)
 
             Dim table As New Data.DataTable
 

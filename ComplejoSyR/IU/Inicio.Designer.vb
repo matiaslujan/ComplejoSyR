@@ -109,7 +109,7 @@ Partial Class Inicio
         Me.cbTipo.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.cbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbTipo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cbTipo.Items.AddRange(New Object() {"Habitacional", "Camping"})
+        Me.cbTipo.Items.AddRange(New Object() {"Camping", "Habitacional"})
         Me.cbTipo.Name = "cbTipo"
         Me.cbTipo.Size = New System.Drawing.Size(121, 36)
         '
