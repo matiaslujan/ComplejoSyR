@@ -285,6 +285,7 @@ Partial Class detCliente
         Me.txtTelefono.Location = New System.Drawing.Point(159, 95)
         Me.txtTelefono.Mask = "99999999999"
         Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.txtTelefono.Size = New System.Drawing.Size(191, 20)
         Me.txtTelefono.TabIndex = 95
         '
