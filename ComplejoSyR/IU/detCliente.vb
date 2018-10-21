@@ -89,8 +89,10 @@
             cbProvincia.SelectedItem = Cliente.Provincia
             txtVehiculo.Text = Cliente.Vehiculo
             txtPatente.Text = Cliente.Patente
+
         Else
             Me.Text = "Nuevo " + CStr(Me.Text)
+            btnHistory.Visible = False
         End If
 
     End Sub
@@ -133,4 +135,10 @@
 
     End Sub
 
+    Private Sub btnHistory_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnHistory.Click
+
+        Dim his As New Historial(txtId.Text)
+        his.ShowDialog()
+
+    End Sub
 End Class

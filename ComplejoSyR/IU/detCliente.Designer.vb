@@ -47,6 +47,7 @@ Partial Class detCliente
         Me.Label11 = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.txtTelefono = New System.Windows.Forms.MaskedTextBox
+        Me.btnHistory = New System.Windows.Forms.Button
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,7 +65,7 @@ Partial Class detCliente
         'txtId
         '
         Me.txtId.Enabled = False
-        Me.txtId.Location = New System.Drawing.Point(29, 5)
+        Me.txtId.Location = New System.Drawing.Point(27, 12)
         Me.txtId.Name = "txtId"
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(21, 20)
@@ -76,7 +77,7 @@ Partial Class detCliente
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(99, 132)
+        Me.Label4.Location = New System.Drawing.Point(97, 139)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(44, 13)
         Me.Label4.TabIndex = 22
@@ -88,7 +89,7 @@ Partial Class detCliente
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(86, 96)
+        Me.Label3.Location = New System.Drawing.Point(84, 103)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 13)
         Me.Label3.TabIndex = 21
@@ -100,7 +101,7 @@ Partial Class detCliente
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(85, 64)
+        Me.Label2.Location = New System.Drawing.Point(83, 71)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 13)
         Me.Label2.TabIndex = 20
@@ -112,7 +113,7 @@ Partial Class detCliente
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(10, 27)
+        Me.Label1.Location = New System.Drawing.Point(8, 34)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(133, 13)
         Me.Label1.TabIndex = 19
@@ -121,14 +122,14 @@ Partial Class detCliente
         '
         'txtCorreo
         '
-        Me.txtCorreo.Location = New System.Drawing.Point(159, 130)
+        Me.txtCorreo.Location = New System.Drawing.Point(157, 137)
         Me.txtCorreo.Name = "txtCorreo"
         Me.txtCorreo.Size = New System.Drawing.Size(191, 20)
         Me.txtCorreo.TabIndex = 16
         '
         'txtDomicilio
         '
-        Me.txtDomicilio.Location = New System.Drawing.Point(159, 61)
+        Me.txtDomicilio.Location = New System.Drawing.Point(157, 68)
         Me.txtDomicilio.Name = "txtDomicilio"
         Me.txtDomicilio.Size = New System.Drawing.Size(191, 20)
         Me.txtDomicilio.TabIndex = 14
@@ -136,7 +137,7 @@ Partial Class detCliente
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(159, 25)
+        Me.txtNombre.Location = New System.Drawing.Point(157, 32)
         Me.txtNombre.Name = "txtNombre"
         Me.txtNombre.Size = New System.Drawing.Size(191, 20)
         Me.txtNombre.TabIndex = 13
@@ -183,7 +184,7 @@ Partial Class detCliente
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(83, 163)
+        Me.Label6.Location = New System.Drawing.Point(81, 170)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(60, 13)
         Me.Label6.TabIndex = 86
@@ -195,7 +196,7 @@ Partial Class detCliente
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(92, 227)
+        Me.Label7.Location = New System.Drawing.Point(90, 234)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(51, 13)
         Me.Label7.TabIndex = 88
@@ -204,7 +205,7 @@ Partial Class detCliente
         '
         'txtVehiculo
         '
-        Me.txtVehiculo.Location = New System.Drawing.Point(159, 195)
+        Me.txtVehiculo.Location = New System.Drawing.Point(157, 202)
         Me.txtVehiculo.Name = "txtVehiculo"
         Me.txtVehiculo.Size = New System.Drawing.Size(191, 20)
         Me.txtVehiculo.TabIndex = 87
@@ -214,7 +215,7 @@ Partial Class detCliente
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(87, 195)
+        Me.Label8.Location = New System.Drawing.Point(85, 202)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 13)
         Me.Label8.TabIndex = 90
@@ -223,7 +224,7 @@ Partial Class detCliente
         '
         'txtPatente
         '
-        Me.txtPatente.Location = New System.Drawing.Point(159, 227)
+        Me.txtPatente.Location = New System.Drawing.Point(157, 234)
         Me.txtPatente.Name = "txtPatente"
         Me.txtPatente.Size = New System.Drawing.Size(191, 20)
         Me.txtPatente.TabIndex = 89
@@ -232,7 +233,7 @@ Partial Class detCliente
         '
         Me.cbProvincia.FormattingEnabled = True
         Me.cbProvincia.Items.AddRange(New Object() {"Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Tucumán", "Otro"})
-        Me.cbProvincia.Location = New System.Drawing.Point(159, 160)
+        Me.cbProvincia.Location = New System.Drawing.Point(157, 167)
         Me.cbProvincia.Name = "cbProvincia"
         Me.cbProvincia.Size = New System.Drawing.Size(191, 21)
         Me.cbProvincia.TabIndex = 91
@@ -243,7 +244,7 @@ Partial Class detCliente
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.Red
-        Me.Label9.Location = New System.Drawing.Point(142, 27)
+        Me.Label9.Location = New System.Drawing.Point(140, 34)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(15, 20)
         Me.Label9.TabIndex = 92
@@ -256,7 +257,7 @@ Partial Class detCliente
         Me.Label10.BackColor = System.Drawing.Color.Transparent
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Red
-        Me.Label10.Location = New System.Drawing.Point(142, 64)
+        Me.Label10.Location = New System.Drawing.Point(140, 71)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(15, 20)
         Me.Label10.TabIndex = 93
@@ -269,7 +270,7 @@ Partial Class detCliente
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Red
-        Me.Label11.Location = New System.Drawing.Point(142, 96)
+        Me.Label11.Location = New System.Drawing.Point(140, 103)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(15, 20)
         Me.Label11.TabIndex = 94
@@ -282,12 +283,26 @@ Partial Class detCliente
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(159, 95)
+        Me.txtTelefono.Location = New System.Drawing.Point(157, 102)
         Me.txtTelefono.Mask = "99999999999"
         Me.txtTelefono.Name = "txtTelefono"
         Me.txtTelefono.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
         Me.txtTelefono.Size = New System.Drawing.Size(191, 20)
         Me.txtTelefono.TabIndex = 95
+        '
+        'btnHistory
+        '
+        Me.btnHistory.BackColor = System.Drawing.Color.Transparent
+        Me.btnHistory.BackgroundImage = Global.ComplejoSolYRio.My.Resources.Resources.calendar1
+        Me.btnHistory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnHistory.FlatAppearance.BorderSize = 0
+        Me.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHistory.Location = New System.Drawing.Point(338, -1)
+        Me.btnHistory.Name = "btnHistory"
+        Me.btnHistory.Size = New System.Drawing.Size(42, 26)
+        Me.btnHistory.TabIndex = 96
+        Me.ToolTip1.SetToolTip(Me.btnHistory, "Historial")
+        Me.btnHistory.UseVisualStyleBackColor = False
         '
         'detCliente
         '
@@ -295,6 +310,7 @@ Partial Class detCliente
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(379, 314)
+        Me.Controls.Add(Me.btnHistory)
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.Label10)
@@ -351,4 +367,5 @@ Partial Class detCliente
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents txtTelefono As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents btnHistory As System.Windows.Forms.Button
 End Class
