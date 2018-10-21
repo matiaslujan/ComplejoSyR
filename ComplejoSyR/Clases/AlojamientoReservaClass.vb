@@ -44,31 +44,31 @@ Public Class AlojamientoReservaClass
             accion_ = value
         End Set
     End Property
-    Private numero_ As String
-    Public Property numero() As String
+    Private Numero_ As String
+    Public Property Numero() As String
         Get
-            Return numero_
+            Return Numero_
         End Get
         Set(ByVal value As String)
-            numero_ = value
+            Numero_ = value
         End Set
     End Property
-    Private modalidad_ As String
-    Public Property modalidad() As String
+    Private Modalidad_ As String
+    Public Property Modalidad() As String
         Get
-            Return modalidad_
+            Return Modalidad_
         End Get
         Set(ByVal value As String)
-            modalidad_ = value
+            Modalidad_ = value
         End Set
     End Property
-    Private capacidad_ As String
-    Public Property capacidad() As String
+    Private Capacidad_ As String
+    Public Property Capacidad() As String
         Get
-            Return capacidad_
+            Return Capacidad_
         End Get
         Set(ByVal value As String)
-            capacidad_ = value
+            Capacidad_ = value
         End Set
     End Property
 
@@ -143,8 +143,6 @@ Public Class AlojamientoReservaClass
                 Next
 
             End If
-
-
 
         Catch ex As Exception
 

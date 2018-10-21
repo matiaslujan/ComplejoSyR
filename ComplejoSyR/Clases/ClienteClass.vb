@@ -125,6 +125,45 @@ Public Class ClienteClass
         End Try
 
     End Sub
+    Public Sub Datos(ByVal cliente As ClienteClass)
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("ClienteDatos", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@Id", cliente.Id)
+
+            Dim lista As SqlDataReader = comando.ExecuteReader
+
+            If lista.HasRows Then
+
+                While lista.Read()
+
+                    cliente.Id = (lista("Id"))
+                    cliente.Nombre = (lista("Nombre"))
+                    cliente.Domicilio = (lista("Domicilio"))
+                    cliente.Telefono = (lista("Telefono"))
+                    cliente.Correo = (lista("Correo"))
+                    cliente.Provincia = (lista("Provincia"))
+                    cliente.Vehiculo = (lista("Vehiculo"))
+                    cliente.Patente = (lista("Patente"))
+            
+
+                End While
+
+            End If
+
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
+
+    End Sub
     Public Sub Agregar(ByVal Cliente As ClienteClass)
         Try
             Conectar()

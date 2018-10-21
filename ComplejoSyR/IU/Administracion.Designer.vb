@@ -110,7 +110,7 @@ Partial Class Administracion
         Me.btnDelMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDelMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDelMod.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnDelMod.Location = New System.Drawing.Point(193, 243)
+        Me.btnDelMod.Location = New System.Drawing.Point(198, 245)
         Me.btnDelMod.Name = "btnDelMod"
         Me.btnDelMod.Size = New System.Drawing.Size(83, 31)
         Me.btnDelMod.TabIndex = 8
@@ -127,7 +127,7 @@ Partial Class Administracion
         Me.btnUpdMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnUpdMod.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnUpdMod.Location = New System.Drawing.Point(100, 243)
+        Me.btnUpdMod.Location = New System.Drawing.Point(103, 245)
         Me.btnUpdMod.Name = "btnUpdMod"
         Me.btnUpdMod.Size = New System.Drawing.Size(83, 31)
         Me.btnUpdMod.TabIndex = 7
@@ -144,7 +144,7 @@ Partial Class Administracion
         Me.btnAddMod.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddMod.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddMod.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnAddMod.Location = New System.Drawing.Point(8, 243)
+        Me.btnAddMod.Location = New System.Drawing.Point(8, 245)
         Me.btnAddMod.Name = "btnAddMod"
         Me.btnAddMod.Size = New System.Drawing.Size(83, 31)
         Me.btnAddMod.TabIndex = 6
@@ -226,7 +226,7 @@ Partial Class Administracion
         Me.btnDeletAloj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDeletAloj.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDeletAloj.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnDeletAloj.Location = New System.Drawing.Point(202, 245)
+        Me.btnDeletAloj.Location = New System.Drawing.Point(198, 245)
         Me.btnDeletAloj.Name = "btnDeletAloj"
         Me.btnDeletAloj.Size = New System.Drawing.Size(83, 31)
         Me.btnDeletAloj.TabIndex = 12
@@ -243,7 +243,7 @@ Partial Class Administracion
         Me.btnModAloj.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnModAloj.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModAloj.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnModAloj.Location = New System.Drawing.Point(105, 245)
+        Me.btnModAloj.Location = New System.Drawing.Point(103, 245)
         Me.btnModAloj.Name = "btnModAloj"
         Me.btnModAloj.Size = New System.Drawing.Size(83, 31)
         Me.btnModAloj.TabIndex = 11

@@ -156,7 +156,10 @@ Public Class ReservaClass
                 dgv.Rows(0).Selected = False
 
             End If
-
+           
+            dgv.Columns("Numero").HeaderText = "N°"
+            dgv.Columns("Numero").Width = 50
+            dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
         Catch ex As Exception
 
             MsgBox(ex.Message)

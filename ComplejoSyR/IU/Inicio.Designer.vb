@@ -105,11 +105,14 @@ Partial Class Inicio
         '
         'cbTipo
         '
+        Me.cbTipo.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.cbTipo.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right
         Me.cbTipo.BackColor = System.Drawing.Color.LemonChiffon
+        Me.cbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.cbTipo.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbTipo.Items.AddRange(New Object() {"Camping", "Habitacional"})
+        Me.cbTipo.Margin = New System.Windows.Forms.Padding(1, 0, 10, 0)
         Me.cbTipo.Name = "cbTipo"
         Me.cbTipo.Size = New System.Drawing.Size(121, 36)
         '

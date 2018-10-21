@@ -612,5 +612,20 @@
         f.IngresoSoloNumeros(e)
     End Sub
 
+    Private Sub InfoCliente_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles InfoCliente.Click
 
+        If cbClientes.SelectedIndex < 0 Then Exit Sub
+
+        Dim c As New ClienteClass
+
+        c.Id = cbClientes.SelectedValue
+
+        c.Datos(c)
+
+        Dim det As New detCliente(c)
+
+        det.ShowDialog()
+
+
+    End Sub
 End Class

@@ -86,7 +86,7 @@ Partial Class detServicio
         Me.txtImporte.Location = New System.Drawing.Point(150, 111)
         Me.txtImporte.Name = "txtImporte"
         Me.txtImporte.Size = New System.Drawing.Size(145, 20)
-        Me.txtImporte.TabIndex = 2
+        Me.txtImporte.TabIndex = 1
         Me.txtImporte.Tag = "Validar"
         '
         'Label2
@@ -117,6 +117,7 @@ Partial Class detServicio
         Me.txtIdReserva.ReadOnly = True
         Me.txtIdReserva.Size = New System.Drawing.Size(63, 20)
         Me.txtIdReserva.TabIndex = 29
+        Me.txtIdReserva.TabStop = False
         Me.txtIdReserva.Visible = False
         '
         'txtId
@@ -127,6 +128,7 @@ Partial Class detServicio
         Me.txtId.ReadOnly = True
         Me.txtId.Size = New System.Drawing.Size(63, 20)
         Me.txtId.TabIndex = 28
+        Me.txtId.TabStop = False
         Me.txtId.Visible = False
         '
         'dtpFecha
@@ -135,6 +137,7 @@ Partial Class detServicio
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(145, 20)
         Me.dtpFecha.TabIndex = 1
+        Me.dtpFecha.TabStop = False
         '
         'btnCancelar
         '
@@ -148,7 +151,7 @@ Partial Class detServicio
         Me.btnCancelar.Location = New System.Drawing.Point(197, 159)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(83, 31)
-        Me.btnCancelar.TabIndex = 4
+        Me.btnCancelar.TabIndex = 3
         Me.btnCancelar.Text = "Cancelar"
         Me.btnCancelar.UseVisualStyleBackColor = False
         '
@@ -164,7 +167,7 @@ Partial Class detServicio
         Me.btnAceptar.Location = New System.Drawing.Point(89, 159)
         Me.btnAceptar.Name = "btnAceptar"
         Me.btnAceptar.Size = New System.Drawing.Size(83, 31)
-        Me.btnAceptar.TabIndex = 3
+        Me.btnAceptar.TabIndex = 2
         Me.btnAceptar.Text = "Aceptar"
         Me.btnAceptar.UseVisualStyleBackColor = False
         '
