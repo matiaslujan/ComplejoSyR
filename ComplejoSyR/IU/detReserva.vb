@@ -325,7 +325,9 @@
         reserva.subtotal(dgvPagos, txtPagado)
 
         Calcular()
-
+        If lstPagos.Count > 0 Then
+            CbxCancelada.Checked = False
+        End If
         reserva.OcultarColumnas(dgvPagos)
 
     End Sub
