@@ -325,6 +325,7 @@
         reserva.subtotal(dgvPagos, txtPagado)
 
         Calcular()
+        'si la reserva a sido cancelada anteriormente y se le agrega un pago, pasará a estar confirmada
         If lstPagos.Count > 0 Then
             CbxCancelada.Checked = False
         End If
