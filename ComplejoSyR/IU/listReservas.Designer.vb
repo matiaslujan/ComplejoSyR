@@ -32,6 +32,7 @@ Partial Class listReservas
         Me.btnModificar = New System.Windows.Forms.Button
         Me.Label1 = New System.Windows.Forms.Label
         Me.txtBuscar = New System.Windows.Forms.TextBox
+        Me.cbFiltros = New System.Windows.Forms.ComboBox
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -78,33 +79,33 @@ Partial Class listReservas
         '
         'btnAgregar
         '
-        resources.ApplyResources(Me.btnAgregar, "btnAgregar")
         Me.btnAgregar.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnAgregar.FlatAppearance.BorderSize = 2
+        resources.ApplyResources(Me.btnAgregar, "btnAgregar")
         Me.btnAgregar.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.UseVisualStyleBackColor = False
         '
         'btnEliminar
         '
-        resources.ApplyResources(Me.btnEliminar, "btnEliminar")
         Me.btnEliminar.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnEliminar.FlatAppearance.BorderSize = 2
+        resources.ApplyResources(Me.btnEliminar, "btnEliminar")
         Me.btnEliminar.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnEliminar.Name = "btnEliminar"
         Me.btnEliminar.UseVisualStyleBackColor = False
         '
         'btnModificar
         '
-        resources.ApplyResources(Me.btnModificar, "btnModificar")
         Me.btnModificar.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnModificar.FlatAppearance.BorderSize = 2
+        resources.ApplyResources(Me.btnModificar, "btnModificar")
         Me.btnModificar.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnModificar.Name = "btnModificar"
         Me.btnModificar.UseVisualStyleBackColor = False
@@ -120,11 +121,19 @@ Partial Class listReservas
         resources.ApplyResources(Me.txtBuscar, "txtBuscar")
         Me.txtBuscar.Name = "txtBuscar"
         '
+        'cbFiltros
+        '
+        resources.ApplyResources(Me.cbFiltros, "cbFiltros")
+        Me.cbFiltros.FormattingEnabled = True
+        Me.cbFiltros.Items.AddRange(New Object() {resources.GetString("cbFiltros.Items"), resources.GetString("cbFiltros.Items1"), resources.GetString("cbFiltros.Items2"), resources.GetString("cbFiltros.Items3")})
+        Me.cbFiltros.Name = "cbFiltros"
+        '
         'listReservas
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Controls.Add(Me.cbFiltros)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.dgvReservas)
@@ -144,4 +153,5 @@ Partial Class listReservas
     Friend WithEvents btnModificar As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
+    Friend WithEvents cbFiltros As System.Windows.Forms.ComboBox
 End Class

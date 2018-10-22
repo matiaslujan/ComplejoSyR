@@ -123,10 +123,10 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dgvReservas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>169, 0</value>
   </data>
   <data name="dgvReservas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>769, 271</value>
+    <value>600, 316</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvReservas.TabIndex" type="System.Int32, mscorlib">
@@ -142,10 +142,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvReservas.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="btnAgregar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+    <value>3</value>
   </data>
   <data name="btnAgregar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -154,10 +151,10 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnAgregar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 280</value>
+    <value>27, 68</value>
   </data>
   <data name="btnAgregar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 31</value>
+    <value>117, 31</value>
   </data>
   <data name="btnAgregar.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -175,10 +172,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAgregar.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="btnEliminar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+    <value>4</value>
   </data>
   <data name="btnEliminar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -187,10 +181,10 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnEliminar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 280</value>
+    <value>27, 179</value>
   </data>
   <data name="btnEliminar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 31</value>
+    <value>117, 31</value>
   </data>
   <data name="btnEliminar.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -208,10 +202,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnEliminar.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="btnModificar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+    <value>5</value>
   </data>
   <data name="btnModificar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -220,10 +211,10 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnModificar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 280</value>
+    <value>27, 123</value>
   </data>
   <data name="btnModificar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 31</value>
+    <value>117, 31</value>
   </data>
   <data name="btnModificar.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -241,10 +232,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnModificar.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="Label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+    <value>Bottom, Left</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -253,7 +244,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>528, 282</value>
+    <value>49, 242</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -274,16 +265,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="txtBuscar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+    <value>Bottom, Left</value>
   </data>
   <data name="txtBuscar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="txtBuscar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>599, 279</value>
+    <value>5, 275</value>
   </data>
   <data name="txtBuscar.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -304,7 +295,43 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtBuscar.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="cbFiltros.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
+  </data>
+  <data name="cbFiltros.Items" xml:space="preserve">
+    <value>Todas</value>
+  </data>
+  <data name="cbFiltros.Items1" xml:space="preserve">
+    <value>Confirmadas</value>
+  </data>
+  <data name="cbFiltros.Items2" xml:space="preserve">
+    <value>Sin Señar</value>
+  </data>
+  <data name="cbFiltros.Items3" xml:space="preserve">
+    <value>Canceladas</value>
+  </data>
+  <data name="cbFiltros.Location" type="System.Drawing.Point, System.Drawing">
+    <value>27, 12</value>
+  </data>
+  <data name="cbFiltros.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 28</value>
+  </data>
+  <data name="cbFiltros.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;cbFiltros.Name" xml:space="preserve">
+    <value>cbFiltros</value>
+  </data>
+  <data name="&gt;&gt;cbFiltros.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbFiltros.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbFiltros.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

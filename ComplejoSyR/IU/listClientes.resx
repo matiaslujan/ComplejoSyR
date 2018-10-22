@@ -117,19 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="dgvClientes.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvClientes.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="dgvClientes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
+    <value>159, 0</value>
   </data>
   <data name="dgvClientes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>779, 271</value>
+    <value>620, 314</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvClientes.TabIndex" type="System.Int32, mscorlib">
@@ -147,9 +144,6 @@
   <data name="&gt;&gt;dgvClientes.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="btnAgregar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
   <data name="btnAgregar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -157,10 +151,10 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnAgregar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 277</value>
+    <value>25, 12</value>
   </data>
   <data name="btnAgregar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 31</value>
+    <value>117, 31</value>
   </data>
   <data name="btnAgregar.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -180,9 +174,6 @@
   <data name="&gt;&gt;btnAgregar.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="btnEliminar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
   <data name="btnEliminar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -190,10 +181,10 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnEliminar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>183, 277</value>
+    <value>25, 117</value>
   </data>
   <data name="btnEliminar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 31</value>
+    <value>117, 31</value>
   </data>
   <data name="btnEliminar.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -213,9 +204,6 @@
   <data name="&gt;&gt;btnEliminar.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="btnModificar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
   <data name="btnModificar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -223,10 +211,10 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnModificar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>95, 277</value>
+    <value>25, 65</value>
   </data>
   <data name="btnModificar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>83, 31</value>
+    <value>117, 31</value>
   </data>
   <data name="btnModificar.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -247,19 +235,19 @@
     <value>6</value>
   </data>
   <data name="txtBuscar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+    <value>Bottom, Left</value>
   </data>
   <data name="txtBuscar.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="txtBuscar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>609, 277</value>
+    <value>12, 273</value>
   </data>
   <data name="txtBuscar.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="txtBuscar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 29</value>
+    <value>140, 29</value>
   </data>
   <data name="txtBuscar.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -277,7 +265,7 @@
     <value>2</value>
   </data>
   <data name="Label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
+    <value>Bottom, Left</value>
   </data>
   <data name="Label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -286,7 +274,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>538, 280</value>
+    <value>46, 240</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -309,9 +297,6 @@
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnHistorial.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
   <data name="btnHistorial.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -319,10 +304,10 @@
     <value>Microsoft Sans Serif, 8.25pt</value>
   </data>
   <data name="btnHistorial.Location" type="System.Drawing.Point, System.Drawing">
-    <value>381, 277</value>
+    <value>25, 181</value>
   </data>
   <data name="btnHistorial.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 31</value>
+    <value>117, 31</value>
   </data>
   <data name="btnHistorial.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>

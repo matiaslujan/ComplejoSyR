@@ -2,10 +2,31 @@
 
     Dim f As New Funciones
     Dim res As New ReservaClass
+    Private Sub TraerReservas()
 
+        Select Case cbFiltros.SelectedItem
+
+            Case "Todas"
+
+                res.Traer(dgvReservas)
+
+            Case "Sin Señar"
+
+                res.ReservasSinConfirmar(dgvReservas)
+
+            Case "Confirmadas"
+
+                res.ReservasConfirmadas(dgvReservas)
+
+            Case "Canceladas"
+
+                res.ReservasCanceladas(dgvReservas)
+
+        End Select
+    End Sub
     Private Sub listReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        res.Traer(dgvReservas)
+        cbFiltros.SelectedIndex = 0
 
     End Sub
 
@@ -15,7 +36,8 @@
 
         det.ShowDialog()
 
-        res.Traer(dgvReservas)
+        cbFiltros.SelectedIndex = 0
+
 
     End Sub
 
@@ -38,10 +60,10 @@
         res.Datos(res)
 
         Dim det As New detReserva(res)
+
         det.ShowDialog()
 
-        res.Traer(dgvReservas)
-
+        TraerReservas()
 
     End Sub
 
@@ -53,7 +75,7 @@
 
         res.Eliminar(res.Id)
 
-        res.Traer(dgvReservas)
+        TraerReservas()
 
     End Sub
 
@@ -62,4 +84,11 @@
         res.Buscar(txtBuscar.Text, dgvReservas)
 
     End Sub
+
+    Private Sub cbFiltros_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cbFiltros.SelectedIndexChanged
+
+        TraerReservas()
+
+    End Sub
+
 End Class

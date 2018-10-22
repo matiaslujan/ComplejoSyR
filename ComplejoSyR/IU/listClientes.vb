@@ -36,16 +36,7 @@
 
         cliente.Id = dgvClientes.CurrentRow.Cells("Id").Value
 
-        cliente.Datos(cliente)
-        'cliente.Nombre = dgvClientes.CurrentRow.Cells("Nombre").Value
-        'cliente.Domicilio = dgvClientes.CurrentRow.Cells("Domicilio").Value
-        'cliente.Correo = dgvClientes.CurrentRow.Cells("Correo").Value
-        'cliente.Telefono = dgvClientes.CurrentRow.Cells("Telefono").Value
-        'cliente.Provincia = dgvClientes.CurrentRow.Cells("Provincia").Value
-        'cliente.Vehiculo = dgvClientes.CurrentRow.Cells("Vehiculo").Value
-        'cliente.Patente = dgvClientes.CurrentRow.Cells("Patente").Value
-
-        Dim det As New detCliente(cliente)
+        Dim det As New detCliente(cliente.Id)
 
         det.ShowDialog()
 

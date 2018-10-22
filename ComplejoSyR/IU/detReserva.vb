@@ -620,12 +620,9 @@
 
         c.Id = cbClientes.SelectedValue
 
-        c.Datos(c)
-
-        Dim det As New detCliente(c)
+        Dim det As New detCliente(c.Id)
 
         det.ShowDialog()
-
 
     End Sub
 End Class

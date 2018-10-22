@@ -313,6 +313,116 @@ Public Class ReservaClass
         End Try
 
     End Sub
+    Public Sub ReservasConfirmadas(ByVal dgv As DataGridView)
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("ReservasConfirmadas", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            Dim table As New Data.DataTable
+
+            Dim adapter As New SqlDataAdapter(comando)
+
+            adapter.Fill(table)
+
+            dgv.DataSource = table
+
+            dgv.Columns("Id").Visible = False
+            dgv.Columns("Pagado").Visible = False
+            dgv.Columns("Numero").HeaderText = "N°"
+            dgv.Columns("Numero").Width = 50
+            dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+            If dgv.Rows.Count > 0 Then
+
+                dgv.Rows(0).Selected = False
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
+
+
+    End Sub
+    Public Sub ReservasSinConfirmar(ByVal dgv As DataGridView)
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("ReservasSinConfirmar", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            Dim table As New Data.DataTable
+
+            Dim adapter As New SqlDataAdapter(comando)
+
+            adapter.Fill(table)
+
+            dgv.DataSource = table
+
+            dgv.Columns("Id").Visible = False
+            dgv.Columns("Pagado").Visible = False
+            dgv.Columns("Numero").HeaderText = "N°"
+            dgv.Columns("Numero").Width = 50
+            dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+            If dgv.Rows.Count > 0 Then
+
+                dgv.Rows(0).Selected = False
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
+
+
+    End Sub
+    Public Sub ReservasCanceladas(ByVal dgv As DataGridView)
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("ReservasCanceladas", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            Dim table As New Data.DataTable
+
+            Dim adapter As New SqlDataAdapter(comando)
+
+            adapter.Fill(table)
+
+            dgv.DataSource = table
+
+            dgv.Columns("Id").Visible = False
+            dgv.Columns("Numero").HeaderText = "N°"
+            dgv.Columns("Numero").Width = 50
+            dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+
+            If dgv.Rows.Count > 0 Then
+
+                dgv.Rows(0).Selected = False
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
+
+
+    End Sub
     Public Sub Buscar(ByVal Nombre As String, ByVal dgv As DataGridView)
         Try
 

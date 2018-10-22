@@ -631,3 +631,61 @@ group by p.id, s.totalservicio, p.pagado, s.imptotal
  
 END
 GO
+--------------------------------------------------------
+CREATE PROCEDURE ReservasCanceladas
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, r.FEgreso Egreso, r.FReserva Reservado    FROM Reservas r 
+	inner join Clientes c on c.Id = r.IdCliente
+	inner join AlojamientoDeReserva ar on ar.IdReserva = r.Id 
+	inner join Alojamientos a on a.Id = ar.IdAlojamiento
+	inner join Modalidades m on m.Id = a.IdModalidad
+	
+	where  r.Cancelada = 1
+        group by r.Id,c.Nombre, r.FIngreso, r.FEgreso,r.FReserva,M.Nombre,a.Numero
+		order by r.freserva desc
+END
+GO
+--------------------------------------------------------
+CREATE PROCEDURE ReservasConfirmadas
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, r.FEgreso Egreso, r.FReserva Reservado, Sum(p.Pagado)Pagado    FROM Reservas r 
+	inner join Clientes c on c.Id = r.IdCliente
+	inner join AlojamientoDeReserva ar on ar.IdReserva = r.Id 
+	inner join Alojamientos a on a.Id = ar.IdAlojamiento
+	inner join Modalidades m on m.Id = a.IdModalidad
+	inner join PagosImportes p on p.Id = r.Id 
+	where p.Pagado > 0 and r.Cancelada = 0 
+        group by r.Id,c.Nombre, r.FIngreso, r.FEgreso,r.FReserva,M.Nombre,a.Numero
+		order by r.freserva desc
+END
+GO
+--------------------------------------------------------
+CREATE PROCEDURE ReservasSinConfirmar
+
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, r.FEgreso Egreso, r.FReserva Reservado, Sum(p.Pagado)Pagado    FROM Reservas r 
+	inner join Clientes c on c.Id = r.IdCliente
+	inner join AlojamientoDeReserva ar on ar.IdReserva = r.Id 
+	inner join Alojamientos a on a.Id = ar.IdAlojamiento
+	inner join Modalidades m on m.Id = a.IdModalidad
+	inner join PagosImportes p on p.Id = r.Id 
+	where p.Pagado = 0 and r.Cancelada = 0 
+        group by r.Id,c.Nombre, r.FIngreso, r.FEgreso,r.FReserva,M.Nombre,a.Numero
+		order by r.freserva desc
+END
+GO
+--------------------------------------------------------
