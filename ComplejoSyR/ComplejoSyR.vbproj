@@ -90,12 +90,6 @@
     <Compile Include="Clases\PagoClass.vb" />
     <Compile Include="Clases\ReservaClass.vb" />
     <Compile Include="Clases\ServicioClass.vb" />
-    <Compile Include="detalleRes.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>detalleRes.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="IU\Administracion.Designer.vb">
       <DependentUpon>Administracion.vb</DependentUpon>
     </Compile>
@@ -191,10 +185,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="detalleRes.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>detalleRes.vb</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="IU\Administracion.resx">
       <DependentUpon>Administracion.vb</DependentUpon>
     </EmbeddedResource>
