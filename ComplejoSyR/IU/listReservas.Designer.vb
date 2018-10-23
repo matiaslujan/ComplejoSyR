@@ -119,6 +119,7 @@ Partial Class listReservas
         'txtBuscar
         '
         resources.ApplyResources(Me.txtBuscar, "txtBuscar")
+        Me.txtBuscar.BackColor = System.Drawing.Color.Gainsboro
         Me.txtBuscar.Name = "txtBuscar"
         '
         'cbFiltros

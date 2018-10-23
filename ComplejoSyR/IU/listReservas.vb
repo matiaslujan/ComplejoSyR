@@ -79,6 +79,15 @@
 
     End Sub
 
+    Private Sub txtBuscar_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtBuscar.GotFocus
+        txtBuscar.BackColor = Color.White
+
+    End Sub
+    Private Sub txtBuscar_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles txtBuscar.LostFocus
+        txtBuscar.BackColor = Color.Gainsboro
+
+    End Sub
+
     Private Sub txtBuscar_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtBuscar.TextChanged
 
         res.Buscar(txtBuscar.Text, dgvReservas)
