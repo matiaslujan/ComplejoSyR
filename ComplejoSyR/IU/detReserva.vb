@@ -631,6 +631,8 @@
 
 
     Private Sub btnDetalle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalle.Click
-        Dim d As New frmDetalle 
+        Dim d As New frmDetalle
+        d.ShowDialog()
+
     End Sub
 End Class
