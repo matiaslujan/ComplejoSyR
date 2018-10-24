@@ -630,4 +630,7 @@
     End Sub
 
 
+    Private Sub btnDetalle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalle.Click
+        Dim d As New frmDetalle 
+    End Sub
 End Class

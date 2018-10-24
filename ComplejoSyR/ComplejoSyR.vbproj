@@ -90,6 +90,18 @@
     <Compile Include="Clases\PagoClass.vb" />
     <Compile Include="Clases\ReservaClass.vb" />
     <Compile Include="Clases\ServicioClass.vb" />
+    <Compile Include="Reportes\detalle.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>detalle.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\frmDetalle.Designer.vb">
+      <DependentUpon>frmDetalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmDetalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IU\Administracion.Designer.vb">
       <DependentUpon>Administracion.vb</DependentUpon>
     </Compile>
@@ -185,6 +197,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reportes\detalle.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>detalle.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmDetalle.resx">
+      <DependentUpon>frmDetalle.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="IU\Administracion.resx">
       <DependentUpon>Administracion.vb</DependentUpon>
     </EmbeddedResource>
