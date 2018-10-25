@@ -313,6 +313,35 @@ Public Class ReservaClass
         End Try
 
     End Sub
+    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FEgreso As Date) As Boolean
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("DisponibilidadDelAlojamiento", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@idalojamiento", idalojamiento)
+
+            comando.Parameters.AddWithValue("@FE", FEgreso)
+
+            Dim filas As Integer = comando.ExecuteScalar
+
+            If filas > 0 Then
+                Desconectar()
+                Return False
+            Else
+                Desconectar()
+                Return True
+            End If
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+    
+        End Try
+
+    End Function
     Public Sub ReservasConfirmadas(ByVal dgv As DataGridView)
         Try
             Conectar()

@@ -137,7 +137,7 @@ Public Class AlojamientoReservaClass
                     alojres.numero = (lista("Numero"))
                     alojres.modalidad = (lista("Modalidad"))
                     alojres.capacidad = (lista("Capacidad"))
-
+                    alojres.IdAlojamiento = (lista("idalojamiento"))
                     lst.Add(alojres)
 
                 Next

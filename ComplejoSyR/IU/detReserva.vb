@@ -242,6 +242,21 @@
 
         reserva.CantidadDeDias(txtCantDia, dtpFechaIngreso, dtpFechaEgreso)
 
+        If reserva.Accion = "Modificar" Then
+
+            For Each row In dgvAlojamientos.Rows
+
+                If reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, CDate(dtpFechaEgreso.Text)) = False Then
+
+                    MsgBox("El alojamiento: no esta disponible en la fecha indicada")
+
+                End If
+
+            Next
+
+
+        End If
+
     End Sub
     Private Sub dtpFechaIngreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaIngreso.ValueChanged
 
