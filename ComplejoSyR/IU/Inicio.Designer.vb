@@ -41,6 +41,7 @@ Partial Class Inicio
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel
+        Me.btnSeRetiran = New System.Windows.Forms.Button
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOcupacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -158,7 +159,7 @@ Partial Class Inicio
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOcupacion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvOcupacion.Location = New System.Drawing.Point(3, 215)
+        Me.dgvOcupacion.Location = New System.Drawing.Point(3, 176)
         Me.dgvOcupacion.Margin = New System.Windows.Forms.Padding(3, 3, 3, 10)
         Me.dgvOcupacion.MultiSelect = False
         Me.dgvOcupacion.Name = "dgvOcupacion"
@@ -173,7 +174,7 @@ Partial Class Inicio
         Me.dgvOcupacion.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvOcupacion.RowHeadersVisible = False
         Me.dgvOcupacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvOcupacion.Size = New System.Drawing.Size(511, 251)
+        Me.dgvOcupacion.Size = New System.Drawing.Size(511, 262)
         Me.dgvOcupacion.TabIndex = 5
         '
         'Calendario
@@ -217,9 +218,9 @@ Partial Class Inicio
         Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevaReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevaReserva.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnNuevaReserva.Location = New System.Drawing.Point(3, 3)
+        Me.btnNuevaReserva.Location = New System.Drawing.Point(3, 30)
         Me.btnNuevaReserva.Name = "btnNuevaReserva"
-        Me.btnNuevaReserva.Size = New System.Drawing.Size(249, 31)
+        Me.btnNuevaReserva.Size = New System.Drawing.Size(249, 32)
         Me.btnNuevaReserva.TabIndex = 133
         Me.btnNuevaReserva.Text = "Nueva Reserva"
         Me.btnNuevaReserva.UseVisualStyleBackColor = False
@@ -239,9 +240,9 @@ Partial Class Inicio
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnBuscar.Location = New System.Drawing.Point(258, 3)
+        Me.btnBuscar.Location = New System.Drawing.Point(258, 30)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(250, 31)
+        Me.btnBuscar.Size = New System.Drawing.Size(250, 32)
         Me.btnBuscar.TabIndex = 132
         Me.btnBuscar.Text = "Buscar Reserva"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -274,9 +275,9 @@ Partial Class Inicio
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
         Me.TableLayoutPanel2.RowCount = 3
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.63895!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.36105!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.63135!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.36865!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70.0!))
         Me.TableLayoutPanel2.Size = New System.Drawing.Size(517, 519)
         Me.TableLayoutPanel2.TabIndex = 0
         '
@@ -285,15 +286,30 @@ Partial Class Inicio
         Me.TableLayoutPanel3.ColumnCount = 2
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.btnNuevaReserva, 0, 0)
-        Me.TableLayoutPanel3.Controls.Add(Me.btnBuscar, 1, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.btnNuevaReserva, 0, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.btnBuscar, 1, 1)
+        Me.TableLayoutPanel3.Controls.Add(Me.btnSeRetiran, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 479)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 451)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 1
+        Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(511, 37)
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(511, 65)
         Me.TableLayoutPanel3.TabIndex = 7
+        '
+        'btnSeRetiran
+        '
+        Me.btnSeRetiran.BackColor = System.Drawing.Color.DarkKhaki
+        Me.btnSeRetiran.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.btnSeRetiran.FlatAppearance.BorderSize = 0
+        Me.btnSeRetiran.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSeRetiran.Location = New System.Drawing.Point(3, 3)
+        Me.btnSeRetiran.Name = "btnSeRetiran"
+        Me.btnSeRetiran.Size = New System.Drawing.Size(249, 21)
+        Me.btnSeRetiran.TabIndex = 134
+        Me.btnSeRetiran.Text = "Se retiran hoy"
+        Me.btnSeRetiran.UseVisualStyleBackColor = False
         '
         'Inicio
         '
@@ -336,5 +352,6 @@ Partial Class Inicio
     Friend WithEvents TableLayoutPanel2 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents cbTipo As System.Windows.Forms.ToolStripComboBox
+    Friend WithEvents btnSeRetiran As System.Windows.Forms.Button
 
 End Class

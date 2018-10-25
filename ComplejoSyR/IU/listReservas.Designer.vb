@@ -38,6 +38,7 @@ Partial Class listReservas
         Me.Label3 = New System.Windows.Forms.Label
         Me.GroupRetiro = New System.Windows.Forms.GroupBox
         Me.btnConfirmar = New System.Windows.Forms.Button
+        Me.btnCancelarReserva = New System.Windows.Forms.Button
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupRetiro.SuspendLayout()
         Me.SuspendLayout()
@@ -180,6 +181,17 @@ Partial Class listReservas
         Me.btnConfirmar.Name = "btnConfirmar"
         Me.btnConfirmar.UseVisualStyleBackColor = False
         '
+        'btnCancelarReserva
+        '
+        Me.btnCancelarReserva.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnCancelarReserva.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCancelarReserva.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
+        Me.btnCancelarReserva.FlatAppearance.BorderSize = 2
+        resources.ApplyResources(Me.btnCancelarReserva, "btnCancelarReserva")
+        Me.btnCancelarReserva.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnCancelarReserva.Name = "btnCancelarReserva"
+        Me.btnCancelarReserva.UseVisualStyleBackColor = False
+        '
         'listReservas
         '
         resources.ApplyResources(Me, "$this")
@@ -193,6 +205,7 @@ Partial Class listReservas
         Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.btnEliminar)
         Me.Controls.Add(Me.btnModificar)
+        Me.Controls.Add(Me.btnCancelarReserva)
         Me.ForeColor = System.Drawing.Color.SaddleBrown
         Me.Name = "listReservas"
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).EndInit()
@@ -214,4 +227,5 @@ Partial Class listReservas
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents GroupRetiro As System.Windows.Forms.GroupBox
     Friend WithEvents btnConfirmar As System.Windows.Forms.Button
+    Friend WithEvents btnCancelarReserva As System.Windows.Forms.Button
 End Class

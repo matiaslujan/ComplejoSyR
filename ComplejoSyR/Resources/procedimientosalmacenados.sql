@@ -583,7 +583,7 @@ GO
 -- al modificar la fecha de egreso de una reserva se verifica que esta no sea mayor
 -- que la fecha de ingreso de otra reserva en el mismo alojamiento
 CREATE PROCEDURE DisponibilidadDelAlojamiento
-@idalojamiento int, @FE date
+@idalojamiento int, @FE date,@FI date
 AS
 BEGIN
 	
@@ -595,7 +595,7 @@ BEGIN
 	inner join AlojamientoDeReserva ar on ar.IdAlojamiento = a.Id 
 	inner join Reservas r on r.Id = ar.IdReserva 
 	
-	where a.Id = @idalojamiento and @FE > r.FIngreso
+		where a.Id = @idalojamiento and @FE > r.FIngreso and r.Fingreso >@FI and r.Id <> @idreserva
 	
 END
 GO
@@ -696,14 +696,14 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, r.FEgreso Egreso, r.FReserva Reservado, Sum(p.Pagado)Pagado    FROM Reservas r 
+SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, r.FEgreso Egreso, r.FReserva Reservado, Sum(p.Pagado)Pagado,r.Cancelada cancelar    FROM Reservas r 
 	inner join Clientes c on c.Id = r.IdCliente
 	inner join AlojamientoDeReserva ar on ar.IdReserva = r.Id 
 	inner join Alojamientos a on a.Id = ar.IdAlojamiento
 	inner join Modalidades m on m.Id = a.IdModalidad
 	inner join PagosImportes p on p.Id = r.Id 
 	where p.Pagado = 0 and r.Cancelada = 0 
-        group by r.Id,c.Nombre, r.FIngreso, r.FEgreso,r.FReserva,M.Nombre,a.Numero
+        group by r.Id,c.Nombre, r.FIngreso, r.FEgreso,r.FReserva,M.Nombre,a.Numero,r.Cancelada
 		order by r.freserva desc
 END
 GO

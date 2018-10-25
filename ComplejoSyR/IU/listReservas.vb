@@ -2,6 +2,15 @@
 
     Dim f As New Funciones
     Dim res As New ReservaClass
+    Private filtro_ As String = "Todas"
+    Public Property filtro() As String
+        Get
+            Return filtro_
+        End Get
+        Set(ByVal value As String)
+            filtro_ = value
+        End Set
+    End Property
     Private Sub TraerReservas()
 
         If cbFiltros.SelectedItem <> "Se retiran hoy" Then
@@ -14,6 +23,16 @@
 
         End If
 
+        If cbFiltros.SelectedItem <> "Sin Señar" Then
+
+            btnCancelarReserva.Visible = False
+
+        Else
+
+            btnCancelarReserva.Visible = True
+
+        End If
+
         Select Case cbFiltros.SelectedItem
 
             Case "Todas"
@@ -23,6 +42,7 @@
             Case "Sin Señar"
 
                 res.ReservasSinConfirmar(dgvReservas)
+                dgvReservas.ReadOnly = False
 
             Case "Confirmadas"
 
@@ -39,7 +59,7 @@
     End Sub
     Private Sub listReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        cbFiltros.SelectedIndex = 0
+        cbFiltros.SelectedItem = filtro
 
     End Sub
 
@@ -116,14 +136,6 @@
 
     End Sub
 
-    Private Sub dgvReservas_ColumnHeaderMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvReservas.ColumnHeaderMouseClick
-        If cbFiltros.SelectedItem = "Se retiran hoy" Then
-
-            res.colorearretiro(dgvReservas)
-
-        End If
-    End Sub
-
     Private Sub btnConfirmar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConfirmar.Click
 
         For Each row In dgvReservas.Rows
@@ -135,5 +147,26 @@
         Next
 
         res.SeRetiran(dgvReservas)
+
+    End Sub
+
+    Private Sub btnCancelarReserva_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnCancelarReserva.Click
+
+        For Each row In dgvReservas.Rows
+
+            res.Id = row.cells("Id").value
+
+            res.Cancelada = row.cells("Cancelar").value
+
+            If res.Cancelada = True Then
+
+                res.CancelarReserva(res)
+
+            End If
+
+        Next
+
+        res.ReservasSinConfirmar(dgvReservas)
+
     End Sub
 End Class

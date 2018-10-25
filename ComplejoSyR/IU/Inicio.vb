@@ -98,7 +98,7 @@
 
     Private Sub btnNuevaReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevaReserva.Click
         'si la fila esta disponible accede a nuevareserva
-        If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Then
+        If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Or dgvOcupacion.CurrentRow.Cells("FEgreso").Value = Date.Today Then
 
             NuevaReserva()
 
@@ -158,4 +158,14 @@
 
     End Sub
 
+  
+    Private Sub btnSeRetiran_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSeRetiran.Click
+
+        Dim lst As New listReservas
+
+        lst.filtro = "Se retiran hoy"
+
+        lst.ShowDialog()
+
+    End Sub
 End Class

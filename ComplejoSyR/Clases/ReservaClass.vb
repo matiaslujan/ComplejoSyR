@@ -476,13 +476,9 @@ Public Class ReservaClass
 
             ColumLstReservas(dgv)
 
-            'dgv.Columns("Retiro").Visible = False
-
             If dgv.Rows.Count > 0 Then
 
                 dgv.Rows(0).Selected = False
-
-                colorearretiro(dgv)
 
             End If
 
@@ -505,6 +501,27 @@ Public Class ReservaClass
             comando.CommandType = CommandType.StoredProcedure
 
             comando.Parameters.AddWithValue("@Retiro", reserva.Retiro)
+            comando.Parameters.AddWithValue("@Id", reserva.Id)
+
+            comando.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
+    End Sub
+    Public Sub CancelarReserva(ByVal reserva As ReservaClass)
+        Try
+
+            Conectar()
+
+            Dim comando As New SqlCommand("ReservaCancelar", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
             comando.Parameters.AddWithValue("@Id", reserva.Id)
 
             comando.ExecuteNonQuery()
@@ -630,23 +647,7 @@ Public Class ReservaClass
         End Try
 
     End Sub
-    Public Sub colorearretiro(ByRef dgv As DataGridView)
-        For Each Row As DataGridViewRow In dgv.Rows
 
-            If Row.Cells("Retiro").Value = True Then
-
-                Row.DefaultCellStyle.BackColor = Color.LawnGreen
-                Row.DefaultCellStyle.ForeColor = Color.Black
-
-            Else
-                Row.DefaultCellStyle.BackColor = Color.LightCoral
-                Row.DefaultCellStyle.ForeColor = Color.White
-
-
-            End If
-
-        Next
-    End Sub
     Public Sub colorearocupacion(ByRef dgv As DataGridView)
 
         For Each Row As DataGridViewRow In dgv.Rows
@@ -659,6 +660,11 @@ Public Class ReservaClass
 
                 Row.DefaultCellStyle.BackColor = Color.FromArgb(241, 185, 138)
 
+                If Row.Cells("FEgreso").Value = Date.Today Then
+
+                    Row.DefaultCellStyle.BackColor = Color.DarkKhaki
+
+                End If
             End If
 
         Next
