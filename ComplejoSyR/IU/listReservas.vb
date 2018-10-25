@@ -4,6 +4,16 @@
     Dim res As New ReservaClass
     Private Sub TraerReservas()
 
+        If cbFiltros.SelectedItem <> "Se retiran hoy" Then
+
+            GroupRetiro.Visible = False
+
+        Else
+
+            GroupRetiro.Visible = True
+
+        End If
+
         Select Case cbFiltros.SelectedItem
 
             Case "Todas"
@@ -22,6 +32,9 @@
 
                 res.ReservasCanceladas(dgvReservas)
 
+            Case "Se retiran hoy"
+                res.SeRetiran(dgvReservas)
+                dgvReservas.ReadOnly = False
         End Select
     End Sub
     Private Sub listReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -46,11 +59,14 @@
         modificar()
 
     End Sub
+
+
     Private Sub dgvReservas_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvReservas.CellDoubleClick
 
         modificar()
 
     End Sub
+
     Private Sub modificar()
 
         If f.filanoseleccionada(dgvReservas) Then Exit Sub
@@ -100,4 +116,24 @@
 
     End Sub
 
+    Private Sub dgvReservas_ColumnHeaderMouseClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs) Handles dgvReservas.ColumnHeaderMouseClick
+        If cbFiltros.SelectedItem = "Se retiran hoy" Then
+
+            res.colorearretiro(dgvReservas)
+
+        End If
+    End Sub
+
+    Private Sub btnConfirmar_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnConfirmar.Click
+
+        For Each row In dgvReservas.Rows
+
+            res.Id = row.cells("Id").value
+            res.Retiro = row.cells("Retiro").value
+            res.ActualizarRetiro(res)
+
+        Next
+
+        res.SeRetiran(dgvReservas)
+    End Sub
 End Class

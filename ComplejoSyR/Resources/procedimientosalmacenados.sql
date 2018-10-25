@@ -80,7 +80,7 @@ INNER JOIN Modalidades m on m.Id = a.IdModalidad
 INNER JOIN AlojamientoDeReserva  ar on ar.IdAlojamiento= a.Id 
 INNER JOIN Reservas r on r.id = ar.IdReserva 
 
-where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso and r.Cancelada = 0  ) or 
+where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE > r.FIngreso and r.Cancelada = 0  ) or 
 		(@FI > r.FIngreso  and  @FE < r.FEgreso and r.Cancelada = 0 ) or 
 		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI < r.FEgreso and r.Cancelada = 0 ) or
 		(@FI < r.FIngreso  and @FE >=r.FEgreso and r.Cancelada = 0 )) order by a.Numero asc  
@@ -95,8 +95,7 @@ AS
 BEGIN
 	
 	SET NOCOUNT ON;
-
-					select * from (
+select * from (
 (SELECT a.Id, a.Numero, m.Nombre,a.Capacidad, c.Nombre Cliente,  r.FIngreso , r.FEgreso, r.Id IdReserva  FROM Alojamientos a 
 
 INNER JOIN Modalidades m on m.Id = a.IdModalidad 
@@ -104,10 +103,10 @@ INNER JOIN AlojamientoDeReserva  ar on ar.IdAlojamiento= a.Id
 INNER JOIN Reservas r on r.id = ar.IdReserva
 inner join Clientes c on c.Id = r.idcliente 
 
-where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso and r.Cancelada = 0 and m.Tipo like @Tipo) or 
-		(@FI > r.FIngreso  and  @FE < r.FEgreso and r.Cancelada = 0 and m.Tipo like @Tipo) or 
-		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI < r.FEgreso and r.Cancelada = 0 and m.Tipo like @Tipo) or
-		(@FI <r.FIngreso  and @FE >=r.FEgreso and r.Cancelada = 0 and m.Tipo like @Tipo))
+where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE > r.FIngreso and r.Cancelada = 0 and m.Tipo like @Tipo and r.Retiro = 0 ) or 
+		(@FI > r.FIngreso  and  @FE <= r.FEgreso and r.Cancelada = 0 and m.Tipo like @Tipo and r.Retiro = 0) or 
+		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI < r.FEgreso and r.Cancelada = 0 and m.Tipo like @Tipo and r.Retiro = 0) or
+		(@FI <r.FIngreso  and @FE >=r.FEgreso and r.Cancelada = 0 and m.Tipo like @Tipo and r.Retiro = 0))
 		
 union all 
 
@@ -117,10 +116,10 @@ where m.Tipo like @Tipo and a.Id not in (SELECT a.Id  FROM Alojamientos a
 INNER JOIN AlojamientoDeReserva  ar on ar.IdAlojamiento= a.Id 
 INNER JOIN Reservas r on r.id = ar.IdReserva 
 
-where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE >= r.FIngreso and r.Cancelada = 0  ) or 
-		(@FI > r.FIngreso  and  @FE < r.FEgreso and r.Cancelada = 0 ) or 
-		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI < r.FEgreso and r.Cancelada = 0 ) or
-		(@FI < r.FIngreso  and @FE >=r.FEgreso and r.Cancelada = 0 ))
+where	(@FI <= r.FIngreso and @FE <= r.FEgreso and @FE > r.FIngreso and r.Cancelada = 0 and r.Retiro = 0 ) or 
+		(@FI > r.FIngreso  and  @FE <= r.FEgreso and r.Cancelada = 0 and r.Retiro = 0) or 
+		(@FI >= r.FIngreso  and  @FE >= r.FEgreso and @FI < r.FEgreso and r.Cancelada = 0 and r.Retiro = 0 ) or
+		(@FI < r.FIngreso  and @FE >=r.FEgreso and r.Cancelada = 0 and r.Retiro = 0))
 		)as disp
 		
  order by numero asc, FIngreso asc
@@ -524,13 +523,13 @@ CREATE PROCEDURE ReservaAgregar
 	-- parametros
 @IdCliente int ,@FIngreso date ,@FEgreso date ,@FReserva  date,
  @CantDias int ,@CantPersonas int,@ImpDia decimal(10,2),
- @ImpTotal decimal(10,2), @Descripcion varchar(200), @Cancelada bit
+ @ImpTotal decimal(10,2), @Descripcion varchar(200), @Cancelada bit,@Retiro bit
 AS
 BEGIN
 
 	SET NOCOUNT ON;
-       INSERT INTO reservas (IdCliente,FIngreso,FEgreso,FReserva, CantDias,cantPersonas,ImpDia,ImpTotal,Descripcion,Cancelada)
-        values (@IdCliente,@FIngreso,@FEgreso,@FReserva, @CantDias,@cantPersonas,@impDia,@ImpTotal,@Descripcion,@Cancelada)
+       INSERT INTO reservas (IdCliente,FIngreso,FEgreso,FReserva, CantDias,cantPersonas,ImpDia,ImpTotal,Descripcion,Cancelada,Retiro)
+        values (@IdCliente,@FIngreso,@FEgreso,@FReserva, @CantDias,@cantPersonas,@impDia,@ImpTotal,@Descripcion,@Cancelada,@Retiro)
 END
 GO
 ------------------------------------------------------
@@ -540,7 +539,7 @@ CREATE PROCEDURE ReservaModificar
 	@FEgreso date ,@FReserva  date,
  @CantDias int ,@CantPersonas int
  ,@ImpDia decimal(10,2),@ImpTotal decimal(10,2),
- @Descripcion varchar(200),@Cancelada bit, @Id int 
+ @Descripcion varchar(200),@Cancelada bit, @Id int,@Retiro bit 
 AS
 BEGIN
 
@@ -551,7 +550,7 @@ BEGIN
 		FEgreso=@FEgreso,FReserva=@FReserva, CantDias = @CantDias,
 		CantPersonas=@CantPersonas,ImpDia=@ImpDia,
 		ImpTotal=@ImpTotal, Descripcion=@Descripcion,
-		Cancelada=@Cancelada
+		Cancelada=@Cancelada, retiro = @Retiro
      WHERE Id=@Id
 	
 END
@@ -577,6 +576,26 @@ BEGIN
 
 	SET NOCOUNT ON;
    SELECT MAX(Id)Id FROM RESERVAS
+	
+END
+GO
+--------------------------------------------------------
+-- al modificar la fecha de egreso de una reserva se verifica que esta no sea mayor
+-- que la fecha de ingreso de otra reserva en el mismo alojamiento
+CREATE PROCEDURE DisponibilidadDelAlojamiento
+@idalojamiento int, @FE date
+AS
+BEGIN
+	
+	SET NOCOUNT ON;
+
+  
+	SELECT count(a.id) id from Alojamientos a
+	
+	inner join AlojamientoDeReserva ar on ar.IdAlojamiento = a.Id 
+	inner join Reservas r on r.Id = ar.IdReserva 
+	
+	where a.Id = @idalojamiento and @FE > r.FIngreso
 	
 END
 GO
@@ -689,3 +708,35 @@ SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, 
 END
 GO
 --------------------------------------------------------
+
+CREATE PROCEDURE ReservasARetirarse
+@Fecha date
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, r.FEgreso Egreso, r.FReserva Reservado    FROM Reservas r 
+	inner join Clientes c on c.Id = r.IdCliente
+	inner join AlojamientoDeReserva ar on ar.IdReserva = r.Id 
+	inner join Alojamientos a on a.Id = ar.IdAlojamiento
+	inner join Modalidades m on m.Id = a.IdModalidad
+	
+	where  r.Cancelada = 0 and r.FEgreso = @Fecha
+    --group by r.Id,c.Nombre, r.FIngreso, r.FEgreso,r.FReserva,M.Nombre,a.Numero
+	--order by r.freserva desc
+END
+GO
+--------------------------------------------------------
+
+CREATE PROCEDURE ActualizarRetiro 
+@Retiro bit, @Id int
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+   UPDATE Reservas SET Retiro = @Retiro WHERE Id = @Id
+END
+GO

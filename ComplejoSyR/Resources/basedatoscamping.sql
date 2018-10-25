@@ -43,7 +43,8 @@ Cancelada bit,
 CantDias int,
 CantPersonas int,
 Descripcion varchar(200),
-ImpTotal decimal(10,2)
+ImpTotal decimal(10,2),
+Retiro bit
 
 )
 create table AlojamientoDeReserva

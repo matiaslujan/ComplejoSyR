@@ -88,7 +88,7 @@
         cbClientes.SelectedValue = reserva.IdCliente
         txtDescripcion.Text = reserva.Descripcion
         CbxCancelada.Checked = reserva.Cancelada
-
+        ckbRetiro.Checked = reserva.retiro
 
         alojamientos()
 
@@ -237,7 +237,6 @@
         Calcular()
     End Sub
 
-
     Private Sub dtpFechaEgreso_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles dtpFechaEgreso.ValueChanged
 
         reserva.CantidadDeDias(txtCantDia, dtpFechaIngreso, dtpFechaEgreso)
@@ -246,9 +245,11 @@
 
             For Each row In dgvAlojamientos.Rows
 
-                If reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, CDate(dtpFechaEgreso.Text)) = False Then
+                If reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, CDate(dtpFechaEgreso.Text), CDate(dtpFechaIngreso.Text), reserva.Id) = False Then
 
-                    MsgBox("El alojamiento: no esta disponible en la fecha indicada")
+                    Dim nro As Integer = row.cells("Numero").value
+                    Dim modalidad As String = row.cells("Modalidad").value
+                    MsgBox("El alojamiento: " + CStr(modalidad) + " " + CStr(nro) + " no esta disponible en la fecha indicada")
 
                 End If
 
@@ -540,7 +541,7 @@
             reserva.ImpTotal = txtImpEstadia.Text
             reserva.Descripcion = txtDescripcion.Text
             reserva.Cancelada = CbxCancelada.Checked
-
+            reserva.retiro = ckbRetiro.Checked
             If lstAlojamientos.Count = 0 Then
 
                 MsgBox("Agrege un alojamiento")

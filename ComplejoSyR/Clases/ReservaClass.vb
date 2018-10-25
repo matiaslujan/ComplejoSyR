@@ -122,7 +122,15 @@ Public Class ReservaClass
             Cancelada_ = value
         End Set
     End Property
-  
+    Private Retiro_ As Boolean
+    Public Property Retiro() As Boolean
+        Get
+            Return Retiro_
+        End Get
+        Set(ByVal value As Boolean)
+            Retiro_ = value
+        End Set
+    End Property
     Private Accion_ As String
     Public Property Accion() As String
         Get
@@ -132,7 +140,13 @@ Public Class ReservaClass
             Accion_ = value
         End Set
     End Property
+    Private Sub ColumLstReservas(ByVal dgv As DataGridView)
+        dgv.Columns("Id").Visible = False
+        dgv.Columns("Numero").HeaderText = "N°"
+        dgv.Columns("Numero").Width = 50
+        dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
+    End Sub
     Public Sub Traer(ByVal dgv As DataGridView)
         Try
             Conectar()
@@ -149,17 +163,12 @@ Public Class ReservaClass
 
             dgv.DataSource = table
 
-            dgv.Columns("Id").Visible = False
-
             If dgv.Rows.Count > 0 Then
 
                 dgv.Rows(0).Selected = False
 
             End If
-           
-            dgv.Columns("Numero").HeaderText = "N°"
-            dgv.Columns("Numero").Width = 50
-            dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            ColumLstReservas(dgv)
         Catch ex As Exception
 
             MsgBox(ex.Message)
@@ -197,6 +206,7 @@ Public Class ReservaClass
                     reserva.ImpTotal = (lista("ImpTotal"))
                     reserva.Descripcion = (lista("Descripcion"))
                     reserva.Cancelada = (lista("Cancelada"))
+                    reserva.Retiro = (lista("Retiro"))
 
                 End While
 
@@ -229,6 +239,7 @@ Public Class ReservaClass
             comando.Parameters.AddWithValue("@ImpTotal", reserva.ImpTotal)
             comando.Parameters.AddWithValue("@Descripcion", reserva.Descripcion)
             comando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
+            comando.Parameters.AddWithValue("@Retiro", reserva.Retiro)
 
             comando.ExecuteNonQuery()
 
@@ -260,6 +271,7 @@ Public Class ReservaClass
             comando.Parameters.AddWithValue("@Descripcion", reserva.Descripcion)
             comando.Parameters.AddWithValue("@Cancelada", reserva.Cancelada)
             comando.Parameters.AddWithValue("@Id", reserva.Id)
+            comando.Parameters.AddWithValue("@Retiro", reserva.Retiro)
 
             comando.ExecuteNonQuery()
 
@@ -313,7 +325,7 @@ Public Class ReservaClass
         End Try
 
     End Sub
-    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FEgreso As Date) As Boolean
+    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Boolean
         Try
             Conectar()
 
@@ -322,8 +334,9 @@ Public Class ReservaClass
             comando.CommandType = CommandType.StoredProcedure
 
             comando.Parameters.AddWithValue("@idalojamiento", idalojamiento)
-
-            comando.Parameters.AddWithValue("@FE", FEgreso)
+            comando.Parameters.AddWithValue("@FI", FI)
+            comando.Parameters.AddWithValue("@FE", FE)
+            comando.Parameters.AddWithValue("@idreserva", idreserva)
 
             Dim filas As Integer = comando.ExecuteScalar
 
@@ -338,7 +351,7 @@ Public Class ReservaClass
         Catch ex As Exception
 
             MsgBox(ex.Message)
-    
+
         End Try
 
     End Function
@@ -358,12 +371,10 @@ Public Class ReservaClass
 
             dgv.DataSource = table
 
-            dgv.Columns("Id").Visible = False
-            dgv.Columns("Pagado").Visible = False
-            dgv.Columns("Numero").HeaderText = "N°"
-            dgv.Columns("Numero").Width = 50
-            dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            ColumLstReservas(dgv)
 
+            dgv.Columns("Pagado").Visible = False
+      
             If dgv.Rows.Count > 0 Then
 
                 dgv.Rows(0).Selected = False
@@ -395,12 +406,10 @@ Public Class ReservaClass
 
             dgv.DataSource = table
 
-            dgv.Columns("Id").Visible = False
-            dgv.Columns("Pagado").Visible = False
-            dgv.Columns("Numero").HeaderText = "N°"
-            dgv.Columns("Numero").Width = 50
-            dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            ColumLstReservas(dgv)
 
+            dgv.Columns("Pagado").Visible = False
+        
             If dgv.Rows.Count > 0 Then
 
                 dgv.Rows(0).Selected = False
@@ -432,10 +441,7 @@ Public Class ReservaClass
 
             dgv.DataSource = table
 
-            dgv.Columns("Id").Visible = False
-            dgv.Columns("Numero").HeaderText = "N°"
-            dgv.Columns("Numero").Width = 50
-            dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            ColumLstReservas(dgv)
 
             If dgv.Rows.Count > 0 Then
 
@@ -451,6 +457,64 @@ Public Class ReservaClass
         End Try
 
 
+    End Sub
+    Public Sub SeRetiran(ByVal dgv As DataGridView)
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("ReservasARetirarse", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+            comando.Parameters.AddWithValue("@Fecha", DateTime.Today)
+            Dim table As New Data.DataTable
+
+            Dim adapter As New SqlDataAdapter(comando)
+
+            adapter.Fill(table)
+
+            dgv.DataSource = table
+
+            ColumLstReservas(dgv)
+
+            'dgv.Columns("Retiro").Visible = False
+
+            If dgv.Rows.Count > 0 Then
+
+                dgv.Rows(0).Selected = False
+
+                colorearretiro(dgv)
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
+
+
+    End Sub
+    Public Sub ActualizarRetiro(ByVal reserva As ReservaClass)
+        Try
+
+            Conectar()
+
+            Dim comando As New SqlCommand("ActualizarRetiro", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@Retiro", reserva.Retiro)
+            comando.Parameters.AddWithValue("@Id", reserva.Id)
+
+            comando.ExecuteNonQuery()
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
     End Sub
     Public Sub Buscar(ByVal Nombre As String, ByVal dgv As DataGridView)
         Try
@@ -521,7 +585,7 @@ Public Class ReservaClass
             dgv.Columns("Capacidad").Width = 100
             dgv.Columns("Capacidad").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 
-            colorear(dgv)
+            colorearocupacion(dgv)
 
         Catch ex As Exception
 
@@ -566,7 +630,24 @@ Public Class ReservaClass
         End Try
 
     End Sub
-    Public Sub colorear(ByRef dgv As DataGridView)
+    Public Sub colorearretiro(ByRef dgv As DataGridView)
+        For Each Row As DataGridViewRow In dgv.Rows
+
+            If Row.Cells("Retiro").Value = True Then
+
+                Row.DefaultCellStyle.BackColor = Color.LawnGreen
+                Row.DefaultCellStyle.ForeColor = Color.Black
+
+            Else
+                Row.DefaultCellStyle.BackColor = Color.LightCoral
+                Row.DefaultCellStyle.ForeColor = Color.White
+
+
+            End If
+
+        Next
+    End Sub
+    Public Sub colorearocupacion(ByRef dgv As DataGridView)
 
         For Each Row As DataGridViewRow In dgv.Rows
 

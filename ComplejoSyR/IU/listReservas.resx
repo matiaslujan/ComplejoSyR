@@ -126,7 +126,7 @@
     <value>169, 0</value>
   </data>
   <data name="dgvReservas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>600, 316</value>
+    <value>688, 448</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="dgvReservas.TabIndex" type="System.Int32, mscorlib">
@@ -142,7 +142,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dgvReservas.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="btnAgregar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -151,7 +151,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnAgregar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 68</value>
+    <value>27, 50</value>
   </data>
   <data name="btnAgregar.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 31</value>
@@ -172,7 +172,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnAgregar.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="btnEliminar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -181,7 +181,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnEliminar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 179</value>
+    <value>27, 150</value>
   </data>
   <data name="btnEliminar.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 31</value>
@@ -202,7 +202,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnEliminar.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="btnModificar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -211,7 +211,7 @@
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
   <data name="btnModificar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 123</value>
+    <value>27, 101</value>
   </data>
   <data name="btnModificar.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 31</value>
@@ -232,7 +232,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnModificar.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="Label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -244,7 +244,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="Label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>49, 242</value>
+    <value>49, 389</value>
   </data>
   <data name="Label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
@@ -265,7 +265,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;Label1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="txtBuscar.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
@@ -274,7 +274,7 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="txtBuscar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 275</value>
+    <value>5, 411</value>
   </data>
   <data name="txtBuscar.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -295,7 +295,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtBuscar.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="cbFiltros.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
@@ -312,11 +312,14 @@
   <data name="cbFiltros.Items3" xml:space="preserve">
     <value>Canceladas</value>
   </data>
+  <data name="cbFiltros.Items4" xml:space="preserve">
+    <value>Se retiran hoy</value>
+  </data>
   <data name="cbFiltros.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 12</value>
+    <value>5, 5</value>
   </data>
   <data name="cbFiltros.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 28</value>
+    <value>158, 28</value>
   </data>
   <data name="cbFiltros.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -331,6 +334,153 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;cbFiltros.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnLista.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnLista.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnLista.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnLista.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 93</value>
+  </data>
+  <data name="btnLista.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 31</value>
+  </data>
+  <data name="btnLista.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btnLista.Text" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="&gt;&gt;btnLista.Name" xml:space="preserve">
+    <value>btnLista</value>
+  </data>
+  <data name="&gt;&gt;btnLista.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLista.Parent" xml:space="preserve">
+    <value>GroupRetiro</value>
+  </data>
+  <data name="&gt;&gt;btnLista.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 75</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Se retiraron</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>GroupRetiro</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>70, 75</value>
+  </data>
+  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 13</value>
+  </data>
+  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Falta retirarse</value>
+  </data>
+  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
+    <value>Label3</value>
+  </data>
+  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
+    <value>GroupRetiro</value>
+  </data>
+  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="GroupRetiro.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnConfirmar.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnConfirmar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9.75pt</value>
+  </data>
+  <data name="btnConfirmar.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnConfirmar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 35</value>
+  </data>
+  <data name="btnConfirmar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 31</value>
+  </data>
+  <data name="btnConfirmar.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="btnConfirmar.Text" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="&gt;&gt;btnConfirmar.Name" xml:space="preserve">
+    <value>btnConfirmar</value>
+  </data>
+  <data name="&gt;&gt;btnConfirmar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnConfirmar.Parent" xml:space="preserve">
+    <value>GroupRetiro</value>
+  </data>
+  <data name="&gt;&gt;btnConfirmar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="GroupRetiro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 262</value>
+  </data>
+  <data name="GroupRetiro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 125</value>
+  </data>
+  <data name="GroupRetiro.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="GroupRetiro.Text" xml:space="preserve">
+    <value>A retirarse</value>
+  </data>
+  <data name="&gt;&gt;GroupRetiro.Name" xml:space="preserve">
+    <value>GroupRetiro</value>
+  </data>
+  <data name="&gt;&gt;GroupRetiro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupRetiro.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;GroupRetiro.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -340,7 +490,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>769, 316</value>
+    <value>857, 448</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

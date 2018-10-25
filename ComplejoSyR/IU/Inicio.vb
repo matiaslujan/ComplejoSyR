@@ -153,7 +153,7 @@
 
         Dim r As New ReservaClass
 
-        r.colorear(dgvOcupacion)
+        r.colorearocupacion(dgvOcupacion)
 
 
     End Sub

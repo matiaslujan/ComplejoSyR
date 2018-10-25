@@ -1,5 +1,7 @@
 ﻿Public Class Funciones
+
     Public Function ValidarCampos(ByVal Controles As Form.ControlCollection, ByVal errorprovider As ErrorProvider)
+
         ValidarCampos = True
 
         Dim control As Control

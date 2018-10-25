@@ -33,7 +33,13 @@ Partial Class listReservas
         Me.Label1 = New System.Windows.Forms.Label
         Me.txtBuscar = New System.Windows.Forms.TextBox
         Me.cbFiltros = New System.Windows.Forms.ComboBox
+        Me.btnLista = New System.Windows.Forms.Button
+        Me.Label2 = New System.Windows.Forms.Label
+        Me.Label3 = New System.Windows.Forms.Label
+        Me.GroupRetiro = New System.Windows.Forms.GroupBox
+        Me.btnConfirmar = New System.Windows.Forms.Button
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupRetiro.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgvReservas
@@ -126,14 +132,60 @@ Partial Class listReservas
         '
         resources.ApplyResources(Me.cbFiltros, "cbFiltros")
         Me.cbFiltros.FormattingEnabled = True
-        Me.cbFiltros.Items.AddRange(New Object() {resources.GetString("cbFiltros.Items"), resources.GetString("cbFiltros.Items1"), resources.GetString("cbFiltros.Items2"), resources.GetString("cbFiltros.Items3")})
+        Me.cbFiltros.Items.AddRange(New Object() {resources.GetString("cbFiltros.Items"), resources.GetString("cbFiltros.Items1"), resources.GetString("cbFiltros.Items2"), resources.GetString("cbFiltros.Items3"), resources.GetString("cbFiltros.Items4")})
         Me.cbFiltros.Name = "cbFiltros"
+        '
+        'btnLista
+        '
+        Me.btnLista.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnLista.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnLista.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
+        Me.btnLista.FlatAppearance.BorderSize = 2
+        resources.ApplyResources(Me.btnLista, "btnLista")
+        Me.btnLista.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnLista.Name = "btnLista"
+        Me.btnLista.UseVisualStyleBackColor = False
+        '
+        'Label2
+        '
+        resources.ApplyResources(Me.Label2, "Label2")
+        Me.Label2.ForeColor = System.Drawing.Color.LimeGreen
+        Me.Label2.Name = "Label2"
+        '
+        'Label3
+        '
+        resources.ApplyResources(Me.Label3, "Label3")
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Name = "Label3"
+        '
+        'GroupRetiro
+        '
+        resources.ApplyResources(Me.GroupRetiro, "GroupRetiro")
+        Me.GroupRetiro.BackColor = System.Drawing.Color.Transparent
+        Me.GroupRetiro.Controls.Add(Me.btnConfirmar)
+        Me.GroupRetiro.Controls.Add(Me.btnLista)
+        Me.GroupRetiro.Controls.Add(Me.Label3)
+        Me.GroupRetiro.Controls.Add(Me.Label2)
+        Me.GroupRetiro.Name = "GroupRetiro"
+        Me.GroupRetiro.TabStop = False
+        '
+        'btnConfirmar
+        '
+        Me.btnConfirmar.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnConfirmar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
+        Me.btnConfirmar.FlatAppearance.BorderSize = 2
+        resources.ApplyResources(Me.btnConfirmar, "btnConfirmar")
+        Me.btnConfirmar.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnConfirmar.Name = "btnConfirmar"
+        Me.btnConfirmar.UseVisualStyleBackColor = False
         '
         'listReservas
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Controls.Add(Me.GroupRetiro)
         Me.Controls.Add(Me.cbFiltros)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtBuscar)
@@ -144,6 +196,8 @@ Partial Class listReservas
         Me.ForeColor = System.Drawing.Color.SaddleBrown
         Me.Name = "listReservas"
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupRetiro.ResumeLayout(False)
+        Me.GroupRetiro.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -155,4 +209,9 @@ Partial Class listReservas
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
     Friend WithEvents cbFiltros As System.Windows.Forms.ComboBox
+    Friend WithEvents btnLista As System.Windows.Forms.Button
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents GroupRetiro As System.Windows.Forms.GroupBox
+    Friend WithEvents btnConfirmar As System.Windows.Forms.Button
 End Class
