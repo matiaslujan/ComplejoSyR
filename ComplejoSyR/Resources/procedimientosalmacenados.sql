@@ -708,7 +708,19 @@ SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, 
 END
 GO
 --------------------------------------------------------
+CREATE PROCEDURE ReservaCancelar
+@Id int, @Cancelada bit
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
 
+   
+    UPDATE Reservas SET Cancelada = @Cancelada WHERE Id = @Id
+END
+GO
+--------------------------------------------------------
 CREATE PROCEDURE ReservasARetirarse
 @Fecha date
 AS
