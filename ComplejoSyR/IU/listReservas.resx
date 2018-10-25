@@ -346,7 +346,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnImprimir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 93</value>
+    <value>12, 75</value>
   </data>
   <data name="btnImprimir.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 31</value>
@@ -369,60 +369,6 @@
   <data name="&gt;&gt;btnImprimir.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 75</value>
-  </data>
-  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 13</value>
-  </data>
-  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="Label2.Text" xml:space="preserve">
-    <value>Se retiraron</value>
-  </data>
-  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
-    <value>Label2</value>
-  </data>
-  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
-    <value>GroupRetiro</value>
-  </data>
-  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="Label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="Label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 75</value>
-  </data>
-  <data name="Label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 13</value>
-  </data>
-  <data name="Label3.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="Label3.Text" xml:space="preserve">
-    <value>Falta retirarse</value>
-  </data>
-  <data name="&gt;&gt;Label3.Name" xml:space="preserve">
-    <value>Label3</value>
-  </data>
-  <data name="&gt;&gt;Label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;Label3.Parent" xml:space="preserve">
-    <value>GroupRetiro</value>
-  </data>
-  <data name="&gt;&gt;Label3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="GroupRetiro.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Bottom, Left</value>
   </data>
@@ -436,7 +382,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnConfirmar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 35</value>
+    <value>12, 22</value>
   </data>
   <data name="btnConfirmar.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 31</value>
@@ -460,16 +406,16 @@
     <value>0</value>
   </data>
   <data name="GroupRetiro.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 262</value>
+    <value>14, 274</value>
   </data>
   <data name="GroupRetiro.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 125</value>
+    <value>141, 113</value>
   </data>
   <data name="GroupRetiro.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
   </data>
   <data name="GroupRetiro.Text" xml:space="preserve">
-    <value>A retirarse</value>
+    <value>Retiro</value>
   </data>
   <data name="GroupRetiro.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
