@@ -169,4 +169,11 @@
         res.ReservasSinConfirmar(dgvReservas)
 
     End Sub
+
+    Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
+        Dim det As New frmSeRetiran
+
+        det.ShowDialog()
+
+    End Sub
 End Class

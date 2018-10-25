@@ -634,6 +634,15 @@ FROM         dbo.Reservas AS r LEFT OUTER JOIN
 GROUP BY r.Id, r.ImpTotal
 
 GO
+/*--- IMPORTES*/
+CREATE VIEW [dbo].[Importes]
+AS
+SELECT     s.Id AS Reserva, p.Pagado, SUM(s.TotalServicio + p.ImpTotal) AS TotalReserva, SUM(s.TotalServicio + p.ImpTotal - p.Pagado) AS Deuda
+FROM       dbo.PagosImportes AS p INNER JOIN
+           dbo.ServiciosImporte AS s ON p.Id = s.Id
+GROUP BY s.Id, p.Pagado
+
+GO
 --------------------------------------------------------
 CREATE PROCEDURE ReservaImportes
 @Id int
@@ -728,12 +737,12 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, r.FEgreso Egreso, r.FReserva Reservado    FROM Reservas r 
+SELECT r.Id,a.Numero, m.Nombre Modalidad, c.Nombre Cliente, r.FIngreso Ingreso, r.FEgreso Egreso,i.Deuda ,r.FReserva Reservado    FROM Reservas r 
 	inner join Clientes c on c.Id = r.IdCliente
 	inner join AlojamientoDeReserva ar on ar.IdReserva = r.Id 
 	inner join Alojamientos a on a.Id = ar.IdAlojamiento
 	inner join Modalidades m on m.Id = a.IdModalidad
-	
+	inner join Importes i on i.Reserva = r.Id
 	where  r.Cancelada = 0 and r.FEgreso = @Fecha
     --group by r.Id,c.Nombre, r.FIngreso, r.FEgreso,r.FReserva,M.Nombre,a.Numero
 	--order by r.freserva desc

@@ -336,37 +336,37 @@
   <data name="&gt;&gt;cbFiltros.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnLista.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="btnImprimir.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="btnLista.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="btnImprimir.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9.75pt</value>
   </data>
-  <data name="btnLista.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="btnImprimir.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="btnLista.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="btnImprimir.Location" type="System.Drawing.Point, System.Drawing">
     <value>13, 93</value>
   </data>
-  <data name="btnLista.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnImprimir.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 31</value>
   </data>
-  <data name="btnLista.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnImprimir.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
   </data>
-  <data name="btnLista.Text" xml:space="preserve">
+  <data name="btnImprimir.Text" xml:space="preserve">
     <value>Imprimir</value>
   </data>
-  <data name="&gt;&gt;btnLista.Name" xml:space="preserve">
-    <value>btnLista</value>
+  <data name="&gt;&gt;btnImprimir.Name" xml:space="preserve">
+    <value>btnImprimir</value>
   </data>
-  <data name="&gt;&gt;btnLista.Type" xml:space="preserve">
+  <data name="&gt;&gt;btnImprimir.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnLista.Parent" xml:space="preserve">
+  <data name="&gt;&gt;btnImprimir.Parent" xml:space="preserve">
     <value>GroupRetiro</value>
   </data>
-  <data name="&gt;&gt;btnLista.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnImprimir.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="Label2.AutoSize" type="System.Boolean, mscorlib">

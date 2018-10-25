@@ -195,6 +195,18 @@
     <Compile Include="IU\SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\frmSeRetiran.Designer.vb">
+      <DependentUpon>frmSeRetiran.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmSeRetiran.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reservasretiro.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reservasretiro.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reportes\detalle.rpt">
@@ -248,6 +260,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IU\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmSeRetiran.resx">
+      <DependentUpon>frmSeRetiran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reservasretiro.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reservasretiro.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

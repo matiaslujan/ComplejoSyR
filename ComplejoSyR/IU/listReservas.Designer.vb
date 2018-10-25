@@ -23,9 +23,9 @@ Partial Class listReservas
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(listReservas))
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle
         Me.dgvReservas = New System.Windows.Forms.DataGridView
         Me.btnAgregar = New System.Windows.Forms.Button
         Me.btnEliminar = New System.Windows.Forms.Button
@@ -33,7 +33,7 @@ Partial Class listReservas
         Me.Label1 = New System.Windows.Forms.Label
         Me.txtBuscar = New System.Windows.Forms.TextBox
         Me.cbFiltros = New System.Windows.Forms.ComboBox
-        Me.btnLista = New System.Windows.Forms.Button
+        Me.btnImprimir = New System.Windows.Forms.Button
         Me.Label2 = New System.Windows.Forms.Label
         Me.Label3 = New System.Windows.Forms.Label
         Me.GroupRetiro = New System.Windows.Forms.GroupBox
@@ -52,35 +52,35 @@ Partial Class listReservas
         resources.ApplyResources(Me.dgvReservas, "dgvReservas")
         Me.dgvReservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgvReservas.BackgroundColor = System.Drawing.Color.LemonChiffon
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.SaddleBrown
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Coral
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.PeachPuff
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvReservas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.PeachPuff
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvReservas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvReservas.Cursor = System.Windows.Forms.Cursors.Hand
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = System.Drawing.Color.LemonChiffon
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.SaddleBrown
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Chocolate
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.PeachPuff
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.dgvReservas.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.Color.LemonChiffon
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Chocolate
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.PeachPuff
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvReservas.DefaultCellStyle = DataGridViewCellStyle5
         Me.dgvReservas.MultiSelect = False
         Me.dgvReservas.Name = "dgvReservas"
         Me.dgvReservas.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.SaddleBrown
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Coral
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.PeachPuff
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvReservas.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = System.Drawing.Color.LemonChiffon
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.Color.SaddleBrown
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Coral
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.PeachPuff
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvReservas.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.dgvReservas.RowHeadersVisible = False
         Me.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         '
@@ -136,16 +136,16 @@ Partial Class listReservas
         Me.cbFiltros.Items.AddRange(New Object() {resources.GetString("cbFiltros.Items"), resources.GetString("cbFiltros.Items1"), resources.GetString("cbFiltros.Items2"), resources.GetString("cbFiltros.Items3"), resources.GetString("cbFiltros.Items4")})
         Me.cbFiltros.Name = "cbFiltros"
         '
-        'btnLista
+        'btnImprimir
         '
-        Me.btnLista.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnLista.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnLista.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
-        Me.btnLista.FlatAppearance.BorderSize = 2
-        resources.ApplyResources(Me.btnLista, "btnLista")
-        Me.btnLista.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnLista.Name = "btnLista"
-        Me.btnLista.UseVisualStyleBackColor = False
+        Me.btnImprimir.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnImprimir.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnImprimir.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
+        Me.btnImprimir.FlatAppearance.BorderSize = 2
+        resources.ApplyResources(Me.btnImprimir, "btnImprimir")
+        Me.btnImprimir.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnImprimir.Name = "btnImprimir"
+        Me.btnImprimir.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -164,7 +164,7 @@ Partial Class listReservas
         resources.ApplyResources(Me.GroupRetiro, "GroupRetiro")
         Me.GroupRetiro.BackColor = System.Drawing.Color.Transparent
         Me.GroupRetiro.Controls.Add(Me.btnConfirmar)
-        Me.GroupRetiro.Controls.Add(Me.btnLista)
+        Me.GroupRetiro.Controls.Add(Me.btnImprimir)
         Me.GroupRetiro.Controls.Add(Me.Label3)
         Me.GroupRetiro.Controls.Add(Me.Label2)
         Me.GroupRetiro.Name = "GroupRetiro"
@@ -222,7 +222,7 @@ Partial Class listReservas
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents txtBuscar As System.Windows.Forms.TextBox
     Friend WithEvents cbFiltros As System.Windows.Forms.ComboBox
-    Friend WithEvents btnLista As System.Windows.Forms.Button
+    Friend WithEvents btnImprimir As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents GroupRetiro As System.Windows.Forms.GroupBox

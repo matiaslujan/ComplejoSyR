@@ -99,6 +99,7 @@
     Private Sub btnNuevaReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevaReserva.Click
         'si la fila esta disponible accede a nuevareserva
         If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Or dgvOcupacion.CurrentRow.Cells("FEgreso").Value = Date.Today Then
+            'Or dgvOcupacion.CurrentRow.Cells("FIngreso").Value = Calendario.SelectionRange.End.ToString Then
 
             NuevaReserva()
 
