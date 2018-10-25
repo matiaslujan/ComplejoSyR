@@ -123,9 +123,23 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property inciolog22() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("inciolog22", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
         Friend ReadOnly Property inicio() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("inicio", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        Friend ReadOnly Property iniciolog() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("iniciolog", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
