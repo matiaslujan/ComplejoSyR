@@ -245,11 +245,11 @@
 
             For Each row In dgvAlojamientos.Rows
 
-                If reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, CDate(dtpFechaEgreso.Text), CDate(dtpFechaIngreso.Text), reserva.Id) = False Then
-
+                If reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, CDate(dtpFechaEgreso.Text), CDate(dtpFechaIngreso.Text), reserva.Id) <> True Then
+                    Dim fingresoprox As Date = reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, CDate(dtpFechaEgreso.Text), CDate(dtpFechaIngreso.Text), reserva.Id)
                     Dim nro As Integer = row.cells("Numero").value
                     Dim modalidad As String = row.cells("Modalidad").value
-                    MsgBox("El alojamiento: " + CStr(modalidad) + " " + CStr(nro) + " no esta disponible en la fecha indicada")
+                    MsgBox("El alojamiento: " + CStr(modalidad) + " " + CStr(nro) + " tiene una reserva para la fecha: " + CStr(fingresoprox))
 
                 End If
 

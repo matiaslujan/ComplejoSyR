@@ -325,7 +325,7 @@ Public Class ReservaClass
         End Try
 
     End Sub
-    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Boolean
+    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer)
         Try
             Conectar()
 
@@ -338,15 +338,34 @@ Public Class ReservaClass
             comando.Parameters.AddWithValue("@FE", FE)
             comando.Parameters.AddWithValue("@idreserva", idreserva)
 
-            Dim filas As Integer = comando.ExecuteScalar
+            Dim lista As SqlDataReader = comando.ExecuteReader
+            Dim FIProxima As Date
 
-            If filas > 0 Then
+            If lista.HasRows Then
+
+                While lista.Read()
+
+                    FIProxima = (lista("nombre"))
+
+                End While
+
                 Desconectar()
-                Return False
+                Return FIProxima
+
             Else
                 Desconectar()
                 Return True
             End If
+
+            'Dim filas As Integer = comando.ExecuteScalar
+
+            'If filas > 0 Then
+            'Desconectar()
+            'Return False
+            'Else
+            'Desconectar()
+            ' Return True
+            ' End If
 
         Catch ex As Exception
 
