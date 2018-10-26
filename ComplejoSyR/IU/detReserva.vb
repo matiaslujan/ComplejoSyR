@@ -243,10 +243,14 @@
 
         If reserva.Accion = "Modificar" Then
 
+            Dim nwFE As Date = CDate(dtpFechaEgreso.Text)
+
             For Each row In dgvAlojamientos.Rows
 
-                If reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, CDate(dtpFechaEgreso.Text), CDate(dtpFechaIngreso.Text), reserva.Id) <> True Then
-                    Dim fingresoprox As Date = reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, CDate(dtpFechaEgreso.Text), CDate(dtpFechaIngreso.Text), reserva.Id)
+                If reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, nwFE, reserva.FIngreso, reserva.Id) = True Then
+                    Continue For
+                Else
+                    Dim fingresoprox As Date = reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, nwFE, reserva.FIngreso, reserva.Id)
                     Dim nro As Integer = row.cells("Numero").value
                     Dim modalidad As String = row.cells("Modalidad").value
                     MsgBox("El alojamiento: " + CStr(modalidad) + " " + CStr(nro) + " tiene una reserva para la fecha: " + CStr(fingresoprox))
