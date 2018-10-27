@@ -325,7 +325,8 @@ Public Class ReservaClass
         End Try
 
     End Sub
-    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer)
+    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Boolean
+
         Try
             Conectar()
 
@@ -338,38 +339,51 @@ Public Class ReservaClass
             comando.Parameters.AddWithValue("@FE", FE)
             comando.Parameters.AddWithValue("@idreserva", idreserva)
 
-            Dim lista As SqlDataReader = comando.ExecuteReader
-            Dim FIProxima As Date
+            Dim filas As SqlDataReader = comando.ExecuteReader
 
-            If lista.HasRows Then
+            If filas.HasRows Then
 
-                While lista.Read()
 
-                    FIProxima = (lista("nombre"))
-
-                End While
-
-                Desconectar()
-                Return FIProxima
+                Return False
 
             Else
-                Desconectar()
+
                 Return True
+
             End If
 
-            'Dim filas As Integer = comando.ExecuteScalar
-
-            'If filas > 0 Then
-            'Desconectar()
-            'Return False
-            'Else
-            'Desconectar()
-            ' Return True
-            ' End If
 
         Catch ex As Exception
 
             MsgBox(ex.Message)
+        Finally
+            Desconectar()
+
+        End Try
+
+    End Function
+    Public Function FechaProxima(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Date
+
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("DisponibilidadDelAlojamiento", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@idalojamiento", idalojamiento)
+            comando.Parameters.AddWithValue("@FI", FI)
+            comando.Parameters.AddWithValue("@FE", FE)
+            comando.Parameters.AddWithValue("@idreserva", idreserva)
+
+            Dim fechaing As Date = comando.ExecuteScalar
+
+            Return fechaing
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
 
         End Try
 
@@ -508,6 +522,40 @@ Public Class ReservaClass
             Desconectar()
         End Try
 
+    End Sub
+
+    Public Sub IngresanHoy(ByVal dgv As DataGridView)
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("ReservasIngresantes", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@Fecha", DateTime.Today)
+
+            Dim table As New Data.DataTable
+
+            Dim adapter As New SqlDataAdapter(comando)
+
+            adapter.Fill(table)
+
+            dgv.DataSource = table
+
+            ColumLstReservas(dgv)
+
+            If dgv.Rows.Count > 0 Then
+
+                dgv.Rows(0).Selected = False
+
+            End If
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+        End Try
 
     End Sub
     Public Sub ActualizarRetiro(ByVal reserva As ReservaClass)
@@ -681,9 +729,15 @@ Public Class ReservaClass
 
                 If Row.Cells("FEgreso").Value = Date.Today Then
 
+                    Row.DefaultCellStyle.BackColor = Color.YellowGreen
+
+                End If
+                If Row.Cells("FIngreso").Value = Date.Today Then
+
                     Row.DefaultCellStyle.BackColor = Color.DarkKhaki
 
                 End If
+
             End If
 
         Next

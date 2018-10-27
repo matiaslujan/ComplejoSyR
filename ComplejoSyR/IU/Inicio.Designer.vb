@@ -42,6 +42,7 @@ Partial Class Inicio
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel
         Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel
         Me.btnSeRetiran = New System.Windows.Forms.Button
+        Me.Button1 = New System.Windows.Forms.Button
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvOcupacion, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -154,7 +155,7 @@ Partial Class Inicio
         DataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Chocolate
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.HotTrack
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.PeachPuff
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
@@ -211,7 +212,7 @@ Partial Class Inicio
         Me.btnNuevaReserva.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
-        Me.btnNuevaReserva.FlatAppearance.BorderSize = 2
+        Me.btnNuevaReserva.FlatAppearance.BorderSize = 0
         Me.btnNuevaReserva.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
         Me.btnNuevaReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
@@ -233,7 +234,7 @@ Partial Class Inicio
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
-        Me.btnBuscar.FlatAppearance.BorderSize = 2
+        Me.btnBuscar.FlatAppearance.BorderSize = 0
         Me.btnBuscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
@@ -289,18 +290,20 @@ Partial Class Inicio
         Me.TableLayoutPanel3.Controls.Add(Me.btnNuevaReserva, 0, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.btnBuscar, 1, 1)
         Me.TableLayoutPanel3.Controls.Add(Me.btnSeRetiran, 0, 0)
+        Me.TableLayoutPanel3.Controls.Add(Me.Button1, 1, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 451)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
+        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(511, 65)
         Me.TableLayoutPanel3.TabIndex = 7
         '
         'btnSeRetiran
         '
-        Me.btnSeRetiran.BackColor = System.Drawing.Color.DarkKhaki
+        Me.btnSeRetiran.BackColor = System.Drawing.Color.YellowGreen
         Me.btnSeRetiran.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnSeRetiran.FlatAppearance.BorderSize = 0
         Me.btnSeRetiran.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -310,6 +313,19 @@ Partial Class Inicio
         Me.btnSeRetiran.TabIndex = 134
         Me.btnSeRetiran.Text = "Se retiran hoy"
         Me.btnSeRetiran.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkKhaki
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Location = New System.Drawing.Point(258, 3)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(250, 21)
+        Me.Button1.TabIndex = 135
+        Me.Button1.Text = "Ingresan Hoy"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Inicio
         '
@@ -353,5 +369,6 @@ Partial Class Inicio
     Friend WithEvents TableLayoutPanel3 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents cbTipo As System.Windows.Forms.ToolStripComboBox
     Friend WithEvents btnSeRetiran As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

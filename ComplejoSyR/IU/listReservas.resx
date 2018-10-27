@@ -315,6 +315,9 @@
   <data name="cbFiltros.Items4" xml:space="preserve">
     <value>Se retiran hoy</value>
   </data>
+  <data name="cbFiltros.Items5" xml:space="preserve">
+    <value>Ingresan hoy</value>
+  </data>
   <data name="cbFiltros.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 5</value>
   </data>

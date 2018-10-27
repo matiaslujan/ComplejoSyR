@@ -72,6 +72,7 @@
     End Sub
     'si se selecciona una fila disponible se realiza una nueva reserva y se carga el alojamiento seleccionado
     Public Sub NuevaReserva()
+
         If dgvOcupacion.CurrentRow Is Nothing Then
 
             MsgBox("Seleccione un alojamiento")
@@ -98,17 +99,12 @@
 
     Private Sub btnNuevaReserva_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevaReserva.Click
         'si la fila esta disponible accede a nuevareserva
-        If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Or dgvOcupacion.CurrentRow.Cells("FEgreso").Value = Date.Today Then
-            'Or dgvOcupacion.CurrentRow.Cells("FIngreso").Value = Calendario.SelectionRange.End.ToString Then
+        'If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Or dgvOcupacion.CurrentRow.Cells("FEgreso").Value = Date.Today Then
+        
+        Dim det As New detReserva
 
-            NuevaReserva()
-
-        Else
-            'sino avisa que ese alojamiento esta ocupado
-            MsgBox("Alojamiento no disponible")
-
-        End If
-
+        det.ShowDialog()
+     
     End Sub
 
     Private Sub dgvOcupacion_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvOcupacion.CellDoubleClick
@@ -119,6 +115,7 @@
     'al hacer dobleclick en un item de la lista si este esta ocupado se accedde al detalle e esta reserva
     'sino se realiza una nueva reserva
     Private Sub RESERVA()
+
         If IsDBNull(dgvOcupacion.CurrentRow.Cells("IdReserva").Value) = True Then
 
             NuevaReserva()
@@ -134,16 +131,15 @@
 
             Dim det As New detReserva(res)
 
-            Try
-                'det.idreserva = res.Id
+            ' Try
 
-                det.ShowDialog()
+            det.ShowDialog()
 
-            Catch ex As Exception
+            'Catch ex As Exception
 
-                MsgBox(ex.Message)
+            '    MsgBox(ex.Message)
 
-            End Try
+            'End Try
 
             Ocupacion()
 
@@ -165,6 +161,16 @@
         Dim lst As New listReservas
 
         lst.filtro = "Se retiran hoy"
+
+        lst.ShowDialog()
+
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+
+        Dim lst As New listReservas
+
+        lst.filtro = "Ingresan hoy"
 
         lst.ShowDialog()
 

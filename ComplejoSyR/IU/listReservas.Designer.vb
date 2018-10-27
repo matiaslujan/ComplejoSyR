@@ -131,7 +131,7 @@ Partial Class listReservas
         '
         resources.ApplyResources(Me.cbFiltros, "cbFiltros")
         Me.cbFiltros.FormattingEnabled = True
-        Me.cbFiltros.Items.AddRange(New Object() {resources.GetString("cbFiltros.Items"), resources.GetString("cbFiltros.Items1"), resources.GetString("cbFiltros.Items2"), resources.GetString("cbFiltros.Items3"), resources.GetString("cbFiltros.Items4")})
+        Me.cbFiltros.Items.AddRange(New Object() {resources.GetString("cbFiltros.Items"), resources.GetString("cbFiltros.Items1"), resources.GetString("cbFiltros.Items2"), resources.GetString("cbFiltros.Items3"), resources.GetString("cbFiltros.Items4"), resources.GetString("cbFiltros.Items5")})
         Me.cbFiltros.Name = "cbFiltros"
         '
         'btnImprimir

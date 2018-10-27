@@ -248,12 +248,16 @@
             For Each row In dgvAlojamientos.Rows
 
                 If reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, nwFE, reserva.FIngreso, reserva.Id) = True Then
+
                     Continue For
+
                 Else
-                    Dim fingresoprox As Date = reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, nwFE, reserva.FIngreso, reserva.Id)
+
+                    Dim fi As Date = reserva.FechaProxima(row.cells("idalojamiento").value, nwFE, reserva.FIngreso, reserva.Id)
                     Dim nro As Integer = row.cells("Numero").value
                     Dim modalidad As String = row.cells("Modalidad").value
-                    MsgBox("El alojamiento: " + CStr(modalidad) + " " + CStr(nro) + " tiene una reserva para la fecha: " + CStr(fingresoprox))
+                    MsgBox("El alojamiento: " + CStr(modalidad) + " " + CStr(nro) + " tiene una reserva para la fecha " + CStr(fi))
+                    dtpFechaEgreso.Text = reserva.FEgreso
 
                 End If
 
@@ -268,9 +272,7 @@
         reserva.CantidadDeDias(txtCantDia, dtpFechaIngreso, dtpFechaEgreso)
 
     End Sub
-
     'agregar nuevo cliente
-
     Private Sub btnNuevo_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnNuevo.Click
 
         Dim det As New detCliente(cbClientes)
@@ -294,7 +296,6 @@
         reserva.eliminarregistro(dgvAlojamientos)
 
         reserva.OcultarColumnas(dgvAlojamientos)
-
 
     End Sub
 

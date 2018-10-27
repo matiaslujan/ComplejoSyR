@@ -55,6 +55,9 @@
             Case "Se retiran hoy"
                 res.SeRetiran(dgvReservas)
                 dgvReservas.ReadOnly = False
+
+            Case "Ingresan hoy"
+                res.IngresanHoy(dgvReservas)
         End Select
     End Sub
     Private Sub listReservas_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
