@@ -152,11 +152,11 @@ Partial Class Inicio
         Me.dgvOcupacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvOcupacion.Cursor = System.Windows.Forms.Cursors.Hand
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.Color.LemonChiffon
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.White
         DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.HotTrack
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.PeachPuff
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOcupacion.Dock = System.Windows.Forms.DockStyle.Fill
@@ -211,11 +211,11 @@ Partial Class Inicio
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnNuevaReserva.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
-        Me.btnNuevaReserva.FlatAppearance.BorderSize = 0
+        Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnNuevaReserva.FlatAppearance.BorderSize = 2
         Me.btnNuevaReserva.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
-        Me.btnNuevaReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnNuevaReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Wheat
+        Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Wheat
         Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevaReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevaReserva.ForeColor = System.Drawing.Color.SaddleBrown
@@ -233,11 +233,11 @@ Partial Class Inicio
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnBuscar.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
-        Me.btnBuscar.FlatAppearance.BorderSize = 0
+        Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.btnBuscar.FlatAppearance.BorderSize = 2
         Me.btnBuscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
-        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Wheat
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Wheat
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.SaddleBrown
@@ -303,7 +303,7 @@ Partial Class Inicio
         '
         'btnSeRetiran
         '
-        Me.btnSeRetiran.BackColor = System.Drawing.Color.YellowGreen
+        Me.btnSeRetiran.BackColor = System.Drawing.Color.LightGreen
         Me.btnSeRetiran.Dock = System.Windows.Forms.DockStyle.Fill
         Me.btnSeRetiran.FlatAppearance.BorderSize = 0
         Me.btnSeRetiran.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -311,20 +311,21 @@ Partial Class Inicio
         Me.btnSeRetiran.Name = "btnSeRetiran"
         Me.btnSeRetiran.Size = New System.Drawing.Size(249, 21)
         Me.btnSeRetiran.TabIndex = 134
-        Me.btnSeRetiran.Text = "Se retiran hoy"
+        Me.btnSeRetiran.Text = "SE RETIRAN HOY"
         Me.btnSeRetiran.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.BackColor = System.Drawing.Color.DarkKhaki
+        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.Button1.Location = New System.Drawing.Point(258, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(250, 21)
         Me.Button1.TabIndex = 135
-        Me.Button1.Text = "Ingresan Hoy"
+        Me.Button1.Text = "INGRESAN HOY"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Inicio

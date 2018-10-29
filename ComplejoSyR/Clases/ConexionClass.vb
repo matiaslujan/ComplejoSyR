@@ -13,13 +13,89 @@ Public Class ConexionClass
             conexion_ = value
         End Set
     End Property
+    Private strConexion_ As String
+    Public Property strConexion() As String
+        Get
+            Return strConexion_
+        End Get
+        Set(ByVal value As String)
+            strConexion_ = value
+        End Set
+    End Property
+    Private servidor_ As String
+    Public Property servidor() As String
+        Get
+            Return servidor_
+        End Get
+        Set(ByVal value As String)
+            servidor_ = value
+        End Set
+    End Property
+    Private usuario_ As String
+    Public Property usuario() As String
+        Get
+            Return usuario_
+        End Get
+        Set(ByVal value As String)
+            usuario_ = value
+        End Set
+    End Property
+    Private basededatos_ As String
+    Public Property basededatos() As String
+        Get
+            Return basededatos_
+        End Get
+        Set(ByVal value As String)
+            basededatos_ = value
+        End Set
+    End Property
+    Private password_ As String
+    Public Property password() As String
+        Get
+            Return password_
+        End Get
+        Set(ByVal value As String)
+            password_ = value
+        End Set
+    End Property
+    Private intsecurity_ As Boolean = False
+    Public Property intsecurity() As Boolean
+        Get
+            Return intsecurity_
+        End Get
+        Set(ByVal value As Boolean)
+            intsecurity_ = value
+        End Set
+    End Property
+    Public Sub New()
 
+        servidor = "LAPTOP-K16JEHVE\DEVELOPER"
+        basededatos = "complejosolyrio"
+        'basededatos = "csyr"
+
+        usuario = ""
+        password = ""
+
+        If usuario = "" And password = "" Then
+
+            intsecurity = True
+
+        End If
+    End Sub
     Public Sub Conectar()
         Try
 
-            conexion.ConnectionString = "Server=LAPTOP-K16JEHVE\DEVELOPER;Database=complejosolyrio;Trusted_connection=true;"
+            'conexion.ConnectionString = "Server=LAPTOP-K16JEHVE\DEVELOPER;Database=complejosolyrio;Trusted_connection=true;"
+            'conexion.ConnectionString = "Server=" & servidor & ";Database=" & basededatos & ";Trusted_connection=true;"
+            ' conexion.Open()
+            strConexion_ = "Server=" & servidor & ";Database=" & basededatos & ";Trusted_connection=true;"
+
+            conexion.ConnectionString = strConexion_
 
             conexion.Open()
+            'Dim nConexion As New SqlConnection(strConexion)
+
+            'nConexion.Open()
 
         Catch ex As Exception
 
@@ -30,6 +106,11 @@ Public Class ConexionClass
     End Sub
 
     Public Sub Desconectar()
+        ' If Data.ConnectionState.Open Then
+
+        'Data.ConnectionState = ConnectionState.Closed
+
+        'End If
 
         Try
             conexion.Close()

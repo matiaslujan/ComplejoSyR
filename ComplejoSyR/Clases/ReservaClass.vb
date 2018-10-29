@@ -719,22 +719,25 @@ Public Class ReservaClass
 
         For Each Row As DataGridViewRow In dgv.Rows
 
-            If IsDBNull(Row.Cells("IdReserva").Value) = True Then
+            If IsDBNull(Row.Cells("IdReserva").Value) = False Then
 
-                Row.DefaultCellStyle.BackColor = Color.LemonChiffon
+                'alojamientos ocupados
+                Row.DefaultCellStyle.BackColor = Color.FromArgb(255, 199, 48)
 
-            Else
-
-                Row.DefaultCellStyle.BackColor = Color.FromArgb(241, 185, 138)
+            
 
                 If Row.Cells("FEgreso").Value = Date.Today Then
-
-                    Row.DefaultCellStyle.BackColor = Color.YellowGreen
+                    'se retiran hoy 255; 255; 128
+                    Row.DefaultCellStyle.ForeColor = Color.Black
+                    Row.DefaultCellStyle.BackColor = Color.LightGreen
 
                 End If
-                If Row.Cells("FIngreso").Value = Date.Today Then
 
-                    Row.DefaultCellStyle.BackColor = Color.DarkKhaki
+                If Row.Cells("FIngreso").Value = Date.Today Then
+                    'ingresan hoy
+                    Row.DefaultCellStyle.BackColor = Color.FromArgb(255, 255, 138)
+
+                    Row.DefaultCellStyle.ForeColor = Color.Black
 
                 End If
 
