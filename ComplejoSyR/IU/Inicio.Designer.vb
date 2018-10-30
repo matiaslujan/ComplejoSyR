@@ -214,8 +214,8 @@ Partial Class Inicio
         Me.btnNuevaReserva.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnNuevaReserva.FlatAppearance.BorderSize = 2
         Me.btnNuevaReserva.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
-        Me.btnNuevaReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Wheat
-        Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Wheat
+        Me.btnNuevaReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.btnNuevaReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnNuevaReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnNuevaReserva.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnNuevaReserva.ForeColor = System.Drawing.Color.SaddleBrown
@@ -236,8 +236,8 @@ Partial Class Inicio
         Me.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(199, Byte), Integer), CType(CType(48, Byte), Integer))
         Me.btnBuscar.FlatAppearance.BorderSize = 2
         Me.btnBuscar.FlatAppearance.CheckedBackColor = System.Drawing.Color.White
-        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Wheat
-        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Wheat
+        Me.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White
+        Me.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.SaddleBrown

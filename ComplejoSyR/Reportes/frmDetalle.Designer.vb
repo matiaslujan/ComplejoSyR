@@ -29,24 +29,27 @@ Partial Class frmDetalle
         'CrystalReportViewer1
         '
         Me.CrystalReportViewer1.ActiveViewIndex = 0
+        Me.CrystalReportViewer1.AutoSize = True
+        Me.CrystalReportViewer1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.CrystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CrystalReportViewer1.DisplayGroupTree = False
         Me.CrystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.ReportSource = Me.detalle1
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(741, 368)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(474, 615)
         Me.CrystalReportViewer1.TabIndex = 0
         '
         'frmDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(741, 368)
+        Me.ClientSize = New System.Drawing.Size(474, 615)
         Me.Controls.Add(Me.CrystalReportViewer1)
         Me.Name = "frmDetalle"
         Me.Text = "Detalle de Reserva"
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents CrystalReportViewer1 As CrystalDecisions.Windows.Forms.CrystalReportViewer

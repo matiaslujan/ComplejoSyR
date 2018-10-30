@@ -35,15 +35,16 @@ Partial Class frmSeRetiran
         Me.CrystalReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.CrystalReportViewer1.Name = "CrystalReportViewer1"
         Me.CrystalReportViewer1.ReportSource = Me.reservasretiro1
-        Me.CrystalReportViewer1.Size = New System.Drawing.Size(892, 520)
+        Me.CrystalReportViewer1.Size = New System.Drawing.Size(474, 615)
         Me.CrystalReportViewer1.TabIndex = 0
         '
         'frmSeRetiran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(892, 520)
+        Me.ClientSize = New System.Drawing.Size(474, 615)
         Me.Controls.Add(Me.CrystalReportViewer1)
+        Me.MaximumSize = New System.Drawing.Size(490, 654)
         Me.Name = "frmSeRetiran"
         Me.Text = "frmSeRetiran"
         Me.ResumeLayout(False)
