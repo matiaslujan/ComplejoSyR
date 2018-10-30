@@ -174,9 +174,11 @@
     End Sub
 
     Private Sub btnImprimir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnImprimir.Click
-        Dim det As New frmSeRetiran
+        'Dim det As New frmSeRetiran
 
-        det.ShowDialog()
+        'det.ShowDialog()
+        Dim impresion As New Impresiones
+        impresion.seretiranhoy(frmSeRetiran, frmSeRetiran.reservasretiro1, Date.Today)
 
     End Sub
 End Class

@@ -777,6 +777,12 @@ Public Class ReservaClass
         dgv.Columns("Id").Visible = False
         dgv.Columns("Accion").Visible = False
         dgv.Columns("Conexion").Visible = False
+        dgv.Columns("usuario").Visible = False
+        dgv.Columns("password").Visible = False
+        dgv.Columns("strconexion").Visible = False
+        dgv.Columns("basededatos").Visible = False
+        dgv.Columns("servidor").Visible = False
+        dgv.Columns("intsecurity").Visible = False
 
         If dgv.Tag = "Alojamientos" Then
 

@@ -34,4 +34,18 @@ Public Class Impresiones
         frmdetalle.Dispose()
 
     End Sub
+    Public Sub seretiranhoy(ByVal frmdetalle As Form, ByVal objreporte As Object, ByVal fechar As Date)
+
+        Dim parametros As New ParameterValues
+        Dim fecha As New ParameterDiscreteValue
+        parametros.Clear()
+        fecha.Value = fechar
+        parametros.Add(fecha)
+
+        objreporte.datadefinition.parameterfields("@Fecha").applycurrentvalues(parametros)
+
+        frmdetalle.ShowDialog()
+        frmdetalle.Dispose()
+
+    End Sub
 End Class
