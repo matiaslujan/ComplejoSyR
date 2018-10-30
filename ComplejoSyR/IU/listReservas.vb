@@ -23,6 +23,16 @@
 
         End If
 
+        If cbFiltros.SelectedItem <> "Ingresan hoy" Then
+
+            btnIngresantes.Visible = False
+
+        Else
+
+            btnIngresantes.Visible = True
+
+        End If
+
         If cbFiltros.SelectedItem <> "Sin Señar" Then
 
             btnCancelarReserva.Visible = False
@@ -179,6 +189,13 @@
         'det.ShowDialog()
         Dim impresion As New Impresiones
         impresion.seretiranhoy(frmSeRetiran, frmSeRetiran.reservasretiro1, Date.Today)
+
+    End Sub
+
+    Private Sub btnIngresantes_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnIngresantes.Click
+        Dim impresion As New Impresiones
+
+        impresion.seretiranhoy(frmIngreso, frmIngreso.ingresanhoy1, Date.Today)
 
     End Sub
 End Class

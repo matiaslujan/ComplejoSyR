@@ -1,7 +1,4 @@
-﻿Imports CrystalDecisions.ReportSource
-Imports CrystalDecisions.CrystalReports.Engine
-Imports CrystalDecisions.Shared
-
+﻿Imports CrystalDecisions.Shared
 
 Public Class Impresiones
 

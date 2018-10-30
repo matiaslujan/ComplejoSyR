@@ -36,6 +36,7 @@ Partial Class listReservas
         Me.btnImprimir = New System.Windows.Forms.Button
         Me.GroupRetiro = New System.Windows.Forms.GroupBox
         Me.btnConfirmar = New System.Windows.Forms.Button
+        Me.btnIngresantes = New System.Windows.Forms.Button
         Me.btnCancelarReserva = New System.Windows.Forms.Button
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupRetiro.SuspendLayout()
@@ -166,6 +167,17 @@ Partial Class listReservas
         Me.btnConfirmar.Name = "btnConfirmar"
         Me.btnConfirmar.UseVisualStyleBackColor = False
         '
+        'btnIngresantes
+        '
+        Me.btnIngresantes.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnIngresantes.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnIngresantes.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
+        Me.btnIngresantes.FlatAppearance.BorderSize = 2
+        resources.ApplyResources(Me.btnIngresantes, "btnIngresantes")
+        Me.btnIngresantes.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnIngresantes.Name = "btnIngresantes"
+        Me.btnIngresantes.UseVisualStyleBackColor = False
+        '
         'btnCancelarReserva
         '
         Me.btnCancelarReserva.BackColor = System.Drawing.SystemColors.ControlLightLight
@@ -183,6 +195,7 @@ Partial Class listReservas
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(230, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.Controls.Add(Me.GroupRetiro)
+        Me.Controls.Add(Me.btnIngresantes)
         Me.Controls.Add(Me.cbFiltros)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.txtBuscar)
@@ -210,4 +223,5 @@ Partial Class listReservas
     Friend WithEvents GroupRetiro As System.Windows.Forms.GroupBox
     Friend WithEvents btnConfirmar As System.Windows.Forms.Button
     Friend WithEvents btnCancelarReserva As System.Windows.Forms.Button
+    Friend WithEvents btnIngresantes As System.Windows.Forms.Button
 End Class

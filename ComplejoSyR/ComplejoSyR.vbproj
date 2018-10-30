@@ -196,11 +196,23 @@
     <Compile Include="IU\SplashScreen.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reportes\frmIngreso.Designer.vb">
+      <DependentUpon>frmIngreso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\frmIngreso.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reportes\frmSeRetiran.Designer.vb">
       <DependentUpon>frmSeRetiran.vb</DependentUpon>
     </Compile>
     <Compile Include="Reportes\frmSeRetiran.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\ingresanhoy.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ingresanhoy.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reportes\reservasretiro.vb">
       <AutoGen>True</AutoGen>
@@ -262,8 +274,15 @@
     <EmbeddedResource Include="IU\SplashScreen.resx">
       <DependentUpon>SplashScreen.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\frmIngreso.resx">
+      <DependentUpon>frmIngreso.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\frmSeRetiran.resx">
       <DependentUpon>frmSeRetiran.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\ingresanhoy.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ingresanhoy.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\reservasretiro.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
