@@ -116,6 +116,13 @@ Namespace My.Resources
             End Get
         End Property
         
+        Friend ReadOnly Property icono() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("icono", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
         Friend ReadOnly Property inci() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("inci", resourceCulture)
