@@ -71,8 +71,6 @@ Public Class ConexionClass
 
         servidor = "LAPTOP-K16JEHVE\DEVELOPER"
         basededatos = "complejosolyrio"
-        'basededatos = "csyr"
-
         usuario = ""
         password = ""
 
@@ -85,17 +83,12 @@ Public Class ConexionClass
     Public Sub Conectar()
         Try
 
-            'conexion.ConnectionString = "Server=LAPTOP-K16JEHVE\DEVELOPER;Database=complejosolyrio;Trusted_connection=true;"
-            'conexion.ConnectionString = "Server=" & servidor & ";Database=" & basededatos & ";Trusted_connection=true;"
-            ' conexion.Open()
+    
             strConexion_ = "Server=" & servidor & ";Database=" & basededatos & ";Trusted_connection=true;"
 
             conexion.ConnectionString = strConexion_
 
             conexion.Open()
-            'Dim nConexion As New SqlConnection(strConexion)
-
-            'nConexion.Open()
 
         Catch ex As Exception
 
@@ -106,12 +99,7 @@ Public Class ConexionClass
     End Sub
 
     Public Sub Desconectar()
-        ' If Data.ConnectionState.Open Then
-
-        'Data.ConnectionState = ConnectionState.Closed
-
-        'End If
-
+   
         Try
             conexion.Close()
 
