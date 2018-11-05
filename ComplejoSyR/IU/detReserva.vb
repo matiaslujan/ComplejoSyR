@@ -247,7 +247,7 @@
 
             For Each row In dgvAlojamientos.Rows
                 Dim alojamiento As New AlojamientoClass
-                If alojamiento.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, nwFE, reserva.FIngreso, reserva.Id) = True Then
+                If alojamiento.DisponibilidadDeUnAlojamiento(row.cells("idalojamiento").value, nwFE, reserva.FIngreso, reserva.Id) = True Then
 
                     Continue For
 

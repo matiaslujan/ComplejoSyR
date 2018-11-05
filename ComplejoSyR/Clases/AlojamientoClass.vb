@@ -158,7 +158,7 @@ Public Class AlojamientoClass
     End Sub
     '' traer alojamientos disponibles segun las fechas ingresadas
 
-    Public Sub AlojDisponibles(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date, ByVal Tipo As String)
+    Public Sub Disponibles(ByVal dgv As DataGridView, ByVal FIng As Date, ByVal FEg As Date, ByVal Tipo As String)
         Try
 
             Conectar()
@@ -190,7 +190,7 @@ Public Class AlojamientoClass
         End Try
     End Sub
 
-    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Boolean
+    Public Function DisponibilidadDeUnAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Boolean
 
         Try
             Conectar()

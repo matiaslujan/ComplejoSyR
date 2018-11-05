@@ -45,7 +45,7 @@
 
         Dim aloj As New AlojamientoClass
 
-        aloj.AlojDisponibles(dgvAlojRes, FIn, FEg, cbTipo.SelectedItem)
+        aloj.Disponibles(dgvAlojRes, FIn, FEg, cbTipo.SelectedItem)
 
     End Sub
 
