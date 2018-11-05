@@ -325,43 +325,43 @@ Public Class ReservaClass
         End Try
 
     End Sub
-    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Boolean
+    'Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Boolean
 
-        Try
-            Conectar()
+    '    Try
+    '        Conectar()
 
-            Dim comando As New SqlCommand("DisponibilidadDelAlojamiento", conexion)
+    '        Dim comando As New SqlCommand("DisponibilidadDelAlojamiento", conexion)
 
-            comando.CommandType = CommandType.StoredProcedure
+    '        comando.CommandType = CommandType.StoredProcedure
 
-            comando.Parameters.AddWithValue("@idalojamiento", idalojamiento)
-            comando.Parameters.AddWithValue("@FI", FI)
-            comando.Parameters.AddWithValue("@FE", FE)
-            comando.Parameters.AddWithValue("@idreserva", idreserva)
+    '        comando.Parameters.AddWithValue("@idalojamiento", idalojamiento)
+    '        comando.Parameters.AddWithValue("@FI", FI)
+    '        comando.Parameters.AddWithValue("@FE", FE)
+    '        comando.Parameters.AddWithValue("@idreserva", idreserva)
 
-            Dim filas As SqlDataReader = comando.ExecuteReader
+    '        Dim filas As SqlDataReader = comando.ExecuteReader
 
-            If filas.HasRows Then
-
-
-                Return False
-
-            Else
-
-                Return True
-
-            End If
+    '        If filas.HasRows Then
 
 
-        Catch ex As Exception
+    '            Return False
 
-            MsgBox(ex.Message)
-        Finally
-            Desconectar()
+    '        Else
 
-        End Try
+    '            Return True
 
-    End Function
+    '        End If
+
+
+    '    Catch ex As Exception
+
+    '        MsgBox(ex.Message)
+    '    Finally
+    '        Desconectar()
+
+    '    End Try
+
+    'End Function
     Public Function FechaProxima(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Date
 
         Try

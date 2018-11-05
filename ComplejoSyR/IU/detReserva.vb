@@ -246,8 +246,8 @@
             Dim nwFE As Date = CDate(dtpFechaEgreso.Text)
 
             For Each row In dgvAlojamientos.Rows
-
-                If reserva.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, nwFE, reserva.FIngreso, reserva.Id) = True Then
+                Dim alojamiento As New AlojamientoClass
+                If alojamiento.DisponibilidadDelAlojamiento(row.cells("idalojamiento").value, nwFE, reserva.FIngreso, reserva.Id) = True Then
 
                     Continue For
 
@@ -652,8 +652,7 @@
 
 
     Private Sub btnDetalle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDetalle.Click
-        'Dim d As New frmDetalle
-        'd.ShowDialog()
+       
         Dim impresion As New Impresiones
         impresion.detallereserva(frmDetalle, frmDetalle.detalle1, reserva.Id)
 

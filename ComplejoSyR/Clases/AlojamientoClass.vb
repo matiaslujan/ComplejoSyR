@@ -189,4 +189,42 @@ Public Class AlojamientoClass
 
         End Try
     End Sub
+
+    Public Function DisponibilidadDelAlojamiento(ByVal idalojamiento As Integer, ByVal FE As Date, ByVal FI As Date, ByVal idreserva As Integer) As Boolean
+
+        Try
+            Conectar()
+
+            Dim comando As New SqlCommand("DisponibilidadDelAlojamiento", conexion)
+
+            comando.CommandType = CommandType.StoredProcedure
+
+            comando.Parameters.AddWithValue("@idalojamiento", idalojamiento)
+            comando.Parameters.AddWithValue("@FI", FI)
+            comando.Parameters.AddWithValue("@FE", FE)
+            comando.Parameters.AddWithValue("@idreserva", idreserva)
+
+            Dim filas As SqlDataReader = comando.ExecuteReader
+
+            If filas.HasRows Then
+
+
+                Return False
+
+            Else
+
+                Return True
+
+            End If
+
+
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+        Finally
+            Desconectar()
+
+        End Try
+
+    End Function
 End Class
