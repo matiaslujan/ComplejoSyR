@@ -1,20 +1,28 @@
 ﻿Imports System.Data
+Imports System.Data.OleDb
 Imports System.Data.SqlClient
+
 
 Public Class ConexionClass
 
-    Private conexion_ As New SqlConnection
 
-    Public Property conexion() As SqlConnection
-        Get
-            Return conexion_
-        End Get
-        Set(ByVal value As SqlConnection)
-            conexion_ = value
-        End Set
-    End Property
     Private strConexion_ As String
-    Public Property strConexion() As String
+    Private objConexion_ As SqlConnection
+    Private servidor_ As String
+    Private baseDatos_ As String
+    Private usuario_ As String
+    Private password_ As String
+    Private miConfiguracion As ConfiguracionConexion
+
+    Public Sub New()
+        miConfiguracion = New ConfiguracionConexion
+        servidor_ = miConfiguracion.servidorSQL
+        baseDatos_ = miConfiguracion.baseDatosSQL
+        usuario_ = miConfiguracion.usuarioSQL
+        password_ = miConfiguracion.passwordSQL
+    End Sub
+
+    Protected Property strConexion() As String
         Get
             Return strConexion_
         End Get
@@ -22,8 +30,17 @@ Public Class ConexionClass
             strConexion_ = value
         End Set
     End Property
-    Private servidor_ As String
-    Public Property servidor() As String
+
+    Protected Property Conexion() As SqlConnection
+        Get
+            Return objConexion_
+        End Get
+        Set(ByVal value As SqlConnection)
+            objConexion_ = value
+        End Set
+    End Property
+
+    Protected Property servidor() As String
         Get
             Return servidor_
         End Get
@@ -31,8 +48,17 @@ Public Class ConexionClass
             servidor_ = value
         End Set
     End Property
-    Private usuario_ As String
-    Public Property usuario() As String
+
+    Protected Property baseDatos() As String
+        Get
+            Return baseDatos_
+        End Get
+        Set(ByVal value As String)
+            baseDatos_ = value
+        End Set
+    End Property
+
+    Protected Property usuario() As String
         Get
             Return usuario_
         End Get
@@ -40,17 +66,8 @@ Public Class ConexionClass
             usuario_ = value
         End Set
     End Property
-    Private basededatos_ As String
-    Public Property basededatos() As String
-        Get
-            Return basededatos_
-        End Get
-        Set(ByVal value As String)
-            basededatos_ = value
-        End Set
-    End Property
-    Private password_ As String
-    Public Property password() As String
+
+    Protected Property password() As String
         Get
             Return password_
         End Get
@@ -67,47 +84,34 @@ Public Class ConexionClass
             intsecurity_ = value
         End Set
     End Property
-    Public Sub New()
-
-        servidor = "LAPTOP-K16JEHVE\DEVELOPER"
-        basededatos = "complejosolyrio"
-        usuario = ""
-        password = ""
-
-        If usuario = "" And password = "" Then
-
-            intsecurity = True
-
-        End If
-    End Sub
-    Public Sub Conectar()
+    Protected Function Conectar()
         Try
 
-    
-            strConexion_ = "Server=" & servidor & ";Database=" & basededatos & ";Trusted_connection=true;"
-
-            conexion.ConnectionString = strConexion_
-
-            conexion.Open()
-
+            If usuario_ = "" And password_ = "" Then
+                strConexion = "Data Source=" & servidor_ & "; DataBase=" & baseDatos_ & "; Trusted_Connection=True"
+            Else
+                strConexion = "Data Source=" & servidor_ & "; DataBase=" & baseDatos_ & "; user=" & usuario_ & "; password=" & password_
+            End If
+            Conexion = New SqlConnection(strConexion)
+            Conexion.Open()
+            Return True
         Catch ex As Exception
-
             MsgBox(ex.Message)
-
+            Return False
         End Try
+    End Function
 
-    End Sub
-
-    Public Sub Desconectar()
-   
+    Protected Function Desconectar()
         Try
-            conexion.Close()
-
+            If Conexion.State = ConnectionState.Open Then
+                Conexion.Close()
+                Return True
+            Else
+                Return False
+            End If
         Catch ex As Exception
-
             MsgBox(ex.Message)
-
+            Return False
         End Try
-
-    End Sub
+    End Function
 End Class

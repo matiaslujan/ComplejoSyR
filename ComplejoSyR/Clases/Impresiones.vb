@@ -8,7 +8,7 @@ Public Class Impresiones
 
         Conectar()
 
-        objreporte.datasourceconnections.item(0).setconnection(servidor, basededatos, intsecurity)
+        objreporte.datasourceconnections.item(0).setconnection(servidor, baseDatos, intsecurity)
 
         objreporte.setdatabaselogon(usuario, password)
 

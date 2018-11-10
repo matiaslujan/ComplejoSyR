@@ -85,6 +85,7 @@
     <Compile Include="Clases\AlojamientoReservaClass.vb" />
     <Compile Include="Clases\ClienteClass.vb" />
     <Compile Include="Clases\ConexionClass.vb" />
+    <Compile Include="Clases\ConfiguracionConexion.vb" />
     <Compile Include="Clases\Funciones.vb" />
     <Compile Include="Clases\Impresiones.vb" />
     <Compile Include="Clases\ModalidadClass.vb" />
@@ -349,6 +350,7 @@
     <None Include="Resources\iniciolog.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Resources\icono.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
