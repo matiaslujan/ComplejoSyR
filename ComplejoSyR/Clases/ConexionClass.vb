@@ -15,11 +15,18 @@ Public Class ConexionClass
     Private miConfiguracion As ConfiguracionConexion
 
     Public Sub New()
+
         miConfiguracion = New ConfiguracionConexion
         servidor_ = miConfiguracion.servidorSQL
         baseDatos_ = miConfiguracion.baseDatosSQL
         usuario_ = miConfiguracion.usuarioSQL
         password_ = miConfiguracion.passwordSQL
+
+        If password = "" And usuario = "" Then
+
+            intsecurity = True
+
+        End If
     End Sub
 
     Protected Property strConexion() As String
