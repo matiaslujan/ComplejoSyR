@@ -95,9 +95,9 @@ Public Class ConexionClass
         Try
 
             If usuario_ = "" And password_ = "" Then
-                strConexion = "Data Source=" & servidor_ & "; DataBase=" & baseDatos_ & "; Trusted_Connection=True"
+                strConexion = "Data Source=" & servidor & "; DataBase=" & baseDatos & "; Trusted_Connection=True"
             Else
-                strConexion = "Data Source=" & servidor_ & "; DataBase=" & baseDatos_ & "; user=" & usuario_ & "; password=" & password_
+                strConexion = "Data Source=" & servidor & "; DataBase=" & baseDatos & "; user=" & usuario & "; password=" & password
             End If
             Conexion = New SqlConnection(strConexion)
             Conexion.Open()
