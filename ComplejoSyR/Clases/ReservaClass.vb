@@ -625,12 +625,15 @@ Public Class ReservaClass
             dgv.Columns("FIngreso").HeaderText = "Ingreso"
             dgv.Columns("FEgreso").HeaderText = "Egreso"
             dgv.Columns("Numero").HeaderText = "N°"
+            dgv.Columns("FIngreso").MinimumWidth = 100
+            dgv.Columns("FEgreso").MinimumWidth = 100
             dgv.Columns("FIngreso").Width = 100
             dgv.Columns("FEgreso").Width = 100
             dgv.Columns("FEgreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             dgv.Columns("FIngreso").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
             dgv.Columns("Numero").Width = 50
             dgv.Columns("Numero").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+            dgv.Columns("Capacidad").HeaderText = "Capac."
             dgv.Columns("Capacidad").Width = 100
             dgv.Columns("Capacidad").DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
 

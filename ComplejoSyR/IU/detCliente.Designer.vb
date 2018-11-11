@@ -46,8 +46,8 @@ Partial Class detCliente
         Me.Label10 = New System.Windows.Forms.Label
         Me.Label11 = New System.Windows.Forms.Label
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.txtTelefono = New System.Windows.Forms.MaskedTextBox
         Me.btnHistory = New System.Windows.Forms.Button
+        Me.txtTelefono = New System.Windows.Forms.MaskedTextBox
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -281,15 +281,6 @@ Partial Class detCliente
         '
         Me.ToolTip1.ForeColor = System.Drawing.Color.Firebrick
         '
-        'txtTelefono
-        '
-        Me.txtTelefono.Location = New System.Drawing.Point(157, 102)
-        Me.txtTelefono.Mask = "99999999999"
-        Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.txtTelefono.Size = New System.Drawing.Size(191, 20)
-        Me.txtTelefono.TabIndex = 95
-        '
         'btnHistory
         '
         Me.btnHistory.BackColor = System.Drawing.Color.Transparent
@@ -303,6 +294,16 @@ Partial Class detCliente
         Me.btnHistory.TabIndex = 96
         Me.ToolTip1.SetToolTip(Me.btnHistory, "Historial")
         Me.btnHistory.UseVisualStyleBackColor = False
+        Me.btnHistory.Visible = False
+        '
+        'txtTelefono
+        '
+        Me.txtTelefono.Location = New System.Drawing.Point(157, 102)
+        Me.txtTelefono.Mask = "99999999999"
+        Me.txtTelefono.Name = "txtTelefono"
+        Me.txtTelefono.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.txtTelefono.Size = New System.Drawing.Size(191, 20)
+        Me.txtTelefono.TabIndex = 95
         '
         'detCliente
         '

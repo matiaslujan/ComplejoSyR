@@ -104,7 +104,9 @@
         Dim det As New detReserva
 
         det.ShowDialog()
-     
+
+        Ocupacion()
+
     End Sub
 
     Private Sub dgvOcupacion_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dgvOcupacion.CellDoubleClick

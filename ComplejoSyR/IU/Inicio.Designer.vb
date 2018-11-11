@@ -62,7 +62,7 @@ Partial Class Inicio
         Me.MenuStrip1.Margin = New System.Windows.Forms.Padding(0, 0, 0, 10)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(876, 40)
+        Me.MenuStrip1.Size = New System.Drawing.Size(895, 40)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -122,9 +122,9 @@ Partial Class Inicio
         '
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PictureBox1.Image = Global.ComplejoSolYRio.My.Resources.Resources.iniciolog
-        Me.PictureBox1.Location = New System.Drawing.Point(526, 3)
+        Me.PictureBox1.Location = New System.Drawing.Point(551, 3)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(344, 519)
+        Me.PictureBox1.Size = New System.Drawing.Size(338, 544)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 132
         Me.PictureBox1.TabStop = False
@@ -160,7 +160,7 @@ Partial Class Inicio
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgvOcupacion.DefaultCellStyle = DataGridViewCellStyle3
         Me.dgvOcupacion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvOcupacion.Location = New System.Drawing.Point(3, 176)
+        Me.dgvOcupacion.Location = New System.Drawing.Point(3, 186)
         Me.dgvOcupacion.Margin = New System.Windows.Forms.Padding(3, 3, 3, 10)
         Me.dgvOcupacion.MultiSelect = False
         Me.dgvOcupacion.Name = "dgvOcupacion"
@@ -175,7 +175,7 @@ Partial Class Inicio
         Me.dgvOcupacion.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.dgvOcupacion.RowHeadersVisible = False
         Me.dgvOcupacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvOcupacion.Size = New System.Drawing.Size(511, 262)
+        Me.dgvOcupacion.Size = New System.Drawing.Size(536, 277)
         Me.dgvOcupacion.TabIndex = 5
         '
         'Calendario
@@ -200,7 +200,7 @@ Partial Class Inicio
         '
         Me.Splitter1.Location = New System.Drawing.Point(0, 40)
         Me.Splitter1.Name = "Splitter1"
-        Me.Splitter1.Size = New System.Drawing.Size(3, 525)
+        Me.Splitter1.Size = New System.Drawing.Size(3, 550)
         Me.Splitter1.TabIndex = 134
         Me.Splitter1.TabStop = False
         '
@@ -221,7 +221,7 @@ Partial Class Inicio
         Me.btnNuevaReserva.ForeColor = System.Drawing.Color.SaddleBrown
         Me.btnNuevaReserva.Location = New System.Drawing.Point(3, 30)
         Me.btnNuevaReserva.Name = "btnNuevaReserva"
-        Me.btnNuevaReserva.Size = New System.Drawing.Size(249, 32)
+        Me.btnNuevaReserva.Size = New System.Drawing.Size(262, 32)
         Me.btnNuevaReserva.TabIndex = 133
         Me.btnNuevaReserva.Text = "Nueva Reserva"
         Me.btnNuevaReserva.UseVisualStyleBackColor = False
@@ -241,9 +241,9 @@ Partial Class Inicio
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnBuscar.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnBuscar.Location = New System.Drawing.Point(258, 30)
+        Me.btnBuscar.Location = New System.Drawing.Point(271, 30)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(250, 32)
+        Me.btnBuscar.Size = New System.Drawing.Size(262, 32)
         Me.btnBuscar.TabIndex = 132
         Me.btnBuscar.Text = "Buscar Reserva"
         Me.btnBuscar.UseVisualStyleBackColor = False
@@ -252,8 +252,8 @@ Partial Class Inicio
         '
         Me.TableLayoutPanel1.BackColor = System.Drawing.Color.OldLace
         Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.43498!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.56502!))
         Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.PictureBox1, 1, 0)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -261,7 +261,7 @@ Partial Class Inicio
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
         Me.TableLayoutPanel1.RowCount = 1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(873, 525)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(892, 550)
         Me.TableLayoutPanel1.TabIndex = 135
         '
         'TableLayoutPanel2
@@ -279,7 +279,7 @@ Partial Class Inicio
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.63135!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 61.36865!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(517, 519)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(542, 544)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'TableLayoutPanel3
@@ -292,13 +292,13 @@ Partial Class Inicio
         Me.TableLayoutPanel3.Controls.Add(Me.btnSeRetiran, 0, 0)
         Me.TableLayoutPanel3.Controls.Add(Me.Button1, 1, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 451)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 476)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 2
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38.0!))
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(511, 65)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(536, 65)
         Me.TableLayoutPanel3.TabIndex = 7
         '
         'btnSeRetiran
@@ -309,7 +309,7 @@ Partial Class Inicio
         Me.btnSeRetiran.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSeRetiran.Location = New System.Drawing.Point(3, 3)
         Me.btnSeRetiran.Name = "btnSeRetiran"
-        Me.btnSeRetiran.Size = New System.Drawing.Size(249, 21)
+        Me.btnSeRetiran.Size = New System.Drawing.Size(262, 21)
         Me.btnSeRetiran.TabIndex = 134
         Me.btnSeRetiran.Text = "SE RETIRAN HOY"
         Me.btnSeRetiran.UseVisualStyleBackColor = False
@@ -321,9 +321,9 @@ Partial Class Inicio
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.Location = New System.Drawing.Point(258, 3)
+        Me.Button1.Location = New System.Drawing.Point(271, 3)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(250, 21)
+        Me.Button1.Size = New System.Drawing.Size(262, 21)
         Me.Button1.TabIndex = 135
         Me.Button1.Text = "INGRESAN HOY"
         Me.Button1.UseVisualStyleBackColor = False
@@ -334,12 +334,12 @@ Partial Class Inicio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(876, 565)
+        Me.ClientSize = New System.Drawing.Size(895, 590)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Controls.Add(Me.Splitter1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(892, 604)
+        Me.MinimumSize = New System.Drawing.Size(911, 629)
         Me.Name = "Inicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = " "
