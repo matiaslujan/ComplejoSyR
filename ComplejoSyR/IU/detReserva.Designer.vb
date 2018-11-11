@@ -1189,11 +1189,11 @@ Partial Class detReserva
         'CbxCancelada
         '
         Me.CbxCancelada.AutoSize = True
-        Me.CbxCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CbxCancelada.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CbxCancelada.ForeColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(9, Byte), Integer))
         Me.CbxCancelada.Location = New System.Drawing.Point(3, 493)
         Me.CbxCancelada.Name = "CbxCancelada"
-        Me.CbxCancelada.Size = New System.Drawing.Size(92, 19)
+        Me.CbxCancelada.Size = New System.Drawing.Size(86, 17)
         Me.CbxCancelada.TabIndex = 2
         Me.CbxCancelada.Text = "Cancelada"
         Me.CbxCancelada.UseVisualStyleBackColor = True
@@ -1255,8 +1255,7 @@ Partial Class detReserva
         '
         'TableLayoutPanel14
         '
-        Me.TableLayoutPanel14.ColumnCount = 4
-        Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.TableLayoutPanel14.ColumnCount = 3
         Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.TableLayoutPanel14.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
@@ -1276,18 +1275,21 @@ Partial Class detReserva
         Me.btnDetalle.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnDetalle.BackColor = System.Drawing.Color.White
+        Me.btnDetalle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.btnDetalle.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnDetalle.FlatAppearance.BorderColor = System.Drawing.Color.Chocolate
         Me.btnDetalle.FlatAppearance.BorderSize = 2
         Me.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnDetalle.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDetalle.ForeColor = System.Drawing.Color.SaddleBrown
+        Me.btnDetalle.ImageAlign = System.Drawing.ContentAlignment.TopLeft
         Me.btnDetalle.Location = New System.Drawing.Point(3, 3)
         Me.btnDetalle.Name = "btnDetalle"
-        Me.btnDetalle.Size = New System.Drawing.Size(91, 31)
+        Me.btnDetalle.Size = New System.Drawing.Size(124, 31)
         Me.btnDetalle.TabIndex = 178
         Me.btnDetalle.TabStop = False
-        Me.btnDetalle.Text = "Imprimir"
+        Me.btnDetalle.Text = "Imprimir detalle"
+        Me.btnDetalle.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnDetalle.UseVisualStyleBackColor = False
         '
         'btnSalir
@@ -1301,9 +1303,9 @@ Partial Class detReserva
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSalir.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSalir.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnSalir.Location = New System.Drawing.Point(197, 3)
+        Me.btnSalir.Location = New System.Drawing.Point(263, 3)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(91, 31)
+        Me.btnSalir.Size = New System.Drawing.Size(125, 31)
         Me.btnSalir.TabIndex = 177
         Me.btnSalir.TabStop = False
         Me.btnSalir.Text = "Salir"
@@ -1320,9 +1322,9 @@ Partial Class detReserva
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnGuardar.ForeColor = System.Drawing.Color.SaddleBrown
-        Me.btnGuardar.Location = New System.Drawing.Point(100, 3)
+        Me.btnGuardar.Location = New System.Drawing.Point(133, 3)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(91, 31)
+        Me.btnGuardar.Size = New System.Drawing.Size(124, 31)
         Me.btnGuardar.TabIndex = 176
         Me.btnGuardar.TabStop = False
         Me.btnGuardar.Text = "Guardar"
