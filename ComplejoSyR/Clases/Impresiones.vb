@@ -23,9 +23,9 @@ Public Class Impresiones
 
         Conectar()
 
-        objreporte.datasourceconnections.item(0).setconnection(servidor, baseDatos, intsecurity)
+        objreporte.DataSourceConnections.Item(0).SetConnection(servidor, baseDatos, intsecurity)
 
-        objreporte.setdatabaselogon(usuario, password)
+        objreporte.SetDatabaseLogon(usuario, password)
 
         Desconectar()
 
@@ -34,6 +34,7 @@ Public Class Impresiones
 
     Public Sub detallereserva(ByVal frmdetalle As Form, ByVal objreporte As Object, ByVal idreserva As Integer)
 
+        Configurar(objreporte)
 
         Dim parametros As New parametervalues
         Dim id As New ParameterDiscreteValue
@@ -41,9 +42,7 @@ Public Class Impresiones
         id.Value = idreserva
         parametros.Add(id)
 
-        Configurar(objreporte)
-
-        objreporte.datadefinition.parameterfields("@IdReserva").applycurrentvalues(parametros)
+        objreporte.DataDefinition.ParameterFields("@IdReserva").ApplyCurrentValues(parametros)
 
         frmdetalle.ShowDialog()
         frmdetalle.Dispose()
@@ -51,6 +50,7 @@ Public Class Impresiones
     End Sub
     Public Sub listahoy(ByVal frmdetalle As Form, ByVal objreporte As Object, ByVal fechar As Date)
 
+        Configurar(objreporte)
 
         Dim parametros As New ParameterValues
         Dim fecha As New ParameterDiscreteValue
@@ -60,9 +60,7 @@ Public Class Impresiones
 
         parametros.Add(fecha)
 
-        Configurar(objreporte)
-
-        objreporte.datadefinition.parameterfields("@Fecha").applycurrentvalues(parametros)
+        objreporte.DataDefinition.ParameterFields("@Fecha").ApplyCurrentValues(parametros)
 
         frmdetalle.ShowDialog()
         frmdetalle.Dispose()
