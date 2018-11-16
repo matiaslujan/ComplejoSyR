@@ -21,7 +21,7 @@
 
     'al iniciar se trae la ocupacion actual del tipo habitacional
     Private Sub Inicio_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+ 
         cbTipo.SelectedIndex = 1
 
 
