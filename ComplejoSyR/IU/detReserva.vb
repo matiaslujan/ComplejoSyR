@@ -208,10 +208,11 @@
             dtpFechaEgreso.Text = reserva.FEgreso
 
             dtpFechaIngreso.Text = reserva.FIngreso
-
+            btnDetalle.Visible = False
         Else
 
             Me.Text = "Nueva " + CStr(Me.Text)
+            btnDetalle.Visible = False
 
         End If
 
