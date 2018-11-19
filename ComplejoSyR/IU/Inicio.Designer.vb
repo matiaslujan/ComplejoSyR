@@ -342,7 +342,7 @@ Partial Class Inicio
         Me.MinimumSize = New System.Drawing.Size(911, 629)
         Me.Name = "Inicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
-        Me.Text = " "
+        Me.Text = " Complejo Turistico Sol y Rio"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

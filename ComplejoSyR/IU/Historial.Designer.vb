@@ -78,6 +78,7 @@ Partial Class Historial
         Me.ClientSize = New System.Drawing.Size(715, 261)
         Me.Controls.Add(Me.dgvReservas)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(731, 300)
         Me.Name = "Historial"
         Me.Text = "Historial"
         CType(Me.dgvReservas, System.ComponentModel.ISupportInitialize).EndInit()
