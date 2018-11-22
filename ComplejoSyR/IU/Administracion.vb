@@ -77,11 +77,17 @@
     'agregar
     Private Sub btnAddAloj_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddAloj.Click
 
+        m.Traer(dgvModalidades)
+        If dgvModalidades.Rows.Count = 0 Then
+            MsgBox("Primero debe agregar una Modalidad")
+            Exit Sub
+        End If
         Dim detalle As New detAlojamiento()
 
         detalle.ShowDialog()
 
         a.Traer(dgvAlojamientos)
+
 
     End Sub
 
